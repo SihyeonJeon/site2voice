@@ -53,6 +53,38 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertEqual(payload["output_contract"]["recommended_terms"], [])
             self.assertIn("source_terms", payload["output_contract"])
 
+    def test_cli_writes_site_markdown(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td) / "SITE.md"
+            code = main(["site", str(FIXTURE), "--out", str(out)])
+            self.assertEqual(code, 0)
+            text = out.read_text(encoding="utf-8")
+            self.assertIn("# SITE.md", text)
+            self.assertIn("Page Blueprint", text)
+            self.assertIn("Section Recipes", text)
+            self.assertIn("Rhetorical Pattern", text)
+            self.assertIn("Content Boundary", text)
+            self.assertIn("Pair it with `VOICE.md`", text)
+            self.assertNotIn("Start free", text)
+            self.assertNotIn("Northstar Ops", text)
+
+    def test_cli_writes_site_json(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td) / "site.json"
+            code = main(["site", str(FIXTURE), "--format", "json", "--out", str(out)])
+            self.assertEqual(code, 0)
+            payload = json.loads(out.read_text(encoding="utf-8"))
+            self.assertEqual(payload["schema_version"], "site2voice.site.v1")
+            self.assertEqual(payload["generator"], f"site2voice/{__version__}")
+            self.assertIn("site_summary", payload)
+            self.assertIn("page_blueprint", payload)
+            self.assertIn("section_recipes", payload)
+            self.assertNotIn("headings", payload)
+            self.assertNotIn("ctas", payload)
+            self.assertNotIn("links", payload)
+            self.assertNotIn("lexicon", payload)
+            self.assertNotIn("paragraph_samples", payload)
+
     def test_benchmark_scores_after_above_before(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             out = Path(td) / "bench.json"
@@ -110,7 +142,9 @@ class Site2VoiceTests(unittest.TestCase):
                 code = main(["init", str(FIXTURE), "--dir", str(target), "--no-samples"])
             self.assertEqual(code, 0)
             self.assertTrue((target / "VOICE.md").exists())
+            self.assertTrue((target / "SITE.md").exists())
             self.assertTrue((target / "voice.json").exists())
+            self.assertTrue((target / "site.json").exists())
             self.assertTrue((target / "agent-prompt.md").exists())
             voice_json = json.loads((target / "voice.json").read_text(encoding="utf-8"))
             self.assertEqual(voice_json["schema_version"], "site2voice.voice.v1")
@@ -124,8 +158,17 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertEqual(voice_json["links"], [])
             self.assertEqual(voice_json["buttons"], [])
             self.assertEqual(voice_json["output_contract"]["source_terms"], [])
+            site_json = json.loads((target / "site.json").read_text(encoding="utf-8"))
+            self.assertEqual(site_json["schema_version"], "site2voice.site.v1")
+            self.assertIn("site_summary", site_json)
+            self.assertNotIn("headings", site_json)
+            self.assertNotIn("ctas", site_json)
+            site_md = (target / "SITE.md").read_text(encoding="utf-8")
+            self.assertIn("Page Blueprint", site_md)
+            self.assertIn("Section Recipes", site_md)
             agent_prompt = (target / "agent-prompt.md").read_text(encoding="utf-8")
             self.assertIn("Output Contract", agent_prompt)
+            self.assertIn("Page Blueprint", agent_prompt)
             self.assertIn("site2voice bench", agent_prompt)
             self.assertIn("reference-only copy contract", agent_prompt)
             self.assertIn("Do not imply brand affiliation", agent_prompt)

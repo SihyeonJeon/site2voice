@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SihyeonJeon/site2voice/schemas/site.schema.json",
+  "title": "site2voice site profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generator",
+    "source",
+    "site_summary",
+    "structure_metrics",
+    "measurement_note",
+    "target_ranges",
+    "page_blueprint",
+    "section_recipes",
+    "agent_instructions",
+    "anti_patterns"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "site2voice.site.v1"
+    },
+    "generator": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "site_summary": {
+      "type": "object",
+      "required": [
+        "page_archetype",
+        "information_density",
+        "conversion_pressure",
+        "navigation_model",
+        "content_boundary"
+      ],
+      "properties": {
+        "page_archetype": {"type": "string"},
+        "information_density": {"enum": ["compact", "balanced", "dense"]},
+        "conversion_pressure": {"enum": ["low", "medium", "high"]},
+        "navigation_model": {"type": "string"},
+        "content_boundary": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "structure_metrics": {
+      "type": "object",
+      "required": [
+        "words",
+        "headings",
+        "ctas",
+        "links",
+        "avg_heading_words",
+        "avg_paragraph_words",
+        "avg_cta_words",
+        "avg_link_words"
+      ],
+      "properties": {
+        "words": {"type": "integer", "minimum": 0},
+        "headings": {"type": "integer", "minimum": 0},
+        "ctas": {"type": "integer", "minimum": 0},
+        "links": {"type": "integer", "minimum": 0},
+        "avg_heading_words": {"type": "number", "minimum": 0},
+        "avg_paragraph_words": {"type": "number", "minimum": 0},
+        "avg_cta_words": {"type": "number", "minimum": 0},
+        "avg_link_words": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "measurement_note": {
+      "type": "string"
+    },
+    "target_ranges": {
+      "type": "object",
+      "required": ["heading_words", "paragraph_words", "cta_words"],
+      "properties": {
+        "heading_words": {"$ref": "#/$defs/metric_window"},
+        "paragraph_words": {"$ref": "#/$defs/metric_window"},
+        "cta_words": {"$ref": "#/$defs/metric_window"}
+      },
+      "additionalProperties": false
+    },
+    "page_blueprint": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/blueprint_item"}
+    },
+    "section_recipes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/section_recipe"}
+    },
+    "agent_instructions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "anti_patterns": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "metric_window": {
+      "type": "object",
+      "required": ["target", "min", "max"],
+      "properties": {
+        "target": {"type": "number", "minimum": 0},
+        "min": {"type": "number", "minimum": 0},
+        "max": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "blueprint_item": {
+      "type": "object",
+      "required": ["order", "slot", "goal", "copy_shape"],
+      "properties": {
+        "order": {"type": "integer", "minimum": 1},
+        "slot": {"type": "string"},
+        "goal": {"type": "string"},
+        "copy_shape": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "section_recipe": {
+      "type": "object",
+      "required": ["slot", "goal", "copy_shape", "agent_rule"],
+      "properties": {
+        "slot": {"type": "string"},
+        "goal": {"type": "string"},
+        "copy_shape": {"type": "string"},
+        "agent_rule": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

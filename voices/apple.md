@@ -7,7 +7,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 ## Voice Summary
 
 - Overall tone: **balanced, action-oriented**.
-- Sentence shape: about **13.0 words** per sentence.
+- Copy method: follow the rhetorical moves, section behavior, CTA pattern, and claim boundaries below.
+- Measurement policy: word ranges are benchmark drift checks, not the main writing method.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -17,7 +18,17 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 - Bring your own product names, topics, claims, examples, and domain nouns.
 - Do not use trademarks, logos, proprietary product names, or brand claims unless you already have independent rights to use them.
 
+## Writing Moves
+
+- First screen: start with a concrete user outcome, then add one short proof/value sentence.
+- Heading move: make headings specific enough to stand alone in a scan.
+- Body move: explain one idea per paragraph; do not stack unrelated claims.
+- CTA move: use visible action verbs and keep the next step unambiguous.
+- Claim move: prefer supported product behavior over broad market promises.
+
 ## Style Fingerprint
+
+Use these numbers as calibration checks after drafting.
 
 - Heading shape: about **2 words** per heading.
 - Paragraph rhythm: about **6.1 words** per paragraph sample.
@@ -39,7 +50,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **9.8 and 16.2 words**.
+- Benchmark drift check: keep average sentence length between **9.8 and 16.2 words**.
 - Keep headings near **2.0 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **6.1 words**.
 - Keep CTAs near **3.6 words** and start them with: `watch`, `learn`, `buy`, `get`, `see`, `contact`.

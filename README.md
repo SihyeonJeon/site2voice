@@ -1,10 +1,12 @@
 # site2voice
 
-**Drop-in `VOICE.md` copy profiles. Pick a public writing pattern, save one file, and your agent writes less generic copy.**
+**Drop-in `SITE.md` and `VOICE.md` profiles. Pick a public web pattern, save two files, and your agent gets page structure plus copy rhythm.**
 
 `site2voice` is not a visual design-system library and not a brand-cloning tool.
-It turns public copy into a compact, reference-only writing contract: sentence
-rhythm, heading shape, CTA verb shape, claim boundaries, and benchmark gates.
+It turns public pages into compact, reference-only context files:
+
+- `SITE.md`: section order, page jobs, structure recipes, and content boundaries.
+- `VOICE.md`: sentence rhythm, heading shape, CTA shape, claim boundaries, and benchmark gates.
 
 **No install. No JSON. No generation step.**
 
@@ -35,26 +37,27 @@ popular web products such as [Canva](voices/canva.md),
 [LinkedIn](voices/linkedin.md), [Netflix](voices/netflix.md),
 [TikTok](voices/tiktok.md), [WhatsApp](voices/whatsapp.md), [Zoom](voices/zoom.md),
 and [PayPal](voices/paypal.md). See the [full collection](voices) and the
-[popular-sites analysis](docs/popular-sites-analysis.md).
+[SITE.md collection](sites), plus the [popular-sites analysis](docs/popular-sites-analysis.md).
 
 ## Use
 
-Download one copy profile as `VOICE.md`:
+Download one structure profile and one copy profile:
 
 ```bash
+curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/sites/stripe.md -o SITE.md
 curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md
 ```
 
 Tell Claude Code, Codex, Cursor, or Copilot:
 
 ```text
-Use @VOICE.md as a copy contract for headings, CTA shape, paragraph rhythm, and UI microcopy.
+Use @SITE.md for page structure and @VOICE.md for copy rhythm. Bring our own product nouns, facts, and claims.
 ```
 
-Each file is a plain Markdown writing brief with sentence rhythm, heading
-shape, CTA verbs, content boundaries, claim boundaries, and a benchmark target.
-The public profiles remove source nouns, raw CTAs, navigation labels, paragraph
-samples, logos, screenshots, and brand assets.
+Each file is plain Markdown. Public profiles remove source nouns, raw CTAs,
+navigation labels, paragraph samples, logos, screenshots, and brand assets.
+Use `SITE.md` when building a web page; use `VOICE.md` when writing headings,
+CTAs, UI copy, and launch copy.
 
 Reference names identify the public page used for measurement. They do not
 imply sponsorship, endorsement, affiliation, or permission to reuse protected
@@ -63,10 +66,12 @@ brand identity. See [Brand Usage](BRAND_USAGE.md).
 ## Not DESIGN.md
 
 `DESIGN.md` describes visual identity: colors, typography, spacing, components,
-layout, and responsive behavior. `VOICE.md` describes writing behavior: rhythm,
-CTA shape, information order, claim safety, and copy-safety gates.
+layout, and responsive behavior. `SITE.md` describes page structure: section
+order, section jobs, page archetype, and content boundaries. `VOICE.md`
+describes writing behavior: rhythm, CTA shape, claim safety, and copy-safety
+gates.
 
-Read the full comparison in [DESIGN.md vs VOICE.md](docs/design-md-comparison.md)
+Read the full comparison in [DESIGN.md vs SITE.md / VOICE.md](docs/design-md-comparison.md)
 and the dated [competitive review](docs/competitive-review.md).
 
 ## Before / After
@@ -82,11 +87,17 @@ See the [full comparison](examples/comparisons/stripe-ledgerflow/README.md).
 
 ## Optional CLI
 
-Generate a new copy profile from any public URL:
+Generate a new context pack from any public URL:
 
 ```bash
 pipx install site2voice
 site2voice init https://example.com
+```
+
+Generate only a page-structure file:
+
+```bash
+site2voice site https://example.com --out SITE.md
 ```
 
 Validate generated copy:
@@ -95,7 +106,7 @@ Validate generated copy:
 site2voice bench https://example.com draft.md --strict
 ```
 
-Need `voice.json` or an agent prompt too? Use the full [context packs](packs).
+Need `site.json`, `voice.json`, or an agent prompt too? Use the full [context packs](packs).
 
 ## Status
 

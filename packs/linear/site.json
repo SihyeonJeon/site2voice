@@ -1,0 +1,141 @@
+{
+  "schema_version": "site2voice.site.v1",
+  "generator": "site2voice/0.5.4",
+  "source": "https://linear.app/",
+  "site_summary": {
+    "page_archetype": "technical product landing",
+    "information_density": "balanced",
+    "conversion_pressure": "high",
+    "navigation_model": "broad utility navigation",
+    "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+  },
+  "structure_metrics": {
+    "words": 797,
+    "headings": 12,
+    "ctas": 9,
+    "links": 16,
+    "avg_heading_words": 7.2,
+    "avg_paragraph_words": 16.1,
+    "avg_cta_words": 1.6,
+    "avg_link_words": 1.4
+  },
+  "measurement_note": "Numeric ranges are drift checks for benchmarking, not the primary writing method.",
+  "target_ranges": {
+    "heading_words": {
+      "target": 7.2,
+      "min": 5.4,
+      "max": 9.0
+    },
+    "paragraph_words": {
+      "target": 16.1,
+      "min": 12.1,
+      "max": 20.1
+    },
+    "cta_words": {
+      "target": 1.6,
+      "min": 1.2,
+      "max": 2.0
+    }
+  },
+  "page_blueprint": [
+    {
+      "order": 1,
+      "slot": "navigation",
+      "goal": "Orient the reader before the first claim.",
+      "copy_shape": "Use short noun-led labels; keep utility paths separate from product paths."
+    },
+    {
+      "order": 2,
+      "slot": "first_screen",
+      "goal": "State the main outcome and give a visible next action.",
+      "copy_shape": "Specific headline, one compact value sentence, and one or two action CTAs."
+    },
+    {
+      "order": 3,
+      "slot": "capability_stack",
+      "goal": "Move from outcome to workflow, proof, and implementation detail.",
+      "copy_shape": "Outcome heading, concrete capability sentence, concise action link."
+    },
+    {
+      "order": 4,
+      "slot": "proof_band",
+      "goal": "Make the promise believable without overclaiming.",
+      "copy_shape": "Use concrete evidence blocks: metric, customer type, workflow step, or product constraint."
+    },
+    {
+      "order": 5,
+      "slot": "detail_sections",
+      "goal": "Give deeper readers enough structure to evaluate fit.",
+      "copy_shape": "Alternate short headings with one-paragraph explanations and compact lists."
+    },
+    {
+      "order": 6,
+      "slot": "conversion_band",
+      "goal": "Repeat the next action after value and proof are established.",
+      "copy_shape": "Short reminder sentence plus one primary action CTA."
+    },
+    {
+      "order": 7,
+      "slot": "footer",
+      "goal": "Close with utility, trust, and legal/support paths.",
+      "copy_shape": "Grouped utility links with short labels and no marketing prose."
+    }
+  ],
+  "section_recipes": [
+    {
+      "slot": "navigation",
+      "goal": "Orient the reader before the first claim.",
+      "copy_shape": "Use short noun-led labels; keep utility paths separate from product paths.",
+      "agent_rule": "Use navigation categories from the new product, not the reference source."
+    },
+    {
+      "slot": "first_screen",
+      "goal": "State the main outcome and give a visible next action.",
+      "copy_shape": "Specific headline, one compact value sentence, and one or two action CTAs.",
+      "agent_rule": "Name the new outcome plainly before explaining features."
+    },
+    {
+      "slot": "capability_stack",
+      "goal": "Move from outcome to workflow, proof, and implementation detail.",
+      "copy_shape": "Outcome heading, concrete capability sentence, concise action link.",
+      "agent_rule": "Explain the new product's actual mechanics; do not borrow platform claims."
+    },
+    {
+      "slot": "proof_band",
+      "goal": "Make the promise believable without overclaiming.",
+      "copy_shape": "Use concrete evidence blocks: metric, customer type, workflow step, or product constraint.",
+      "agent_rule": "Only include proof that the new project can independently support."
+    },
+    {
+      "slot": "detail_sections",
+      "goal": "Give deeper readers enough structure to evaluate fit.",
+      "copy_shape": "Alternate short headings with one-paragraph explanations and compact lists.",
+      "agent_rule": "Split detail by user job, workflow step, or decision criterion."
+    },
+    {
+      "slot": "conversion_band",
+      "goal": "Repeat the next action after value and proof are established.",
+      "copy_shape": "Short reminder sentence plus one primary action CTA.",
+      "agent_rule": "Repeat the real conversion action; do not add urgency unless it is true."
+    },
+    {
+      "slot": "footer",
+      "goal": "Close with utility, trust, and legal/support paths.",
+      "copy_shape": "Grouped utility links with short labels and no marketing prose.",
+      "agent_rule": "Use owned support, policy, company, and resource links."
+    }
+  ],
+  "agent_instructions": [
+    "Use SITE.md for page structure and section order.",
+    "Use VOICE.md for sentence rhythm, CTA shape, and benchmark gates.",
+    "Replace every topic, product noun, market claim, price, and proof point with facts from the new project.",
+    "Do not imply affiliation with, endorsement from, or official representation of the reference source.",
+    "If a needed fact is missing, write a neutral placeholder or remove the claim."
+  ],
+  "anti_patterns": [
+    "Do not copy source headings, CTA labels, navigation labels, slogans, or campaign names.",
+    "Do not import the reference site's product catalog, audience, pricing, legal claims, or feature names.",
+    "Do not turn structure guidance into a visual design system.",
+    "Do not add urgency, security, performance, customer, or compliance claims without evidence."
+  ]
+}

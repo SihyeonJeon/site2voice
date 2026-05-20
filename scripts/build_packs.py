@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from site2voice.context_pack import create_context_pack
+from site2voice.extract import to_site_json, to_site_markdown
 
 
 PACKS = [
@@ -243,9 +244,9 @@ PACKS = [
 
 def build_readme(rows: list[dict[str, object]]) -> str:
     lines = [
-        "# Voice Packs",
+        "# Context Packs",
         "",
-        "Full reference-only copy profile packs generated from public websites.",
+        "Full reference-only `SITE.md` + `VOICE.md` context packs generated from public websites.",
         "",
         "These packs are public artifacts: they keep derived copy metrics and",
         "benchmark contracts, but remove source paragraph samples, source nouns,",
@@ -255,18 +256,20 @@ def build_readme(rows: list[dict[str, object]]) -> str:
         "impersonate a reference source. Reference names identify measurement",
         "sources only.",
         "",
-        "For the fastest path, use the single-file [VOICE.md collection](../voices).",
+        "For the fastest path, use the single-file [VOICE.md](../voices) and",
+        "[SITE.md](../sites) collections.",
         "",
         "## Use",
         "",
         "```bash",
         "curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md",
+        "curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/sites/stripe.md -o SITE.md",
         "```",
         "",
         "Then tell your agent:",
         "",
         "```text",
-        "Use @VOICE.md as a copy contract for headings, CTA shape, paragraph rhythm, and UI microcopy.",
+        "Use @SITE.md for page structure and @VOICE.md for copy rhythm.",
         "```",
         "",
         "## Packs",
@@ -278,7 +281,7 @@ def build_readme(rows: list[dict[str, object]]) -> str:
         metrics = row["metrics"]
         assert isinstance(metrics, dict)
         lines.append(
-            f"| [{row['name']}]({row['slug']}/VOICE.md) | {row['category']} | "
+            f"| [{row['name']}]({row['slug']}/VOICE.md) / [SITE]({row['slug']}/SITE.md) | {row['category']} | "
             f"{metrics['words']} | {metrics['avg_sentence_words']} | {metrics['ctas']} | {row['use']} |"
         )
     lines.extend(
@@ -341,12 +344,62 @@ def build_voice_readme(rows: list[dict[str, object]]) -> str:
     return "\n".join(lines)
 
 
+def build_site_readme(rows: list[dict[str, object]]) -> str:
+    lines = [
+        "# SITE.md Collection",
+        "",
+        "Drop-in reference-only page-structure profiles for AI agents.",
+        "",
+        "`SITE.md` captures page architecture: section order, section jobs,",
+        "content boundaries, and agent instructions. It does not include visual",
+        "design tokens, source headings, raw CTAs, screenshots, logos, or brand assets.",
+        "",
+        "Use it with the matching `VOICE.md`:",
+        "",
+        "```bash",
+        "curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/sites/stripe.md -o SITE.md",
+        "curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md",
+        "```",
+        "",
+        "Then tell your agent:",
+        "",
+        "```text",
+        "Use @SITE.md for page structure and @VOICE.md for copy rhythm. Bring our own product nouns, facts, and claims.",
+        "```",
+        "",
+        "**No install. No JSON. No generation step.**",
+        "",
+        "## Sites",
+        "",
+        "| Site | Archetype | Density | Conversion | Use |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    for row in rows:
+        site = row["site_summary"]
+        assert isinstance(site, dict)
+        lines.append(
+            f"| [{row['name']}]({row['slug']}.md) | {site['page_archetype']} | "
+            f"{site['information_density']} | {site['conversion_pressure']} | {row['use']} |"
+        )
+    lines.extend(
+        [
+            "",
+            "Need machine-readable evidence or an agent prompt too? Use the full",
+            "[context packs](../packs).",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
     packs_dir = root / "packs"
     voices_dir = root / "voices"
+    sites_dir = root / "sites"
     packs_dir.mkdir(exist_ok=True)
     voices_dir.mkdir(exist_ok=True)
+    sites_dir.mkdir(exist_ok=True)
 
     rows: list[dict[str, object]] = []
     for pack in PACKS:
@@ -358,20 +411,38 @@ def main() -> None:
                 max_snippets=0,
                 force=True,
                 timeout=20.0,
+                category_hint=pack["category"],
             )
         except Exception as exc:  # noqa: BLE001
-            if not (target / "VOICE.md").exists() or not (target / "voice.json").exists():
+            if (target / "VOICE.md").exists() and (target / "voice.json").exists():
+                existing_profile = json.loads((target / "voice.json").read_text(encoding="utf-8"))
+                (target / "SITE.md").write_text(
+                    to_site_markdown(existing_profile, category_hint=pack["category"]),
+                    encoding="utf-8",
+                )
+                (target / "site.json").write_text(
+                    to_site_json(existing_profile, category_hint=pack["category"]),
+                    encoding="utf-8",
+                )
+            required = ["VOICE.md", "SITE.md", "voice.json", "site.json"]
+            if any(not (target / name).exists() for name in required):
                 raise
             print(f"warning: keeping existing {pack['slug']} pack after fetch failed: {exc}")
         (voices_dir / f"{pack['slug']}.md").write_text(
             (target / "VOICE.md").read_text(encoding="utf-8"),
             encoding="utf-8",
         )
+        (sites_dir / f"{pack['slug']}.md").write_text(
+            (target / "SITE.md").read_text(encoding="utf-8"),
+            encoding="utf-8",
+        )
         profile = json.loads((target / "voice.json").read_text(encoding="utf-8"))
+        site_profile = json.loads((target / "site.json").read_text(encoding="utf-8"))
         row: dict[str, object] = {
             **pack,
             "metrics": profile["metrics"],
             "tone": profile["tone"],
+            "site_summary": site_profile["site_summary"],
         }
         rows.append(row)
 
@@ -379,6 +450,7 @@ def main() -> None:
     (packs_dir / "index.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (packs_dir / "README.md").write_text(build_readme(rows), encoding="utf-8")
     (voices_dir / "README.md").write_text(build_voice_readme(rows), encoding="utf-8")
+    (sites_dir / "README.md").write_text(build_site_readme(rows), encoding="utf-8")
 
 
 if __name__ == "__main__":

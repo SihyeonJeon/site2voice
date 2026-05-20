@@ -3,13 +3,17 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any
 
-from .extract import analyze, to_json, to_markdown
+from .extract import analyze, to_json, to_markdown, to_site_json, to_site_markdown
 
 
 PROMPT_TEMPLATE = """# site2voice Agent Prompt
 
-Use `VOICE.md` as a reference-only copy contract for landing-page copy,
-headings, CTA shape, paragraph rhythm, and UI microcopy.
+Use `SITE.md` and `VOICE.md` together:
+
+- `SITE.md`: page structure, section order, section jobs, and content boundaries.
+- `VOICE.md`: sentence rhythm, CTA shape, paragraph rhythm, and benchmark gates.
+
+Together they form a reference-only copy contract and page-structure contract.
 
 Before shipping new copy, run a benchmark against the source:
 
@@ -21,11 +25,13 @@ Rules:
 
 - Treat the `Output Contract` section in `VOICE.md` as the measurable
   pass/fail target.
+- Treat the `Page Blueprint` and `Section Recipes` sections in `SITE.md` as the
+  page-structure target.
 - Reuse rhythm, CTA shape, and information order; bring your own product nouns.
 - Do not transfer source-specific nouns from the reference site.
 - Keep unsupported security, performance, customer, pricing, or AI claims out.
 - Do not imply brand affiliation, endorsement, or official guideline status.
-- Treat `voice.json` as machine-readable evidence, not brand approval.
+- Treat `voice.json` and `site.json` as machine-readable evidence, not brand approval.
 """
 
 
@@ -35,6 +41,7 @@ def create_context_pack(
     timeout: float = 20.0,
     max_snippets: int = 8,
     force: bool = False,
+    category_hint: str | None = None,
 ) -> dict[str, Any]:
     payload = analyze(source, timeout=timeout)
     json_payload = dict(payload)
@@ -52,7 +59,9 @@ def create_context_pack(
     target = Path(output_dir).expanduser()
     paths = {
         "voice_md": target / "VOICE.md",
+        "site_md": target / "SITE.md",
         "voice_json": target / "voice.json",
+        "site_json": target / "site.json",
         "agent_prompt": target / "agent-prompt.md",
     }
     existing = [path for path in paths.values() if path.exists()]
@@ -62,7 +71,9 @@ def create_context_pack(
 
     target.mkdir(parents=True, exist_ok=True)
     paths["voice_md"].write_text(to_markdown(payload, max_snippets=max_snippets), encoding="utf-8")
+    paths["site_md"].write_text(to_site_markdown(payload, category_hint=category_hint), encoding="utf-8")
     paths["voice_json"].write_text(to_json(json_payload), encoding="utf-8")
+    paths["site_json"].write_text(to_site_json(payload, category_hint=category_hint), encoding="utf-8")
     paths["agent_prompt"].write_text(PROMPT_TEMPLATE.format(source=payload["source"]), encoding="utf-8")
 
     return {

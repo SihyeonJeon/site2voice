@@ -1,10 +1,13 @@
-.PHONY: test example bench bench-ci init-example packs
+.PHONY: test example site-example bench bench-ci init-example packs
 
 test:
 	PYTHONPATH=src python3 -m unittest discover -s tests
 
 example:
 	PYTHONPATH=src python3 -m site2voice.cli examples/saas-home.html --out examples/saas-VOICE.md
+
+site-example:
+	PYTHONPATH=src python3 -m site2voice.cli site examples/saas-home.html --out examples/saas-SITE.md
 
 bench:
 	PYTHONPATH=src python3 -m site2voice.cli bench examples/editorial-home.html examples/before-copy.md examples/after-copy.md --out examples/editorial-benchmark.md

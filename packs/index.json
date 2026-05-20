@@ -23,7 +23,14 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "technical product landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "apple",
@@ -47,7 +54,14 @@
     "tone": [
       "balanced",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "brave",
@@ -73,7 +87,14 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "technical product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "canva",
@@ -98,7 +119,14 @@
       "short and direct",
       "action-oriented",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "discord",
@@ -124,7 +152,14 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "community platform landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "disneyplus",
@@ -147,7 +182,14 @@
     },
     "tone": [
       "balanced"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "subscription landing",
+      "information_density": "dense",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "eyesmag",
@@ -170,7 +212,14 @@
     },
     "tone": [
       "balanced"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "editorial index",
+      "information_density": "balanced",
+      "conversion_pressure": "low",
+      "navigation_model": "focused product navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "figma",
@@ -195,7 +244,14 @@
       "short and direct",
       "action-oriented",
       "technical"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "github",
@@ -221,7 +277,14 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "technical product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "highsnobiety",
@@ -244,7 +307,14 @@
     },
     "tone": [
       "balanced"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "editorial index",
+      "information_density": "dense",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "hypebeast",
@@ -267,7 +337,14 @@
     },
     "tone": [
       "short and direct"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "editorial index",
+      "information_density": "balanced",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "linear",
@@ -292,7 +369,14 @@
       "balanced",
       "action-oriented",
       "technical"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "technical product landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "linkedin",
@@ -317,7 +401,14 @@
       "balanced",
       "action-oriented",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "community platform landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "microsoft",
@@ -343,7 +434,14 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "technical product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "monocle",
@@ -352,22 +450,29 @@
     "category": "global affairs and culture media",
     "use": "polished city, design, and affairs copy",
     "metrics": {
-      "words": 2696,
-      "sentences": 85,
-      "avg_sentence_words": 6.4,
-      "avg_heading_words": 8.2,
+      "words": 2690,
+      "sentences": 81,
+      "avg_sentence_words": 6.7,
+      "avg_heading_words": 8.3,
       "avg_paragraph_words": 7,
       "avg_cta_words": 2.9,
       "avg_link_words": 2.1,
       "headings": 12,
       "ctas": 7,
       "links": 16,
-      "type_token_ratio": 0.29
+      "type_token_ratio": 0.291
     },
     "tone": [
       "short and direct",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "editorial index",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "netflix",
@@ -391,7 +496,14 @@
     "tone": [
       "short and direct",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "subscription landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "notion",
@@ -417,7 +529,14 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "product landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "openai",
@@ -442,7 +561,14 @@
       "short and direct",
       "action-oriented",
       "technical"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "technical product landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "paypal",
@@ -467,7 +593,14 @@
       "short and direct",
       "action-oriented",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "commerce journey",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "pinterest",
@@ -491,7 +624,14 @@
     "tone": [
       "balanced",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "community platform landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "primevideo",
@@ -515,7 +655,14 @@
     "tone": [
       "short and direct",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "subscription landing",
+      "information_density": "balanced",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "reddit",
@@ -539,7 +686,14 @@
     "tone": [
       "balanced",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "community platform landing",
+      "information_density": "balanced",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "roblox",
@@ -563,7 +717,14 @@
     "tone": [
       "balanced",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "community platform landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "samsung",
@@ -586,7 +747,14 @@
     },
     "tone": [
       "short and direct"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "product landing",
+      "information_density": "dense",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "shopify",
@@ -611,7 +779,14 @@
       "short and direct",
       "action-oriented",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "commerce journey",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "spotify",
@@ -635,7 +810,14 @@
     "tone": [
       "short and direct",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "subscription landing",
+      "information_density": "balanced",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "stripe",
@@ -659,7 +841,14 @@
     "tone": [
       "balanced",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "technical product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "tiktok",
@@ -683,7 +872,14 @@
     "tone": [
       "explanatory",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "community platform landing",
+      "information_density": "dense",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "vercel",
@@ -709,7 +905,14 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "technical product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "wallpaper",
@@ -732,7 +935,14 @@
     },
     "tone": [
       "short and direct"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "editorial index",
+      "information_density": "dense",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "whatsapp",
@@ -756,7 +966,14 @@
     "tone": [
       "balanced",
       "trust-forward"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "community platform landing",
+      "information_density": "balanced",
+      "conversion_pressure": "medium",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "zillow",
@@ -781,7 +998,14 @@
       "balanced",
       "action-oriented",
       "technical"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "marketplace landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   },
   {
     "slug": "zoom",
@@ -805,6 +1029,13 @@
     "tone": [
       "short and direct",
       "action-oriented"
-    ]
+    ],
+    "site_summary": {
+      "page_archetype": "product landing",
+      "information_density": "dense",
+      "conversion_pressure": "high",
+      "navigation_model": "broad utility navigation",
+      "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    }
   }
 ]

@@ -7,7 +7,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 ## Voice Summary
 
 - Overall tone: **short and direct, action-oriented, technical, trust-forward**.
-- Sentence shape: about **10.0 words** per sentence.
+- Copy method: follow the rhetorical moves, section behavior, CTA pattern, and claim boundaries below.
+- Measurement policy: word ranges are benchmark drift checks, not the main writing method.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -17,7 +18,17 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 - Bring your own product names, topics, claims, examples, and domain nouns.
 - Do not use trademarks, logos, proprietary product names, or brand claims unless you already have independent rights to use them.
 
+## Writing Moves
+
+- First screen: start with a concrete user outcome, then add one short proof/value sentence.
+- Heading move: make headings specific enough to stand alone in a scan.
+- Body move: explain one idea per paragraph; do not stack unrelated claims.
+- CTA move: use visible action verbs and keep the next step unambiguous.
+- Claim move: prefer supported product behavior over broad market promises.
+
 ## Style Fingerprint
+
+Use these numbers as calibration checks after drafting.
 
 - Heading shape: about **5.3 words** per heading.
 - Paragraph rhythm: about **12.4 words** per paragraph sample.
@@ -39,7 +50,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **7.5 and 12.5 words**.
+- Benchmark drift check: keep average sentence length between **7.5 and 12.5 words**.
 - Keep headings near **5.3 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **12.4 words**.
 - Keep CTAs near **2.8 words** and start them with: `sign`, `open`, `create`, `try`, `explore`, `read`.

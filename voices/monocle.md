@@ -7,7 +7,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 ## Voice Summary
 
 - Overall tone: **short and direct, action-oriented**.
-- Sentence shape: about **6.4 words** per sentence.
+- Copy method: follow the rhetorical moves, section behavior, CTA pattern, and claim boundaries below.
+- Measurement policy: word ranges are benchmark drift checks, not the main writing method.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -17,14 +18,24 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 - Bring your own product names, topics, claims, examples, and domain nouns.
 - Do not use trademarks, logos, proprietary product names, or brand claims unless you already have independent rights to use them.
 
+## Writing Moves
+
+- First screen: start with a concrete user outcome, then add one short proof/value sentence.
+- Heading move: make headings specific enough to stand alone in a scan.
+- Body move: explain one idea per paragraph; do not stack unrelated claims.
+- CTA move: use visible action verbs and keep the next step unambiguous.
+- Claim move: prefer supported product behavior over broad market promises.
+
 ## Style Fingerprint
 
-- Heading shape: about **8.2 words** per heading.
+Use these numbers as calibration checks after drafting.
+
+- Heading shape: about **8.3 words** per heading.
 - Paragraph rhythm: about **7 words** per paragraph sample.
 - CTA shape: about **2.9 words** per CTA.
 - CTA verbs: `see`, `contact`, `get`, `sign`, `buy`.
 - Navigation label shape: about **2.1 words** per label.
-- Lexical variety: **0.29** type-token ratio.
+- Lexical variety: **0.291** type-token ratio.
 
 ## Agent Rules
 
@@ -39,8 +50,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **4.8 and 8.0 words**.
-- Keep headings near **8.2 words**; avoid generic one-word section labels unless the source uses them.
+- Benchmark drift check: keep average sentence length between **5.0 and 8.4 words**.
+- Keep headings near **8.3 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **7.0 words**.
 - Keep CTAs near **2.9 words** and start them with: `see`, `contact`, `get`, `sign`, `buy`.
 - Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
@@ -53,8 +64,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 | Signal | Value |
 | --- | --- |
-| Words | 2696 |
-| Sentences | 85 |
+| Words | 2690 |
+| Sentences | 81 |
 | Headings | 12 |
 | CTA candidates | 7 |
 

@@ -280,6 +280,266 @@ def output_contract(metrics: dict[str, Any], lexicon: list[str], cta_verbs: list
     }
 
 
+def density_label(metrics: dict[str, Any]) -> str:
+    structural_score = int(metrics["words"]) + int(metrics["headings"]) * 28 + int(metrics["links"]) * 10
+    if structural_score >= 1600:
+        return "dense"
+    if structural_score >= 650:
+        return "balanced"
+    return "compact"
+
+
+def conversion_pressure(metrics: dict[str, Any]) -> str:
+    ctas = int(metrics["ctas"])
+    links = int(metrics["links"])
+    score = ctas * 1.4 + min(links, 16) * 0.2
+    if score >= 10:
+        return "high"
+    if score >= 4:
+        return "medium"
+    return "low"
+
+
+def navigation_model(metrics: dict[str, Any]) -> str:
+    links = int(metrics["links"])
+    if links >= 12:
+        return "broad utility navigation"
+    if links >= 5:
+        return "focused product navigation"
+    return "minimal navigation"
+
+
+def archetype_from_hint(hint: str | None) -> str | None:
+    if not hint:
+        return None
+    value = hint.lower()
+    if any(term in value for term in ["streetwear", "fashion", "media", "magazine", "editorial", "culture media"]):
+        return "editorial index"
+    if any(term in value for term in ["streaming", "audio"]):
+        return "subscription landing"
+    if any(term in value for term in ["infrastructure", "developer", "technology", "ai research", "browser", "privacy"]):
+        return "technical product landing"
+    if any(term in value for term in ["visual discovery"]):
+        return "community platform landing"
+    if any(term in value for term in ["commerce", "merchant", "payments", "financial"]):
+        return "commerce journey"
+    if any(term in value for term in ["real estate", "marketplace"]):
+        return "marketplace landing"
+    if any(term in value for term in ["community", "network", "messaging", "video platform", "gaming"]):
+        return "community platform landing"
+    if any(term in value for term in ["productivity", "collaboration", "communication", "workspace", "design platform"]):
+        return "product landing"
+    if any(term in value for term in ["hardware", "electronics"]):
+        return "product landing"
+    return None
+
+
+def page_archetype(payload: dict[str, Any], category_hint: str | None = None) -> str:
+    hinted = archetype_from_hint(category_hint)
+    if hinted:
+        return hinted
+    lexicon = set(payload.get("lexicon", []))
+    tone = set(payload.get("tone", []))
+    archetypes = [
+        (
+            {"article", "articles", "culture", "editorial", "fashion", "latest", "magazine", "news", "stories"},
+            "editorial index",
+        ),
+        (
+            {"movie", "music", "premium", "show", "shows", "stream", "streaming", "subscribe", "subscription", "video"},
+            "subscription landing",
+        ),
+        (
+            {"buy", "cart", "commerce", "merchant", "order", "payment", "payments", "shop", "store"},
+            "commerce journey",
+        ),
+        (
+            {"community", "conversation", "creator", "message", "network", "people", "social", "together"},
+            "community platform landing",
+        ),
+        (
+            {"api", "app", "code", "data", "deploy", "developer", "model", "platform", "workflow"},
+            "technical product landing",
+        ),
+        (
+            {"career", "company", "hiring", "job", "jobs", "professional", "team", "work"},
+            "professional product landing",
+        ),
+        (
+            {"home", "loan", "market", "mortgage", "property", "real", "rent", "seller"},
+            "marketplace landing",
+        ),
+    ]
+    for terms, label in archetypes:
+        if lexicon & terms:
+            return label
+    if "technical" in tone:
+        return "technical product landing"
+    if "action-oriented" in tone:
+        return "conversion landing"
+    return "product landing"
+
+
+def core_section_slot(archetype: str) -> dict[str, str]:
+    if archetype == "editorial index":
+        return {
+            "slot": "feed_index",
+            "goal": "Turn many topics into a scannable editorial path.",
+            "copy_shape": "Short section labels, compact summaries, clear onward links.",
+            "agent_rule": "Use the structure for topic grouping only; bring new subjects and article angles.",
+        }
+    if archetype == "technical product landing":
+        return {
+            "slot": "capability_stack",
+            "goal": "Move from outcome to workflow, proof, and implementation detail.",
+            "copy_shape": "Outcome heading, concrete capability sentence, concise action link.",
+            "agent_rule": "Explain the new product's actual mechanics; do not borrow platform claims.",
+        }
+    if archetype in {"commerce journey", "marketplace landing"}:
+        return {
+            "slot": "decision_path",
+            "goal": "Help the reader compare, trust, and choose the next action.",
+            "copy_shape": "Benefit-led heading, practical constraint, short action.",
+            "agent_rule": "Use only the new offer, price, availability, and trust claims.",
+        }
+    if archetype == "subscription landing":
+        return {
+            "slot": "offer_stack",
+            "goal": "Convert attention into subscription understanding.",
+            "copy_shape": "Offer heading, short value sentence, plan or catalog proof.",
+            "agent_rule": "Replace all catalog, plan, and availability details with owned facts.",
+        }
+    if archetype == "community platform landing":
+        return {
+            "slot": "participation_path",
+            "goal": "Show who joins, what they do, and why they return.",
+            "copy_shape": "People-first heading, one behavior sentence, one join action.",
+            "agent_rule": "Use the new community's real audience and participation model.",
+        }
+    return {
+        "slot": "core_value_sections",
+        "goal": "Explain the product through repeated value, proof, and action blocks.",
+        "copy_shape": "Specific heading, short proof sentence, compact CTA.",
+        "agent_rule": "Keep each section tied to a real product capability.",
+    }
+
+
+def site_sections(payload: dict[str, Any], category_hint: str | None = None) -> list[dict[str, str]]:
+    metrics = payload["metrics"]
+    density = density_label(metrics)
+    pressure = conversion_pressure(metrics)
+    archetype = page_archetype(payload, category_hint=category_hint)
+
+    sections = [
+        {
+            "slot": "navigation",
+            "goal": "Orient the reader before the first claim.",
+            "copy_shape": "Use short noun-led labels; keep utility paths separate from product paths.",
+            "agent_rule": "Use navigation categories from the new product, not the reference source.",
+        },
+        {
+            "slot": "first_screen",
+            "goal": "State the main outcome and give a visible next action.",
+            "copy_shape": "Specific headline, one compact value sentence, and one or two action CTAs.",
+            "agent_rule": "Name the new outcome plainly before explaining features.",
+        },
+        core_section_slot(archetype),
+        {
+            "slot": "proof_band",
+            "goal": "Make the promise believable without overclaiming.",
+            "copy_shape": "Use concrete evidence blocks: metric, customer type, workflow step, or product constraint.",
+            "agent_rule": "Only include proof that the new project can independently support.",
+        },
+    ]
+    if density != "compact":
+        sections.append(
+            {
+                "slot": "detail_sections",
+                "goal": "Give deeper readers enough structure to evaluate fit.",
+                "copy_shape": "Alternate short headings with one-paragraph explanations and compact lists.",
+                "agent_rule": "Split detail by user job, workflow step, or decision criterion.",
+            }
+        )
+    if pressure != "low":
+        sections.append(
+            {
+                "slot": "conversion_band",
+                "goal": "Repeat the next action after value and proof are established.",
+                "copy_shape": "Short reminder sentence plus one primary action CTA.",
+                "agent_rule": "Repeat the real conversion action; do not add urgency unless it is true.",
+            }
+        )
+    sections.append(
+        {
+            "slot": "footer",
+            "goal": "Close with utility, trust, and legal/support paths.",
+            "copy_shape": "Grouped utility links with short labels and no marketing prose.",
+            "agent_rule": "Use owned support, policy, company, and resource links.",
+        }
+    )
+    return sections
+
+
+def site_contract(payload: dict[str, Any], category_hint: str | None = None) -> dict[str, Any]:
+    metrics = payload["metrics"]
+    contract = payload["output_contract"]
+    archetype = page_archetype(payload, category_hint=category_hint)
+    density = density_label(metrics)
+    pressure = conversion_pressure(metrics)
+    sections = site_sections(payload, category_hint=category_hint)
+    return {
+        "schema_version": "site2voice.site.v1",
+        "generator": f"site2voice/{__version__}",
+        "source": payload["source"],
+        "site_summary": {
+            "page_archetype": archetype,
+            "information_density": density,
+            "conversion_pressure": pressure,
+            "navigation_model": navigation_model(metrics),
+            "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers.",
+        },
+        "structure_metrics": {
+            "words": metrics["words"],
+            "headings": metrics["headings"],
+            "ctas": metrics["ctas"],
+            "links": metrics["links"],
+            "avg_heading_words": metrics["avg_heading_words"],
+            "avg_paragraph_words": metrics["avg_paragraph_words"],
+            "avg_cta_words": metrics["avg_cta_words"],
+            "avg_link_words": metrics.get("avg_link_words", 0.0),
+        },
+        "measurement_note": "Numeric ranges are drift checks for benchmarking, not the primary writing method.",
+        "target_ranges": {
+            "heading_words": contract["heading_words"],
+            "paragraph_words": contract["paragraph_words"],
+            "cta_words": contract["cta_words"],
+        },
+        "page_blueprint": [
+            {
+                "order": index,
+                "slot": section["slot"],
+                "goal": section["goal"],
+                "copy_shape": section["copy_shape"],
+            }
+            for index, section in enumerate(sections, start=1)
+        ],
+        "section_recipes": sections,
+        "agent_instructions": [
+            "Use SITE.md for page structure and section order.",
+            "Use VOICE.md for sentence rhythm, CTA shape, and benchmark gates.",
+            "Replace every topic, product noun, market claim, price, and proof point with facts from the new project.",
+            "Do not imply affiliation with, endorsement from, or official representation of the reference source.",
+            "If a needed fact is missing, write a neutral placeholder or remove the claim.",
+        ],
+        "anti_patterns": [
+            "Do not copy source headings, CTA labels, navigation labels, slogans, or campaign names.",
+            "Do not import the reference site's product catalog, audience, pricing, legal claims, or feature names.",
+            "Do not turn structure guidance into a visual design system.",
+            "Do not add urgency, security, performance, customer, or compliance claims without evidence.",
+        ],
+    }
+
+
 def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
     markup, resolved_source = read_source(source, timeout=timeout)
     parser = CopyParser()
@@ -369,7 +629,8 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         "## Voice Summary",
         "",
         f"- Overall tone: **{tone}**.",
-        f"- Sentence shape: about **{metrics['avg_sentence_words']} words** per sentence.",
+        "- Copy method: follow the rhetorical moves, section behavior, CTA pattern, and claim boundaries below.",
+        "- Measurement policy: word ranges are benchmark drift checks, not the main writing method.",
         "- Content policy: this file captures rhythm and structure, not source nouns.",
         "- Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.",
         "",
@@ -379,7 +640,17 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         "- Bring your own product names, topics, claims, examples, and domain nouns.",
         "- Do not use trademarks, logos, proprietary product names, or brand claims unless you already have independent rights to use them.",
         "",
+        "## Writing Moves",
+        "",
+        "- First screen: start with a concrete user outcome, then add one short proof/value sentence.",
+        "- Heading move: make headings specific enough to stand alone in a scan.",
+        "- Body move: explain one idea per paragraph; do not stack unrelated claims.",
+        "- CTA move: use visible action verbs and keep the next step unambiguous.",
+        "- Claim move: prefer supported product behavior over broad market promises.",
+        "",
         "## Style Fingerprint",
+        "",
+        "Use these numbers as calibration checks after drafting.",
         "",
         f"- Heading shape: about **{metrics['avg_heading_words']} words** per heading.",
         f"- Paragraph rhythm: about **{metrics['avg_paragraph_words']} words** per paragraph sample.",
@@ -401,7 +672,7 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         "",
         "## Output Contract",
         "",
-        f"- Keep average sentence length between **{sentence_words['min']} and {sentence_words['max']} words**.",
+        f"- Benchmark drift check: keep average sentence length between **{sentence_words['min']} and {sentence_words['max']} words**.",
         f"- Keep headings near **{heading_words['target']} words**; avoid generic one-word section labels unless the source uses them.",
         f"- Keep paragraph blocks near **{paragraph_words['target']} words**.",
         f"- Keep CTAs near **{cta_words['target']} words** and start them with: {contract_verbs}.",
@@ -452,6 +723,98 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
     return "\n".join(lines)
 
 
+def to_site_markdown(payload: dict[str, Any], category_hint: str | None = None) -> str:
+    contract = site_contract(payload, category_hint=category_hint)
+    summary = contract["site_summary"]
+    metrics = contract["structure_metrics"]
+    ranges = contract["target_ranges"]
+    blueprint = contract["page_blueprint"]
+    recipes = contract["section_recipes"]
+
+    lines = [
+        "# SITE.md",
+        "",
+        f"Reference source: `{payload['source']}`",
+        "",
+        "Use this file as a reference-only page-structure contract for AI-generated websites.",
+        "",
+        "Pair it with `VOICE.md`: `SITE.md` controls section order and page intent; `VOICE.md` controls copy rhythm, CTA shape, and benchmark gates.",
+        "",
+        "## Site Summary",
+        "",
+        f"- Page archetype: **{summary['page_archetype']}**.",
+        f"- Information density: **{summary['information_density']}**.",
+        f"- Conversion pressure: **{summary['conversion_pressure']}**.",
+        f"- Navigation model: **{summary['navigation_model']}**.",
+        f"- Content boundary: {summary['content_boundary']}",
+        "- Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.",
+        "",
+        "## Page Blueprint",
+        "",
+        "| Order | Slot | Purpose |",
+        "| ---: | --- | --- |",
+    ]
+    for item in blueprint:
+        lines.append(f"| {item['order']} | `{item['slot']}` | {item['goal']} |")
+
+    lines.extend(
+        [
+            "",
+            "## Section Recipes",
+            "",
+            "| Slot | Copy Shape | Agent Rule |",
+            "| --- | --- | --- |",
+        ]
+    )
+    for recipe in recipes:
+        lines.append(f"| `{recipe['slot']}` | {recipe['copy_shape']} | {recipe['agent_rule']} |")
+
+    lines.extend(
+        [
+            "",
+            "## Rhetorical Pattern",
+            "",
+            "- Opening move: name the reader outcome before listing mechanics.",
+            "- Section rhythm: move from value, to proof, to action, then to detail only when needed.",
+            "- Proof move: use real product behavior, customer evidence, constraints, or measurable facts.",
+            "- CTA move: repeat one primary next action after the reader has enough context.",
+            "- Density move: keep compact pages decisive; make dense pages scannable with clear section jobs.",
+            "",
+            "## Agent Instructions",
+            "",
+        ]
+    )
+    lines.extend(f"- {item}" for item in contract["agent_instructions"])
+    lines.extend(
+        [
+            "",
+            "## Content Boundary",
+            "",
+        ]
+    )
+    lines.extend(f"- {item}" for item in contract["anti_patterns"])
+    lines.extend(
+        [
+            "",
+            "## Measurement",
+            "",
+            "These numbers are drift checks for benchmarking, not the main writing method.",
+            "",
+            "| Signal | Value |",
+            "| --- | ---: |",
+            f"| Words measured | {metrics['words']} |",
+            f"| Headings measured | {metrics['headings']} |",
+            f"| CTA candidates measured | {metrics['ctas']} |",
+            f"| Link labels measured | {metrics['links']} |",
+            f"| Heading word target | {ranges['heading_words']['target']} |",
+            f"| Paragraph word target | {ranges['paragraph_words']['target']} |",
+            f"| CTA word target | {ranges['cta_words']['target']} |",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def trim_snippet(value: str, limit: int = 96) -> str:
     value = clean_text(value)
     if len(value) <= limit:
@@ -462,3 +825,7 @@ def trim_snippet(value: str, limit: int = 96) -> str:
 
 def to_json(payload: dict[str, Any]) -> str:
     return json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+
+
+def to_site_json(payload: dict[str, Any], category_hint: str | None = None) -> str:
+    return json.dumps(site_contract(payload, category_hint=category_hint), ensure_ascii=False, indent=2) + "\n"

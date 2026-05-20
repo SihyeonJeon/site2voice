@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 0.5.4
+
+- Added `SITE.md` page-structure profiles beside existing `VOICE.md` copy
+  profiles.
+- Added `site2voice site SOURCE --out SITE.md` and machine-readable
+  `site2voice.site.v1` / `site.json` output.
+- Updated context packs to include `SITE.md`, `site.json`, `VOICE.md`,
+  `voice.json`, and a combined agent prompt.
+- Added a flat `sites/` collection for direct no-install downloads.
+- Kept numeric ranges as benchmark drift checks while moving public guidance
+  toward section recipes, rhetorical patterns, and content boundaries.
+
 ## 0.5.3
 
 - Added 18 reference-only copy profiles from popular web products and platforms.

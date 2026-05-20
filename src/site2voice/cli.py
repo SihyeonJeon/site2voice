@@ -7,7 +7,7 @@ from pathlib import Path
 from . import __version__
 from .benchmark import benchmark, benchmark_failures, benchmark_json, benchmark_markdown
 from .context_pack import create_context_pack
-from .extract import analyze, to_json, to_markdown
+from .extract import analyze, to_json, to_markdown, to_site_json, to_site_markdown
 
 
 def build_generate_parser() -> argparse.ArgumentParser:
@@ -17,6 +17,7 @@ def build_generate_parser() -> argparse.ArgumentParser:
         epilog=(
             "Commands:\n"
             "  site2voice SOURCE --out VOICE.md\n"
+            "  site2voice site SOURCE --out SITE.md\n"
             "  site2voice init SOURCE --dir .site2voice\n"
             "  site2voice bench REFERENCE candidate.md --strict"
         ),
@@ -29,6 +30,18 @@ def build_generate_parser() -> argparse.ArgumentParser:
     parser.add_argument("--timeout", type=float, default=20.0, help="seconds to wait for URL fetches")
     parser.add_argument("--max-snippets", type=int, default=8, help="max evidence snippets in Markdown output")
     parser.add_argument("--no-samples", action="store_true", help="omit page-pattern and paragraph samples")
+    return parser
+
+
+def build_site_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="site2voice site",
+        description="Generate an agent-ready SITE.md page-structure profile.",
+    )
+    parser.add_argument("source", help="URL or local HTML file")
+    parser.add_argument("--format", choices=["md", "json"], default="md")
+    parser.add_argument("--out", help="write output to this path")
+    parser.add_argument("--timeout", type=float, default=20.0, help="seconds to wait for URL fetches")
     return parser
 
 
@@ -52,7 +65,7 @@ def build_bench_parser() -> argparse.ArgumentParser:
 def build_init_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="site2voice init",
-        description="Create an agent-ready copy profile context pack.",
+        description="Create an agent-ready SITE.md and VOICE.md context pack.",
     )
     parser.add_argument("source", help="URL or local HTML file")
     parser.add_argument("--dir", default=".site2voice", help="output directory for the context pack")
@@ -81,6 +94,18 @@ def cmd_generate(argv: list[str] | None) -> int:
         return 1
     max_snippets = 0 if args.no_samples else args.max_snippets
     output = to_json(payload) if args.format == "json" else to_markdown(payload, max_snippets=max_snippets)
+    write_output(output, args.out)
+    return 0
+
+
+def cmd_site(argv: list[str]) -> int:
+    args = build_site_parser().parse_args(argv)
+    try:
+        payload = analyze(args.source, timeout=args.timeout)
+    except Exception as exc:  # noqa: BLE001
+        print(f"ERROR: {exc}", file=sys.stderr)
+        return 1
+    output = to_site_json(payload) if args.format == "json" else to_site_markdown(payload)
     write_output(output, args.out)
     return 0
 
@@ -122,7 +147,7 @@ def cmd_init(argv: list[str]) -> int:
     except Exception as exc:  # noqa: BLE001
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
-    print(f"Created voice context pack in {result['output_dir']}:")
+    print(f"Created site2voice context pack in {result['output_dir']}:")
     for path in result["files"].values():
         print(f"- {path}")
     return 0
@@ -134,6 +159,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_bench(argv[1:])
     if argv and argv[0] == "init":
         return cmd_init(argv[1:])
+    if argv and argv[0] == "site":
+        return cmd_site(argv[1:])
     return cmd_generate(argv)
 
 
