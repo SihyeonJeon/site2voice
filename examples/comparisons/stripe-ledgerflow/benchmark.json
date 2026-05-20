@@ -1,0 +1,133 @@
+{
+  "reference": {
+    "source": "https://stripe.com/",
+    "metrics": {
+      "words": 1748,
+      "sentences": 111,
+      "avg_sentence_words": 15.7,
+      "avg_heading_words": 7.2,
+      "avg_paragraph_words": 7.8,
+      "avg_cta_words": 2.6,
+      "headings": 12,
+      "ctas": 12,
+      "links": 16,
+      "type_token_ratio": 0.301
+    },
+    "tone": [
+      "balanced",
+      "action-oriented"
+    ],
+    "style": {
+      "cta_verbs": [
+        "sign",
+        "start",
+        "contact",
+        "get",
+        "create",
+        "watch",
+        "explore",
+        "see"
+      ],
+      "punctuation": {
+        "periods": 111,
+        "questions": 0,
+        "exclamations": 0,
+        "colons": 1
+      }
+    },
+    "lexicon": [
+      "stripe",
+      "read",
+      "payments",
+      "story",
+      "financial",
+      "business",
+      "how",
+      "commerce",
+      "products",
+      "crypto",
+      "billing",
+      "businesses",
+      "platforms",
+      "grow",
+      "revenue",
+      "tools"
+    ],
+    "ctas": [
+      "Sign in",
+      "Start now",
+      "Contact sales",
+      "Get started",
+      "Sign up with Google",
+      "Create a card issuing program",
+      "Watch now",
+      "Explore no-code"
+    ]
+  },
+  "candidates": [
+    {
+      "label": "output-with-voice",
+      "score": 63.1,
+      "grade": "mixed",
+      "pass": false,
+      "scores": {
+        "sentence_fit": 79.7,
+        "lexicon_fit": 40.0,
+        "cta_fit": 100.0,
+        "tone_fit": 0.0,
+        "heading_fit": 49.2,
+        "claim_safety": 100.0,
+        "copy_safety": 100.0
+      },
+      "metrics": {
+        "words": 138,
+        "sentences": 7,
+        "avg_sentence_words": 19.7,
+        "headings": 10,
+        "ctas": 3,
+        "type_token_ratio": 0.717
+      },
+      "tone": [
+        "explanatory"
+      ],
+      "lexicon_overlap": [
+        "payments",
+        "read",
+        "revenue",
+        "story"
+      ],
+      "longest_shared_run": 4
+    },
+    {
+      "label": "output-without-voice",
+      "score": 54.7,
+      "grade": "weak",
+      "pass": false,
+      "scores": {
+        "sentence_fit": 74.1,
+        "lexicon_fit": 10.0,
+        "cta_fit": 75.0,
+        "tone_fit": 0.0,
+        "heading_fit": 79.2,
+        "claim_safety": 100.0,
+        "copy_safety": 100.0
+      },
+      "metrics": {
+        "words": 191,
+        "sentences": 9,
+        "avg_sentence_words": 21.2,
+        "headings": 8,
+        "ctas": 3,
+        "type_token_ratio": 0.743
+      },
+      "tone": [
+        "explanatory",
+        "technical"
+      ],
+      "lexicon_overlap": [
+        "payments"
+      ],
+      "longest_shared_run": 2
+    }
+  ]
+}

@@ -37,6 +37,9 @@ curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/packs/stri
 
 See [packs](packs/README.md).
 
+See also the [Stripe pack comparison](examples/comparisons/stripe-ledgerflow/README.md),
+which shows the same prompt run with and without `VOICE.md`.
+
 ## What You Get
 
 ```text
