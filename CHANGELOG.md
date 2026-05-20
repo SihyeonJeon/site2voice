@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+- Added the `pypi` GitHub environment claim to the Trusted Publishing workflow.
+
 ## 0.2.0
 
 - Added `site2voice bench` for before/after voice-alignment scoring.
