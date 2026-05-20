@@ -18,10 +18,10 @@ docs, onboarding flows, and UI microcopy, the agent also needs:
 
 - message hierarchy;
 - CTA language;
-- navigation vocabulary;
+- navigation labels;
 - sentence length;
 - claim boundaries;
-- words to reuse and words to avoid.
+- source-specific terms to avoid transferring.
 
 `site2voice` targets that gap with a deterministic `VOICE.md` generator.
 
@@ -36,8 +36,8 @@ site2voice SOURCE --out VOICE.md
 site2voice bench SOURCE before.md after.md
 ```
 
-The benchmark scores sentence shape, vocabulary overlap, CTA shape, heading
-shape, tone labels, claim boundaries, and copy safety.
+The benchmark scores sentence shape, lexical variety, CTA shape, heading shape,
+tone labels, claim boundaries, and copy safety.
 
 ## Product Bet
 
@@ -51,7 +51,7 @@ The output should answer:
 
 - What does this site sound like?
 - What CTAs does it use?
-- What vocabulary should an agent reuse?
+- Which source-specific terms should stay out of unrelated projects?
 - What claims must the agent avoid inventing?
 
 ## Boundaries

@@ -29,9 +29,12 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertEqual(code, 0)
             text = out.read_text(encoding="utf-8")
             self.assertIn("# VOICE.md", text)
-            self.assertIn("Common CTAs", text)
+            self.assertIn("CTA verbs", text)
+            self.assertIn("Navigation label shape", text)
             self.assertIn("Output Contract", text)
-            self.assertIn("Start free", text)
+            self.assertIn("Content boundary", text)
+            self.assertNotIn("Main vocabulary", text)
+            self.assertNotIn("Start free", text)
 
     def test_cli_writes_json(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -43,6 +46,8 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertGreater(payload["metrics"]["words"], 20)
             self.assertIn("output_contract", payload)
             self.assertIn("sentence_words", payload["output_contract"])
+            self.assertEqual(payload["output_contract"]["recommended_terms"], [])
+            self.assertIn("source_terms", payload["output_contract"])
 
     def test_benchmark_scores_after_above_before(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -106,7 +111,15 @@ class Site2VoiceTests(unittest.TestCase):
             voice_json = json.loads((target / "voice.json").read_text(encoding="utf-8"))
             self.assertEqual(voice_json["schema_version"], "site2voice.voice.v1")
             self.assertIn("output_contract", voice_json)
+            self.assertEqual(voice_json["title"], "")
+            self.assertEqual(voice_json["meta_description"], "")
+            self.assertEqual(voice_json["headings"], [])
             self.assertEqual(voice_json["paragraph_samples"], [])
+            self.assertEqual(voice_json["lexicon"], [])
+            self.assertEqual(voice_json["ctas"], [])
+            self.assertEqual(voice_json["links"], [])
+            self.assertEqual(voice_json["buttons"], [])
+            self.assertEqual(voice_json["output_contract"]["source_terms"], [])
             agent_prompt = (target / "agent-prompt.md").read_text(encoding="utf-8")
             self.assertIn("Output Contract", agent_prompt)
             self.assertIn("site2voice bench", agent_prompt)

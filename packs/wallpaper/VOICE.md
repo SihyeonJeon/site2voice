@@ -7,10 +7,8 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 ## Voice Summary
 
 - Overall tone: **explanatory**.
-- Sentence shape: about **69.2 words** per sentence.
-- Main vocabulary: `may`, `published`, `new`, `design`, `wallpaper`, `travel`, `last`, `updated`, `jack`, `moss`, `tianna`, `williams`.
-- Common CTAs: `Sign up to our newsletter Newsletter`, `Contact Future's experts`.
-- Navigation labels: `Wallpaper*`, `Architecture`, `Design & interiors`, `Art & Culture`, `Watches & Jewellery`, `Fashion & Beauty`, `Technology`, `Transportation`, `Travel`, `Entertaining`.
+- Sentence shape: about **69.0 words** per sentence.
+- Content policy: this file captures rhythm and structure, not source nouns.
 
 ## Style Fingerprint
 
@@ -18,24 +16,26 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Paragraph rhythm: about **17.2 words** per paragraph sample.
 - CTA shape: about **4.5 words** per CTA.
 - CTA verbs: `sign`, `contact`.
-- Lexical variety: **0.227** type-token ratio.
+- Navigation label shape: about **1.9 words** per label.
+- Lexical variety: **0.228** type-token ratio.
 
 ## Agent Rules
 
 - Start with a concrete user outcome before describing implementation details.
 - Prefer short active sentences and visible verbs from the CTA list.
-- Reuse the observed vocabulary, but do not copy full marketing paragraphs.
-- Keep headings specific; avoid generic labels like `Powerful features` unless the source uses that pattern.
+- Reuse rhythm, CTA shape, and information order; bring your own product nouns.
+- Do not import source-specific topics, product names, market claims, or domain nouns.
+- Keep headings specific; avoid generic labels like `<generic feature label>` unless the source uses that pattern.
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
 ## Output Contract
 
-- Keep average sentence length between **51.9 and 86.5 words**.
+- Keep average sentence length between **51.8 and 86.2 words**.
 - Keep headings near **1.5 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **17.2 words**.
 - Keep CTAs near **4.5 words** and start them with: `sign`, `contact`.
-- Use at least **4** of these terms where natural: `may`, `published`, `new`, `design`, `wallpaper`, `travel`, `last`, `updated`, `jack`, `moss`, `tianna`, `williams`.
+- Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
   `site2voice bench https://www.wallpaper.com/ path/to/candidate.md --strict`
@@ -45,14 +45,15 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 
 | Signal | Value |
 | --- | --- |
-| Words | 2076 |
+| Words | 2071 |
 | Sentences | 30 |
 | Headings | 12 |
 | CTA candidates | 2 |
 
 ## Do / Don't
 
-- Do: write concise, outcome-first copy using the observed verbs and nouns.
+- Do: write concise, outcome-first copy using the observed rhythm and CTA verbs.
 - Do: keep CTAs short and action-led.
+- Don't: transfer source-specific nouns into an unrelated project.
 - Don't: paste source paragraphs verbatim.
 - Don't: add claims the source did not support.

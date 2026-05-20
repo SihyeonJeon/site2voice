@@ -8,9 +8,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 
 - Overall tone: **balanced, action-oriented, technical**.
 - Sentence shape: about **12.9 words** per sentence.
-- Main vocabulary: `linear`, `product`, `teams`, `agents`, `app`, `agent`, `just`, `contact`, `plan`, `work`, `will`, `customers`.
-- Common CTAs: `Contact`, `Sign up`, `3.0 Build →`, `Get started`, `Contact sales`, `Download`, `Build`, `Contact us`.
-- Navigation labels: `Skip to content →`, `Customers`, `Pricing`, `Now`, `Contact`, `Docs`, `Open app`, `Log in`, `Sign up`, `1.0 Intake →`.
+- Content policy: this file captures rhythm and structure, not source nouns.
 
 ## Style Fingerprint
 
@@ -18,14 +16,16 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Paragraph rhythm: about **16.1 words** per paragraph sample.
 - CTA shape: about **1.5 words** per CTA.
 - CTA verbs: `contact`, `sign`, `build`, `get`, `download`.
+- Navigation label shape: about **1.4 words** per label.
 - Lexical variety: **0.399** type-token ratio.
 
 ## Agent Rules
 
 - Start with a concrete user outcome before describing implementation details.
 - Prefer short active sentences and visible verbs from the CTA list.
-- Reuse the observed vocabulary, but do not copy full marketing paragraphs.
-- Keep headings specific; avoid generic labels like `Powerful features` unless the source uses that pattern.
+- Reuse rhythm, CTA shape, and information order; bring your own product nouns.
+- Do not import source-specific topics, product names, market claims, or domain nouns.
+- Keep headings specific; avoid generic labels like `<generic feature label>` unless the source uses that pattern.
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
@@ -35,7 +35,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Keep headings near **7.2 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **16.1 words**.
 - Keep CTAs near **1.5 words** and start them with: `contact`, `sign`, `build`, `get`, `download`.
-- Use at least **4** of these terms where natural: `linear`, `product`, `teams`, `agents`, `app`, `agent`, `just`, `contact`, `plan`, `work`, `will`, `customers`.
+- Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
   `site2voice bench https://linear.app/ path/to/candidate.md --strict`
@@ -52,7 +52,8 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 
 ## Do / Don't
 
-- Do: write concise, outcome-first copy using the observed verbs and nouns.
+- Do: write concise, outcome-first copy using the observed rhythm and CTA verbs.
 - Do: keep CTAs short and action-led.
+- Don't: transfer source-specific nouns into an unrelated project.
 - Don't: paste source paragraphs verbatim.
 - Don't: add claims the source did not support.

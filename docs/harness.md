@@ -6,7 +6,7 @@
    live examples or should be represented by synthetic fixtures.
 2. **Profiler** runs `site2voice SOURCE --format json` and extracts measurable
    voice signals: sentence shape, heading shape, CTA verbs, lexical variety,
-   and repeated vocabulary.
+   and source-term boundaries.
 3. **Initializer** runs `site2voice init SOURCE` to create `VOICE.md`,
    `voice.json`, and `agent-prompt.md`.
 4. **Writer** uses the generated `VOICE.md` as context to write new candidate

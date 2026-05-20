@@ -12,6 +12,7 @@
       "avg_heading_words": 5.2,
       "avg_paragraph_words": 14.8,
       "avg_cta_words": 2,
+      "avg_link_words": 2,
       "headings": 12,
       "ctas": 3,
       "links": 16,
@@ -21,20 +22,6 @@
       "explanatory",
       "technical",
       "trust-forward"
-    ],
-    "lexicon": [
-      "claude",
-      "anthropic",
-      "security",
-      "policy",
-      "code",
-      "log",
-      "responsible",
-      "download",
-      "app",
-      "constitution",
-      "scaling",
-      "compliance"
     ]
   },
   {
@@ -50,6 +37,7 @@
       "avg_heading_words": 2,
       "avg_paragraph_words": 6.1,
       "avg_cta_words": 3.6,
+      "avg_link_words": 1.3,
       "headings": 12,
       "ctas": 9,
       "links": 16,
@@ -58,20 +46,6 @@
     "tone": [
       "explanatory",
       "action-oriented"
-    ],
-    "lexicon": [
-      "apple",
-      "card",
-      "offer",
-      "account",
-      "now",
-      "new",
-      "cash",
-      "daily",
-      "period",
-      "this",
-      "airpods",
-      "qualifying"
     ]
   },
   {
@@ -87,6 +61,7 @@
       "avg_heading_words": 1,
       "avg_paragraph_words": 16.2,
       "avg_cta_words": 2,
+      "avg_link_words": 1.4,
       "headings": 1,
       "ctas": 1,
       "links": 8,
@@ -94,20 +69,6 @@
     },
     "tone": [
       "balanced"
-    ],
-    "lexicon": [
-      "eyesmag",
-      "회사소개",
-      "fashion",
-      "info",
-      "com",
-      "아이즈매거진",
-      "라이프스타일",
-      "매거진입니다",
-      "매력적인",
-      "정보를",
-      "선별하고",
-      "데스크톱"
     ]
   },
   {
@@ -123,6 +84,7 @@
       "avg_heading_words": 4.8,
       "avg_paragraph_words": 3.2,
       "avg_cta_words": 3.2,
+      "avg_link_words": 2.7,
       "headings": 12,
       "ctas": 12,
       "links": 16,
@@ -132,20 +94,6 @@
       "explanatory",
       "action-oriented",
       "technical"
-    ],
-    "lexicon": [
-      "figma",
-      "design",
-      "explore",
-      "code",
-      "make",
-      "prompt",
-      "anything",
-      "tools",
-      "sites",
-      "imagine",
-      "product",
-      "started"
     ]
   },
   {
@@ -161,6 +109,7 @@
       "avg_heading_words": 5.3,
       "avg_paragraph_words": 12.4,
       "avg_cta_words": 3.2,
+      "avg_link_words": 3.1,
       "headings": 12,
       "ctas": 12,
       "links": 16,
@@ -171,20 +120,6 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ],
-    "lexicon": [
-      "github",
-      "code",
-      "security",
-      "copilot",
-      "view",
-      "explore",
-      "support",
-      "features",
-      "customer",
-      "platform",
-      "manage",
-      "community"
     ]
   },
   {
@@ -200,6 +135,7 @@
       "avg_heading_words": 9.2,
       "avg_paragraph_words": 21,
       "avg_cta_words": 2,
+      "avg_link_words": 1.4,
       "headings": 12,
       "ctas": 3,
       "links": 16,
@@ -207,20 +143,6 @@
     },
     "tone": [
       "explanatory"
-    ],
-    "lexicon": [
-      "culture",
-      "style",
-      "highsnobiety",
-      "beauty",
-      "brands",
-      "sneakers",
-      "now",
-      "this",
-      "spring",
-      "issue",
-      "sable",
-      "yong"
     ]
   },
   {
@@ -236,6 +158,7 @@
       "avg_heading_words": 7.3,
       "avg_paragraph_words": 7.8,
       "avg_cta_words": 2,
+      "avg_link_words": 1.3,
       "headings": 12,
       "ctas": 1,
       "links": 16,
@@ -243,20 +166,6 @@
     },
     "tone": [
       "explanatory"
-    ],
-    "lexicon": [
-      "브랜드",
-      "댓글들",
-      "컬렉션",
-      "디자인",
-      "라이프스타일",
-      "hypebeast",
-      "한국어",
-      "버튼을",
-      "클릭합니다",
-      "페이지를",
-      "아래의",
-      "hypebae"
     ]
   },
   {
@@ -272,6 +181,7 @@
       "avg_heading_words": 7.2,
       "avg_paragraph_words": 16.1,
       "avg_cta_words": 1.5,
+      "avg_link_words": 1.4,
       "headings": 12,
       "ctas": 8,
       "links": 16,
@@ -281,20 +191,6 @@
       "balanced",
       "action-oriented",
       "technical"
-    ],
-    "lexicon": [
-      "linear",
-      "product",
-      "teams",
-      "agents",
-      "app",
-      "agent",
-      "just",
-      "contact",
-      "plan",
-      "work",
-      "will",
-      "customers"
     ]
   },
   {
@@ -304,12 +200,13 @@
     "category": "global affairs and culture media",
     "use": "polished city, design, and affairs copy",
     "metrics": {
-      "words": 2675,
+      "words": 2690,
       "sentences": 40,
-      "avg_sentence_words": 66.9,
-      "avg_heading_words": 8.2,
+      "avg_sentence_words": 67.2,
+      "avg_heading_words": 8.3,
       "avg_paragraph_words": 7,
       "avg_cta_words": 2.9,
+      "avg_link_words": 2.1,
       "headings": 12,
       "ctas": 7,
       "links": 16,
@@ -318,20 +215,6 @@
     "tone": [
       "explanatory",
       "action-oriented"
-    ],
-    "lexicon": [
-      "monocle",
-      "min",
-      "city",
-      "design",
-      "guides",
-      "read",
-      "affairs",
-      "radio",
-      "new",
-      "travel",
-      "shop",
-      "fashion"
     ]
   },
   {
@@ -347,6 +230,7 @@
       "avg_heading_words": 2.7,
       "avg_paragraph_words": 9,
       "avg_cta_words": 3,
+      "avg_link_words": 3.4,
       "headings": 12,
       "ctas": 5,
       "links": 16,
@@ -357,20 +241,6 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ],
-    "lexicon": [
-      "work",
-      "notion",
-      "agents",
-      "enterprise",
-      "knowledge",
-      "search",
-      "custom",
-      "own",
-      "over",
-      "tools",
-      "automate",
-      "answers"
     ]
   },
   {
@@ -386,6 +256,7 @@
       "avg_heading_words": 2.4,
       "avg_paragraph_words": 2.2,
       "avg_cta_words": 4.6,
+      "avg_link_words": 3.1,
       "headings": 5,
       "ctas": 5,
       "links": 16,
@@ -395,20 +266,6 @@
       "explanatory",
       "action-oriented",
       "technical"
-    ],
-    "lexicon": [
-      "new",
-      "opens",
-      "window",
-      "research",
-      "product",
-      "chatgpt",
-      "may",
-      "gpt-5",
-      "business",
-      "min",
-      "read",
-      "safety"
     ]
   },
   {
@@ -418,33 +275,22 @@
     "category": "commerce platform",
     "use": "merchant-growth product copy",
     "metrics": {
-      "words": 1699,
-      "sentences": 77,
-      "avg_sentence_words": 22.1,
-      "avg_heading_words": 4.4,
-      "avg_paragraph_words": 4.2,
-      "avg_cta_words": 2.5,
+      "words": 1771,
+      "sentences": 87,
+      "avg_sentence_words": 20.4,
+      "avg_heading_words": 5.4,
+      "avg_paragraph_words": 4.5,
+      "avg_cta_words": 3,
+      "avg_link_words": 1.9,
       "headings": 12,
-      "ctas": 2,
+      "ctas": 5,
       "links": 16,
-      "type_token_ratio": 0.293
+      "type_token_ratio": 0.25
     },
     "tone": [
-      "explanatory"
-    ],
-    "lexicon": [
-      "english",
-      "shopify",
-      "espa",
-      "fran",
-      "ais",
-      "sidekick",
-      "상거래",
-      "com",
-      "deutsch",
-      "에이전트",
-      "dev",
-      "shop"
+      "explanatory",
+      "action-oriented",
+      "trust-forward"
     ]
   },
   {
@@ -460,6 +306,7 @@
       "avg_heading_words": 7.2,
       "avg_paragraph_words": 7.8,
       "avg_cta_words": 2.6,
+      "avg_link_words": 2.4,
       "headings": 12,
       "ctas": 12,
       "links": 16,
@@ -468,20 +315,6 @@
     "tone": [
       "balanced",
       "action-oriented"
-    ],
-    "lexicon": [
-      "stripe",
-      "read",
-      "payments",
-      "story",
-      "financial",
-      "business",
-      "how",
-      "commerce",
-      "products",
-      "crypto",
-      "billing",
-      "businesses"
     ]
   },
   {
@@ -497,6 +330,7 @@
       "avg_heading_words": 2.6,
       "avg_paragraph_words": 4.5,
       "avg_cta_words": 3.9,
+      "avg_link_words": 4.6,
       "headings": 12,
       "ctas": 11,
       "links": 16,
@@ -507,20 +341,6 @@
       "action-oriented",
       "technical",
       "trust-forward"
-    ],
-    "lexicon": [
-      "web",
-      "apps",
-      "scale",
-      "platform",
-      "deploy",
-      "vercel",
-      "protection",
-      "next",
-      "one",
-      "ship",
-      "fast",
-      "help"
     ]
   },
   {
@@ -530,33 +350,20 @@
     "category": "design and architecture media",
     "use": "design, interiors, and architecture editorial copy",
     "metrics": {
-      "words": 2076,
+      "words": 2071,
       "sentences": 30,
-      "avg_sentence_words": 69.2,
+      "avg_sentence_words": 69.0,
       "avg_heading_words": 1.5,
       "avg_paragraph_words": 17.2,
       "avg_cta_words": 4.5,
+      "avg_link_words": 1.9,
       "headings": 12,
       "ctas": 2,
       "links": 16,
-      "type_token_ratio": 0.227
+      "type_token_ratio": 0.228
     },
     "tone": [
       "explanatory"
-    ],
-    "lexicon": [
-      "may",
-      "published",
-      "new",
-      "design",
-      "wallpaper",
-      "travel",
-      "last",
-      "updated",
-      "jack",
-      "moss",
-      "tianna",
-      "williams"
     ]
   }
 ]

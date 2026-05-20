@@ -2,8 +2,8 @@
   "schema_version": "site2voice.voice.v1",
   "generator": "site2voice/0.5.0",
   "source": "https://www.eyesmag.com/about",
-  "title": "아이즈매거진 | eyesmag",
-  "meta_description": "<아이즈매거진>은 패션&라이프스타일 웹 매거진입니다.",
+  "title": "",
+  "meta_description": "",
   "metrics": {
     "words": 769,
     "sentences": 60,
@@ -11,6 +11,7 @@
     "avg_heading_words": 1,
     "avg_paragraph_words": 16.2,
     "avg_cta_words": 2,
+    "avg_link_words": 1.4,
     "headings": 1,
     "ctas": 1,
     "links": 8,
@@ -21,7 +22,7 @@
   ],
   "style": {
     "cta_verbs": [
-      "profile"
+      "download"
     ],
     "punctuation": {
       "periods": 51,
@@ -51,72 +52,23 @@
       "min": 1.5,
       "max": 2.5
     },
-    "recommended_terms": [
-      "eyesmag",
-      "회사소개",
-      "fashion",
-      "info",
-      "com",
-      "아이즈매거진",
-      "라이프스타일",
-      "매거진입니다",
-      "매력적인",
-      "정보를",
-      "선별하고",
-      "데스크톱"
-    ],
+    "recommended_terms": [],
+    "source_terms": [],
     "cta_verbs": [
-      "profile"
+      "download"
     ],
-    "minimum_recommended_terms": 4,
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
     "benchmark_gates": {
       "overall": 75,
       "copy_safety": 85,
       "claim_safety": 75
     }
   },
-  "headings": [
-    "회사소개"
-  ],
-  "ctas": [
-    "Profile download"
-  ],
-  "links": [
-    "샵",
-    "회사소개",
-    "info@eyesmag.com",
-    "Profile download",
-    "윤리강령",
-    "고충처리인",
-    "개인정보처리방침",
-    "홈"
-  ],
+  "headings": [],
+  "ctas": [],
+  "links": [],
   "buttons": [],
-  "lexicon": [
-    "eyesmag",
-    "회사소개",
-    "fashion",
-    "info",
-    "com",
-    "아이즈매거진",
-    "라이프스타일",
-    "매거진입니다",
-    "매력적인",
-    "정보를",
-    "선별하고",
-    "데스크톱",
-    "태블릿",
-    "스마트폰",
-    "디바이스에",
-    "디지털",
-    "환경에서",
-    "편리하게",
-    "이용할",
-    "있도록",
-    "최적의",
-    "과정을",
-    "콘텐츠를",
-    "실시간으로"
-  ],
+  "lexicon": [],
   "paragraph_samples": []
 }

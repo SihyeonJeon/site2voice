@@ -29,9 +29,9 @@ landing-page or docs copy.
 Add this to `CLAUDE.md` or a project skill:
 
 ```md
-When writing website copy, read `.site2voice/VOICE.md` first. Use the vocabulary,
+When writing website copy, read `.site2voice/VOICE.md` first. Use the rhythm,
 CTA shape, Output Contract, and claim boundaries. Do not paste source
-paragraphs. Validate with `site2voice bench`.
+paragraphs or transfer source-specific nouns. Validate with `site2voice bench`.
 ```
 
 ## Cursor / Copilot

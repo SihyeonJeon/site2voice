@@ -32,13 +32,13 @@ Use @VOICE.md for headings, CTAs, navigation labels, and UI microcopy.
 | [Highsnobiety](highsnobiety/VOICE.md) | fashion and culture media | 1716 | 22.3 | 3 | commerce-aware culture editorial copy |
 | [Hypebeast](hypebeast/VOICE.md) | streetwear and culture media | 993 | 47.3 | 1 | trend-led culture editorial copy |
 | [Linear](linear/VOICE.md) | developer productivity | 797 | 12.9 | 8 | precise product-team positioning |
-| [Monocle](monocle/VOICE.md) | global affairs and culture media | 2675 | 66.9 | 7 | polished city, design, and affairs copy |
+| [Monocle](monocle/VOICE.md) | global affairs and culture media | 2690 | 67.2 | 7 | polished city, design, and affairs copy |
 | [Notion](notion/VOICE.md) | workspace productivity | 635 | 14.8 | 5 | simple workspace and AI-product copy |
 | [OpenAI](openai/VOICE.md) | AI research and product | 554 | 46.2 | 5 | research-to-product institutional copy |
-| [Shopify](shopify/VOICE.md) | commerce platform | 1699 | 22.1 | 2 | merchant-growth product copy |
+| [Shopify](shopify/VOICE.md) | commerce platform | 1771 | 20.4 | 5 | merchant-growth product copy |
 | [Stripe](stripe/VOICE.md) | financial infrastructure | 1748 | 15.7 | 12 | technical trust-forward SaaS copy |
 | [Vercel](vercel/VOICE.md) | developer platform | 2033 | 34.5 | 11 | performance and deployment copy |
-| [Wallpaper](wallpaper/VOICE.md) | design and architecture media | 2076 | 69.2 | 2 | design, interiors, and architecture editorial copy |
+| [Wallpaper](wallpaper/VOICE.md) | design and architecture media | 2071 | 69.0 | 2 | design, interiors, and architecture editorial copy |
 
 Regenerate:
 

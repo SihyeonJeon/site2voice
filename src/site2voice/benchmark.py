@@ -95,21 +95,21 @@ def heading_fit(reference: dict[str, Any], candidate: dict[str, Any]) -> float:
 
 
 def cta_fit(reference: dict[str, Any], candidate: dict[str, Any]) -> float:
-    ref_terms = {word for cta in reference.get("ctas", []) for word in words(cta)}
-    cand_terms = {word for cta in candidate.get("ctas", []) for word in words(cta)}
-    if not ref_terms:
+    ref_verbs = set(reference.get("style", {}).get("cta_verbs", []))
+    cand_verbs = {tokens[0] for cta in candidate.get("ctas", []) if (tokens := words(cta))}
+    if not ref_verbs:
         return 1.0
-    if not cand_terms:
+    if not cand_verbs:
         return 0.0
-    return clamp(len(ref_terms & cand_terms) / min(len(ref_terms), 4))
+    return clamp(len(ref_verbs & cand_verbs) / min(len(ref_verbs), 4))
 
 
-def lexicon_fit(reference: dict[str, Any], candidate: dict[str, Any]) -> float:
-    ref_terms = set(reference.get("lexicon", [])[:16])
-    cand_words = set(words(candidate.get("text", "")))
-    if not ref_terms:
-        return 1.0
-    return clamp(len(ref_terms & cand_words) / min(len(ref_terms), 10))
+def lexical_variety_fit(reference: dict[str, Any], candidate: dict[str, Any]) -> float:
+    reference_ratio = float(reference.get("metrics", {}).get("type_token_ratio", 0.0))
+    candidate_ratio = float(candidate.get("metrics", {}).get("type_token_ratio", 0.0))
+    if reference_ratio <= 0 or candidate_ratio <= 0:
+        return 0.0
+    return clamp(1.0 - abs(reference_ratio - candidate_ratio) / max(reference_ratio, candidate_ratio, 0.25))
 
 
 def tone_fit(reference: dict[str, Any], candidate: dict[str, Any]) -> float:
@@ -189,7 +189,7 @@ def score_candidate(reference: dict[str, Any], candidate_text: str, label: str) 
     copy_score, shared_run = copy_safety(reference, candidate)
     scores = {
         "sentence_fit": sentence_fit(ref_avg, cand_avg),
-        "lexicon_fit": lexicon_fit(reference, candidate),
+        "lexical_variety_fit": lexical_variety_fit(reference, candidate),
         "cta_fit": cta_fit(reference, candidate),
         "tone_fit": tone_fit(reference, candidate),
         "heading_fit": heading_fit(reference, candidate),
@@ -197,11 +197,11 @@ def score_candidate(reference: dict[str, Any], candidate_text: str, label: str) 
         "copy_safety": copy_score,
     }
     weighted = (
-        scores["sentence_fit"] * 18
-        + scores["lexicon_fit"] * 22
-        + scores["cta_fit"] * 15
-        + scores["tone_fit"] * 15
-        + scores["heading_fit"] * 10
+        scores["sentence_fit"] * 22
+        + scores["cta_fit"] * 18
+        + scores["tone_fit"] * 16
+        + scores["heading_fit"] * 14
+        + scores["lexical_variety_fit"] * 10
         + scores["claim_safety"] * 10
         + scores["copy_safety"] * 10
     )
@@ -218,7 +218,6 @@ def score_candidate(reference: dict[str, Any], candidate_text: str, label: str) 
         "scores": {key: round(value * 100, 1) for key, value in scores.items()},
         "metrics": candidate["metrics"],
         "tone": candidate["tone"],
-        "lexicon_overlap": sorted(set(reference.get("lexicon", [])[:16]) & set(words(candidate["text"]))),
         "longest_shared_run": shared_run,
     }
 
@@ -235,8 +234,6 @@ def benchmark(reference_source: str, candidate_paths: list[str], timeout: float 
             "metrics": reference["metrics"],
             "tone": reference["tone"],
             "style": reference.get("style", {}),
-            "lexicon": reference["lexicon"][:16],
-            "ctas": reference["ctas"][:8],
         },
         "candidates": sorted(candidates, key=lambda item: item["score"], reverse=True),
     }
@@ -284,12 +281,12 @@ def benchmark_markdown(payload: dict[str, Any]) -> str:
         "",
         f"- Tone: {', '.join(reference['tone']) or 'not enough copy'}",
         f"- Average sentence length: {reference['metrics']['avg_sentence_words']} words",
-        f"- Lexicon: {', '.join(f'`{term}`' for term in reference['lexicon'][:12])}",
-        f"- CTAs: {', '.join(f'`{item}`' for item in reference['ctas'][:8]) or 'None detected'}",
+        f"- Lexical variety: {reference['metrics'].get('type_token_ratio', 0.0)} type-token ratio",
+        f"- CTA verbs: {', '.join(f'`{item}`' for item in reference.get('style', {}).get('cta_verbs', [])[:8]) or 'None detected'}",
         "",
         "## Scores",
         "",
-        "| Candidate | Result | Overall | Sentence | Lexicon | CTA | Tone | Heading | Claim safety | Copy safety |",
+        "| Candidate | Result | Overall | Sentence | Variety | CTA | Tone | Heading | Claim safety | Copy safety |",
         "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
     ]
     for candidate in payload["candidates"]:
@@ -297,7 +294,7 @@ def benchmark_markdown(payload: dict[str, Any]) -> str:
         result = "PASS" if candidate["pass"] else "FAIL"
         lines.append(
             f"| `{candidate['label']}` | **{result}** | {candidate['score']:.1f} | "
-            f"{scores['sentence_fit']:.1f} | {scores['lexicon_fit']:.1f} | "
+            f"{scores['sentence_fit']:.1f} | {scores['lexical_variety_fit']:.1f} | "
             f"{scores['cta_fit']:.1f} | {scores['tone_fit']:.1f} | "
             f"{scores['heading_fit']:.1f} | {scores['claim_safety']:.1f} | "
             f"{scores['copy_safety']:.1f} |"
@@ -308,10 +305,8 @@ def benchmark_markdown(payload: dict[str, Any]) -> str:
     )
     lines.extend(["", "## Candidate Evidence", ""])
     for candidate in payload["candidates"]:
-        overlap = ", ".join(f"`{term}`" for term in candidate["lexicon_overlap"]) or "none"
         lines.append(
-            f"- `{candidate['label']}` reused source lexicon: {trim_snippet(overlap, 160)}; "
-            f"longest shared run: {candidate['longest_shared_run']} words."
+            f"- `{candidate['label']}` longest shared run: {candidate['longest_shared_run']} words."
         )
     lines.append("")
     return "\n".join(lines)

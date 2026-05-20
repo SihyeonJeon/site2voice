@@ -19,17 +19,17 @@ The benchmark uses `https://stripe.com/` as the reference voice.
 
 ## Result
 
-| Candidate | Overall | Lexicon | CTA | Copy safety |
+| Candidate | Overall | Variety | CTA | Copy safety |
 | --- | ---: | ---: | ---: | ---: |
-| Without `VOICE.md` | 54.7 | 10.0 | 75.0 | 100.0 |
-| With `VOICE.md` | 97.2 | 100.0 | 100.0 | 96.2 |
+| Without `VOICE.md` | 60.4 | 40.5 | 50.0 | 100.0 |
+| With `VOICE.md` | 91.0 | 45.8 | 100.0 | 96.2 |
 
-The injected pack improved the score by **42.5 points**, raised lexicon overlap
-from **10.0** to **100.0**, and raised CTA fit from **75.0** to **100.0**.
+The injected pack improved the score by **30.6 points**, removed source-term
+reuse from the reward signal, and raised CTA fit from **50.0** to **100.0**.
 
 The output with `VOICE.md` passed the default strict gate. The difference is the
 contract: it turns the style brief into measurable target ranges for sentence
-length, heading shape, CTA verbs, vocabulary reuse, copy safety, and claim
+length, heading shape, CTA verbs, content boundaries, copy safety, and claim
 safety.
 
 ## Reproduce

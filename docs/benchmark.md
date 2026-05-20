@@ -21,7 +21,7 @@ site2voice bench examples/editorial-home.html examples/after-copy.md --strict
 | Metric | What it checks |
 | --- | --- |
 | Sentence fit | Candidate average sentence length vs source average. |
-| Lexicon fit | Whether candidate reuses source vocabulary without requiring exact prose. |
+| Lexical variety fit | Candidate type-token ratio vs source type-token ratio. |
 | CTA fit | Whether short action-led lines match observed CTA vocabulary. |
 | Tone fit | Overlap between deterministic tone labels. |
 | Heading fit | Whether heading length/shape is close to the source. |
@@ -34,7 +34,7 @@ punctuation counts.
 
 Generated `VOICE.md` files convert those measurements into an `Output Contract`
 so agents have target ranges before they write: sentence length, heading shape,
-paragraph rhythm, CTA verbs, recommended terms, and pass gates.
+paragraph rhythm, CTA verbs, source-term boundaries, and pass gates.
 
 ## Gates
 
@@ -58,9 +58,9 @@ site2voice bench SOURCE candidate.md \
 
 ## Example
 
-| Candidate | Result | Overall | Sentence | Lexicon | CTA | Tone | Heading | Claim safety | Copy safety |
+| Candidate | Result | Overall | Sentence | Variety | CTA | Tone | Heading | Claim safety | Copy safety |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| `after-copy` | PASS | 83.8 | 95.8 | 70.0 | 50.0 | 100.0 | 93.8 | 100.0 | 93.2 |
-| `before-copy` | FAIL | 36.6 | 57.5 | 0.0 | 0.0 | 0.0 | 62.5 | 100.0 | 100.0 |
+| `after-copy` | PASS | 88.5 | 95.8 | 99.4 | 50.0 | 100.0 | 93.8 | 100.0 | 93.2 |
+| `before-copy` | FAIL | 49.7 | 57.5 | 83.0 | 0.0 | 0.0 | 62.5 | 100.0 | 100.0 |
 
 See [editorial-benchmark.md](../examples/editorial-benchmark.md).

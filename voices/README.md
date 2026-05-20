@@ -33,7 +33,7 @@ curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/str
 | [Monocle](monocle.md) | explanatory, action-oriented | polished city, design, and affairs copy |
 | [Notion](notion.md) | balanced, action-oriented, technical, trust-forward | simple workspace and AI-product copy |
 | [OpenAI](openai.md) | explanatory, action-oriented, technical | research-to-product institutional copy |
-| [Shopify](shopify.md) | explanatory | merchant-growth product copy |
+| [Shopify](shopify.md) | explanatory, action-oriented, trust-forward | merchant-growth product copy |
 | [Stripe](stripe.md) | balanced, action-oriented | technical trust-forward SaaS copy |
 | [Vercel](vercel.md) | explanatory, action-oriented, technical, trust-forward | performance and deployment copy |
 | [Wallpaper](wallpaper.md) | explanatory | design, interiors, and architecture editorial copy |

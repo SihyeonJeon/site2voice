@@ -41,7 +41,7 @@ Use @VOICE.md for headings, CTAs, navigation labels, and UI microcopy.
 ```
 
 Each file is a plain Markdown writing brief with sentence rhythm, heading
-shape, CTA verbs, preferred vocabulary, claim boundaries, and a benchmark target.
+shape, CTA verbs, content boundaries, claim boundaries, and a benchmark target.
 
 These are not official brand guidelines. They are derived style briefs from
 public pages, built to help agents write nearby copy without pasting source
@@ -51,10 +51,10 @@ prose.
 
 Same LedgerFlow prompt, scored against Stripe:
 
-| Candidate | Result | Overall | Lexicon | CTA | Copy safety |
+| Candidate | Result | Overall | Variety | CTA | Copy safety |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Without `VOICE.md` | FAIL | 54.7 | 10.0 | 75.0 | 100.0 |
-| With `VOICE.md` | PASS | 97.2 | 100.0 | 100.0 | 96.2 |
+| Without `VOICE.md` | FAIL | 60.4 | 40.5 | 50.0 | 100.0 |
+| With `VOICE.md` | PASS | 91.0 | 45.8 | 100.0 | 96.2 |
 
 See the [full comparison](examples/comparisons/stripe-ledgerflow/README.md).
 

@@ -2,8 +2,8 @@
   "schema_version": "site2voice.voice.v1",
   "generator": "site2voice/0.5.0",
   "source": "https://hypebeast.com/",
-  "title": "Hypebeast.KR | 하입비스트",
-  "meta_description": "- 세계 1위 패션과 스트릿웨어 웹진. 최신 뉴스와 정보를 받아보시고 저희 웹샵에서 쇼핑도 즐겨보세요.",
+  "title": "",
+  "meta_description": "",
   "metrics": {
     "words": 993,
     "sentences": 21,
@@ -11,6 +11,7 @@
     "avg_heading_words": 7.3,
     "avg_paragraph_words": 7.8,
     "avg_cta_words": 2,
+    "avg_link_words": 1.3,
     "headings": 12,
     "ctas": 1,
     "links": 16,
@@ -21,7 +22,7 @@
   ],
   "style": {
     "cta_verbs": [
-      "더"
+      "보기"
     ],
     "punctuation": {
       "periods": 18,
@@ -51,101 +52,23 @@
       "min": 1.5,
       "max": 2.5
     },
-    "recommended_terms": [
-      "브랜드",
-      "댓글들",
-      "컬렉션",
-      "디자인",
-      "라이프스타일",
-      "hypebeast",
-      "한국어",
-      "버튼을",
-      "클릭합니다",
-      "페이지를",
-      "아래의",
-      "hypebae"
-    ],
+    "recommended_terms": [],
+    "source_terms": [],
     "cta_verbs": [
-      "더"
+      "보기"
     ],
-    "minimum_recommended_terms": 4,
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
     "benchmark_gates": {
       "overall": 75,
       "copy_safety": 85,
       "claim_safety": 75
     }
   },
-  "headings": [
-    "배드 버니 x 자라 ‘Benito Antonio’ 첫 컬렉션 공개",
-    "BTS 정국 x 캘빈 클라인 첫 컬렉션 공개",
-    "인기 글",
-    "비브람 x 나이키 에어 포스 1 로우 공식 이미지 공개",
-    "슈프림 x 미첼앤네스 2026년 봄 컬렉션 공개",
-    "업데이트: 에메 레온 도르 x 뉴발란스 ‘게이터 런’ 새 컬러 공개",
-    "에어 조던 3 ‘세계 최고의 아빠’ 공개",
-    "Hypebeast. Driving Culture Forward",
-    "젠틀몬스터 x 구글 x 삼성 AI 글라스 공개",
-    "휴먼 메이드 x ‘포켓몬’ 두 번째 컬렉션 공개",
-    "키스 x 리오넬 메시 x 아디다스 풋볼 유니폼 공개",
-    "리바이스 ‘501 데이’ 기념 한정 데님 컬렉션 공개"
-  ],
-  "ctas": [
-    "더 보기"
-  ],
-  "links": [
-    "Hypebeast",
-    "Hypebae",
-    "Hypemaps",
-    "HBX",
-    "회원 가입",
-    "로그인",
-    "한국어",
-    "Deutsch",
-    "English",
-    "Filipino",
-    "Français",
-    "Indonesian",
-    "Italiano",
-    "Português",
-    "더 알아보기",
-    "HC Hypecoins"
-  ],
-  "buttons": [
-    "Hypebeast",
-    "구독하기",
-    "뒤로가기",
-    "Adblock",
-    "Adblock Plus",
-    "Adblocker Ultimate",
-    "Ghostery",
-    "uBlock Origin",
-    "Others"
-  ],
-  "lexicon": [
-    "브랜드",
-    "댓글들",
-    "컬렉션",
-    "디자인",
-    "라이프스타일",
-    "hypebeast",
-    "한국어",
-    "버튼을",
-    "클릭합니다",
-    "페이지를",
-    "아래의",
-    "hypebae",
-    "hypemaps",
-    "hbx",
-    "온라인",
-    "스토어",
-    "이미지",
-    "euna",
-    "jeong",
-    "jisoo",
-    "yoon",
-    "사이트",
-    "오른쪽",
-    "클릭하세요"
-  ],
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
   "paragraph_samples": []
 }

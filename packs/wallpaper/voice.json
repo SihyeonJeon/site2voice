@@ -2,19 +2,20 @@
   "schema_version": "site2voice.voice.v1",
   "generator": "site2voice/0.5.0",
   "source": "https://www.wallpaper.com/",
-  "title": "Wallpaper*: design, interiors, architecture, fashion, art",
-  "meta_description": "Wallpaper* is the world’s number one global design destination, championing the best in architecture, interiors, fashion, art and contemporary lifestyle",
+  "title": "",
+  "meta_description": "",
   "metrics": {
-    "words": 2076,
+    "words": 2071,
     "sentences": 30,
-    "avg_sentence_words": 69.2,
+    "avg_sentence_words": 69.0,
     "avg_heading_words": 1.5,
     "avg_paragraph_words": 17.2,
     "avg_cta_words": 4.5,
+    "avg_link_words": 1.9,
     "headings": 12,
     "ctas": 2,
     "links": 16,
-    "type_token_ratio": 0.227
+    "type_token_ratio": 0.228
   },
   "tone": [
     "explanatory"
@@ -28,14 +29,14 @@
       "periods": 17,
       "questions": 9,
       "exclamations": 4,
-      "colons": 6
+      "colons": 5
     }
   },
   "output_contract": {
     "sentence_words": {
-      "target": 69.2,
-      "min": 51.9,
-      "max": 86.5
+      "target": 69.0,
+      "min": 51.8,
+      "max": 86.2
     },
     "heading_words": {
       "target": 1.5,
@@ -52,97 +53,24 @@
       "min": 3.4,
       "max": 5.6
     },
-    "recommended_terms": [
-      "may",
-      "published",
-      "new",
-      "design",
-      "wallpaper",
-      "travel",
-      "last",
-      "updated",
-      "jack",
-      "moss",
-      "tianna",
-      "williams"
-    ],
+    "recommended_terms": [],
+    "source_terms": [],
     "cta_verbs": [
       "sign",
       "contact"
     ],
-    "minimum_recommended_terms": 4,
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
     "benchmark_gates": {
       "overall": 75,
       "copy_safety": 85,
       "claim_safety": 75
     }
   },
-  "headings": [
-    "Wallpaper*",
-    "Latest News",
-    "Editor’s Picks",
-    "Architecture",
-    "Design & Interiors",
-    "Art",
-    "Watches & Jewellery",
-    "Fashion & Beauty",
-    "Tech",
-    "Transportation",
-    "Travel",
-    "Entertaining"
-  ],
-  "ctas": [
-    "Sign up to our newsletter Newsletter",
-    "Contact Future's experts"
-  ],
-  "links": [
-    "Wallpaper*",
-    "Architecture",
-    "Design & interiors",
-    "Art & Culture",
-    "Watches & Jewellery",
-    "Fashion & Beauty",
-    "Technology",
-    "Transportation",
-    "Travel",
-    "Entertaining",
-    "Wallpaper* Store",
-    "Sign up to our newsletter Newsletter",
-    "Wallpaper* Magazine Subscription",
-    "From $46.75",
-    "Subscribe now",
-    "Chelsea Flower Show"
-  ],
-  "buttons": [
-    "Subscribe",
-    "×",
-    "Search"
-  ],
-  "lexicon": [
-    "may",
-    "published",
-    "new",
-    "design",
-    "wallpaper",
-    "travel",
-    "last",
-    "updated",
-    "jack",
-    "moss",
-    "tianna",
-    "williams",
-    "this",
-    "view",
-    "jonathan",
-    "bell",
-    "museum",
-    "here",
-    "summer",
-    "years",
-    "architecture",
-    "art",
-    "fashion",
-    "they"
-  ],
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
   "paragraph_samples": []
 }

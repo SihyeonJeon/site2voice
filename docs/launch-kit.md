@@ -12,7 +12,7 @@ from website copy and scores whether new AI-written copy follows the source
 voice.
 
 It extracts headings, CTA text, navigation labels, sentence length, and repeated
-vocabulary, then writes a concise voice brief for Claude Code, Cursor, Codex, or
+structure, then writes a concise voice brief for Claude Code, Cursor, Codex, or
 any other coding agent.
 
 ```bash

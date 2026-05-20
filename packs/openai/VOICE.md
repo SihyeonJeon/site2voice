@@ -8,9 +8,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 
 - Overall tone: **explanatory, action-oriented, technical**.
 - Sentence shape: about **46.2 words** per sentence.
-- Main vocabulary: `new`, `opens`, `window`, `research`, `product`, `chatgpt`, `may`, `gpt-5`, `business`, `min`, `read`, `safety`.
-- Common CTAs: `Try ChatGPT (opens in a new window)`, `Download`, `Explore ChatGPT (opens in a new window)`, `Download (opens in a new window)`, `Contact Sales`.
-- Navigation labels: `Skip to main content`, `Research`, `Business`, `Developers`, `Company`, `Foundation (opens in a new window)`, `Talk with ChatGPT`, `API Platform`, `Stories`, `Introducing GPT-5.5 Product 18 min read`.
+- Content policy: this file captures rhythm and structure, not source nouns.
 
 ## Style Fingerprint
 
@@ -18,14 +16,16 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Paragraph rhythm: about **2.2 words** per paragraph sample.
 - CTA shape: about **4.6 words** per CTA.
 - CTA verbs: `try`, `download`, `explore`, `contact`.
+- Navigation label shape: about **3.1 words** per label.
 - Lexical variety: **0.301** type-token ratio.
 
 ## Agent Rules
 
 - Start with a concrete user outcome before describing implementation details.
 - Prefer short active sentences and visible verbs from the CTA list.
-- Reuse the observed vocabulary, but do not copy full marketing paragraphs.
-- Keep headings specific; avoid generic labels like `Powerful features` unless the source uses that pattern.
+- Reuse rhythm, CTA shape, and information order; bring your own product nouns.
+- Do not import source-specific topics, product names, market claims, or domain nouns.
+- Keep headings specific; avoid generic labels like `<generic feature label>` unless the source uses that pattern.
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
@@ -35,7 +35,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Keep headings near **2.4 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **2.2 words**.
 - Keep CTAs near **4.6 words** and start them with: `try`, `download`, `explore`, `contact`.
-- Use at least **4** of these terms where natural: `new`, `opens`, `window`, `research`, `product`, `chatgpt`, `may`, `gpt-5`, `business`, `min`, `read`, `safety`.
+- Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
   `site2voice bench https://openai.com/ path/to/candidate.md --strict`
@@ -52,7 +52,8 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 
 ## Do / Don't
 
-- Do: write concise, outcome-first copy using the observed verbs and nouns.
+- Do: write concise, outcome-first copy using the observed rhythm and CTA verbs.
 - Do: keep CTAs short and action-led.
+- Don't: transfer source-specific nouns into an unrelated project.
 - Don't: paste source paragraphs verbatim.
 - Don't: add claims the source did not support.

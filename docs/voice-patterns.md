@@ -1,15 +1,16 @@
 # Voice Patterns
 
-`site2voice` does not try to copy a brand or magazine. It extracts measurable
-signals that help an agent write new copy in a nearby register without pasting
-source prose.
+`site2voice` does not try to copy a brand, magazine, or topic. It extracts
+measurable voice signals that help an agent write new copy in a nearby register
+without pasting source prose or importing source-specific nouns.
 
 ## Editorial / Magazine
 
 What to measure:
 
 - short section labels mixed with longer descriptive paragraphs;
-- named entities, places, seasons, materials, products, and collaborators;
+- whether named entities, places, seasons, materials, products, and collaborators
+  are content boundaries rather than reusable style;
 - restrained adjectives before concrete nouns;
 - headline length and whether titles read like indexes, blurbs, or news alerts;
 - CTA words such as `read`, `explore`, `view`, `subscribe`, or `join`.
@@ -31,7 +32,7 @@ What to measure:
 
 - outcome-first headings;
 - short conversion CTAs;
-- technical nouns and integration terms;
+- whether technical nouns and integration terms should stay source-specific;
 - proof language, customer claims, security claims, and performance claims;
 - whether copy starts with user value or implementation detail.
 
@@ -52,7 +53,7 @@ site2voice bench https://example.com before.md after.md
 ```
 
 The first command gives the agent a voice brief with an `Output Contract`:
-sentence range, heading target, paragraph target, CTA verbs, vocabulary targets,
+sentence range, heading target, paragraph target, CTA verbs, content boundaries,
 and benchmark gates. The second command verifies whether the resulting copy
 moved closer to the source profile while staying inside copy-safety and
 claim-safety gates.

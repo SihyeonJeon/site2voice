@@ -216,13 +216,18 @@ def main() -> None:
     rows: list[dict[str, object]] = []
     for pack in PACKS:
         target = packs_dir / pack["slug"]
-        create_context_pack(
-            pack["url"],
-            output_dir=str(target),
-            max_snippets=0,
-            force=True,
-            timeout=20.0,
-        )
+        try:
+            create_context_pack(
+                pack["url"],
+                output_dir=str(target),
+                max_snippets=0,
+                force=True,
+                timeout=20.0,
+            )
+        except Exception as exc:  # noqa: BLE001
+            if not (target / "VOICE.md").exists() or not (target / "voice.json").exists():
+                raise
+            print(f"warning: keeping existing {pack['slug']} pack after fetch failed: {exc}")
         (voices_dir / f"{pack['slug']}.md").write_text(
             (target / "VOICE.md").read_text(encoding="utf-8"),
             encoding="utf-8",
@@ -232,7 +237,6 @@ def main() -> None:
             **pack,
             "metrics": profile["metrics"],
             "tone": profile["tone"],
-            "lexicon": profile["lexicon"][:12],
         }
         rows.append(row)
 

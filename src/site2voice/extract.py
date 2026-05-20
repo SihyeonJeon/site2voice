@@ -220,7 +220,9 @@ def first_words(values: list[str], limit: int = 8) -> list[str]:
         tokens = words(value)
         if not tokens:
             continue
-        token = tokens[0]
+        token = next((item for item in tokens[:2] if item in CTA_VERBS), "")
+        if not token:
+            continue
         if token not in output:
             output.append(token)
         if len(output) >= limit:
@@ -253,9 +255,11 @@ def output_contract(metrics: dict[str, Any], lexicon: list[str], cta_verbs: list
         "heading_words": metric_window(float(metrics["avg_heading_words"]), minimum_floor=1.0),
         "paragraph_words": metric_window(float(metrics["avg_paragraph_words"]), minimum_floor=4.0),
         "cta_words": metric_window(float(metrics["avg_cta_words"]), minimum_floor=1.0),
-        "recommended_terms": lexicon[:12],
+        "recommended_terms": [],
+        "source_terms": lexicon[:12],
         "cta_verbs": cta_verbs,
-        "minimum_recommended_terms": min(4, len(lexicon[:12])),
+        "minimum_recommended_terms": 0,
+        "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
         "benchmark_gates": {
             "overall": 75,
             "copy_safety": 85,
@@ -292,6 +296,7 @@ def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
         "avg_heading_words": average_word_count(headings),
         "avg_paragraph_words": average_word_count(paragraphs),
         "avg_cta_words": average_word_count(ctas),
+        "avg_link_words": average_word_count(links),
         "headings": len(headings),
         "ctas": len(ctas),
         "links": len(links),
@@ -330,11 +335,11 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
     cta_words = contract["cta_words"]
     gates = contract["benchmark_gates"]
     tone = ", ".join(payload["tone"]) if payload["tone"] else "not enough copy"
-    preferred_terms = ", ".join(f"`{term}`" for term in payload["lexicon"][:12]) or "None detected"
-    cta_terms = ", ".join(f"`{item}`" for item in payload["ctas"][:8]) or "None detected"
-    nav_terms = ", ".join(f"`{item}`" for item in payload["links"][:10]) or "None detected"
-    contract_terms = ", ".join(f"`{term}`" for term in contract["recommended_terms"]) or "None detected"
     contract_verbs = ", ".join(f"`{item}`" for item in contract["cta_verbs"]) or "the observed CTA verbs"
+    content_rule = contract.get(
+        "content_rule",
+        "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    )
 
     lines = [
         "# VOICE.md",
@@ -347,9 +352,7 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         "",
         f"- Overall tone: **{tone}**.",
         f"- Sentence shape: about **{metrics['avg_sentence_words']} words** per sentence.",
-        f"- Main vocabulary: {preferred_terms}.",
-        f"- Common CTAs: {cta_terms}.",
-        f"- Navigation labels: {nav_terms}.",
+        "- Content policy: this file captures rhythm and structure, not source nouns.",
         "",
         "## Style Fingerprint",
         "",
@@ -357,14 +360,16 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         f"- Paragraph rhythm: about **{metrics['avg_paragraph_words']} words** per paragraph sample.",
         f"- CTA shape: about **{metrics['avg_cta_words']} words** per CTA.",
         f"- CTA verbs: {', '.join(f'`{item}`' for item in payload['style']['cta_verbs']) or 'None detected'}.",
+        f"- Navigation label shape: about **{metrics.get('avg_link_words', 0.0)} words** per label.",
         f"- Lexical variety: **{metrics['type_token_ratio']}** type-token ratio.",
         "",
         "## Agent Rules",
         "",
         "- Start with a concrete user outcome before describing implementation details.",
         "- Prefer short active sentences and visible verbs from the CTA list.",
-        "- Reuse the observed vocabulary, but do not copy full marketing paragraphs.",
-        "- Keep headings specific; avoid generic labels like `Powerful features` unless the source uses that pattern.",
+        "- Reuse rhythm, CTA shape, and information order; bring your own product nouns.",
+        "- Do not import source-specific topics, product names, market claims, or domain nouns.",
+        "- Keep headings specific; avoid generic labels like `<generic feature label>` unless the source uses that pattern.",
         "- When adding new sections, match the observed information order: headline, proof, action, details.",
         "- Do not invent compliance, security, customer, or performance claims that are not present in the source.",
         "",
@@ -374,7 +379,7 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         f"- Keep headings near **{heading_words['target']} words**; avoid generic one-word section labels unless the source uses them.",
         f"- Keep paragraph blocks near **{paragraph_words['target']} words**.",
         f"- Keep CTAs near **{cta_words['target']} words** and start them with: {contract_verbs}.",
-        f"- Use at least **{contract['minimum_recommended_terms']}** of these terms where natural: {contract_terms}.",
+        f"- Content boundary: {content_rule}",
         "- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.",
         "- If writing a candidate file, run:",
         f"  `site2voice bench {payload['source']} path/to/candidate.md --strict`",
@@ -409,8 +414,9 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         [
             "## Do / Don't",
             "",
-            "- Do: write concise, outcome-first copy using the observed verbs and nouns.",
+            "- Do: write concise, outcome-first copy using the observed rhythm and CTA verbs.",
             "- Do: keep CTAs short and action-led.",
+            "- Don't: transfer source-specific nouns into an unrelated project.",
             "- Don't: paste source paragraphs verbatim.",
             "- Don't: add claims the source did not support.",
             "",

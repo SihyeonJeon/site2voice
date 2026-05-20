@@ -21,7 +21,8 @@ Rules:
 
 - Treat the `Output Contract` section in `VOICE.md` as the measurable
   pass/fail target.
-- Reuse the observed vocabulary, not full source paragraphs.
+- Reuse rhythm, CTA shape, and information order; bring your own product nouns.
+- Do not transfer source-specific nouns from the reference site.
 - Keep unsupported security, performance, customer, pricing, or AI claims out.
 - Treat `voice.json` as machine-readable evidence, not as brand approval.
 """
@@ -37,7 +38,16 @@ def create_context_pack(
     payload = analyze(source, timeout=timeout)
     json_payload = dict(payload)
     if max_snippets == 0:
+        json_payload["title"] = ""
+        json_payload["meta_description"] = ""
+        json_payload["headings"] = []
         json_payload["paragraph_samples"] = []
+        json_payload["lexicon"] = []
+        json_payload["ctas"] = []
+        json_payload["links"] = []
+        json_payload["buttons"] = []
+        json_payload["output_contract"] = dict(payload["output_contract"])
+        json_payload["output_contract"]["source_terms"] = []
     target = Path(output_dir).expanduser()
     paths = {
         "voice_md": target / "VOICE.md",

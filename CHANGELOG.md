@@ -5,6 +5,12 @@
 - Repositioned the README around ready-to-use `VOICE.md` downloads.
 - Added a flat `voices/` collection for direct single-file use.
 - Updated pack generation to build `voices/` and avoid duplicate URL fetches.
+- Removed source vocabulary, raw CTA text, and navigation labels from public
+  `VOICE.md` files so content nouns do not leak as style.
+- Redacted raw text arrays from public `voice.json` files generated with
+  `--no-samples`.
+- Updated benchmarks to reward lexical variety and CTA verbs instead of source
+  vocabulary overlap.
 
 ## 0.5.0
 

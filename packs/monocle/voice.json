@@ -2,15 +2,16 @@
   "schema_version": "site2voice.voice.v1",
   "generator": "site2voice/0.5.0",
   "source": "https://monocle.com/",
-  "title": "Monocle - global affairs, culture and design",
-  "meta_description": "Monocle is a global briefing covering international affairs, business, design and culture through a magazine, radio station and website.",
+  "title": "",
+  "meta_description": "",
   "metrics": {
-    "words": 2675,
+    "words": 2690,
     "sentences": 40,
-    "avg_sentence_words": 66.9,
-    "avg_heading_words": 8.2,
+    "avg_sentence_words": 67.2,
+    "avg_heading_words": 8.3,
     "avg_paragraph_words": 7,
     "avg_cta_words": 2.9,
+    "avg_link_words": 2.1,
     "headings": 12,
     "ctas": 7,
     "links": 16,
@@ -37,14 +38,14 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 66.9,
-      "min": 50.2,
-      "max": 83.6
+      "target": 67.2,
+      "min": 50.4,
+      "max": 84.0
     },
     "heading_words": {
-      "target": 8.2,
-      "min": 6.1,
-      "max": 10.2
+      "target": 8.3,
+      "min": 6.2,
+      "max": 10.4
     },
     "paragraph_words": {
       "target": 7.0,
@@ -56,20 +57,8 @@
       "min": 2.2,
       "max": 3.6
     },
-    "recommended_terms": [
-      "monocle",
-      "min",
-      "city",
-      "design",
-      "guides",
-      "read",
-      "affairs",
-      "radio",
-      "new",
-      "travel",
-      "shop",
-      "fashion"
-    ],
+    "recommended_terms": [],
+    "source_terms": [],
     "cta_verbs": [
       "see",
       "contact",
@@ -77,93 +66,18 @@
       "sign",
       "buy"
     ],
-    "minimum_recommended_terms": 4,
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
     "benchmark_gates": {
       "overall": 75,
       "copy_safety": 85,
       "claim_safety": 75
     }
   },
-  "headings": [
-    "Monocle Logo",
-    "Monocle Radio",
-    "The Briefing",
-    "Good mayors zone in on the details – just ask Zohran Mamdani",
-    "How to age in a dignified way: know your neighbours",
-    "Billionaire media mogul Vincent Bolloré casts a long shadow over Cannes film festival",
-    "Want to know Thailand? Get behind the wheel",
-    "Tray tables up: The civil aviation quiz results are cleared to land",
-    "Seven of the most beautiful hotels in Thailand right now",
-    "‘Success should enable reinvention’: How Oribe cornered the luxury beauty market",
-    "Finally! In London’s David Bowie exhibition the ‘immersive experience’ hits the right note",
-    "Latest from Monocle radio"
-  ],
-  "ctas": [
-    "see all",
-    "See all Monocle events and collaborations",
-    "Contact Us",
-    "Get in touch",
-    "Sign in",
-    "Buy a subscription",
-    "Sign out"
-  ],
-  "links": [
-    "Skip to main content",
-    "Subscribe",
-    "British Pound (GBP)",
-    "Euro (EUR)",
-    "US Dollar (USD)",
-    "Australian Dollar (AUD)",
-    "Swiss Franc (CHF)",
-    "Magazine",
-    "Radio",
-    "Shop",
-    "Monocle Logo",
-    "Daily inbox intelligence from Monocle",
-    "Affairs",
-    "Business",
-    "Culture",
-    "Design"
-  ],
-  "buttons": [
-    "Go",
-    "Listen Live",
-    "Share",
-    "Topics",
-    "Discover",
-    "Our Brand",
-    "Contact Us",
-    "Legal & Privacy",
-    "Close Filter",
-    "Affairs",
-    "Architecture",
-    "Art"
-  ],
-  "lexicon": [
-    "monocle",
-    "min",
-    "city",
-    "design",
-    "guides",
-    "read",
-    "affairs",
-    "radio",
-    "new",
-    "travel",
-    "shop",
-    "fashion",
-    "culture",
-    "see",
-    "handbook",
-    "issue",
-    "hong",
-    "kong",
-    "business",
-    "thailand",
-    "dollar",
-    "film",
-    "restaurants",
-    "may"
-  ],
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
   "paragraph_samples": []
 }

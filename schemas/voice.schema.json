@@ -42,6 +42,7 @@
         "avg_heading_words": {"type": "number", "minimum": 0},
         "avg_paragraph_words": {"type": "number", "minimum": 0},
         "avg_cta_words": {"type": "number", "minimum": 0},
+        "avg_link_words": {"type": "number", "minimum": 0},
         "headings": {"type": "integer", "minimum": 0},
         "ctas": {"type": "integer", "minimum": 0},
         "links": {"type": "integer", "minimum": 0},
@@ -89,6 +90,10 @@
           "type": "array",
           "items": {"type": "string"}
         },
+        "source_terms": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
         "cta_verbs": {
           "type": "array",
           "items": {"type": "string"}
@@ -96,6 +101,9 @@
         "minimum_recommended_terms": {
           "type": "integer",
           "minimum": 0
+        },
+        "content_rule": {
+          "type": "string"
         },
         "benchmark_gates": {
           "type": "object",

@@ -8,9 +8,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 
 - Overall tone: **balanced, action-oriented**.
 - Sentence shape: about **15.7 words** per sentence.
-- Main vocabulary: `stripe`, `read`, `payments`, `story`, `financial`, `business`, `how`, `commerce`, `products`, `crypto`, `billing`, `businesses`.
-- Common CTAs: `Sign in`, `Start now`, `Contact sales`, `Get started`, `Sign up with Google`, `Create a card issuing program`, `Watch now`, `Explore no-code`.
-- Navigation labels: `Pricing`, `Sign in`, `Start now`, `Contact sales`, `Get started`, `Sign up with Google`, `Watch now`, `historical uptime`, `Stripe for enterprises`, `Read the story`.
+- Content policy: this file captures rhythm and structure, not source nouns.
 
 ## Style Fingerprint
 
@@ -18,14 +16,16 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Paragraph rhythm: about **7.8 words** per paragraph sample.
 - CTA shape: about **2.6 words** per CTA.
 - CTA verbs: `sign`, `start`, `contact`, `get`, `create`, `watch`, `explore`, `see`.
+- Navigation label shape: about **2.4 words** per label.
 - Lexical variety: **0.301** type-token ratio.
 
 ## Agent Rules
 
 - Start with a concrete user outcome before describing implementation details.
 - Prefer short active sentences and visible verbs from the CTA list.
-- Reuse the observed vocabulary, but do not copy full marketing paragraphs.
-- Keep headings specific; avoid generic labels like `Powerful features` unless the source uses that pattern.
+- Reuse rhythm, CTA shape, and information order; bring your own product nouns.
+- Do not import source-specific topics, product names, market claims, or domain nouns.
+- Keep headings specific; avoid generic labels like `<generic feature label>` unless the source uses that pattern.
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
@@ -35,7 +35,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Keep headings near **7.2 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **7.8 words**.
 - Keep CTAs near **2.6 words** and start them with: `sign`, `start`, `contact`, `get`, `create`, `watch`, `explore`, `see`.
-- Use at least **4** of these terms where natural: `stripe`, `read`, `payments`, `story`, `financial`, `business`, `how`, `commerce`, `products`, `crypto`, `billing`, `businesses`.
+- Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
   `site2voice bench https://stripe.com/ path/to/candidate.md --strict`
@@ -52,7 +52,8 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 
 ## Do / Don't
 
-- Do: write concise, outcome-first copy using the observed verbs and nouns.
+- Do: write concise, outcome-first copy using the observed rhythm and CTA verbs.
 - Do: keep CTAs short and action-led.
+- Don't: transfer source-specific nouns into an unrelated project.
 - Don't: paste source paragraphs verbatim.
 - Don't: add claims the source did not support.

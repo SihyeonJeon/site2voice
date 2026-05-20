@@ -8,6 +8,7 @@
       "avg_heading_words": 7.2,
       "avg_paragraph_words": 7.8,
       "avg_cta_words": 2.6,
+      "avg_link_words": 2.4,
       "headings": 12,
       "ctas": 12,
       "links": 16,
@@ -34,45 +35,17 @@
         "exclamations": 0,
         "colons": 1
       }
-    },
-    "lexicon": [
-      "stripe",
-      "read",
-      "payments",
-      "story",
-      "financial",
-      "business",
-      "how",
-      "commerce",
-      "products",
-      "crypto",
-      "billing",
-      "businesses",
-      "platforms",
-      "grow",
-      "revenue",
-      "tools"
-    ],
-    "ctas": [
-      "Sign in",
-      "Start now",
-      "Contact sales",
-      "Get started",
-      "Sign up with Google",
-      "Create a card issuing program",
-      "Watch now",
-      "Explore no-code"
-    ]
+    }
   },
   "candidates": [
     {
       "label": "output-with-voice",
-      "score": 97.2,
+      "score": 91.0,
       "grade": "excellent",
       "pass": true,
       "scores": {
         "sentence_fit": 96.8,
-        "lexicon_fit": 100.0,
+        "lexical_variety_fit": 45.8,
         "cta_fit": 100.0,
         "tone_fit": 100.0,
         "heading_fit": 81.8,
@@ -91,30 +64,17 @@
         "balanced",
         "action-oriented"
       ],
-      "lexicon_overlap": [
-        "billing",
-        "business",
-        "commerce",
-        "financial",
-        "how",
-        "payments",
-        "products",
-        "read",
-        "revenue",
-        "story",
-        "tools"
-      ],
       "longest_shared_run": 6
     },
     {
       "label": "output-without-voice",
-      "score": 54.7,
-      "grade": "weak",
+      "score": 60.4,
+      "grade": "mixed",
       "pass": false,
       "scores": {
         "sentence_fit": 74.1,
-        "lexicon_fit": 10.0,
-        "cta_fit": 75.0,
+        "lexical_variety_fit": 40.5,
+        "cta_fit": 50.0,
         "tone_fit": 0.0,
         "heading_fit": 79.2,
         "claim_safety": 100.0,
@@ -131,9 +91,6 @@
       "tone": [
         "explanatory",
         "technical"
-      ],
-      "lexicon_overlap": [
-        "payments"
       ],
       "longest_shared_run": 2
     }
