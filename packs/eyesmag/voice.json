@@ -1,0 +1,77 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://www.eyesmag.com/about",
+  "title": "아이즈매거진 | eyesmag",
+  "meta_description": "<아이즈매거진>은 패션&라이프스타일 웹 매거진입니다.",
+  "metrics": {
+    "words": 769,
+    "sentences": 60,
+    "avg_sentence_words": 12.8,
+    "avg_heading_words": 1,
+    "avg_paragraph_words": 16.2,
+    "avg_cta_words": 2,
+    "headings": 1,
+    "ctas": 1,
+    "links": 8,
+    "type_token_ratio": 0.246
+  },
+  "tone": [
+    "balanced"
+  ],
+  "style": {
+    "cta_verbs": [
+      "profile"
+    ],
+    "punctuation": {
+      "periods": 51,
+      "questions": 0,
+      "exclamations": 8,
+      "colons": 6
+    }
+  },
+  "headings": [
+    "회사소개"
+  ],
+  "ctas": [
+    "Profile download"
+  ],
+  "links": [
+    "샵",
+    "회사소개",
+    "info@eyesmag.com",
+    "Profile download",
+    "윤리강령",
+    "고충처리인",
+    "개인정보처리방침",
+    "홈"
+  ],
+  "buttons": [],
+  "lexicon": [
+    "eyesmag",
+    "회사소개",
+    "fashion",
+    "info",
+    "com",
+    "아이즈매거진",
+    "라이프스타일",
+    "매거진입니다",
+    "매력적인",
+    "정보를",
+    "선별하고",
+    "데스크톱",
+    "태블릿",
+    "스마트폰",
+    "디바이스에",
+    "디지털",
+    "환경에서",
+    "편리하게",
+    "이용할",
+    "있도록",
+    "최적의",
+    "과정을",
+    "콘텐츠를",
+    "실시간으로"
+  ],
+  "paragraph_samples": []
+}

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.0
+
+- Added public voice packs for 15 well-known product and editorial sites.
+- Added `packs/index.json` and `packs/README.md`.
+- Added `scripts/build_packs.py` for reproducible pack generation.
+- Redacted paragraph samples from `site2voice init --no-samples` JSON output.
+- Updated README around downloadable voice packs.
+
 ## 0.3.0
 
 - Added `site2voice init` for agent-ready context packs.
@@ -7,7 +15,8 @@
   `--min-copy-safety`, and `--min-claim-safety`.
 - Added stable `site2voice.voice.v1` metadata to JSON output.
 - Improved copy-safety runtime on longer inputs.
-- Added repo hygiene docs, demo assets, and agent workflow documentation.
+- Added repo hygiene docs, demo assets, agent workflow documentation, and
+  public voice packs for well-known websites.
 
 ## 0.2.1
 

@@ -1,0 +1,564 @@
+[
+  {
+    "slug": "anthropic",
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com/",
+    "category": "AI research and product",
+    "use": "measured AI safety and product copy",
+    "metrics": {
+      "words": 1064,
+      "sentences": 31,
+      "avg_sentence_words": 34.3,
+      "avg_heading_words": 5.2,
+      "avg_paragraph_words": 14.8,
+      "avg_cta_words": 2,
+      "headings": 12,
+      "ctas": 3,
+      "links": 16,
+      "type_token_ratio": 0.233
+    },
+    "tone": [
+      "explanatory",
+      "technical",
+      "trust-forward"
+    ],
+    "lexicon": [
+      "claude",
+      "anthropic",
+      "security",
+      "policy",
+      "code",
+      "log",
+      "responsible",
+      "download",
+      "app",
+      "constitution",
+      "scaling",
+      "compliance"
+    ]
+  },
+  {
+    "slug": "apple",
+    "name": "Apple",
+    "url": "https://www.apple.com/",
+    "category": "consumer hardware",
+    "use": "minimal premium product copy",
+    "metrics": {
+      "words": 2998,
+      "sentences": 149,
+      "avg_sentence_words": 20.1,
+      "avg_heading_words": 2,
+      "avg_paragraph_words": 6.1,
+      "avg_cta_words": 3.6,
+      "headings": 12,
+      "ctas": 9,
+      "links": 16,
+      "type_token_ratio": 0.17
+    },
+    "tone": [
+      "explanatory",
+      "action-oriented"
+    ],
+    "lexicon": [
+      "apple",
+      "card",
+      "offer",
+      "account",
+      "now",
+      "new",
+      "cash",
+      "daily",
+      "period",
+      "this",
+      "airpods",
+      "qualifying"
+    ]
+  },
+  {
+    "slug": "eyesmag",
+    "name": "EYESMAG",
+    "url": "https://www.eyesmag.com/about",
+    "category": "Korean fashion and lifestyle media",
+    "use": "Korean fashion and lifestyle editorial intro copy",
+    "metrics": {
+      "words": 769,
+      "sentences": 60,
+      "avg_sentence_words": 12.8,
+      "avg_heading_words": 1,
+      "avg_paragraph_words": 16.2,
+      "avg_cta_words": 2,
+      "headings": 1,
+      "ctas": 1,
+      "links": 8,
+      "type_token_ratio": 0.246
+    },
+    "tone": [
+      "balanced"
+    ],
+    "lexicon": [
+      "eyesmag",
+      "회사소개",
+      "fashion",
+      "info",
+      "com",
+      "아이즈매거진",
+      "라이프스타일",
+      "매거진입니다",
+      "매력적인",
+      "정보를",
+      "선별하고",
+      "데스크톱"
+    ]
+  },
+  {
+    "slug": "figma",
+    "name": "Figma",
+    "url": "https://www.figma.com/",
+    "category": "design collaboration",
+    "use": "creative collaboration copy",
+    "metrics": {
+      "words": 1544,
+      "sentences": 27,
+      "avg_sentence_words": 57.2,
+      "avg_heading_words": 4.8,
+      "avg_paragraph_words": 3.2,
+      "avg_cta_words": 3.2,
+      "headings": 12,
+      "ctas": 12,
+      "links": 16,
+      "type_token_ratio": 0.227
+    },
+    "tone": [
+      "explanatory",
+      "action-oriented",
+      "technical"
+    ],
+    "lexicon": [
+      "figma",
+      "design",
+      "explore",
+      "code",
+      "make",
+      "prompt",
+      "anything",
+      "tools",
+      "sites",
+      "imagine",
+      "product",
+      "started"
+    ]
+  },
+  {
+    "slug": "github",
+    "name": "GitHub",
+    "url": "https://github.com/",
+    "category": "developer platform",
+    "use": "developer ecosystem copy",
+    "metrics": {
+      "words": 1628,
+      "sentences": 40,
+      "avg_sentence_words": 40.7,
+      "avg_heading_words": 5.3,
+      "avg_paragraph_words": 12.4,
+      "avg_cta_words": 3.2,
+      "headings": 12,
+      "ctas": 12,
+      "links": 16,
+      "type_token_ratio": 0.26
+    },
+    "tone": [
+      "explanatory",
+      "action-oriented",
+      "technical",
+      "trust-forward"
+    ],
+    "lexicon": [
+      "github",
+      "code",
+      "security",
+      "copilot",
+      "view",
+      "explore",
+      "support",
+      "features",
+      "customer",
+      "platform",
+      "manage",
+      "community"
+    ]
+  },
+  {
+    "slug": "highsnobiety",
+    "name": "Highsnobiety",
+    "url": "https://www.highsnobiety.com/",
+    "category": "fashion and culture media",
+    "use": "commerce-aware culture editorial copy",
+    "metrics": {
+      "words": 1730,
+      "sentences": 81,
+      "avg_sentence_words": 21.4,
+      "avg_heading_words": 9.2,
+      "avg_paragraph_words": 21,
+      "avg_cta_words": 2,
+      "headings": 12,
+      "ctas": 3,
+      "links": 16,
+      "type_token_ratio": 0.35
+    },
+    "tone": [
+      "explanatory"
+    ],
+    "lexicon": [
+      "culture",
+      "style",
+      "highsnobiety",
+      "beauty",
+      "brands",
+      "sneakers",
+      "now",
+      "this",
+      "spring",
+      "issue",
+      "sable",
+      "yong"
+    ]
+  },
+  {
+    "slug": "hypebeast",
+    "name": "Hypebeast",
+    "url": "https://hypebeast.com/",
+    "category": "streetwear and culture media",
+    "use": "trend-led culture editorial copy",
+    "metrics": {
+      "words": 993,
+      "sentences": 21,
+      "avg_sentence_words": 47.3,
+      "avg_heading_words": 7.3,
+      "avg_paragraph_words": 7.8,
+      "avg_cta_words": 2,
+      "headings": 12,
+      "ctas": 1,
+      "links": 16,
+      "type_token_ratio": 0.349
+    },
+    "tone": [
+      "explanatory"
+    ],
+    "lexicon": [
+      "브랜드",
+      "댓글들",
+      "컬렉션",
+      "디자인",
+      "라이프스타일",
+      "hypebeast",
+      "한국어",
+      "버튼을",
+      "클릭합니다",
+      "페이지를",
+      "아래의",
+      "hypebae"
+    ]
+  },
+  {
+    "slug": "linear",
+    "name": "Linear",
+    "url": "https://linear.app/",
+    "category": "developer productivity",
+    "use": "precise product-team positioning",
+    "metrics": {
+      "words": 797,
+      "sentences": 62,
+      "avg_sentence_words": 12.9,
+      "avg_heading_words": 7.2,
+      "avg_paragraph_words": 16.1,
+      "avg_cta_words": 1.5,
+      "headings": 12,
+      "ctas": 8,
+      "links": 16,
+      "type_token_ratio": 0.399
+    },
+    "tone": [
+      "balanced",
+      "action-oriented",
+      "technical"
+    ],
+    "lexicon": [
+      "linear",
+      "product",
+      "teams",
+      "agents",
+      "app",
+      "agent",
+      "just",
+      "contact",
+      "plan",
+      "work",
+      "will",
+      "customers"
+    ]
+  },
+  {
+    "slug": "monocle",
+    "name": "Monocle",
+    "url": "https://monocle.com/",
+    "category": "global affairs and culture media",
+    "use": "polished city, design, and affairs copy",
+    "metrics": {
+      "words": 2677,
+      "sentences": 40,
+      "avg_sentence_words": 66.9,
+      "avg_heading_words": 8.3,
+      "avg_paragraph_words": 7,
+      "avg_cta_words": 2.9,
+      "headings": 12,
+      "ctas": 7,
+      "links": 16,
+      "type_token_ratio": 0.29
+    },
+    "tone": [
+      "explanatory",
+      "action-oriented"
+    ],
+    "lexicon": [
+      "monocle",
+      "min",
+      "city",
+      "design",
+      "guides",
+      "read",
+      "affairs",
+      "radio",
+      "new",
+      "travel",
+      "shop",
+      "fashion"
+    ]
+  },
+  {
+    "slug": "notion",
+    "name": "Notion",
+    "url": "https://www.notion.com/",
+    "category": "workspace productivity",
+    "use": "simple workspace and AI-product copy",
+    "metrics": {
+      "words": 635,
+      "sentences": 43,
+      "avg_sentence_words": 14.8,
+      "avg_heading_words": 2.7,
+      "avg_paragraph_words": 9,
+      "avg_cta_words": 3,
+      "headings": 12,
+      "ctas": 5,
+      "links": 16,
+      "type_token_ratio": 0.402
+    },
+    "tone": [
+      "balanced",
+      "action-oriented",
+      "technical",
+      "trust-forward"
+    ],
+    "lexicon": [
+      "work",
+      "notion",
+      "agents",
+      "enterprise",
+      "knowledge",
+      "search",
+      "custom",
+      "own",
+      "over",
+      "tools",
+      "automate",
+      "answers"
+    ]
+  },
+  {
+    "slug": "openai",
+    "name": "OpenAI",
+    "url": "https://openai.com/",
+    "category": "AI research and product",
+    "use": "research-to-product institutional copy",
+    "metrics": {
+      "words": 554,
+      "sentences": 12,
+      "avg_sentence_words": 46.2,
+      "avg_heading_words": 2.4,
+      "avg_paragraph_words": 2.2,
+      "avg_cta_words": 4.6,
+      "headings": 5,
+      "ctas": 5,
+      "links": 16,
+      "type_token_ratio": 0.301
+    },
+    "tone": [
+      "explanatory",
+      "action-oriented",
+      "technical"
+    ],
+    "lexicon": [
+      "new",
+      "opens",
+      "window",
+      "research",
+      "product",
+      "chatgpt",
+      "may",
+      "gpt-5",
+      "business",
+      "min",
+      "read",
+      "safety"
+    ]
+  },
+  {
+    "slug": "shopify",
+    "name": "Shopify",
+    "url": "https://www.shopify.com/",
+    "category": "commerce platform",
+    "use": "merchant-growth product copy",
+    "metrics": {
+      "words": 1771,
+      "sentences": 87,
+      "avg_sentence_words": 20.4,
+      "avg_heading_words": 5.4,
+      "avg_paragraph_words": 4.5,
+      "avg_cta_words": 3,
+      "headings": 12,
+      "ctas": 5,
+      "links": 16,
+      "type_token_ratio": 0.25
+    },
+    "tone": [
+      "explanatory",
+      "action-oriented",
+      "trust-forward"
+    ],
+    "lexicon": [
+      "english",
+      "shopify",
+      "espa",
+      "store",
+      "commerce",
+      "sidekick",
+      "fran",
+      "ais",
+      "build",
+      "app",
+      "dev",
+      "checkout"
+    ]
+  },
+  {
+    "slug": "stripe",
+    "name": "Stripe",
+    "url": "https://stripe.com/",
+    "category": "financial infrastructure",
+    "use": "technical trust-forward SaaS copy",
+    "metrics": {
+      "words": 1748,
+      "sentences": 111,
+      "avg_sentence_words": 15.7,
+      "avg_heading_words": 7.2,
+      "avg_paragraph_words": 7.8,
+      "avg_cta_words": 2.6,
+      "headings": 12,
+      "ctas": 12,
+      "links": 16,
+      "type_token_ratio": 0.301
+    },
+    "tone": [
+      "balanced",
+      "action-oriented"
+    ],
+    "lexicon": [
+      "stripe",
+      "read",
+      "payments",
+      "story",
+      "financial",
+      "business",
+      "how",
+      "commerce",
+      "products",
+      "crypto",
+      "billing",
+      "businesses"
+    ]
+  },
+  {
+    "slug": "vercel",
+    "name": "Vercel",
+    "url": "https://vercel.com/",
+    "category": "developer platform",
+    "use": "performance and deployment copy",
+    "metrics": {
+      "words": 2034,
+      "sentences": 59,
+      "avg_sentence_words": 34.5,
+      "avg_heading_words": 2.6,
+      "avg_paragraph_words": 4.5,
+      "avg_cta_words": 3.9,
+      "headings": 12,
+      "ctas": 11,
+      "links": 16,
+      "type_token_ratio": 0.172
+    },
+    "tone": [
+      "explanatory",
+      "action-oriented",
+      "technical",
+      "trust-forward"
+    ],
+    "lexicon": [
+      "web",
+      "apps",
+      "scale",
+      "platform",
+      "deploy",
+      "vercel",
+      "protection",
+      "next",
+      "one",
+      "ship",
+      "fast",
+      "help"
+    ]
+  },
+  {
+    "slug": "wallpaper",
+    "name": "Wallpaper",
+    "url": "https://www.wallpaper.com/",
+    "category": "design and architecture media",
+    "use": "design, interiors, and architecture editorial copy",
+    "metrics": {
+      "words": 2007,
+      "sentences": 23,
+      "avg_sentence_words": 87.3,
+      "avg_heading_words": 1.5,
+      "avg_paragraph_words": 15.4,
+      "avg_cta_words": 4.5,
+      "headings": 12,
+      "ctas": 2,
+      "links": 16,
+      "type_token_ratio": 0.228
+    },
+    "tone": [
+      "explanatory"
+    ],
+    "lexicon": [
+      "may",
+      "published",
+      "new",
+      "design",
+      "wallpaper",
+      "travel",
+      "jonathan",
+      "bell",
+      "last",
+      "updated",
+      "jack",
+      "moss"
+    ]
+  }
+]

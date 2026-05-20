@@ -1,0 +1,106 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://www.shopify.com/",
+  "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
+  "meta_description": "Try Shopify free. Build or grow your business fast with AI. Get more than ecommerce software with tools to manage every part of your business.",
+  "metrics": {
+    "words": 1771,
+    "sentences": 87,
+    "avg_sentence_words": 20.4,
+    "avg_heading_words": 5.4,
+    "avg_paragraph_words": 4.5,
+    "avg_cta_words": 3,
+    "headings": 12,
+    "ctas": 5,
+    "links": 16,
+    "type_token_ratio": 0.25
+  },
+  "tone": [
+    "explanatory",
+    "action-oriented",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "start",
+      "get",
+      "build"
+    ],
+    "punctuation": {
+      "periods": 83,
+      "questions": 3,
+      "exclamations": 0,
+      "colons": 1
+    }
+  },
+  "headings": [
+    "Be the next AI all-star",
+    "store they line up for",
+    "Your brand has entered the chat",
+    "Sell more in more places",
+    "Grow around the world",
+    "For anyone from entrepreneurs to enterprise",
+    "Meet your secret weapon, Sidekick",
+    "Your very own commerce AI",
+    "What winning looks like",
+    "Customize everything with apps",
+    "Hyperdriven by AI. Commerce to the core.",
+    "There’s no better place for you to build"
+  ],
+  "ctas": [
+    "Start for free",
+    "Get a stunning store",
+    "Build custom storefronts",
+    "Build for AI",
+    "Build apps"
+  ],
+  "links": [
+    "Skip to Content",
+    "Sidekick Your commerce-obsessed AI assistant.",
+    "Website Builder",
+    "Themes",
+    "Domains",
+    "Customer Accounts",
+    "Sidekick",
+    "Online",
+    "AI Chats",
+    "Point of Sale",
+    "Shop App",
+    "Social & Marketplaces",
+    "Global",
+    "B2B",
+    "Across Markets",
+    "Advertising & Campaigns"
+  ],
+  "buttons": [
+    "USA | English"
+  ],
+  "lexicon": [
+    "english",
+    "shopify",
+    "espa",
+    "store",
+    "commerce",
+    "sidekick",
+    "fran",
+    "ais",
+    "build",
+    "app",
+    "dev",
+    "checkout",
+    "deutsch",
+    "shop",
+    "tools",
+    "com",
+    "fast",
+    "customer",
+    "nederlands",
+    "portugu",
+    "italiano",
+    "sloven",
+    "ina",
+    "enterprise"
+  ],
+  "paragraph_samples": []
+}

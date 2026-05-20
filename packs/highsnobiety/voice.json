@@ -1,0 +1,108 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://www.highsnobiety.com/",
+  "title": "Discover and Shop What's Next | Highsnobiety",
+  "meta_description": "Highsnobiety is a global fashion and media brand passionate about product and the stories that shape them. Discover and shop what's next.",
+  "metrics": {
+    "words": 1730,
+    "sentences": 81,
+    "avg_sentence_words": 21.4,
+    "avg_heading_words": 9.2,
+    "avg_paragraph_words": 21,
+    "avg_cta_words": 2,
+    "headings": 12,
+    "ctas": 3,
+    "links": 16,
+    "type_token_ratio": 0.35
+  },
+  "tone": [
+    "explanatory"
+  ],
+  "style": {
+    "cta_verbs": [
+      "get",
+      "see",
+      "contact"
+    ],
+    "punctuation": {
+      "periods": 67,
+      "questions": 13,
+      "exclamations": 0,
+      "colons": 1
+    }
+  },
+  "headings": [
+    "What Happens After Apple? Eugene Whang Is Finding Out",
+    "GU Is UNIQLO for Gen Z. Why Isn’t Anyone Talking About It?",
+    "Eddie Huang Knows Menswear. So Does His New Novel.",
+    "20 Years After Santal 33, Does Le Labo Still Smell Like Cool?",
+    "These Skaters Turned a 1995 Honda Van Into a Wild Salomon (EXCLUSIVE)",
+    "This Brand Spent 21 Years Perfecting the World's Greatest Work Pants",
+    "Up Close With the Audemars Piguet x Swatch Collab That No One Saw Coming (EXCLUSIVE)",
+    "Why Are Fashion Brands Culturemogging the Venice Biennale?",
+    "Get Highsnobiety straight to your inbox",
+    "Jameson and KidSuper Keep Brooklyn Super Smooth",
+    "Donald Judd’s Objects",
+    "We’re Living Through the Face Mist Revolution"
+  ],
+  "ctas": [
+    "Get our App",
+    "See All",
+    "Contact"
+  ],
+  "links": [
+    "Highsnobiety",
+    "Latest",
+    "Shopping",
+    "Style",
+    "Sneakers",
+    "Culture",
+    "Beauty",
+    "SPRING ‘26 ISSUE",
+    "Drop Calendar",
+    "Magazines",
+    "Get our App",
+    "Newsletters",
+    "Account",
+    "Search",
+    "Noah Johnson",
+    "Tres Dean"
+  ],
+  "buttons": [
+    "menu",
+    "subscribe",
+    "Online Shop",
+    "Sections",
+    "More",
+    "Company",
+    "Features"
+  ],
+  "lexicon": [
+    "culture",
+    "style",
+    "highsnobiety",
+    "beauty",
+    "brands",
+    "sneakers",
+    "now",
+    "this",
+    "spring",
+    "issue",
+    "sable",
+    "yong",
+    "shop",
+    "latest",
+    "best",
+    "app",
+    "brand",
+    "sneaker",
+    "accessibility",
+    "we've",
+    "got",
+    "download",
+    "shopping",
+    "his"
+  ],
+  "paragraph_samples": []
+}

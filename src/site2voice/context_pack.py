@@ -33,6 +33,9 @@ def create_context_pack(
     force: bool = False,
 ) -> dict[str, Any]:
     payload = analyze(source, timeout=timeout)
+    json_payload = dict(payload)
+    if max_snippets == 0:
+        json_payload["paragraph_samples"] = []
     target = Path(output_dir).expanduser()
     paths = {
         "voice_md": target / "VOICE.md",
@@ -46,7 +49,7 @@ def create_context_pack(
 
     target.mkdir(parents=True, exist_ok=True)
     paths["voice_md"].write_text(to_markdown(payload, max_snippets=max_snippets), encoding="utf-8")
-    paths["voice_json"].write_text(to_json(payload), encoding="utf-8")
+    paths["voice_json"].write_text(to_json(json_payload), encoding="utf-8")
     paths["agent_prompt"].write_text(PROMPT_TEMPLATE.format(source=payload["source"]), encoding="utf-8")
 
     return {
@@ -54,4 +57,3 @@ def create_context_pack(
         "output_dir": str(target),
         "files": {key: str(path) for key, path in paths.items()},
     }
-

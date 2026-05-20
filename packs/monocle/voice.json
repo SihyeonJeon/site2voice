@@ -1,0 +1,120 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://monocle.com/",
+  "title": "Monocle - global affairs, culture and design",
+  "meta_description": "Monocle is a global briefing covering international affairs, business, design and culture through a magazine, radio station and website.",
+  "metrics": {
+    "words": 2677,
+    "sentences": 40,
+    "avg_sentence_words": 66.9,
+    "avg_heading_words": 8.3,
+    "avg_paragraph_words": 7,
+    "avg_cta_words": 2.9,
+    "headings": 12,
+    "ctas": 7,
+    "links": 16,
+    "type_token_ratio": 0.29
+  },
+  "tone": [
+    "explanatory",
+    "action-oriented"
+  ],
+  "style": {
+    "cta_verbs": [
+      "see",
+      "contact",
+      "get",
+      "sign",
+      "buy"
+    ],
+    "punctuation": {
+      "periods": 24,
+      "questions": 13,
+      "exclamations": 2,
+      "colons": 54
+    }
+  },
+  "headings": [
+    "Monocle Logo",
+    "Monocle Radio",
+    "The Continental Shift",
+    "Good mayors zone in on the details – just ask Zohran Mamdani",
+    "How to age in a dignified way: know your neighbours",
+    "Billionaire media mogul Vincent Bolloré casts a long shadow over Cannes film festival",
+    "Want to know Thailand? Get behind the wheel",
+    "Tray tables up: The civil aviation quiz results are cleared to land",
+    "Seven of the most beautiful hotels in Thailand right now",
+    "‘Success should enable reinvention’: How Oribe cornered the luxury beauty market",
+    "Finally! In London’s David Bowie exhibition the ‘immersive experience’ hits the right note",
+    "Latest from Monocle radio"
+  ],
+  "ctas": [
+    "see all",
+    "See all Monocle events and collaborations",
+    "Contact Us",
+    "Get in touch",
+    "Sign in",
+    "Buy a subscription",
+    "Sign out"
+  ],
+  "links": [
+    "Skip to main content",
+    "Subscribe",
+    "British Pound (GBP)",
+    "Euro (EUR)",
+    "US Dollar (USD)",
+    "Australian Dollar (AUD)",
+    "Swiss Franc (CHF)",
+    "Magazine",
+    "Radio",
+    "Shop",
+    "Monocle Logo",
+    "Daily inbox intelligence from Monocle",
+    "Affairs",
+    "Business",
+    "Culture",
+    "Design"
+  ],
+  "buttons": [
+    "Go",
+    "Listen Live",
+    "Share",
+    "Topics",
+    "Discover",
+    "Our Brand",
+    "Contact Us",
+    "Legal & Privacy",
+    "Close Filter",
+    "Affairs",
+    "Architecture",
+    "Art"
+  ],
+  "lexicon": [
+    "monocle",
+    "min",
+    "city",
+    "design",
+    "guides",
+    "read",
+    "affairs",
+    "radio",
+    "new",
+    "travel",
+    "shop",
+    "fashion",
+    "culture",
+    "see",
+    "handbook",
+    "issue",
+    "hong",
+    "kong",
+    "business",
+    "thailand",
+    "dollar",
+    "film",
+    "restaurants",
+    "may"
+  ],
+  "paragraph_samples": []
+}

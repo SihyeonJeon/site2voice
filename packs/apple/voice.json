@@ -1,0 +1,122 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://www.apple.com/",
+  "title": "Apple",
+  "meta_description": "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support.",
+  "metrics": {
+    "words": 2998,
+    "sentences": 149,
+    "avg_sentence_words": 20.1,
+    "avg_heading_words": 2,
+    "avg_paragraph_words": 6.1,
+    "avg_cta_words": 3.6,
+    "headings": 12,
+    "ctas": 9,
+    "links": 16,
+    "type_token_ratio": 0.17
+  },
+  "tone": [
+    "explanatory",
+    "action-oriented"
+  ],
+  "style": {
+    "cta_verbs": [
+      "watch",
+      "learn",
+      "buy",
+      "get",
+      "see",
+      "contact"
+    ],
+    "punctuation": {
+      "periods": 145,
+      "questions": 3,
+      "exclamations": 0,
+      "colons": 11
+    }
+  },
+  "headings": [
+    "Apple",
+    "MacBook Neo",
+    "iPhone",
+    "iPad Air",
+    "WWDC 26",
+    "Apple Card",
+    "Apple for College",
+    "MacBook Pro",
+    "Apple Watch Series 11",
+    "Apple Trade In",
+    "Endless entertainment.",
+    "Apple Footer"
+  ],
+  "ctas": [
+    "Watch",
+    "Learn more",
+    "Buy",
+    "Get your estimate",
+    "See the schedule Live MLB games, every Friday.",
+    "Watch now Billie Eilish",
+    "Watch now Core with Kyle",
+    "Watch now Asian-Pacific American Heritage Month",
+    "Contact Apple"
+  ],
+  "links": [
+    "Apple",
+    "Store",
+    "Mac",
+    "iPad",
+    "iPhone",
+    "Watch",
+    "Vision",
+    "AirPods",
+    "TV & Home",
+    "Entertainment",
+    "Accessories",
+    "Support",
+    "Learn more",
+    "Buy",
+    "Shop iPhone",
+    "Get your estimate"
+  ],
+  "buttons": [
+    "Shop and Learn",
+    "Apple Wallet",
+    "Account",
+    "Entertainment",
+    "Apple Store",
+    "For Business",
+    "For Education",
+    "For Healthcare",
+    "For Government",
+    "Apple Values",
+    "About Apple"
+  ],
+  "lexicon": [
+    "apple",
+    "card",
+    "offer",
+    "account",
+    "now",
+    "new",
+    "cash",
+    "daily",
+    "period",
+    "this",
+    "airpods",
+    "qualifying",
+    "purchases",
+    "purchase",
+    "may",
+    "store",
+    "pro",
+    "not",
+    "will",
+    "transaction",
+    "item",
+    "during",
+    "month",
+    "watch"
+  ],
+  "paragraph_samples": []
+}

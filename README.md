@@ -25,6 +25,18 @@ words: headings, CTAs, navigation labels, claim boundaries, and product tone.
 
 `DESIGN.md` gives agents visual taste. `site2voice` gives them copy taste.
 
+## Voice Packs
+
+The repo includes downloadable voice packs for well-known product and editorial
+sites: Apple, Stripe, Linear, Vercel, Notion, Figma, Shopify, GitHub, OpenAI,
+Anthropic, Hypebeast, Highsnobiety, Monocle, Wallpaper, and EYESMAG.
+
+```bash
+curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/packs/stripe/VOICE.md -o VOICE.md
+```
+
+See [packs](packs/README.md).
+
 ## What You Get
 
 ```text
@@ -97,6 +109,7 @@ make bench-ci
 ## Docs
 
 - [Benchmark](docs/benchmark.md)
+- [Voice packs](packs/README.md)
 - [CI usage](docs/ci.md)
 - [Agent workflows](docs/agent-workflows.md)
 - [Voice patterns](docs/voice-patterns.md)

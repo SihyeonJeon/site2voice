@@ -1,0 +1,115 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://www.anthropic.com/",
+  "title": "Home \\ Anthropic",
+  "meta_description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
+  "metrics": {
+    "words": 1064,
+    "sentences": 31,
+    "avg_sentence_words": 34.3,
+    "avg_heading_words": 5.2,
+    "avg_paragraph_words": 14.8,
+    "avg_cta_words": 2,
+    "headings": 12,
+    "ctas": 3,
+    "links": 16,
+    "type_token_ratio": 0.233
+  },
+  "tone": [
+    "explanatory",
+    "technical",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "try",
+      "contact",
+      "download"
+    ],
+    "punctuation": {
+      "periods": 30,
+      "questions": 0,
+      "exclamations": 0,
+      "colons": 6
+    }
+  },
+  "headings": [
+    "AI research and products that put safety at the frontier",
+    "Project Glasswing",
+    "Latest releases",
+    "Claude Opus 4.7",
+    "Claude is a space to think",
+    "Claude on Mars",
+    "At Anthropic, we build AI to serve humanity’s long-term well-being.",
+    "‍",
+    "Core views on AI safety",
+    "Anthropic’s Responsible Scaling Policy",
+    "Anthropic Academy: Build and Learn with Claude",
+    "Anthropic’s Economic Index"
+  ],
+  "ctas": [
+    "Try Claude",
+    "Contact sales",
+    "Download app"
+  ],
+  "links": [
+    "Skip to main content",
+    "Skip to footer",
+    "Research",
+    "Economic Futures",
+    "Claude's Constitution",
+    "Transparency",
+    "Responsible Scaling Policy",
+    "Security and compliance",
+    "Anthropic Academy",
+    "Tutorials",
+    "Use cases",
+    "Engineering at Anthropic",
+    "Developer docs",
+    "About",
+    "Careers",
+    "Events"
+  ],
+  "buttons": [
+    "Try Claude",
+    "Log in to Claude",
+    "Download app",
+    "Read the story",
+    "Model details",
+    "Read announcement",
+    "Read the post",
+    "Privacy choices",
+    "Customize cookie settings",
+    "Reject all cookies",
+    "Accept all cookies",
+    "Save preferences"
+  ],
+  "lexicon": [
+    "claude",
+    "anthropic",
+    "security",
+    "policy",
+    "code",
+    "log",
+    "responsible",
+    "download",
+    "app",
+    "constitution",
+    "scaling",
+    "compliance",
+    "try",
+    "cowork",
+    "pricing",
+    "opus",
+    "read",
+    "research",
+    "economic",
+    "claude's",
+    "transparency",
+    "academy",
+    "tutorials",
+    "cases"
+  ],
+  "paragraph_samples": []
+}

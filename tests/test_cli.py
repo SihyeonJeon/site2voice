@@ -102,6 +102,7 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertTrue((target / "agent-prompt.md").exists())
             voice_json = json.loads((target / "voice.json").read_text(encoding="utf-8"))
             self.assertEqual(voice_json["schema_version"], "site2voice.voice.v1")
+            self.assertEqual(voice_json["paragraph_samples"], [])
             self.assertIn("site2voice bench", (target / "agent-prompt.md").read_text(encoding="utf-8"))
 
 

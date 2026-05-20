@@ -1,0 +1,102 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://www.wallpaper.com/",
+  "title": "Wallpaper*: design, interiors, architecture, fashion, art",
+  "meta_description": "Wallpaper* is the world’s number one global design destination, championing the best in architecture, interiors, fashion, art and contemporary lifestyle",
+  "metrics": {
+    "words": 2007,
+    "sentences": 23,
+    "avg_sentence_words": 87.3,
+    "avg_heading_words": 1.5,
+    "avg_paragraph_words": 15.4,
+    "avg_cta_words": 4.5,
+    "headings": 12,
+    "ctas": 2,
+    "links": 16,
+    "type_token_ratio": 0.228
+  },
+  "tone": [
+    "explanatory"
+  ],
+  "style": {
+    "cta_verbs": [
+      "sign",
+      "contact"
+    ],
+    "punctuation": {
+      "periods": 14,
+      "questions": 6,
+      "exclamations": 3,
+      "colons": 4
+    }
+  },
+  "headings": [
+    "Wallpaper*",
+    "Latest News",
+    "Editor’s Picks",
+    "Architecture",
+    "Design & Interiors",
+    "Art",
+    "Watches & Jewellery",
+    "Fashion & Beauty",
+    "Tech",
+    "Transportation",
+    "Travel",
+    "Entertaining"
+  ],
+  "ctas": [
+    "Sign up to our newsletter Newsletter",
+    "Contact Future's experts"
+  ],
+  "links": [
+    "Wallpaper*",
+    "Architecture",
+    "Design & interiors",
+    "Art & Culture",
+    "Watches & Jewellery",
+    "Fashion & Beauty",
+    "Technology",
+    "Transportation",
+    "Travel",
+    "Entertaining",
+    "Wallpaper* Store",
+    "Sign up to our newsletter Newsletter",
+    "Wallpaper* Magazine Subscription",
+    "From $46.75",
+    "Subscribe now",
+    "Venice Biennale"
+  ],
+  "buttons": [
+    "Subscribe",
+    "×",
+    "Search"
+  ],
+  "lexicon": [
+    "may",
+    "published",
+    "new",
+    "design",
+    "wallpaper",
+    "travel",
+    "jonathan",
+    "bell",
+    "last",
+    "updated",
+    "jack",
+    "moss",
+    "tianna",
+    "williams",
+    "this",
+    "view",
+    "york",
+    "here",
+    "summer",
+    "architecture",
+    "art",
+    "fashion",
+    "venice",
+    "biennale"
+  ],
+  "paragraph_samples": []
+}

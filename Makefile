@@ -1,4 +1,4 @@
-.PHONY: test example bench bench-ci init-example
+.PHONY: test example bench bench-ci init-example packs
 
 test:
 	PYTHONPATH=src python3 -m unittest discover -s tests
@@ -15,3 +15,6 @@ bench-ci:
 init-example:
 	rm -rf /tmp/site2voice-context
 	PYTHONPATH=src python3 -m site2voice.cli init examples/editorial-home.html --dir /tmp/site2voice-context --no-samples
+
+packs:
+	PYTHONPATH=src python3 scripts/build_packs.py

@@ -1,0 +1,109 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://openai.com/",
+  "title": "OpenAI | Research & Deployment",
+  "meta_description": "We believe our research will eventually lead to artificial general intelligence, a system that can solve human-level problems. Building safe and beneficial AGI is our mission.",
+  "metrics": {
+    "words": 554,
+    "sentences": 12,
+    "avg_sentence_words": 46.2,
+    "avg_heading_words": 2.4,
+    "avg_paragraph_words": 2.2,
+    "avg_cta_words": 4.6,
+    "headings": 5,
+    "ctas": 5,
+    "links": 16,
+    "type_token_ratio": 0.301
+  },
+  "tone": [
+    "explanatory",
+    "action-oriented",
+    "technical"
+  ],
+  "style": {
+    "cta_verbs": [
+      "try",
+      "download",
+      "explore",
+      "contact"
+    ],
+    "punctuation": {
+      "periods": 11,
+      "questions": 0,
+      "exclamations": 0,
+      "colons": 0
+    }
+  },
+  "headings": [
+    "Recent news",
+    "Stories",
+    "Latest research",
+    "OpenAI for business",
+    "Get started with ChatGPT"
+  ],
+  "ctas": [
+    "Try ChatGPT (opens in a new window)",
+    "Download",
+    "Explore ChatGPT (opens in a new window)",
+    "Download (opens in a new window)",
+    "Contact Sales"
+  ],
+  "links": [
+    "Skip to main content",
+    "Research",
+    "Business",
+    "Developers",
+    "Company",
+    "Foundation (opens in a new window)",
+    "Talk with ChatGPT",
+    "API Platform",
+    "Stories",
+    "Introducing GPT-5.5 Product 18 min read",
+    "Introducing ChatGPT Images 2.0 Product",
+    "View more",
+    "View all",
+    "A salvage yard in Nevada",
+    "A seed farm in South Carolina",
+    "A tamale shop in California"
+  ],
+  "buttons": [
+    "Products",
+    "Log in",
+    "Research",
+    "Business",
+    "Developers",
+    "Company",
+    "Login",
+    "More",
+    "Manage Cookies",
+    "English United States"
+  ],
+  "lexicon": [
+    "new",
+    "opens",
+    "window",
+    "research",
+    "product",
+    "chatgpt",
+    "may",
+    "gpt-5",
+    "business",
+    "min",
+    "read",
+    "safety",
+    "company",
+    "foundation",
+    "mar",
+    "apr",
+    "overview",
+    "products",
+    "developers",
+    "api",
+    "stories",
+    "introducing",
+    "codex",
+    "view"
+  ],
+  "paragraph_samples": []
+}

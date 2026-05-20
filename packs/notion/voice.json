@@ -1,0 +1,119 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.4.0",
+  "source": "https://www.notion.com/",
+  "title": "The AI workspace that works for you. | Notion",
+  "meta_description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
+  "metrics": {
+    "words": 635,
+    "sentences": 43,
+    "avg_sentence_words": 14.8,
+    "avg_heading_words": 2.7,
+    "avg_paragraph_words": 9,
+    "avg_cta_words": 3,
+    "headings": 12,
+    "ctas": 5,
+    "links": 16,
+    "type_token_ratio": 0.402
+  },
+  "tone": [
+    "balanced",
+    "action-oriented",
+    "technical",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "see",
+      "request",
+      "get",
+      "explore"
+    ],
+    "punctuation": {
+      "periods": 42,
+      "questions": 0,
+      "exclamations": 0,
+      "colons": 0
+    }
+  },
+  "headings": [
+    "AI features",
+    "Explore use cases",
+    "Teams",
+    "Company size",
+    "Use Cases",
+    "Browse",
+    "Discover",
+    "Learn",
+    "Meet the night shift.",
+    "Keep work moving 24/7.",
+    "Automate repetitive work for your team.",
+    "See what Custom Agents can do"
+  ],
+  "ctas": [
+    "See what’s new →",
+    "Request a demo",
+    "Get Notion free",
+    "See pricing plans →",
+    "Explore more →"
+  ],
+  "links": [
+    "Notion Your AI workspace",
+    "Notion Calendar",
+    "Notion Mail",
+    "Notion AI AI tools for work",
+    "Agents Automate busywork",
+    "Enterprise Search Find answers instantly",
+    "Knowledge Base Centralize your knowledge",
+    "Docs Simple and powerful",
+    "Projects Manage any project",
+    "Connections Connect your apps",
+    "Security Safe and scalable",
+    "See what’s new →",
+    "Notion App →",
+    "For work",
+    "For life",
+    "Eng & Product"
+  ],
+  "buttons": [
+    "Product",
+    "AI",
+    "Solutions",
+    "Resources",
+    "Play",
+    "Q&A agents Answers questions instantly using knowledge you already have.",
+    "Task routing agents Assigns, prioritizes, and routes tasks on its own.",
+    "Reporting agents Summarizes, writes, and sends reports for you.",
+    "Create your own Make a Custom Agent for any work that repeats.",
+    "View the video",
+    "English (US)",
+    "Cookie settings"
+  ],
+  "lexicon": [
+    "work",
+    "notion",
+    "agents",
+    "enterprise",
+    "knowledge",
+    "search",
+    "custom",
+    "own",
+    "over",
+    "tools",
+    "automate",
+    "answers",
+    "instantly",
+    "agent",
+    "one",
+    "community",
+    "product",
+    "base",
+    "any",
+    "connections",
+    "security",
+    "teams",
+    "pricing",
+    "questions"
+  ],
+  "paragraph_samples": []
+}

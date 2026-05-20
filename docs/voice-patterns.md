@@ -22,7 +22,8 @@ Good source families:
 - Dazed/i-D-style youth culture and fashion framing.
 
 Use synthetic fixtures for checked-in examples. Use live URLs only for local
-analysis or private benchmark runs.
+analysis or public packs that remove paragraph samples and keep only derived
+style signals.
 
 ## Product / Developer Sites
 
@@ -53,4 +54,3 @@ site2voice bench https://example.com before.md after.md
 The first command gives the agent a voice brief. The second command verifies
 whether the resulting copy moved closer to the source profile while staying
 inside copy-safety and claim-safety gates.
-
