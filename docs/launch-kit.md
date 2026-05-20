@@ -15,7 +15,7 @@ vocabulary, then writes a concise voice brief for Claude Code, Cursor, Codex, or
 any other coding agent.
 
 ```bash
-pipx install site2voice
+pipx install git+https://github.com/SihyeonJeon/site2voice.git@v0.2.1
 site2voice https://example.com --out VOICE.md
 
 # from a repo clone

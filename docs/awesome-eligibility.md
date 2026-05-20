@@ -18,7 +18,9 @@ clear novelty, and a stable public surface.
 
 ## Submit When
 
-- v0.2+ release is public and installable.
+- v0.2+ release is public and installable from GitHub.
+- PyPI trusted publishing is connected, or the README clearly marks PyPI as
+  pending.
 - README shows one command, one result, and one before/after benchmark.
 - At least one real-world demo or user workflow exists.
 - No generated third-party prose is committed.
@@ -48,4 +50,3 @@ Avoid:
 - [subinium/awesome-claude-code](https://github.com/subinium/awesome-claude-code)
 - [promptslab/awesome-prompt-engineering](https://github.com/promptslab/awesome-prompt-engineering)
 - [allanjsx/awesome-ai-for-design](https://github.com/allanjsx/awesome-ai-for-design)
-

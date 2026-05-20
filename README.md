@@ -7,10 +7,13 @@ AI coding agent how the site sounds: headings, CTAs, navigation labels, sentence
 shape, repeated vocabulary, and claim boundaries.
 
 ```bash
-pipx install site2voice
+pipx install git+https://github.com/SihyeonJeon/site2voice.git@v0.2.1
 
 site2voice https://example.com --out VOICE.md
 ```
+
+PyPI install will be `pipx install site2voice` after the PyPI trusted publisher
+matches the GitHub release workflow.
 
 From a repo clone, run the included benchmark fixture:
 
