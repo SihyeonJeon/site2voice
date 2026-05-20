@@ -7,11 +7,16 @@ AI coding agent how the site sounds: headings, CTAs, navigation labels, sentence
 shape, repeated vocabulary, and claim boundaries.
 
 ```bash
-pipx install git+https://github.com/SihyeonJeon/site2voice
+pipx install site2voice
 
 site2voice https://example.com --out VOICE.md
-site2voice examples/saas-home.html --out examples/saas-VOICE.md
+```
+
+From a repo clone, run the included benchmark fixture:
+
+```bash
 site2voice examples/saas-home.html --format json
+site2voice bench examples/editorial-home.html examples/before-copy.md examples/after-copy.md
 ```
 
 ## Why
@@ -44,15 +49,43 @@ Use @VOICE.md for landing-page copy, headings, CTAs, and UI microcopy.
 - Do not invent compliance, security, customer, or performance claims.
 ```
 
+The real output also includes a small style fingerprint for heading length,
+paragraph rhythm, CTA shape, CTA verbs, and lexical variety.
+
 ## What It Does
 
 - Reads a URL or local HTML file.
 - Extracts title, meta description, headings, links, buttons, and paragraphs.
 - Finds CTA candidates from short action-led links/buttons.
 - Measures average sentence length.
+- Extracts a compact style fingerprint: heading shape, paragraph rhythm,
+  CTA shape, CTA verbs, and lexical variety.
 - Builds a repeated-vocabulary lexicon.
 - Writes Markdown or JSON.
+- Benchmarks candidate copy against a source voice profile.
+- Gates against unsupported claims and copied spans.
 - Uses only the Python standard library.
+
+## Benchmark
+
+`site2voice bench` compares candidate copy against measurable source signals:
+sentence length, vocabulary overlap, CTA shape, tone labels, heading shape,
+claim boundaries, and copy safety.
+
+```bash
+site2voice bench examples/editorial-home.html \
+  examples/before-copy.md \
+  examples/after-copy.md \
+  --out examples/editorial-benchmark.md
+```
+
+| Candidate | Result | Overall | Lexicon | Copy safety |
+| --- | --- | ---: | ---: | ---: |
+| `after-copy` | PASS | 83.8 | 70.0 | 93.2 |
+| `before-copy` | FAIL | 36.6 | 0.0 | 100.0 |
+
+The benchmark rewards measurable voice alignment without rewarding verbatim
+copying.
 
 ## What It Is Not
 
@@ -66,12 +99,18 @@ Use @VOICE.md for landing-page copy, headings, CTAs, and UI microcopy.
 ```bash
 python3 -m pip install -e .
 make test
+make bench
 site2voice examples/saas-home.html --out examples/saas-VOICE.md
 ```
 
 ## Links
 
 - [Research](docs/research.md)
+- [Benchmark](docs/benchmark.md)
+- [Voice patterns](docs/voice-patterns.md)
+- [Source candidates](docs/source-candidates.md)
+- [Awesome eligibility](docs/awesome-eligibility.md)
+- [Harness](docs/harness.md)
 - [Launch kit](docs/launch-kit.md)
 
 ## License

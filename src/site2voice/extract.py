@@ -11,6 +11,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
+from . import __version__
+
 
 TARGET_TAGS = {"title", "h1", "h2", "h3", "p", "a", "button", "li"}
 SKIP_TAGS = {"script", "style", "noscript", "svg", "canvas"}
@@ -48,6 +50,14 @@ STOPWORDS = {
     "with",
     "you",
     "your",
+    "그리고",
+    "대한",
+    "에서",
+    "으로",
+    "이다",
+    "있는",
+    "하는",
+    "한다",
 }
 CTA_VERBS = {
     "book",
@@ -67,6 +77,14 @@ CTA_VERBS = {
     "start",
     "try",
     "watch",
+    "구매",
+    "만나",
+    "보기",
+    "살펴",
+    "시작",
+    "읽기",
+    "지원",
+    "확인",
 }
 
 
@@ -133,7 +151,7 @@ def read_source(source: str, timeout: float = 20.0) -> tuple[str, str]:
     if source.startswith(("http://", "https://")):
         request = urllib.request.Request(
             source,
-            headers={"User-Agent": "site2voice/0.1 (+https://github.com/SihyeonJeon/site2voice)"},
+            headers={"User-Agent": f"site2voice/{__version__} (+https://github.com/SihyeonJeon/site2voice)"},
         )
         with urllib.request.urlopen(request, timeout=timeout) as response:
             content_type = response.headers.get_content_charset() or "utf-8"
@@ -157,11 +175,11 @@ def unique(values: list[str], limit: int) -> list[str]:
 
 
 def words(text: str) -> list[str]:
-    return re.findall(r"[A-Za-z][A-Za-z0-9'-]*", text.lower())
+    return re.findall(r"[A-Za-z가-힣][A-Za-z0-9가-힣'-]*", text.lower())
 
 
 def sentences(text: str) -> list[str]:
-    return [item.strip() for item in re.split(r"[.!?]+", text) if item.strip()]
+    return [item.strip() for item in re.split(r"[.!?。！？]+", text) if item.strip()]
 
 
 def cta_score(text: str) -> bool:
@@ -189,6 +207,34 @@ def tone_labels(avg_sentence_words: float, cta_count: int, lexicon: list[str]) -
     if lexicon_set & trust_terms:
         labels.append("trust-forward")
     return labels
+
+
+def average_word_count(values: list[str]) -> float:
+    lengths = [len(words(value)) for value in values if words(value)]
+    return round(statistics.mean(lengths), 1) if lengths else 0.0
+
+
+def first_words(values: list[str], limit: int = 8) -> list[str]:
+    output: list[str] = []
+    for value in values:
+        tokens = words(value)
+        if not tokens:
+            continue
+        token = tokens[0]
+        if token not in output:
+            output.append(token)
+        if len(output) >= limit:
+            break
+    return output
+
+
+def punctuation_profile(text: str) -> dict[str, int]:
+    return {
+        "periods": text.count("."),
+        "questions": text.count("?") + text.count("？"),
+        "exclamations": text.count("!") + text.count("！"),
+        "colons": text.count(":"),
+    }
 
 
 def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
@@ -220,11 +266,19 @@ def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
             "words": len(all_words),
             "sentences": len(all_sentences),
             "avg_sentence_words": round(avg_sentence_words, 1),
+            "avg_heading_words": average_word_count(headings),
+            "avg_paragraph_words": average_word_count(paragraphs),
+            "avg_cta_words": average_word_count(ctas),
             "headings": len(headings),
             "ctas": len(ctas),
             "links": len(links),
+            "type_token_ratio": round(len(set(all_words)) / len(all_words), 3) if all_words else 0.0,
         },
         "tone": tone_labels(avg_sentence_words, len(ctas), lexicon),
+        "style": {
+            "cta_verbs": first_words(ctas),
+            "punctuation": punctuation_profile(all_copy),
+        },
         "headings": headings,
         "ctas": ctas,
         "links": links,
@@ -256,6 +310,14 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         f"- Common CTAs: {cta_terms}.",
         f"- Navigation labels: {nav_terms}.",
         "",
+        "## Style Fingerprint",
+        "",
+        f"- Heading shape: about **{metrics['avg_heading_words']} words** per heading.",
+        f"- Paragraph rhythm: about **{metrics['avg_paragraph_words']} words** per paragraph sample.",
+        f"- CTA shape: about **{metrics['avg_cta_words']} words** per CTA.",
+        f"- CTA verbs: {', '.join(f'`{item}`' for item in payload['style']['cta_verbs']) or 'None detected'}.",
+        f"- Lexical variety: **{metrics['type_token_ratio']}** type-token ratio.",
+        "",
         "## Agent Rules",
         "",
         "- Start with a concrete user outcome before describing implementation details.",
@@ -264,14 +326,13 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         "- Keep headings specific; avoid generic labels like `Powerful features` unless the source uses that pattern.",
         "- When adding new sections, match the observed information order: headline, proof, action, details.",
         "- Do not invent compliance, security, customer, or performance claims that are not present in the source.",
-        "",
-        "## Page Pattern",
-        "",
     ]
-    if payload["headings"]:
-        lines.extend(f"- Heading: {trim_snippet(item)}" for item in payload["headings"][:max_snippets])
-    else:
-        lines.append("- No headings detected.")
+    if max_snippets > 0:
+        lines.extend(["", "## Page Pattern", ""])
+        if payload["headings"]:
+            lines.extend(f"- Heading: {trim_snippet(item)}" for item in payload["headings"][:max_snippets])
+        else:
+            lines.append("- No headings detected.")
     lines.extend(
         [
             "",

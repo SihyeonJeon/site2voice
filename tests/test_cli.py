@@ -38,6 +38,27 @@ class Site2VoiceTests(unittest.TestCase):
             payload = json.loads(out.read_text(encoding="utf-8"))
             self.assertGreater(payload["metrics"]["words"], 20)
 
+    def test_benchmark_scores_after_above_before(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td) / "bench.json"
+            code = main(
+                [
+                    "bench",
+                    "examples/editorial-home.html",
+                    "examples/before-copy.md",
+                    "examples/after-copy.md",
+                    "--format",
+                    "json",
+                    "--out",
+                    str(out),
+                ]
+            )
+            self.assertEqual(code, 0)
+            payload = json.loads(out.read_text(encoding="utf-8"))
+            scores = {item["label"]: item["score"] for item in payload["candidates"]}
+            self.assertGreater(scores["after-copy"], scores["before-copy"])
+            self.assertGreater(scores["after-copy"], 70)
+
 
 if __name__ == "__main__":
     unittest.main()

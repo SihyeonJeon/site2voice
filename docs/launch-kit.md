@@ -15,12 +15,18 @@ vocabulary, then writes a concise voice brief for Claude Code, Cursor, Codex, or
 any other coding agent.
 
 ```bash
-pipx install git+https://github.com/SihyeonJeon/site2voice
+pipx install site2voice
 site2voice https://example.com --out VOICE.md
+
+# from a repo clone
+site2voice bench examples/editorial-home.html examples/before-copy.md examples/after-copy.md
 ```
 
 No LLM dependency. No browser dependency. The goal is simple: give agents voice
 and positioning context before they write new UI copy.
+
+The benchmark path shows whether the generated copy actually moved closer to
+the source voice, without rewarding copied spans.
 
 Repo: https://github.com/SihyeonJeon/site2voice
 

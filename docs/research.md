@@ -25,6 +25,20 @@ docs, onboarding flows, and UI microcopy, the agent also needs:
 
 `site2voice` targets that gap with a deterministic `VOICE.md` generator.
 
+## New Evidence Path
+
+The project now includes `site2voice bench`, which measures whether candidate
+copy follows a source voice profile. This turns `VOICE.md` from a descriptive
+artifact into a testable workflow:
+
+```bash
+site2voice SOURCE --out VOICE.md
+site2voice bench SOURCE before.md after.md
+```
+
+The benchmark scores sentence shape, vocabulary overlap, CTA shape, heading
+shape, tone labels, claim boundaries, and copy safety.
+
 ## Product Bet
 
 The README should be short:
