@@ -9,7 +9,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Overall tone: **explanatory, action-oriented**.
 - Sentence shape: about **20.1 words** per sentence.
 - Main vocabulary: `apple`, `card`, `offer`, `account`, `now`, `new`, `cash`, `daily`, `period`, `this`, `airpods`, `qualifying`.
-- Common CTAs: `Watch`, `Learn more`, `Buy`, `Get your estimate`, `See the schedule Live MLB games, every Friday.`, `Watch now Billie Eilish`, `Watch now Core with Kyle`, `Watch now Asian-Pacific American Heritage Month`.
+- Common CTAs: `Watch`, `Learn more`, `Buy`, `Get your estimate`, `See the schedule Live MLB games, every Friday.`, `Watch now Core with Kyle`, `Watch now Billie Eilish`, `Watch now Asian-Pacific American Heritage Month`.
 - Navigation labels: `Apple`, `Store`, `Mac`, `iPad`, `iPhone`, `Watch`, `Vision`, `AirPods`, `TV & Home`, `Entertainment`.
 
 ## Style Fingerprint
@@ -28,6 +28,18 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Keep headings specific; avoid generic labels like `Powerful features` unless the source uses that pattern.
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
+
+## Output Contract
+
+- Keep average sentence length between **15.1 and 25.1 words**.
+- Keep headings near **2.0 words**; avoid generic one-word section labels unless the source uses them.
+- Keep paragraph blocks near **6.1 words**.
+- Keep CTAs near **3.6 words** and start them with: `watch`, `learn`, `buy`, `get`, `see`, `contact`.
+- Use at least **4** of these terms where natural: `apple`, `card`, `offer`, `account`, `now`, `new`, `cash`, `daily`, `period`, `this`, `airpods`, `qualifying`.
+- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
+- If writing a candidate file, run:
+  `site2voice bench https://www.apple.com/ path/to/candidate.md --strict`
+- Revise until overall >= **75**, copy safety >= **85**, and claim safety >= **75**.
 
 ## Evidence
 

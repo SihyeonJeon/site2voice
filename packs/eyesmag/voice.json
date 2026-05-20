@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://www.eyesmag.com/about",
   "title": "아이즈매거진 | eyesmag",
   "meta_description": "<아이즈매거진>은 패션&라이프스타일 웹 매거진입니다.",
@@ -28,6 +28,51 @@
       "questions": 0,
       "exclamations": 8,
       "colons": 6
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 12.8,
+      "min": 9.6,
+      "max": 16.0
+    },
+    "heading_words": {
+      "target": 1.0,
+      "min": 1.0,
+      "max": 1.2
+    },
+    "paragraph_words": {
+      "target": 16.2,
+      "min": 12.1,
+      "max": 20.2
+    },
+    "cta_words": {
+      "target": 2.0,
+      "min": 1.5,
+      "max": 2.5
+    },
+    "recommended_terms": [
+      "eyesmag",
+      "회사소개",
+      "fashion",
+      "info",
+      "com",
+      "아이즈매거진",
+      "라이프스타일",
+      "매거진입니다",
+      "매력적인",
+      "정보를",
+      "선별하고",
+      "데스크톱"
+    ],
+    "cta_verbs": [
+      "profile"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

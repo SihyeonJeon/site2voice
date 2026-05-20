@@ -1,20 +1,20 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://www.wallpaper.com/",
   "title": "Wallpaper*: design, interiors, architecture, fashion, art",
   "meta_description": "Wallpaper* is the world’s number one global design destination, championing the best in architecture, interiors, fashion, art and contemporary lifestyle",
   "metrics": {
-    "words": 2007,
-    "sentences": 23,
-    "avg_sentence_words": 87.3,
+    "words": 2050,
+    "sentences": 30,
+    "avg_sentence_words": 68.3,
     "avg_heading_words": 1.5,
-    "avg_paragraph_words": 15.4,
+    "avg_paragraph_words": 16.2,
     "avg_cta_words": 4.5,
     "headings": 12,
     "ctas": 2,
     "links": 16,
-    "type_token_ratio": 0.228
+    "type_token_ratio": 0.23
   },
   "tone": [
     "explanatory"
@@ -25,10 +25,56 @@
       "contact"
     ],
     "punctuation": {
-      "periods": 14,
-      "questions": 6,
-      "exclamations": 3,
-      "colons": 4
+      "periods": 17,
+      "questions": 9,
+      "exclamations": 4,
+      "colons": 6
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 68.3,
+      "min": 51.2,
+      "max": 85.4
+    },
+    "heading_words": {
+      "target": 1.5,
+      "min": 1.1,
+      "max": 1.9
+    },
+    "paragraph_words": {
+      "target": 16.2,
+      "min": 12.1,
+      "max": 20.2
+    },
+    "cta_words": {
+      "target": 4.5,
+      "min": 3.4,
+      "max": 5.6
+    },
+    "recommended_terms": [
+      "may",
+      "published",
+      "new",
+      "last",
+      "design",
+      "updated",
+      "wallpaper",
+      "travel",
+      "tianna",
+      "williams",
+      "this",
+      "summer"
+    ],
+    "cta_verbs": [
+      "sign",
+      "contact"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [
@@ -65,7 +111,7 @@
     "Wallpaper* Magazine Subscription",
     "From $46.75",
     "Subscribe now",
-    "Venice Biennale"
+    "Chelsea Flower Show"
   ],
   "buttons": [
     "Subscribe",
@@ -76,27 +122,27 @@
     "may",
     "published",
     "new",
+    "last",
     "design",
+    "updated",
     "wallpaper",
     "travel",
-    "jonathan",
-    "bell",
-    "last",
-    "updated",
-    "jack",
-    "moss",
     "tianna",
     "williams",
     "this",
-    "view",
-    "york",
-    "here",
     "summer",
+    "view",
+    "jonathan",
+    "bell",
     "architecture",
     "art",
+    "museum",
+    "here",
+    "york",
     "fashion",
-    "venice",
-    "biennale"
+    "live",
+    "ben",
+    "mccormack"
   ],
   "paragraph_samples": []
 }

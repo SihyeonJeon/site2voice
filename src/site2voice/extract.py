@@ -237,6 +237,33 @@ def punctuation_profile(text: str) -> dict[str, int]:
     }
 
 
+def metric_window(target: float, minimum_floor: float = 1.0) -> dict[str, float]:
+    if target <= 0:
+        return {"target": 0.0, "min": 0.0, "max": 0.0}
+    return {
+        "target": round(target, 1),
+        "min": round(max(minimum_floor, target * 0.75), 1),
+        "max": round(max(minimum_floor, target * 1.25), 1),
+    }
+
+
+def output_contract(metrics: dict[str, Any], lexicon: list[str], cta_verbs: list[str]) -> dict[str, Any]:
+    return {
+        "sentence_words": metric_window(float(metrics["avg_sentence_words"]), minimum_floor=4.0),
+        "heading_words": metric_window(float(metrics["avg_heading_words"]), minimum_floor=1.0),
+        "paragraph_words": metric_window(float(metrics["avg_paragraph_words"]), minimum_floor=4.0),
+        "cta_words": metric_window(float(metrics["avg_cta_words"]), minimum_floor=1.0),
+        "recommended_terms": lexicon[:12],
+        "cta_verbs": cta_verbs,
+        "minimum_recommended_terms": min(4, len(lexicon[:12])),
+        "benchmark_gates": {
+            "overall": 75,
+            "copy_safety": 85,
+            "claim_safety": 75,
+        },
+    }
+
+
 def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
     markup, resolved_source = read_source(source, timeout=timeout)
     parser = CopyParser()
@@ -258,29 +285,33 @@ def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
         for word, _ in Counter(word for word in all_words if word not in STOPWORDS and len(word) >= 3).most_common(24)
     ]
 
+    metrics = {
+        "words": len(all_words),
+        "sentences": len(all_sentences),
+        "avg_sentence_words": round(avg_sentence_words, 1),
+        "avg_heading_words": average_word_count(headings),
+        "avg_paragraph_words": average_word_count(paragraphs),
+        "avg_cta_words": average_word_count(ctas),
+        "headings": len(headings),
+        "ctas": len(ctas),
+        "links": len(links),
+        "type_token_ratio": round(len(set(all_words)) / len(all_words), 3) if all_words else 0.0,
+    }
+    cta_verbs = first_words(ctas)
+
     return {
         "schema_version": "site2voice.voice.v1",
         "generator": f"site2voice/{__version__}",
         "source": resolved_source,
         "title": title_items[-1] if title_items else "",
         "meta_description": parser.meta_description,
-        "metrics": {
-            "words": len(all_words),
-            "sentences": len(all_sentences),
-            "avg_sentence_words": round(avg_sentence_words, 1),
-            "avg_heading_words": average_word_count(headings),
-            "avg_paragraph_words": average_word_count(paragraphs),
-            "avg_cta_words": average_word_count(ctas),
-            "headings": len(headings),
-            "ctas": len(ctas),
-            "links": len(links),
-            "type_token_ratio": round(len(set(all_words)) / len(all_words), 3) if all_words else 0.0,
-        },
+        "metrics": metrics,
         "tone": tone_labels(avg_sentence_words, len(ctas), lexicon),
         "style": {
-            "cta_verbs": first_words(ctas),
+            "cta_verbs": cta_verbs,
             "punctuation": punctuation_profile(all_copy),
         },
+        "output_contract": output_contract(metrics, lexicon, cta_verbs),
         "headings": headings,
         "ctas": ctas,
         "links": links,
@@ -292,10 +323,18 @@ def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
 
 def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
     metrics = payload["metrics"]
+    contract = payload["output_contract"]
+    sentence_words = contract["sentence_words"]
+    heading_words = contract["heading_words"]
+    paragraph_words = contract["paragraph_words"]
+    cta_words = contract["cta_words"]
+    gates = contract["benchmark_gates"]
     tone = ", ".join(payload["tone"]) if payload["tone"] else "not enough copy"
     preferred_terms = ", ".join(f"`{term}`" for term in payload["lexicon"][:12]) or "None detected"
     cta_terms = ", ".join(f"`{item}`" for item in payload["ctas"][:8]) or "None detected"
     nav_terms = ", ".join(f"`{item}`" for item in payload["links"][:10]) or "None detected"
+    contract_terms = ", ".join(f"`{term}`" for term in contract["recommended_terms"]) or "None detected"
+    contract_verbs = ", ".join(f"`{item}`" for item in contract["cta_verbs"]) or "the observed CTA verbs"
 
     lines = [
         "# VOICE.md",
@@ -328,6 +367,18 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         "- Keep headings specific; avoid generic labels like `Powerful features` unless the source uses that pattern.",
         "- When adding new sections, match the observed information order: headline, proof, action, details.",
         "- Do not invent compliance, security, customer, or performance claims that are not present in the source.",
+        "",
+        "## Output Contract",
+        "",
+        f"- Keep average sentence length between **{sentence_words['min']} and {sentence_words['max']} words**.",
+        f"- Keep headings near **{heading_words['target']} words**; avoid generic one-word section labels unless the source uses them.",
+        f"- Keep paragraph blocks near **{paragraph_words['target']} words**.",
+        f"- Keep CTAs near **{cta_words['target']} words** and start them with: {contract_verbs}.",
+        f"- Use at least **{contract['minimum_recommended_terms']}** of these terms where natural: {contract_terms}.",
+        "- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.",
+        "- If writing a candidate file, run:",
+        f"  `site2voice bench {payload['source']} path/to/candidate.md --strict`",
+        f"- Revise until overall >= **{gates['overall']}**, copy safety >= **{gates['copy_safety']}**, and claim safety >= **{gates['claim_safety']}**.",
     ]
     if max_snippets > 0:
         lines.extend(["", "## Page Pattern", ""])

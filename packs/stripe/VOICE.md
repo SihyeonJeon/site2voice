@@ -29,6 +29,18 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
+## Output Contract
+
+- Keep average sentence length between **11.8 and 19.6 words**.
+- Keep headings near **7.2 words**; avoid generic one-word section labels unless the source uses them.
+- Keep paragraph blocks near **7.8 words**.
+- Keep CTAs near **2.6 words** and start them with: `sign`, `start`, `contact`, `get`, `create`, `watch`, `explore`, `see`.
+- Use at least **4** of these terms where natural: `stripe`, `read`, `payments`, `story`, `financial`, `business`, `how`, `commerce`, `products`, `crypto`, `billing`, `businesses`.
+- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
+- If writing a candidate file, run:
+  `site2voice bench https://stripe.com/ path/to/candidate.md --strict`
+- Revise until overall >= **75**, copy safety >= **85**, and claim safety >= **75**.
+
 ## Evidence
 
 | Signal | Value |

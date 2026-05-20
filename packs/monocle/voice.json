@@ -1,13 +1,13 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://monocle.com/",
   "title": "Monocle - global affairs, culture and design",
   "meta_description": "Monocle is a global briefing covering international affairs, business, design and culture through a magazine, radio station and website.",
   "metrics": {
-    "words": 2677,
+    "words": 2673,
     "sentences": 40,
-    "avg_sentence_words": 66.9,
+    "avg_sentence_words": 66.8,
     "avg_heading_words": 8.3,
     "avg_paragraph_words": 7,
     "avg_cta_words": 2.9,
@@ -33,6 +33,55 @@
       "questions": 13,
       "exclamations": 2,
       "colons": 54
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 66.8,
+      "min": 50.1,
+      "max": 83.5
+    },
+    "heading_words": {
+      "target": 8.3,
+      "min": 6.2,
+      "max": 10.4
+    },
+    "paragraph_words": {
+      "target": 7.0,
+      "min": 5.2,
+      "max": 8.8
+    },
+    "cta_words": {
+      "target": 2.9,
+      "min": 2.2,
+      "max": 3.6
+    },
+    "recommended_terms": [
+      "monocle",
+      "min",
+      "city",
+      "design",
+      "guides",
+      "read",
+      "affairs",
+      "radio",
+      "new",
+      "travel",
+      "shop",
+      "fashion"
+    ],
+    "cta_verbs": [
+      "see",
+      "contact",
+      "get",
+      "sign",
+      "buy"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

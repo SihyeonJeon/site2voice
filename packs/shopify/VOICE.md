@@ -29,6 +29,18 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
+## Output Contract
+
+- Keep average sentence length between **15.3 and 25.5 words**.
+- Keep headings near **5.4 words**; avoid generic one-word section labels unless the source uses them.
+- Keep paragraph blocks near **4.5 words**.
+- Keep CTAs near **3.0 words** and start them with: `start`, `get`, `build`.
+- Use at least **4** of these terms where natural: `english`, `shopify`, `espa`, `store`, `commerce`, `sidekick`, `fran`, `ais`, `build`, `app`, `dev`, `checkout`.
+- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
+- If writing a candidate file, run:
+  `site2voice bench https://www.shopify.com/ path/to/candidate.md --strict`
+- Revise until overall >= **75**, copy safety >= **85**, and claim safety >= **75**.
+
 ## Evidence
 
 | Signal | Value |

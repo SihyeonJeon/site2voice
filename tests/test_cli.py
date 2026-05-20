@@ -30,6 +30,7 @@ class Site2VoiceTests(unittest.TestCase):
             text = out.read_text(encoding="utf-8")
             self.assertIn("# VOICE.md", text)
             self.assertIn("Common CTAs", text)
+            self.assertIn("Output Contract", text)
             self.assertIn("Start free", text)
 
     def test_cli_writes_json(self) -> None:
@@ -40,6 +41,8 @@ class Site2VoiceTests(unittest.TestCase):
             payload = json.loads(out.read_text(encoding="utf-8"))
             self.assertEqual(payload["schema_version"], "site2voice.voice.v1")
             self.assertGreater(payload["metrics"]["words"], 20)
+            self.assertIn("output_contract", payload)
+            self.assertIn("sentence_words", payload["output_contract"])
 
     def test_benchmark_scores_after_above_before(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -102,8 +105,11 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertTrue((target / "agent-prompt.md").exists())
             voice_json = json.loads((target / "voice.json").read_text(encoding="utf-8"))
             self.assertEqual(voice_json["schema_version"], "site2voice.voice.v1")
+            self.assertIn("output_contract", voice_json)
             self.assertEqual(voice_json["paragraph_samples"], [])
-            self.assertIn("site2voice bench", (target / "agent-prompt.md").read_text(encoding="utf-8"))
+            agent_prompt = (target / "agent-prompt.md").read_text(encoding="utf-8")
+            self.assertIn("Output Contract", agent_prompt)
+            self.assertIn("site2voice bench", agent_prompt)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://www.anthropic.com/",
   "title": "Home \\ Anthropic",
   "meta_description": "Anthropic is an AI safety and research company that's working to build reliable, interpretable, and steerable AI systems.",
@@ -32,6 +32,53 @@
       "questions": 0,
       "exclamations": 0,
       "colons": 6
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 34.3,
+      "min": 25.7,
+      "max": 42.9
+    },
+    "heading_words": {
+      "target": 5.2,
+      "min": 3.9,
+      "max": 6.5
+    },
+    "paragraph_words": {
+      "target": 14.8,
+      "min": 11.1,
+      "max": 18.5
+    },
+    "cta_words": {
+      "target": 2.0,
+      "min": 1.5,
+      "max": 2.5
+    },
+    "recommended_terms": [
+      "claude",
+      "anthropic",
+      "security",
+      "policy",
+      "code",
+      "log",
+      "responsible",
+      "download",
+      "app",
+      "constitution",
+      "scaling",
+      "compliance"
+    ],
+    "cta_verbs": [
+      "try",
+      "contact",
+      "download"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://www.figma.com/",
   "title": "Figma: The Collaborative Interface Design Tool",
   "meta_description": "Figma is the leading collaborative design platform for building meaningful products. Design, prototype, and build products faster—while gathering feedback all in one place.",
@@ -36,6 +36,57 @@
       "questions": 0,
       "exclamations": 0,
       "colons": 4
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 57.2,
+      "min": 42.9,
+      "max": 71.5
+    },
+    "heading_words": {
+      "target": 4.8,
+      "min": 3.6,
+      "max": 6.0
+    },
+    "paragraph_words": {
+      "target": 3.2,
+      "min": 4.0,
+      "max": 4.0
+    },
+    "cta_words": {
+      "target": 3.2,
+      "min": 2.4,
+      "max": 4.0
+    },
+    "recommended_terms": [
+      "figma",
+      "design",
+      "explore",
+      "code",
+      "make",
+      "prompt",
+      "anything",
+      "tools",
+      "sites",
+      "imagine",
+      "product",
+      "started"
+    ],
+    "cta_verbs": [
+      "ai",
+      "see",
+      "events",
+      "contact",
+      "get",
+      "build",
+      "explore"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

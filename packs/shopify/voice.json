@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://www.shopify.com/",
   "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
   "meta_description": "Try Shopify free. Build or grow your business fast with AI. Get more than ecommerce software with tools to manage every part of your business.",
@@ -32,6 +32,53 @@
       "questions": 3,
       "exclamations": 0,
       "colons": 1
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 20.4,
+      "min": 15.3,
+      "max": 25.5
+    },
+    "heading_words": {
+      "target": 5.4,
+      "min": 4.1,
+      "max": 6.8
+    },
+    "paragraph_words": {
+      "target": 4.5,
+      "min": 4.0,
+      "max": 5.6
+    },
+    "cta_words": {
+      "target": 3.0,
+      "min": 2.2,
+      "max": 3.8
+    },
+    "recommended_terms": [
+      "english",
+      "shopify",
+      "espa",
+      "store",
+      "commerce",
+      "sidekick",
+      "fran",
+      "ais",
+      "build",
+      "app",
+      "dev",
+      "checkout"
+    ],
+    "cta_verbs": [
+      "start",
+      "get",
+      "build"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

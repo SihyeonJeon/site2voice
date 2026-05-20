@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0
+
+- Added an `Output Contract` section to generated `VOICE.md` files.
+- Added machine-readable `output_contract` fields to generated `voice.json`.
+- Updated context-pack agent prompts to treat the output contract as the
+  measurable target before running `site2voice bench`.
+- Regenerated public voice packs and the Stripe comparison with the stronger
+  contract included.
+
 ## 0.4.0
 
 - Added public voice packs for 15 well-known product and editorial sites.

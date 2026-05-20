@@ -51,6 +51,8 @@ site2voice https://example.com --out VOICE.md --max-snippets 0
 site2voice bench https://example.com before.md after.md
 ```
 
-The first command gives the agent a voice brief. The second command verifies
-whether the resulting copy moved closer to the source profile while staying
-inside copy-safety and claim-safety gates.
+The first command gives the agent a voice brief with an `Output Contract`:
+sentence range, heading target, paragraph target, CTA verbs, vocabulary targets,
+and benchmark gates. The second command verifies whether the resulting copy
+moved closer to the source profile while staying inside copy-safety and
+claim-safety gates.

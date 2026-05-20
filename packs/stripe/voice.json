@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://stripe.com/",
   "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
   "meta_description": "Stripe is a financial services platform that helps all types of businesses accept payments, build flexible billing models, and manage money movement.",
@@ -36,6 +36,58 @@
       "questions": 0,
       "exclamations": 0,
       "colons": 1
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 15.7,
+      "min": 11.8,
+      "max": 19.6
+    },
+    "heading_words": {
+      "target": 7.2,
+      "min": 5.4,
+      "max": 9.0
+    },
+    "paragraph_words": {
+      "target": 7.8,
+      "min": 5.8,
+      "max": 9.8
+    },
+    "cta_words": {
+      "target": 2.6,
+      "min": 2.0,
+      "max": 3.2
+    },
+    "recommended_terms": [
+      "stripe",
+      "read",
+      "payments",
+      "story",
+      "financial",
+      "business",
+      "how",
+      "commerce",
+      "products",
+      "crypto",
+      "billing",
+      "businesses"
+    ],
+    "cta_verbs": [
+      "sign",
+      "start",
+      "contact",
+      "get",
+      "create",
+      "watch",
+      "explore",
+      "see"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

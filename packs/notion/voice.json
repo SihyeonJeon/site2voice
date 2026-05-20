@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://www.notion.com/",
   "title": "The AI workspace that works for you. | Notion",
   "meta_description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
@@ -34,6 +34,54 @@
       "questions": 0,
       "exclamations": 0,
       "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 14.8,
+      "min": 11.1,
+      "max": 18.5
+    },
+    "heading_words": {
+      "target": 2.7,
+      "min": 2.0,
+      "max": 3.4
+    },
+    "paragraph_words": {
+      "target": 9.0,
+      "min": 6.8,
+      "max": 11.2
+    },
+    "cta_words": {
+      "target": 3.0,
+      "min": 2.2,
+      "max": 3.8
+    },
+    "recommended_terms": [
+      "work",
+      "notion",
+      "agents",
+      "enterprise",
+      "knowledge",
+      "search",
+      "custom",
+      "own",
+      "over",
+      "tools",
+      "automate",
+      "answers"
+    ],
+    "cta_verbs": [
+      "see",
+      "request",
+      "get",
+      "explore"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

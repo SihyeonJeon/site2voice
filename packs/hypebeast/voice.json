@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://hypebeast.com/",
   "title": "Hypebeast.KR | 하입비스트",
   "meta_description": "- 세계 1위 패션과 스트릿웨어 웹진. 최신 뉴스와 정보를 받아보시고 저희 웹샵에서 쇼핑도 즐겨보세요.",
@@ -28,6 +28,51 @@
       "questions": 2,
       "exclamations": 0,
       "colons": 2
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 47.3,
+      "min": 35.5,
+      "max": 59.1
+    },
+    "heading_words": {
+      "target": 7.3,
+      "min": 5.5,
+      "max": 9.1
+    },
+    "paragraph_words": {
+      "target": 7.8,
+      "min": 5.8,
+      "max": 9.8
+    },
+    "cta_words": {
+      "target": 2.0,
+      "min": 1.5,
+      "max": 2.5
+    },
+    "recommended_terms": [
+      "브랜드",
+      "댓글들",
+      "컬렉션",
+      "디자인",
+      "라이프스타일",
+      "hypebeast",
+      "한국어",
+      "버튼을",
+      "클릭합니다",
+      "페이지를",
+      "아래의",
+      "hypebae"
+    ],
+    "cta_verbs": [
+      "더"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

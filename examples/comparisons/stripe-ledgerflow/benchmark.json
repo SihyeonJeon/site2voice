@@ -67,36 +67,44 @@
   "candidates": [
     {
       "label": "output-with-voice",
-      "score": 63.1,
-      "grade": "mixed",
-      "pass": false,
+      "score": 97.2,
+      "grade": "excellent",
+      "pass": true,
       "scores": {
-        "sentence_fit": 79.7,
-        "lexicon_fit": 40.0,
+        "sentence_fit": 96.8,
+        "lexicon_fit": 100.0,
         "cta_fit": 100.0,
-        "tone_fit": 0.0,
-        "heading_fit": 49.2,
+        "tone_fit": 100.0,
+        "heading_fit": 81.8,
         "claim_safety": 100.0,
-        "copy_safety": 100.0
+        "copy_safety": 96.2
       },
       "metrics": {
-        "words": 138,
-        "sentences": 7,
-        "avg_sentence_words": 19.7,
-        "headings": 10,
-        "ctas": 3,
-        "type_token_ratio": 0.717
+        "words": 137,
+        "sentences": 9,
+        "avg_sentence_words": 15.2,
+        "headings": 7,
+        "ctas": 7,
+        "type_token_ratio": 0.657
       },
       "tone": [
-        "explanatory"
+        "balanced",
+        "action-oriented"
       ],
       "lexicon_overlap": [
+        "billing",
+        "business",
+        "commerce",
+        "financial",
+        "how",
         "payments",
+        "products",
         "read",
         "revenue",
-        "story"
+        "story",
+        "tools"
       ],
-      "longest_shared_run": 4
+      "longest_shared_run": 6
     },
     {
       "label": "output-without-voice",

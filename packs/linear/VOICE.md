@@ -29,6 +29,18 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
+## Output Contract
+
+- Keep average sentence length between **9.7 and 16.1 words**.
+- Keep headings near **7.2 words**; avoid generic one-word section labels unless the source uses them.
+- Keep paragraph blocks near **16.1 words**.
+- Keep CTAs near **1.5 words** and start them with: `contact`, `sign`, `build`, `get`, `download`.
+- Use at least **4** of these terms where natural: `linear`, `product`, `teams`, `agents`, `app`, `agent`, `just`, `contact`, `plan`, `work`, `will`, `customers`.
+- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
+- If writing a candidate file, run:
+  `site2voice bench https://linear.app/ path/to/candidate.md --strict`
+- Revise until overall >= **75**, copy safety >= **85**, and claim safety >= **75**.
+
 ## Evidence
 
 | Signal | Value |

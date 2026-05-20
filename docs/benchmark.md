@@ -32,6 +32,10 @@ The reference profile also keeps a style fingerprint: average heading length,
 average paragraph length, average CTA length, CTA verbs, lexical variety, and
 punctuation counts.
 
+Generated `VOICE.md` files convert those measurements into an `Output Contract`
+so agents have target ranges before they write: sentence length, heading shape,
+paragraph rhythm, CTA verbs, recommended terms, and pass gates.
+
 ## Gates
 
 A candidate passes when:

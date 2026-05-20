@@ -1,28 +1,29 @@
-# LedgerFlow
+LedgerFlow.
 
-## Nav
-Product · Pricing · Docs · Sign in · Start now
+## Navigation for payments and billing teams
+Products · Pricing · Docs · Sign in · Start now · Contact sales.
 
-## Hero
-# See every payment, before finance has to ask
-Unify payment events, ledger entries, and reconciliation signals so finance and engineering read from one story.
+## See how payments become one financial story
+LedgerFlow connects payment events, billing records, and ledger changes so finance and engineering read the same business timeline.
 
-**Get started** · **Contact sales**
+Start now
+Contact sales
 
-## Track payments end to end
-Trace each charge, refund, and payout from gateway to ledger in one timeline.
+## Track every payment across the business
+Follow charges, refunds, payouts, and failures from product event to ledger entry.
 
-## Reconcile without spreadsheets
-Match processor reports to internal ledgers automatically and surface the breaks worth reading.
+## Reconcile billing before close starts
+Match processor files, commerce records, and internal ledger rows as they arrive.
 
-## Alert on revenue drift
-Set thresholds on authorization rates, refund spikes, and settlement gaps; route alerts to the right on-call.
+## Read revenue movement in one story
+See how authorization shifts, refunds, and settlement gaps affect revenue.
 
-## Share one source of truth
-Give finance, engineering, and ops the same dashboards, queries, and exports.
+## Build tools for finance and engineering
+Give teams shared queries, alerts, and exports without another spreadsheet.
 
-## Proof
-Finance and engineering teams use LedgerFlow to close books faster and resolve payment incidents in hours, not days.
+## Proof for payment teams
+Use one workspace to review payments, explain billing breaks, and plan the next business decision.
 
-## Start now
-**Start now** — connect your first payment source in minutes.
+Start now
+Get started
+Contact sales

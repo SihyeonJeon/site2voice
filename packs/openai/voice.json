@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://openai.com/",
   "title": "OpenAI | Research & Deployment",
   "meta_description": "We believe our research will eventually lead to artificial general intelligence, a system that can solve human-level problems. Building safe and beneficial AGI is our mission.",
@@ -33,6 +33,54 @@
       "questions": 0,
       "exclamations": 0,
       "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 46.2,
+      "min": 34.7,
+      "max": 57.8
+    },
+    "heading_words": {
+      "target": 2.4,
+      "min": 1.8,
+      "max": 3.0
+    },
+    "paragraph_words": {
+      "target": 2.2,
+      "min": 4.0,
+      "max": 4.0
+    },
+    "cta_words": {
+      "target": 4.6,
+      "min": 3.4,
+      "max": 5.8
+    },
+    "recommended_terms": [
+      "new",
+      "opens",
+      "window",
+      "research",
+      "product",
+      "chatgpt",
+      "may",
+      "gpt-5",
+      "business",
+      "min",
+      "read",
+      "safety"
+    ],
+    "cta_verbs": [
+      "try",
+      "download",
+      "explore",
+      "contact"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

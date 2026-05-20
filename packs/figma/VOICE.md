@@ -29,6 +29,18 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
+## Output Contract
+
+- Keep average sentence length between **42.9 and 71.5 words**.
+- Keep headings near **4.8 words**; avoid generic one-word section labels unless the source uses them.
+- Keep paragraph blocks near **3.2 words**.
+- Keep CTAs near **3.2 words** and start them with: `ai`, `see`, `events`, `contact`, `get`, `build`, `explore`.
+- Use at least **4** of these terms where natural: `figma`, `design`, `explore`, `code`, `make`, `prompt`, `anything`, `tools`, `sites`, `imagine`, `product`, `started`.
+- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
+- If writing a candidate file, run:
+  `site2voice bench https://www.figma.com/ path/to/candidate.md --strict`
+- Revise until overall >= **75**, copy safety >= **85**, and claim safety >= **75**.
+
 ## Evidence
 
 | Signal | Value |

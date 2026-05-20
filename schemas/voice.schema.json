@@ -68,6 +68,48 @@
       },
       "additionalProperties": true
     },
+    "output_contract": {
+      "type": "object",
+      "required": [
+        "sentence_words",
+        "heading_words",
+        "paragraph_words",
+        "cta_words",
+        "recommended_terms",
+        "cta_verbs",
+        "minimum_recommended_terms",
+        "benchmark_gates"
+      ],
+      "properties": {
+        "sentence_words": {"$ref": "#/$defs/metric_window"},
+        "heading_words": {"$ref": "#/$defs/metric_window"},
+        "paragraph_words": {"$ref": "#/$defs/metric_window"},
+        "cta_words": {"$ref": "#/$defs/metric_window"},
+        "recommended_terms": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "cta_verbs": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "minimum_recommended_terms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "benchmark_gates": {
+          "type": "object",
+          "required": ["overall", "copy_safety", "claim_safety"],
+          "properties": {
+            "overall": {"type": "number", "minimum": 0},
+            "copy_safety": {"type": "number", "minimum": 0},
+            "claim_safety": {"type": "number", "minimum": 0}
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
     "headings": {
       "type": "array",
       "items": {"type": "string"}
@@ -93,5 +135,17 @@
       "items": {"type": "string"}
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "$defs": {
+    "metric_window": {
+      "type": "object",
+      "required": ["target", "min", "max"],
+      "properties": {
+        "target": {"type": "number", "minimum": 0},
+        "min": {"type": "number", "minimum": 0},
+        "max": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    }
+  }
 }

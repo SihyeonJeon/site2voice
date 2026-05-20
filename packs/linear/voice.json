@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://linear.app/",
   "title": "Linear – The system for product development",
   "meta_description": "Purpose-built for planning and building products with AI agents.",
@@ -34,6 +34,55 @@
       "questions": 0,
       "exclamations": 0,
       "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 12.9,
+      "min": 9.7,
+      "max": 16.1
+    },
+    "heading_words": {
+      "target": 7.2,
+      "min": 5.4,
+      "max": 9.0
+    },
+    "paragraph_words": {
+      "target": 16.1,
+      "min": 12.1,
+      "max": 20.1
+    },
+    "cta_words": {
+      "target": 1.5,
+      "min": 1.1,
+      "max": 1.9
+    },
+    "recommended_terms": [
+      "linear",
+      "product",
+      "teams",
+      "agents",
+      "app",
+      "agent",
+      "just",
+      "contact",
+      "plan",
+      "work",
+      "will",
+      "customers"
+    ],
+    "cta_verbs": [
+      "contact",
+      "sign",
+      "build",
+      "get",
+      "download"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

@@ -7,7 +7,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 ## Voice Summary
 
 - Overall tone: **explanatory, action-oriented**.
-- Sentence shape: about **66.9 words** per sentence.
+- Sentence shape: about **66.8 words** per sentence.
 - Main vocabulary: `monocle`, `min`, `city`, `design`, `guides`, `read`, `affairs`, `radio`, `new`, `travel`, `shop`, `fashion`.
 - Common CTAs: `see all`, `See all Monocle events and collaborations`, `Contact Us`, `Get in touch`, `Sign in`, `Buy a subscription`, `Sign out`.
 - Navigation labels: `Skip to main content`, `Subscribe`, `British Pound (GBP)`, `Euro (EUR)`, `US Dollar (USD)`, `Australian Dollar (AUD)`, `Swiss Franc (CHF)`, `Magazine`, `Radio`, `Shop`.
@@ -29,11 +29,23 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
+## Output Contract
+
+- Keep average sentence length between **50.1 and 83.5 words**.
+- Keep headings near **8.3 words**; avoid generic one-word section labels unless the source uses them.
+- Keep paragraph blocks near **7.0 words**.
+- Keep CTAs near **2.9 words** and start them with: `see`, `contact`, `get`, `sign`, `buy`.
+- Use at least **4** of these terms where natural: `monocle`, `min`, `city`, `design`, `guides`, `read`, `affairs`, `radio`, `new`, `travel`, `shop`, `fashion`.
+- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
+- If writing a candidate file, run:
+  `site2voice bench https://monocle.com/ path/to/candidate.md --strict`
+- Revise until overall >= **75**, copy safety >= **85**, and claim safety >= **75**.
+
 ## Evidence
 
 | Signal | Value |
 | --- | --- |
-| Words | 2677 |
+| Words | 2673 |
 | Sentences | 40 |
 | Headings | 12 |
 | CTA candidates | 7 |

@@ -29,6 +29,18 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
+## Output Contract
+
+- Keep average sentence length between **9.6 and 16.0 words**.
+- Keep headings near **1.0 words**; avoid generic one-word section labels unless the source uses them.
+- Keep paragraph blocks near **16.2 words**.
+- Keep CTAs near **2.0 words** and start them with: `profile`.
+- Use at least **4** of these terms where natural: `eyesmag`, `회사소개`, `fashion`, `info`, `com`, `아이즈매거진`, `라이프스타일`, `매거진입니다`, `매력적인`, `정보를`, `선별하고`, `데스크톱`.
+- Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
+- If writing a candidate file, run:
+  `site2voice bench https://www.eyesmag.com/about path/to/candidate.md --strict`
+- Revise until overall >= **75**, copy safety >= **85**, and claim safety >= **75**.
+
 ## Evidence
 
 | Signal | Value |

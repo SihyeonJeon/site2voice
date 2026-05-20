@@ -53,6 +53,7 @@ The profile includes:
 
 - heading shape, sentence rhythm, paragraph length, CTA shape;
 - repeated vocabulary and CTA verbs;
+- an output contract with target ranges for generated copy;
 - deterministic tone labels;
 - unsupported-claim detection;
 - copied-span detection.

@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://vercel.com/",
   "title": "Vercel: Build and deploy the best web experiences with the AI Cloud",
   "meta_description": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
@@ -38,6 +38,58 @@
       "questions": 0,
       "exclamations": 0,
       "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 34.5,
+      "min": 25.9,
+      "max": 43.1
+    },
+    "heading_words": {
+      "target": 2.6,
+      "min": 2.0,
+      "max": 3.2
+    },
+    "paragraph_words": {
+      "target": 4.5,
+      "min": 4.0,
+      "max": 5.6
+    },
+    "cta_words": {
+      "target": 3.9,
+      "min": 2.9,
+      "max": 4.9
+    },
+    "recommended_terms": [
+      "web",
+      "apps",
+      "scale",
+      "platform",
+      "deploy",
+      "vercel",
+      "protection",
+      "next",
+      "one",
+      "ship",
+      "fast",
+      "help"
+    ],
+    "cta_verbs": [
+      "v0",
+      "changelog",
+      "events",
+      "community",
+      "sign",
+      "get",
+      "deploy",
+      "learn"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

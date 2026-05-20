@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://github.com/",
   "title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
   "meta_description": "Join the world's most widely adopted, AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.",
@@ -35,6 +35,55 @@
       "questions": 2,
       "exclamations": 0,
       "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 40.7,
+      "min": 30.5,
+      "max": 50.9
+    },
+    "heading_words": {
+      "target": 5.3,
+      "min": 4.0,
+      "max": 6.6
+    },
+    "paragraph_words": {
+      "target": 12.4,
+      "min": 9.3,
+      "max": 15.5
+    },
+    "cta_words": {
+      "target": 3.2,
+      "min": 2.4,
+      "max": 4.0
+    },
+    "recommended_terms": [
+      "github",
+      "code",
+      "security",
+      "copilot",
+      "view",
+      "explore",
+      "support",
+      "features",
+      "customer",
+      "platform",
+      "manage",
+      "community"
+    ],
+    "cta_verbs": [
+      "sign",
+      "create",
+      "try",
+      "explore",
+      "learn"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
     }
   },
   "headings": [

@@ -194,16 +194,16 @@
     "category": "fashion and culture media",
     "use": "commerce-aware culture editorial copy",
     "metrics": {
-      "words": 1730,
-      "sentences": 81,
-      "avg_sentence_words": 21.4,
+      "words": 1716,
+      "sentences": 77,
+      "avg_sentence_words": 22.3,
       "avg_heading_words": 9.2,
       "avg_paragraph_words": 21,
       "avg_cta_words": 2,
       "headings": 12,
       "ctas": 3,
       "links": 16,
-      "type_token_ratio": 0.35
+      "type_token_ratio": 0.355
     },
     "tone": [
       "explanatory"
@@ -304,9 +304,9 @@
     "category": "global affairs and culture media",
     "use": "polished city, design, and affairs copy",
     "metrics": {
-      "words": 2677,
+      "words": 2673,
       "sentences": 40,
-      "avg_sentence_words": 66.9,
+      "avg_sentence_words": 66.8,
       "avg_heading_words": 8.3,
       "avg_paragraph_words": 7,
       "avg_cta_words": 2.9,
@@ -532,16 +532,16 @@
     "category": "design and architecture media",
     "use": "design, interiors, and architecture editorial copy",
     "metrics": {
-      "words": 2007,
-      "sentences": 23,
-      "avg_sentence_words": 87.3,
+      "words": 2050,
+      "sentences": 30,
+      "avg_sentence_words": 68.3,
       "avg_heading_words": 1.5,
-      "avg_paragraph_words": 15.4,
+      "avg_paragraph_words": 16.2,
       "avg_cta_words": 4.5,
       "headings": 12,
       "ctas": 2,
       "links": 16,
-      "type_token_ratio": 0.228
+      "type_token_ratio": 0.23
     },
     "tone": [
       "explanatory"
@@ -550,15 +550,15 @@
       "may",
       "published",
       "new",
+      "last",
       "design",
+      "updated",
       "wallpaper",
       "travel",
-      "jonathan",
-      "bell",
-      "last",
-      "updated",
-      "jack",
-      "moss"
+      "tianna",
+      "williams",
+      "this",
+      "summer"
     ]
   }
 ]

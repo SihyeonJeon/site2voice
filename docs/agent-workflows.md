@@ -10,7 +10,8 @@ Then give the agent this instruction:
 
 ```text
 Use @.site2voice/VOICE.md for headings, CTAs, navigation labels, and UI
-microcopy. Do not invent claims. Before finishing, run site2voice bench.
+microcopy. Follow the Output Contract. Do not invent claims. Before finishing,
+run site2voice bench.
 ```
 
 ## Codex
@@ -29,12 +30,11 @@ Add this to `CLAUDE.md` or a project skill:
 
 ```md
 When writing website copy, read `.site2voice/VOICE.md` first. Use the vocabulary,
-CTA shape, and claim boundaries. Do not paste source paragraphs. Validate with
-`site2voice bench`.
+CTA shape, Output Contract, and claim boundaries. Do not paste source
+paragraphs. Validate with `site2voice bench`.
 ```
 
 ## Cursor / Copilot
 
 Reference `.site2voice/VOICE.md` in the task prompt or project instructions.
 Use `voice.json` when you want deterministic metrics in a script.
-

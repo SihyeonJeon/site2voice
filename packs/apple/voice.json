@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.4.0",
+  "generator": "site2voice/0.5.0",
   "source": "https://www.apple.com/",
   "title": "Apple",
   "meta_description": "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support.",
@@ -36,6 +36,56 @@
       "colons": 11
     }
   },
+  "output_contract": {
+    "sentence_words": {
+      "target": 20.1,
+      "min": 15.1,
+      "max": 25.1
+    },
+    "heading_words": {
+      "target": 2.0,
+      "min": 1.5,
+      "max": 2.5
+    },
+    "paragraph_words": {
+      "target": 6.1,
+      "min": 4.6,
+      "max": 7.6
+    },
+    "cta_words": {
+      "target": 3.6,
+      "min": 2.7,
+      "max": 4.5
+    },
+    "recommended_terms": [
+      "apple",
+      "card",
+      "offer",
+      "account",
+      "now",
+      "new",
+      "cash",
+      "daily",
+      "period",
+      "this",
+      "airpods",
+      "qualifying"
+    ],
+    "cta_verbs": [
+      "watch",
+      "learn",
+      "buy",
+      "get",
+      "see",
+      "contact"
+    ],
+    "minimum_recommended_terms": 4,
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
   "headings": [
     "Apple",
     "MacBook Neo",
@@ -56,8 +106,8 @@
     "Buy",
     "Get your estimate",
     "See the schedule Live MLB games, every Friday.",
-    "Watch now Billie Eilish",
     "Watch now Core with Kyle",
+    "Watch now Billie Eilish",
     "Watch now Asian-Pacific American Heritage Month",
     "Contact Apple"
   ],
