@@ -18,7 +18,7 @@ Reference: `https://stripe.com/`
 
 ## Why This Is Useful
 
-The score is deterministic. It checks measurable voice signals and gates against unsupported claims and copied spans.
+The score is deterministic. It checks measurable copy signals and gates against unsupported claims and copied spans.
 
 ## Candidate Evidence
 

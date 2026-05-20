@@ -200,7 +200,7 @@
     "category": "global affairs and culture media",
     "use": "polished city, design, and affairs copy",
     "metrics": {
-      "words": 2690,
+      "words": 2686,
       "sentences": 40,
       "avg_sentence_words": 67.2,
       "avg_heading_words": 8.3,
@@ -210,7 +210,7 @@
       "headings": 12,
       "ctas": 7,
       "links": 16,
-      "type_token_ratio": 0.29
+      "type_token_ratio": 0.291
     },
     "tone": [
       "explanatory",
@@ -275,22 +275,20 @@
     "category": "commerce platform",
     "use": "merchant-growth product copy",
     "metrics": {
-      "words": 1771,
-      "sentences": 87,
-      "avg_sentence_words": 20.4,
-      "avg_heading_words": 5.4,
-      "avg_paragraph_words": 4.5,
-      "avg_cta_words": 3,
-      "avg_link_words": 1.9,
+      "words": 1699,
+      "sentences": 77,
+      "avg_sentence_words": 22.1,
+      "avg_heading_words": 4.4,
+      "avg_paragraph_words": 4.2,
+      "avg_cta_words": 2.5,
+      "avg_link_words": 2.2,
       "headings": 12,
-      "ctas": 5,
+      "ctas": 2,
       "links": 16,
-      "type_token_ratio": 0.25
+      "type_token_ratio": 0.293
     },
     "tone": [
-      "explanatory",
-      "action-oriented",
-      "trust-forward"
+      "explanatory"
     ]
   },
   {
@@ -324,7 +322,7 @@
     "category": "developer platform",
     "use": "performance and deployment copy",
     "metrics": {
-      "words": 2033,
+      "words": 2035,
       "sentences": 59,
       "avg_sentence_words": 34.5,
       "avg_heading_words": 2.6,
@@ -350,9 +348,9 @@
     "category": "design and architecture media",
     "use": "design, interiors, and architecture editorial copy",
     "metrics": {
-      "words": 2071,
-      "sentences": 30,
-      "avg_sentence_words": 69.0,
+      "words": 2072,
+      "sentences": 28,
+      "avg_sentence_words": 74,
       "avg_heading_words": 1.5,
       "avg_paragraph_words": 17.2,
       "avg_cta_words": 4.5,
@@ -360,7 +358,7 @@
       "headings": 12,
       "ctas": 2,
       "links": 16,
-      "type_token_ratio": 0.228
+      "type_token_ratio": 0.229
     },
     "tone": [
       "explanatory"

@@ -301,7 +301,7 @@ def benchmark_markdown(payload: dict[str, Any]) -> str:
         )
     lines.extend(["", "## Why This Is Useful", ""])
     lines.append(
-        "The score is deterministic. It checks measurable voice signals and gates against unsupported claims and copied spans."
+        "The score is deterministic. It checks measurable copy signals and gates against unsupported claims and copied spans."
     )
     lines.extend(["", "## Candidate Evidence", ""])
     for candidate in payload["candidates"]:

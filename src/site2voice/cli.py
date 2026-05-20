@@ -13,7 +13,7 @@ from .extract import analyze, to_json, to_markdown
 def build_generate_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="site2voice",
-        description="Generate AI-agent VOICE.md files from website copy and CTAs.",
+        description="Generate AI-agent VOICE.md copy profiles from website copy and CTAs.",
         epilog=(
             "Commands:\n"
             "  site2voice SOURCE --out VOICE.md\n"
@@ -35,7 +35,7 @@ def build_generate_parser() -> argparse.ArgumentParser:
 def build_bench_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="site2voice bench",
-        description="Score candidate copy against a website voice profile.",
+        description="Score candidate copy against a reference copy profile.",
     )
     parser.add_argument("reference", help="URL or local HTML file used as the voice reference")
     parser.add_argument("candidates", nargs="+", help="candidate Markdown/text files to score")
@@ -52,7 +52,7 @@ def build_bench_parser() -> argparse.ArgumentParser:
 def build_init_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="site2voice init",
-        description="Create an agent-ready voice context pack.",
+        description="Create an agent-ready copy profile context pack.",
     )
     parser.add_argument("source", help="URL or local HTML file")
     parser.add_argument("--dir", default=".site2voice", help="output directory for the context pack")

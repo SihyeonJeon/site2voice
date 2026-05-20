@@ -19,4 +19,4 @@ Output Markdown only. Include:
 
 Do not mention any real company or source website. Do not claim certifications, customers, compliance, or uptime.
 
-If a VOICE.md file is provided above this task, follow it for tone, sentence rhythm, CTA style, content boundaries, and Output Contract. If no VOICE.md is provided, write from the product brief alone.
+If a VOICE.md file is provided above this task, follow it as a reference-only copy contract for sentence rhythm, CTA verb shape, content boundaries, and Output Contract. If no VOICE.md is provided, write from the product brief alone.

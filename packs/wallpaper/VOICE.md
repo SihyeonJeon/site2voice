@@ -1,14 +1,21 @@
 # VOICE.md
 
-Source: `https://www.wallpaper.com/`
+Reference source: `https://www.wallpaper.com/`
 
-Use this file to keep AI-generated pages, docs, and UI copy aligned with the observed website voice.
+Use this file as a reference-only copy profile for AI-generated pages, docs, and UI microcopy.
 
 ## Voice Summary
 
 - Overall tone: **explanatory**.
-- Sentence shape: about **69.0 words** per sentence.
+- Sentence shape: about **74 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
+- Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
+
+## Scope
+
+- Reuse measurable writing patterns: sentence rhythm, heading shape, CTA verb shape, paragraph rhythm, and information order.
+- Bring your own product names, topics, claims, examples, and domain nouns.
+- Do not use trademarks, logos, proprietary product names, or brand claims unless you already have independent rights to use them.
 
 ## Style Fingerprint
 
@@ -17,7 +24,7 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - CTA shape: about **4.5 words** per CTA.
 - CTA verbs: `sign`, `contact`.
 - Navigation label shape: about **1.9 words** per label.
-- Lexical variety: **0.228** type-token ratio.
+- Lexical variety: **0.229** type-token ratio.
 
 ## Agent Rules
 
@@ -25,13 +32,14 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Prefer short active sentences and visible verbs from the CTA list.
 - Reuse rhythm, CTA shape, and information order; bring your own product nouns.
 - Do not import source-specific topics, product names, market claims, or domain nouns.
+- Do not imply affiliation with, approval from, or official representation of the reference source.
 - Keep headings specific; avoid generic labels like `<generic feature label>` unless the source uses that pattern.
 - When adding new sections, match the observed information order: headline, proof, action, details.
 - Do not invent compliance, security, customer, or performance claims that are not present in the source.
 
 ## Output Contract
 
-- Keep average sentence length between **51.8 and 86.2 words**.
+- Keep average sentence length between **55.5 and 92.5 words**.
 - Keep headings near **1.5 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **17.2 words**.
 - Keep CTAs near **4.5 words** and start them with: `sign`, `contact`.
@@ -45,8 +53,8 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 
 | Signal | Value |
 | --- | --- |
-| Words | 2071 |
-| Sentences | 30 |
+| Words | 2072 |
+| Sentences | 28 |
 | Headings | 12 |
 | CTA candidates | 2 |
 
@@ -55,5 +63,6 @@ Use this file to keep AI-generated pages, docs, and UI copy aligned with the obs
 - Do: write concise, outcome-first copy using the observed rhythm and CTA verbs.
 - Do: keep CTAs short and action-led.
 - Don't: transfer source-specific nouns into an unrelated project.
+- Don't: present the result as official brand copy or a brand guideline.
 - Don't: paste source paragraphs verbatim.
 - Don't: add claims the source did not support.

@@ -24,20 +24,24 @@ usage.
 - No generated third-party prose is committed.
 - The submission can be phrased as a context-engineering tool, not a brand
   imitation tool.
+- Public docs explicitly explain why `VOICE.md` is not `DESIGN.md`, not brand
+  approval, and not permission to impersonate a reference source.
 
 ## Candidate Positioning
 
 Use this description:
 
-> Generate compact `VOICE.md` context files from website copy, then benchmark
-> whether AI-written copy matches the source voice without copying spans or
-> inventing claims.
+> Generate compact `VOICE.md` copy profiles from public website copy, then
+> benchmark whether AI-written copy follows the measurable profile without
+> copying spans, source nouns, or unsupported claims.
 
 Avoid:
 
 - asking for stars;
 - submitting to unrelated design lists;
 - claiming official brand replication;
+- describing the files as official voice guidelines;
+- implying affiliation with reference sources;
 - using EYESMAG, Highsnobiety, Stripe, or Linear outputs as public examples
   unless only derived metrics are shown.
 

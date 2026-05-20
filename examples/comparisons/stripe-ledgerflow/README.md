@@ -5,7 +5,7 @@ This comparison uses the same task prompt twice:
 1. without `VOICE.md`;
 2. with `packs/stripe/VOICE.md` and its `Output Contract` provided above the same prompt.
 
-The benchmark uses `https://stripe.com/` as the reference voice.
+The benchmark uses `https://stripe.com/` as the reference copy profile.
 
 ## Files
 
@@ -28,7 +28,7 @@ The injected pack improved the score by **30.6 points**, removed source-term
 reuse from the reward signal, and raised CTA fit from **50.0** to **100.0**.
 
 The output with `VOICE.md` passed the default strict gate. The difference is the
-contract: it turns the style brief into measurable target ranges for sentence
+contract: it turns the copy brief into measurable target ranges for sentence
 length, heading shape, CTA verbs, content boundaries, copy safety, and claim
 safety.
 

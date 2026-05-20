@@ -1,13 +1,13 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.0",
+  "generator": "site2voice/0.5.2",
   "source": "https://www.wallpaper.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
-    "words": 2071,
-    "sentences": 30,
-    "avg_sentence_words": 69.0,
+    "words": 2072,
+    "sentences": 28,
+    "avg_sentence_words": 74,
     "avg_heading_words": 1.5,
     "avg_paragraph_words": 17.2,
     "avg_cta_words": 4.5,
@@ -15,7 +15,7 @@
     "headings": 12,
     "ctas": 2,
     "links": 16,
-    "type_token_ratio": 0.228
+    "type_token_ratio": 0.229
   },
   "tone": [
     "explanatory"
@@ -27,16 +27,16 @@
     ],
     "punctuation": {
       "periods": 17,
-      "questions": 9,
+      "questions": 7,
       "exclamations": 4,
-      "colons": 5
+      "colons": 9
     }
   },
   "output_contract": {
     "sentence_words": {
-      "target": 69.0,
-      "min": 51.8,
-      "max": 86.2
+      "target": 74.0,
+      "min": 55.5,
+      "max": 92.5
     },
     "heading_words": {
       "target": 1.5,

@@ -1,8 +1,9 @@
 # Voice Patterns
 
 `site2voice` does not try to copy a brand, magazine, or topic. It extracts
-measurable voice signals that help an agent write new copy in a nearby register
-without pasting source prose or importing source-specific nouns.
+measurable writing signals that help an agent write new copy in a nearby
+register without pasting source prose, importing source-specific nouns, or
+implying affiliation with the reference source.
 
 ## Editorial / Magazine
 
@@ -24,7 +25,7 @@ Good source families:
 
 Use synthetic fixtures for checked-in examples. Use live URLs only for local
 analysis or public packs that remove paragraph samples and keep only derived
-style signals.
+copy signals.
 
 ## Product / Developer Sites
 
@@ -52,8 +53,8 @@ site2voice https://example.com --out VOICE.md --max-snippets 0
 site2voice bench https://example.com before.md after.md
 ```
 
-The first command gives the agent a voice brief with an `Output Contract`:
+The first command gives the agent a copy profile with an `Output Contract`:
 sentence range, heading target, paragraph target, CTA verbs, content boundaries,
 and benchmark gates. The second command verifies whether the resulting copy
-moved closer to the source profile while staying inside copy-safety and
+moved closer to the reference profile while staying inside copy-safety and
 claim-safety gates.

@@ -1,14 +1,18 @@
 # site2voice
 
-**Drop-in `VOICE.md` files. Pick a website voice, save it in your repo, and your agent writes less generic copy.**
+**Drop-in `VOICE.md` copy profiles. Pick a public writing pattern, save one file, and your agent writes less generic copy.**
 
-`DESIGN.md` tells agents how UI should look. `VOICE.md` tells them how copy should sound.
+`site2voice` is not a visual design-system library and not a brand-cloning tool.
+It turns public copy into a compact, reference-only writing contract: sentence
+rhythm, heading shape, CTA verb shape, claim boundaries, and benchmark gates.
 
 **No install. No JSON. No generation step.**
 
+**Not official. Not affiliated. Not permission to impersonate a brand.**
+
 ## Voices
 
-| Voice | Tone | Best for |
+| Profile | Tone | Best for |
 | --- | --- | --- |
 | [Apple](voices/apple.md) | premium, minimal | product launches |
 | [Anthropic](voices/anthropic.md) | measured, institutional | AI safety and product pages |
@@ -28,7 +32,7 @@
 
 ## Use
 
-Download one voice as `VOICE.md`:
+Download one copy profile as `VOICE.md`:
 
 ```bash
 curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md
@@ -37,15 +41,26 @@ curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/str
 Tell Claude Code, Codex, Cursor, or Copilot:
 
 ```text
-Use @VOICE.md for headings, CTAs, navigation labels, and UI microcopy.
+Use @VOICE.md as a copy contract for headings, CTA shape, paragraph rhythm, and UI microcopy.
 ```
 
 Each file is a plain Markdown writing brief with sentence rhythm, heading
 shape, CTA verbs, content boundaries, claim boundaries, and a benchmark target.
+The public profiles remove source nouns, raw CTAs, navigation labels, paragraph
+samples, logos, screenshots, and brand assets.
 
-These are not official brand guidelines. They are derived style briefs from
-public pages, built to help agents write nearby copy without pasting source
-prose.
+Reference names identify the public page used for measurement. They do not
+imply sponsorship, endorsement, affiliation, or permission to reuse protected
+brand identity. See [Brand Usage](BRAND_USAGE.md).
+
+## Not DESIGN.md
+
+`DESIGN.md` describes visual identity: colors, typography, spacing, components,
+layout, and responsive behavior. `VOICE.md` describes writing behavior: rhythm,
+CTA shape, information order, claim safety, and copy-safety gates.
+
+Read the full comparison in [DESIGN.md vs VOICE.md](docs/design-md-comparison.md)
+and the dated [competitive review](docs/competitive-review.md).
 
 ## Before / After
 
@@ -60,7 +75,7 @@ See the [full comparison](examples/comparisons/stripe-ledgerflow/README.md).
 
 ## Optional CLI
 
-Generate a new voice from any public URL:
+Generate a new copy profile from any public URL:
 
 ```bash
 pipx install site2voice

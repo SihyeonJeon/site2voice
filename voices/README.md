@@ -1,13 +1,18 @@
 # VOICE.md Collection
 
-Drop-in writing style files for AI agents.
+Drop-in reference-only copy profiles for AI agents.
 
-`DESIGN.md` tells agents how UI should look. `VOICE.md` tells them how copy should sound.
+`VOICE.md` captures writing behavior: rhythm, CTA shape, information order, and benchmark gates.
+It is not a visual design-system file and not a brand-cloning file.
+
+Reference names identify public pages used for measurement. They do not imply
+sponsorship, endorsement, affiliation, or permission to use protected brand
+identity.
 
 Copy one file into your project as `VOICE.md`, then tell your agent:
 
 ```text
-Use @VOICE.md for headings, CTAs, navigation labels, and UI microcopy.
+Use @VOICE.md as a copy contract for headings, CTA shape, paragraph rhythm, and UI microcopy.
 ```
 
 **No install. No JSON. No generation step.**
@@ -33,7 +38,7 @@ curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/str
 | [Monocle](monocle.md) | explanatory, action-oriented | polished city, design, and affairs copy |
 | [Notion](notion.md) | balanced, action-oriented, technical, trust-forward | simple workspace and AI-product copy |
 | [OpenAI](openai.md) | explanatory, action-oriented, technical | research-to-product institutional copy |
-| [Shopify](shopify.md) | explanatory, action-oriented, trust-forward | merchant-growth product copy |
+| [Shopify](shopify.md) | explanatory | merchant-growth product copy |
 | [Stripe](stripe.md) | balanced, action-oriented | technical trust-forward SaaS copy |
 | [Vercel](vercel.md) | explanatory, action-oriented, technical, trust-forward | performance and deployment copy |
 | [Wallpaper](wallpaper.md) | explanatory | design, interiors, and architecture editorial copy |

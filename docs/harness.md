@@ -5,14 +5,14 @@
 1. **Scout** finds relevant public sources and decides whether they are safe as
    live examples or should be represented by synthetic fixtures.
 2. **Profiler** runs `site2voice SOURCE --format json` and extracts measurable
-   voice signals: sentence shape, heading shape, CTA verbs, lexical variety,
+   copy signals: sentence shape, heading shape, CTA verbs, lexical variety,
    and source-term boundaries.
 3. **Initializer** runs `site2voice init SOURCE` to create `VOICE.md`,
    `voice.json`, and `agent-prompt.md`.
 4. **Writer** uses the generated `VOICE.md` as context to write new candidate
    copy.
 5. **Evaluator** runs `site2voice bench SOURCE candidate.md --strict` and checks
-   alignment, claim boundaries, and copy safety.
+   profile fit, claim boundaries, and copy safety.
 6. **Publisher** updates examples, docs, releases, and launch notes.
 
 ## Claude Operator Review

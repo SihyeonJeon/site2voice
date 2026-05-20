@@ -1,3 +1,3 @@
-"""site2voice: generate AI-agent voice briefs from website copy."""
+"""site2voice: generate AI-agent copy profiles from website copy."""
 
-__version__ = "0.5.0"
+__version__ = "0.5.2"

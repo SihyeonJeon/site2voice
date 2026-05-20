@@ -1,35 +1,32 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.0",
+  "generator": "site2voice/0.5.2",
   "source": "https://www.shopify.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
-    "words": 1771,
-    "sentences": 87,
-    "avg_sentence_words": 20.4,
-    "avg_heading_words": 5.4,
-    "avg_paragraph_words": 4.5,
-    "avg_cta_words": 3,
-    "avg_link_words": 1.9,
+    "words": 1699,
+    "sentences": 77,
+    "avg_sentence_words": 22.1,
+    "avg_heading_words": 4.4,
+    "avg_paragraph_words": 4.2,
+    "avg_cta_words": 2.5,
+    "avg_link_words": 2.2,
     "headings": 12,
-    "ctas": 5,
+    "ctas": 2,
     "links": 16,
-    "type_token_ratio": 0.25
+    "type_token_ratio": 0.293
   },
   "tone": [
-    "explanatory",
-    "action-oriented",
-    "trust-forward"
+    "explanatory"
   ],
   "style": {
     "cta_verbs": [
-      "start",
-      "get",
-      "build"
+      "보기",
+      "지원"
     ],
     "punctuation": {
-      "periods": 83,
+      "periods": 73,
       "questions": 3,
       "exclamations": 0,
       "colons": 1
@@ -37,31 +34,30 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 20.4,
-      "min": 15.3,
-      "max": 25.5
+      "target": 22.1,
+      "min": 16.6,
+      "max": 27.6
     },
     "heading_words": {
-      "target": 5.4,
-      "min": 4.1,
-      "max": 6.8
+      "target": 4.4,
+      "min": 3.3,
+      "max": 5.5
     },
     "paragraph_words": {
-      "target": 4.5,
+      "target": 4.2,
       "min": 4.0,
-      "max": 5.6
+      "max": 5.2
     },
     "cta_words": {
-      "target": 3.0,
-      "min": 2.2,
-      "max": 3.8
+      "target": 2.5,
+      "min": 1.9,
+      "max": 3.1
     },
     "recommended_terms": [],
     "source_terms": [],
     "cta_verbs": [
-      "start",
-      "get",
-      "build"
+      "보기",
+      "지원"
     ],
     "minimum_recommended_terms": 0,
     "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",

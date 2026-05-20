@@ -21,5 +21,7 @@ Non-goals:
 
 - scraping private pages;
 - imitating brands as if the output were official;
+- implying affiliation with reference sources;
+- treating source nouns, raw CTAs, or navigation labels as reusable style;
 - rewarding copied paragraphs;
 - requiring an LLM just to profile a page.

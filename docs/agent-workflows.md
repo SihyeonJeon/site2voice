@@ -9,9 +9,9 @@ site2voice init https://example.com
 Then give the agent this instruction:
 
 ```text
-Use @.site2voice/VOICE.md for headings, CTAs, navigation labels, and UI
-microcopy. Follow the Output Contract. Do not invent claims. Before finishing,
-run site2voice bench.
+Use @.site2voice/VOICE.md as a reference-only copy contract for headings, CTA
+shape, paragraph rhythm, and UI microcopy. Follow the Output Contract. Do not
+invent claims. Before finishing, run site2voice bench.
 ```
 
 ## Codex
@@ -31,7 +31,8 @@ Add this to `CLAUDE.md` or a project skill:
 ```md
 When writing website copy, read `.site2voice/VOICE.md` first. Use the rhythm,
 CTA shape, Output Contract, and claim boundaries. Do not paste source
-paragraphs or transfer source-specific nouns. Validate with `site2voice bench`.
+paragraphs, transfer source-specific nouns, or imply reference-source
+affiliation. Validate with `site2voice bench`.
 ```
 
 ## Cursor / Copilot

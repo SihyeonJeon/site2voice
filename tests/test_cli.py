@@ -7,6 +7,7 @@ from contextlib import redirect_stderr, redirect_stdout
 from io import StringIO
 from pathlib import Path
 
+from site2voice import __version__
 from site2voice.cli import main
 from site2voice.extract import analyze
 
@@ -33,6 +34,8 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertIn("Navigation label shape", text)
             self.assertIn("Output Contract", text)
             self.assertIn("Content boundary", text)
+            self.assertIn("Brand policy", text)
+            self.assertIn("not an official guideline", text)
             self.assertNotIn("Main vocabulary", text)
             self.assertNotIn("Start free", text)
 
@@ -43,6 +46,7 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertEqual(code, 0)
             payload = json.loads(out.read_text(encoding="utf-8"))
             self.assertEqual(payload["schema_version"], "site2voice.voice.v1")
+            self.assertEqual(payload["generator"], f"site2voice/{__version__}")
             self.assertGreater(payload["metrics"]["words"], 20)
             self.assertIn("output_contract", payload)
             self.assertIn("sentence_words", payload["output_contract"])
@@ -123,6 +127,8 @@ class Site2VoiceTests(unittest.TestCase):
             agent_prompt = (target / "agent-prompt.md").read_text(encoding="utf-8")
             self.assertIn("Output Contract", agent_prompt)
             self.assertIn("site2voice bench", agent_prompt)
+            self.assertIn("reference-only copy contract", agent_prompt)
+            self.assertIn("Do not imply brand affiliation", agent_prompt)
 
 
 if __name__ == "__main__":

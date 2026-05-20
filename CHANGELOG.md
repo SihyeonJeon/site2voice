@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 0.5.2
+
+- Reframed public documentation around reference-only copy profiles instead of
+  brand-voice imitation.
+- Added `BRAND_USAGE.md`, a `DESIGN.md` vs `VOICE.md` comparison, and a dated
+  competitive review.
+- Added brand-safety scope language to generated `VOICE.md` files and context
+  pack prompts.
+- Synced the package runtime version with the release version.
+
 ## 0.5.1
 
 - Repositioned the README around ready-to-use `VOICE.md` downloads.

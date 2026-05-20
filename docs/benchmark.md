@@ -1,6 +1,6 @@
 # Benchmark
 
-`site2voice bench` checks whether candidate copy follows a source voice profile.
+`site2voice bench` checks whether candidate copy follows a reference copy profile.
 It is deterministic and uses only local text statistics.
 
 ```bash
@@ -22,7 +22,7 @@ site2voice bench examples/editorial-home.html examples/after-copy.md --strict
 | --- | --- |
 | Sentence fit | Candidate average sentence length vs source average. |
 | Lexical variety fit | Candidate type-token ratio vs source type-token ratio. |
-| CTA fit | Whether short action-led lines match observed CTA vocabulary. |
+| CTA fit | Whether short action-led lines match observed CTA verbs. |
 | Tone fit | Overlap between deterministic tone labels. |
 | Heading fit | Whether heading length/shape is close to the source. |
 | Claim safety | Penalizes unsupported security, performance, customer, pricing, and AI claims. |
