@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "site2voice"
+version = "0.1.0"
+description = "Generate AI-agent VOICE.md files from website copy and CTAs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Sihyeon Jeon"}]
+keywords = ["agents", "voice", "copywriting", "markdown", "branding"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+  "Topic :: Text Processing :: Markup :: HTML",
+  "Topic :: Software Development :: Documentation",
+]
+
+[project.scripts]
+site2voice = "site2voice.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
