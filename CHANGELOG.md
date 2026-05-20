@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## 0.5.1
+
 - Repositioned the README around ready-to-use `VOICE.md` downloads.
 - Added a flat `voices/` collection for direct single-file use.
 - Updated pack generation to build `voices/` and avoid duplicate URL fetches.
