@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .extract import STOPWORDS, analyze, clean_text, cta_score, sentences, tone_labels, trim_snippet, words
+from .extract import STOPWORDS, analyze, clean_text, cta_score, sentence_units, sentences, tone_labels, trim_snippet, words
 
 
 DEFAULT_PASS_SCORE = 75.0
@@ -48,10 +48,16 @@ def lexicon_for_text(text: str, limit: int = 24) -> list[str]:
 def candidate_profile(text: str) -> dict[str, Any]:
     clean = clean_text(text)
     token_list = words(clean)
-    sentence_list = sentences(clean)
+    raw_lines = [line for line in text.splitlines() if clean_text(line.lstrip("#>- "))]
+    line_list = [clean_text(line.lstrip("#>- ")) for line in raw_lines]
+    paragraph_lines = [
+        clean_text(line)
+        for line in raw_lines
+        if not line.lstrip().startswith("#") and not cta_score(clean_text(line.lstrip("#>- ")))
+    ]
+    sentence_list = sentence_units(paragraph_lines) or sentence_units(line_list) or sentences(clean)
     sentence_lengths = [len(words(sentence)) for sentence in sentence_list]
     avg_sentence_words = sum(sentence_lengths) / len(sentence_lengths) if sentence_lengths else 0.0
-    line_list = [clean_text(line.lstrip("#>- ")) for line in text.splitlines() if clean_text(line.lstrip("#>- "))]
     ctas = [line for line in line_list if cta_score(line)]
     headings = [line.lstrip("# ").strip() for line in text.splitlines() if line.lstrip().startswith("#")]
     lexicon = lexicon_for_text(clean)

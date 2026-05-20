@@ -3,11 +3,11 @@
     "source": "https://stripe.com/",
     "metrics": {
       "words": 1748,
-      "sentences": 111,
-      "avg_sentence_words": 15.7,
+      "sentences": 49,
+      "avg_sentence_words": 12.6,
       "avg_heading_words": 7.2,
       "avg_paragraph_words": 7.8,
-      "avg_cta_words": 2.6,
+      "avg_cta_words": 2.7,
       "avg_link_words": 2.4,
       "headings": 12,
       "ctas": 12,
@@ -26,8 +26,8 @@
         "get",
         "create",
         "watch",
-        "explore",
-        "see"
+        "read",
+        "explore"
       ],
       "punctuation": {
         "periods": 111,
@@ -40,11 +40,11 @@
   "candidates": [
     {
       "label": "output-with-voice",
-      "score": 91.0,
+      "score": 91.1,
       "grade": "excellent",
       "pass": true,
       "scores": {
-        "sentence_fit": 96.8,
+        "sentence_fit": 97.6,
         "lexical_variety_fit": 45.8,
         "cta_fit": 100.0,
         "tone_fit": 100.0,
@@ -54,10 +54,10 @@
       },
       "metrics": {
         "words": 137,
-        "sentences": 9,
-        "avg_sentence_words": 15.2,
+        "sentences": 7,
+        "avg_sentence_words": 12.3,
         "headings": 7,
-        "ctas": 7,
+        "ctas": 8,
         "type_token_ratio": 0.657
       },
       "tone": [
@@ -68,28 +68,28 @@
     },
     {
       "label": "output-without-voice",
-      "score": 60.4,
+      "score": 63.8,
       "grade": "mixed",
       "pass": false,
       "scores": {
-        "sentence_fit": 74.1,
+        "sentence_fit": 73.7,
         "lexical_variety_fit": 40.5,
-        "cta_fit": 50.0,
-        "tone_fit": 0.0,
+        "cta_fit": 25.0,
+        "tone_fit": 50.0,
         "heading_fit": 79.2,
         "claim_safety": 100.0,
         "copy_safety": 100.0
       },
       "metrics": {
         "words": 191,
-        "sentences": 9,
-        "avg_sentence_words": 21.2,
+        "sentences": 8,
+        "avg_sentence_words": 17.1,
         "headings": 8,
         "ctas": 3,
         "type_token_ratio": 0.743
       },
       "tone": [
-        "explanatory",
+        "balanced",
         "technical"
       ],
       "longest_shared_run": 2

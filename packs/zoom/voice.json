@@ -1,0 +1,87 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.zoom.com/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 1920,
+    "sentences": 51,
+    "avg_sentence_words": 7.8,
+    "avg_heading_words": 7.8,
+    "avg_paragraph_words": 9.2,
+    "avg_cta_words": 2.9,
+    "avg_link_words": 2.6,
+    "headings": 12,
+    "ctas": 12,
+    "links": 16,
+    "type_token_ratio": 0.293
+  },
+  "tone": [
+    "short and direct",
+    "action-oriented"
+  ],
+  "style": {
+    "cta_verbs": [
+      "sign",
+      "contact",
+      "download",
+      "get",
+      "join",
+      "open",
+      "learn"
+    ],
+    "punctuation": {
+      "periods": 91,
+      "questions": 0,
+      "exclamations": 0,
+      "colons": 26
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 7.8,
+      "min": 5.8,
+      "max": 9.8
+    },
+    "heading_words": {
+      "target": 7.8,
+      "min": 5.8,
+      "max": 9.8
+    },
+    "paragraph_words": {
+      "target": 9.2,
+      "min": 6.9,
+      "max": 11.5
+    },
+    "cta_words": {
+      "target": 2.9,
+      "min": 2.2,
+      "max": 3.6
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "sign",
+      "contact",
+      "download",
+      "get",
+      "join",
+      "open",
+      "learn"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

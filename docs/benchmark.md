@@ -60,7 +60,7 @@ site2voice bench SOURCE candidate.md \
 
 | Candidate | Result | Overall | Sentence | Variety | CTA | Tone | Heading | Claim safety | Copy safety |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| `after-copy` | PASS | 88.5 | 95.8 | 99.4 | 50.0 | 100.0 | 93.8 | 100.0 | 93.2 |
-| `before-copy` | FAIL | 49.7 | 57.5 | 83.0 | 0.0 | 0.0 | 62.5 | 100.0 | 100.0 |
+| `after-copy` | PASS | 97.4 | 94.1 | 99.7 | 100.0 | 100.0 | 93.8 | 100.0 | 95.5 |
+| `before-copy` | FAIL | 62.9 | 81.2 | 83.0 | 0.0 | 50.0 | 62.5 | 100.0 | 100.0 |
 
 See [editorial-benchmark.md](../examples/editorial-benchmark.md).

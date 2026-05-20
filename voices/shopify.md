@@ -6,8 +6,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Voice Summary
 
-- Overall tone: **explanatory**.
-- Sentence shape: about **22.1 words** per sentence.
+- Overall tone: **short and direct, action-oriented, trust-forward**.
+- Sentence shape: about **6.1 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -19,12 +19,12 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Style Fingerprint
 
-- Heading shape: about **4.4 words** per heading.
-- Paragraph rhythm: about **4.2 words** per paragraph sample.
-- CTA shape: about **2.5 words** per CTA.
-- CTA verbs: `보기`, `지원`.
-- Navigation label shape: about **2.2 words** per label.
-- Lexical variety: **0.293** type-token ratio.
+- Heading shape: about **5.4 words** per heading.
+- Paragraph rhythm: about **4.5 words** per paragraph sample.
+- CTA shape: about **3 words** per CTA.
+- CTA verbs: `start`, `get`, `build`.
+- Navigation label shape: about **1.9 words** per label.
+- Lexical variety: **0.25** type-token ratio.
 
 ## Agent Rules
 
@@ -39,10 +39,10 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **16.6 and 27.6 words**.
-- Keep headings near **4.4 words**; avoid generic one-word section labels unless the source uses them.
-- Keep paragraph blocks near **4.2 words**.
-- Keep CTAs near **2.5 words** and start them with: `보기`, `지원`.
+- Keep average sentence length between **4.6 and 7.6 words**.
+- Keep headings near **5.4 words**; avoid generic one-word section labels unless the source uses them.
+- Keep paragraph blocks near **4.5 words**.
+- Keep CTAs near **3.0 words** and start them with: `start`, `get`, `build`.
 - Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
@@ -53,10 +53,10 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 | Signal | Value |
 | --- | --- |
-| Words | 1699 |
-| Sentences | 77 |
+| Words | 1771 |
+| Sentences | 66 |
 | Headings | 12 |
-| CTA candidates | 2 |
+| CTA candidates | 5 |
 
 ## Do / Don't
 

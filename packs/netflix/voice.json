@@ -1,0 +1,81 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.netflix.com/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 629,
+    "sentences": 10,
+    "avg_sentence_words": 8.4,
+    "avg_heading_words": 4.9,
+    "avg_paragraph_words": 9,
+    "avg_cta_words": 2.2,
+    "avg_link_words": 2.2,
+    "headings": 12,
+    "ctas": 5,
+    "links": 16,
+    "type_token_ratio": 0.399
+  },
+  "tone": [
+    "short and direct",
+    "action-oriented"
+  ],
+  "style": {
+    "cta_verbs": [
+      "sign",
+      "get",
+      "learn",
+      "contact"
+    ],
+    "punctuation": {
+      "periods": 39,
+      "questions": 22,
+      "exclamations": 1,
+      "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 8.4,
+      "min": 6.3,
+      "max": 10.5
+    },
+    "heading_words": {
+      "target": 4.9,
+      "min": 3.7,
+      "max": 6.1
+    },
+    "paragraph_words": {
+      "target": 9.0,
+      "min": 6.8,
+      "max": 11.2
+    },
+    "cta_words": {
+      "target": 2.2,
+      "min": 1.7,
+      "max": 2.8
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "sign",
+      "get",
+      "learn",
+      "contact"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

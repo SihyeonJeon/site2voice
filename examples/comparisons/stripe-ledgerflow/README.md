@@ -21,11 +21,11 @@ The benchmark uses `https://stripe.com/` as the reference copy profile.
 
 | Candidate | Overall | Variety | CTA | Copy safety |
 | --- | ---: | ---: | ---: | ---: |
-| Without `VOICE.md` | 60.4 | 40.5 | 50.0 | 100.0 |
-| With `VOICE.md` | 91.0 | 45.8 | 100.0 | 96.2 |
+| Without `VOICE.md` | 63.8 | 40.5 | 25.0 | 100.0 |
+| With `VOICE.md` | 91.1 | 45.8 | 100.0 | 96.2 |
 
-The injected pack improved the score by **30.6 points**, removed source-term
-reuse from the reward signal, and raised CTA fit from **50.0** to **100.0**.
+The injected pack improved the score by **27.3 points**, removed source-term
+reuse from the reward signal, and raised CTA fit from **25.0** to **100.0**.
 
 The output with `VOICE.md` passed the default strict gate. The difference is the
 contract: it turns the copy brief into measurable target ranges for sentence

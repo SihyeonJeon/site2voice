@@ -1,19 +1,19 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://linear.app/",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 797,
-    "sentences": 62,
-    "avg_sentence_words": 12.9,
+    "sentences": 27,
+    "avg_sentence_words": 10.6,
     "avg_heading_words": 7.2,
     "avg_paragraph_words": 16.1,
-    "avg_cta_words": 1.5,
+    "avg_cta_words": 1.6,
     "avg_link_words": 1.4,
     "headings": 12,
-    "ctas": 8,
+    "ctas": 9,
     "links": 16,
     "type_token_ratio": 0.399
   },
@@ -25,6 +25,7 @@
   "style": {
     "cta_verbs": [
       "contact",
+      "open",
       "sign",
       "build",
       "get",
@@ -39,9 +40,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 12.9,
-      "min": 9.7,
-      "max": 16.1
+      "target": 10.6,
+      "min": 7.9,
+      "max": 13.2
     },
     "heading_words": {
       "target": 7.2,
@@ -54,14 +55,15 @@
       "max": 20.1
     },
     "cta_words": {
-      "target": 1.5,
-      "min": 1.1,
-      "max": 1.9
+      "target": 1.6,
+      "min": 1.2,
+      "max": 2.0
     },
     "recommended_terms": [],
     "source_terms": [],
     "cta_verbs": [
       "contact",
+      "open",
       "sign",
       "build",
       "get",

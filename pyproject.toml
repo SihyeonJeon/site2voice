@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "site2voice"
-version = "0.5.2"
+version = "0.5.3"
 description = "Ready-to-use VOICE.md copy profiles and optional benchmarks for AI-generated copy."
 readme = "README.md"
 requires-python = ">=3.10"

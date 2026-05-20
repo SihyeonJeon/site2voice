@@ -1,24 +1,24 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://www.notion.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 635,
-    "sentences": 43,
-    "avg_sentence_words": 14.8,
+    "sentences": 30,
+    "avg_sentence_words": 4.9,
     "avg_heading_words": 2.7,
     "avg_paragraph_words": 9,
-    "avg_cta_words": 3,
+    "avg_cta_words": 3.2,
     "avg_link_words": 3.4,
     "headings": 12,
-    "ctas": 5,
+    "ctas": 6,
     "links": 16,
     "type_token_ratio": 0.402
   },
   "tone": [
-    "balanced",
+    "short and direct",
     "action-oriented",
     "technical",
     "trust-forward"
@@ -28,6 +28,7 @@
       "see",
       "request",
       "get",
+      "read",
       "explore"
     ],
     "punctuation": {
@@ -39,9 +40,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 14.8,
-      "min": 11.1,
-      "max": 18.5
+      "target": 4.9,
+      "min": 4.0,
+      "max": 6.1
     },
     "heading_words": {
       "target": 2.7,
@@ -54,9 +55,9 @@
       "max": 11.2
     },
     "cta_words": {
-      "target": 3.0,
-      "min": 2.2,
-      "max": 3.8
+      "target": 3.2,
+      "min": 2.4,
+      "max": 4.0
     },
     "recommended_terms": [],
     "source_terms": [],
@@ -64,6 +65,7 @@
       "see",
       "request",
       "get",
+      "read",
       "explore"
     ],
     "minimum_recommended_terms": 0,

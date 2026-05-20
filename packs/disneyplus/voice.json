@@ -1,0 +1,78 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.disneyplus.com/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 3386,
+    "sentences": 210,
+    "avg_sentence_words": 10.1,
+    "avg_heading_words": 4,
+    "avg_paragraph_words": 5,
+    "avg_cta_words": 2.3,
+    "avg_link_words": 3.4,
+    "headings": 2,
+    "ctas": 3,
+    "links": 16,
+    "type_token_ratio": 0.147
+  },
+  "tone": [
+    "balanced"
+  ],
+  "style": {
+    "cta_verbs": [
+      "get",
+      "learn",
+      "explore"
+    ],
+    "punctuation": {
+      "periods": 216,
+      "questions": 1,
+      "exclamations": 2,
+      "colons": 18
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 10.1,
+      "min": 7.6,
+      "max": 12.6
+    },
+    "heading_words": {
+      "target": 4.0,
+      "min": 3.0,
+      "max": 5.0
+    },
+    "paragraph_words": {
+      "target": 5.0,
+      "min": 4.0,
+      "max": 6.2
+    },
+    "cta_words": {
+      "target": 2.3,
+      "min": 1.7,
+      "max": 2.9
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "get",
+      "learn",
+      "explore"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

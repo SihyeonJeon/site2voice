@@ -1,0 +1,83 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://brave.com/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 1826,
+    "sentences": 97,
+    "avg_sentence_words": 10.6,
+    "avg_heading_words": 5.3,
+    "avg_paragraph_words": 14,
+    "avg_cta_words": 4,
+    "avg_link_words": 2.2,
+    "headings": 7,
+    "ctas": 9,
+    "links": 16,
+    "type_token_ratio": 0.276
+  },
+  "tone": [
+    "balanced",
+    "action-oriented",
+    "technical",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "try",
+      "get",
+      "see",
+      "learn"
+    ],
+    "punctuation": {
+      "periods": 122,
+      "questions": 12,
+      "exclamations": 3,
+      "colons": 2
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 10.6,
+      "min": 7.9,
+      "max": 13.2
+    },
+    "heading_words": {
+      "target": 5.3,
+      "min": 4.0,
+      "max": 6.6
+    },
+    "paragraph_words": {
+      "target": 14.0,
+      "min": 10.5,
+      "max": 17.5
+    },
+    "cta_words": {
+      "target": 4.0,
+      "min": 3.0,
+      "max": 5.0
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "try",
+      "get",
+      "see",
+      "learn"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

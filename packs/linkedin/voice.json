@@ -1,0 +1,80 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.linkedin.com/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 1238,
+    "sentences": 12,
+    "avg_sentence_words": 14,
+    "avg_heading_words": 6.5,
+    "avg_paragraph_words": 14.4,
+    "avg_cta_words": 2.4,
+    "avg_link_words": 1.8,
+    "headings": 12,
+    "ctas": 5,
+    "links": 16,
+    "type_token_ratio": 0.275
+  },
+  "tone": [
+    "balanced",
+    "action-oriented",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "sign",
+      "join",
+      "get"
+    ],
+    "punctuation": {
+      "periods": 12,
+      "questions": 2,
+      "exclamations": 0,
+      "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 14.0,
+      "min": 10.5,
+      "max": 17.5
+    },
+    "heading_words": {
+      "target": 6.5,
+      "min": 4.9,
+      "max": 8.1
+    },
+    "paragraph_words": {
+      "target": 14.4,
+      "min": 10.8,
+      "max": 18.0
+    },
+    "cta_words": {
+      "target": 2.4,
+      "min": 1.8,
+      "max": 3.0
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "sign",
+      "join",
+      "get"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

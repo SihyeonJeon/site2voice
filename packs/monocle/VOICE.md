@@ -6,8 +6,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Voice Summary
 
-- Overall tone: **explanatory, action-oriented**.
-- Sentence shape: about **67.2 words** per sentence.
+- Overall tone: **short and direct, action-oriented**.
+- Sentence shape: about **6.4 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -19,12 +19,12 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Style Fingerprint
 
-- Heading shape: about **8.3 words** per heading.
+- Heading shape: about **8.2 words** per heading.
 - Paragraph rhythm: about **7 words** per paragraph sample.
 - CTA shape: about **2.9 words** per CTA.
 - CTA verbs: `see`, `contact`, `get`, `sign`, `buy`.
 - Navigation label shape: about **2.1 words** per label.
-- Lexical variety: **0.291** type-token ratio.
+- Lexical variety: **0.29** type-token ratio.
 
 ## Agent Rules
 
@@ -39,8 +39,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **50.4 and 84.0 words**.
-- Keep headings near **8.3 words**; avoid generic one-word section labels unless the source uses them.
+- Keep average sentence length between **4.8 and 8.0 words**.
+- Keep headings near **8.2 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **7.0 words**.
 - Keep CTAs near **2.9 words** and start them with: `see`, `contact`, `get`, `sign`, `buy`.
 - Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
@@ -53,8 +53,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 | Signal | Value |
 | --- | --- |
-| Words | 2686 |
-| Sentences | 40 |
+| Words | 2696 |
+| Sentences | 85 |
 | Headings | 12 |
 | CTA candidates | 7 |
 

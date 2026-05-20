@@ -1,13 +1,13 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://www.figma.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 1544,
-    "sentences": 27,
-    "avg_sentence_words": 57.2,
+    "sentences": 51,
+    "avg_sentence_words": 7,
     "avg_heading_words": 4.8,
     "avg_paragraph_words": 3.2,
     "avg_cta_words": 3.2,
@@ -18,7 +18,7 @@
     "type_token_ratio": 0.227
   },
   "tone": [
-    "explanatory",
+    "short and direct",
     "action-oriented",
     "technical"
   ],
@@ -40,9 +40,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 57.2,
-      "min": 42.9,
-      "max": 71.5
+      "target": 7.0,
+      "min": 5.2,
+      "max": 8.8
     },
     "heading_words": {
       "target": 4.8,

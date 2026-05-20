@@ -1,0 +1,81 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.tiktok.com/about",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 4890,
+    "sentences": 189,
+    "avg_sentence_words": 24,
+    "avg_heading_words": 3.3,
+    "avg_paragraph_words": 565.5,
+    "avg_cta_words": 2.2,
+    "avg_link_words": 1.8,
+    "headings": 12,
+    "ctas": 4,
+    "links": 16,
+    "type_token_ratio": 0.298
+  },
+  "tone": [
+    "explanatory",
+    "action-oriented"
+  ],
+  "style": {
+    "cta_verbs": [
+      "contact",
+      "watch",
+      "create",
+      "join"
+    ],
+    "punctuation": {
+      "periods": 217,
+      "questions": 1,
+      "exclamations": 2,
+      "colons": 59
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 24.0,
+      "min": 18.0,
+      "max": 30.0
+    },
+    "heading_words": {
+      "target": 3.3,
+      "min": 2.5,
+      "max": 4.1
+    },
+    "paragraph_words": {
+      "target": 565.5,
+      "min": 424.1,
+      "max": 706.9
+    },
+    "cta_words": {
+      "target": 2.2,
+      "min": 1.7,
+      "max": 2.8
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "contact",
+      "watch",
+      "create",
+      "join"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

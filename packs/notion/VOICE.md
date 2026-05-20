@@ -6,8 +6,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Voice Summary
 
-- Overall tone: **balanced, action-oriented, technical, trust-forward**.
-- Sentence shape: about **14.8 words** per sentence.
+- Overall tone: **short and direct, action-oriented, technical, trust-forward**.
+- Sentence shape: about **4.9 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -21,8 +21,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 - Heading shape: about **2.7 words** per heading.
 - Paragraph rhythm: about **9 words** per paragraph sample.
-- CTA shape: about **3 words** per CTA.
-- CTA verbs: `see`, `request`, `get`, `explore`.
+- CTA shape: about **3.2 words** per CTA.
+- CTA verbs: `see`, `request`, `get`, `read`, `explore`.
 - Navigation label shape: about **3.4 words** per label.
 - Lexical variety: **0.402** type-token ratio.
 
@@ -39,10 +39,10 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **11.1 and 18.5 words**.
+- Keep average sentence length between **4.0 and 6.1 words**.
 - Keep headings near **2.7 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **9.0 words**.
-- Keep CTAs near **3.0 words** and start them with: `see`, `request`, `get`, `explore`.
+- Keep CTAs near **3.2 words** and start them with: `see`, `request`, `get`, `read`, `explore`.
 - Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
@@ -54,9 +54,9 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 | Signal | Value |
 | --- | --- |
 | Words | 635 |
-| Sentences | 43 |
+| Sentences | 30 |
 | Headings | 12 |
-| CTA candidates | 5 |
+| CTA candidates | 6 |
 
 ## Do / Don't
 

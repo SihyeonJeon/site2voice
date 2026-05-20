@@ -71,6 +71,8 @@ CTA_VERBS = {
     "get",
     "join",
     "learn",
+    "open",
+    "read",
     "request",
     "see",
     "sign",
@@ -182,6 +184,16 @@ def sentences(text: str) -> list[str]:
     return [item.strip() for item in re.split(r"[.!?。！？]+", text) if item.strip()]
 
 
+def sentence_units(values: list[str]) -> list[str]:
+    units: list[str] = []
+    for value in values:
+        for part in sentences(value):
+            count = len(words(part))
+            if 2 <= count <= 60:
+                units.append(part)
+    return units
+
+
 def cta_score(text: str) -> bool:
     tokens = words(text)
     if not tokens or len(tokens) > 8:
@@ -281,7 +293,13 @@ def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
     paragraphs = unique([item.text for item in parser.items if item.tag == "p"], 8)
     all_copy = " ".join(item.text for item in parser.items if item.tag != "title")
     all_words = words(all_copy)
-    all_sentences = sentences(all_copy)
+    paragraph_blocks = [item.text for item in parser.items if item.tag == "p"]
+    all_sentences = sentence_units(paragraph_blocks)
+    if len(all_sentences) < 3:
+        natural_blocks = [item.text for item in parser.items if item.tag in {"h1", "h2", "h3", "p", "li"}]
+        all_sentences = sentence_units(natural_blocks)
+    if len(all_sentences) < 3:
+        all_sentences = sentence_units([item.text for item in parser.items if item.tag != "title"])
     sentence_lengths = [len(words(sentence)) for sentence in all_sentences]
     avg_sentence_words = statistics.mean(sentence_lengths) if sentence_lengths else 0.0
     lexicon = [

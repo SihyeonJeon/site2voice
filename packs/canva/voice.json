@@ -1,0 +1,82 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.canva.com/about/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 1549,
+    "sentences": 46,
+    "avg_sentence_words": 6,
+    "avg_heading_words": 2.2,
+    "avg_paragraph_words": 5.8,
+    "avg_cta_words": 2.3,
+    "avg_link_words": 1.4,
+    "headings": 12,
+    "ctas": 6,
+    "links": 16,
+    "type_token_ratio": 0.259
+  },
+  "tone": [
+    "short and direct",
+    "action-oriented",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "contact",
+      "demo",
+      "create",
+      "learn"
+    ],
+    "punctuation": {
+      "periods": 15,
+      "questions": 0,
+      "exclamations": 1,
+      "colons": 9
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 6.0,
+      "min": 4.5,
+      "max": 7.5
+    },
+    "heading_words": {
+      "target": 2.2,
+      "min": 1.7,
+      "max": 2.8
+    },
+    "paragraph_words": {
+      "target": 5.8,
+      "min": 4.3,
+      "max": 7.2
+    },
+    "cta_words": {
+      "target": 2.3,
+      "min": 1.7,
+      "max": 2.9
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "contact",
+      "demo",
+      "create",
+      "learn"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

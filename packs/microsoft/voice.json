@@ -1,0 +1,85 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.microsoft.com/en-us/ai",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 3369,
+    "sentences": 222,
+    "avg_sentence_words": 10.9,
+    "avg_heading_words": 8.8,
+    "avg_paragraph_words": 13,
+    "avg_cta_words": 3.2,
+    "avg_link_words": 2.1,
+    "headings": 12,
+    "ctas": 12,
+    "links": 16,
+    "type_token_ratio": 0.207
+  },
+  "tone": [
+    "balanced",
+    "action-oriented",
+    "technical",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "download",
+      "get",
+      "explore",
+      "learn",
+      "read"
+    ],
+    "punctuation": {
+      "periods": 97,
+      "questions": 37,
+      "exclamations": 0,
+      "colons": 27
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 10.9,
+      "min": 8.2,
+      "max": 13.6
+    },
+    "heading_words": {
+      "target": 8.8,
+      "min": 6.6,
+      "max": 11.0
+    },
+    "paragraph_words": {
+      "target": 13.0,
+      "min": 9.8,
+      "max": 16.2
+    },
+    "cta_words": {
+      "target": 3.2,
+      "min": 2.4,
+      "max": 4.0
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "download",
+      "get",
+      "explore",
+      "learn",
+      "read"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

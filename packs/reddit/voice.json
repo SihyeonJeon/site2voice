@@ -1,0 +1,75 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.redditinc.com/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 685,
+    "sentences": 16,
+    "avg_sentence_words": 11.5,
+    "avg_heading_words": 2.6,
+    "avg_paragraph_words": 16.2,
+    "avg_cta_words": 1.5,
+    "avg_link_words": 1.4,
+    "headings": 7,
+    "ctas": 2,
+    "links": 16,
+    "type_token_ratio": 0.253
+  },
+  "tone": [
+    "balanced",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "contact"
+    ],
+    "punctuation": {
+      "periods": 20,
+      "questions": 2,
+      "exclamations": 0,
+      "colons": 4
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 11.5,
+      "min": 8.6,
+      "max": 14.4
+    },
+    "heading_words": {
+      "target": 2.6,
+      "min": 2.0,
+      "max": 3.2
+    },
+    "paragraph_words": {
+      "target": 16.2,
+      "min": 12.1,
+      "max": 20.2
+    },
+    "cta_words": {
+      "target": 1.5,
+      "min": 1.1,
+      "max": 1.9
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "contact"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

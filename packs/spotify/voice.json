@@ -1,0 +1,83 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.spotify.com/us/premium/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 1014,
+    "sentences": 44,
+    "avg_sentence_words": 5.4,
+    "avg_heading_words": 8.6,
+    "avg_paragraph_words": 8,
+    "avg_cta_words": 3,
+    "avg_link_words": 2.5,
+    "headings": 12,
+    "ctas": 8,
+    "links": 16,
+    "type_token_ratio": 0.337
+  },
+  "tone": [
+    "short and direct",
+    "action-oriented"
+  ],
+  "style": {
+    "cta_verbs": [
+      "download",
+      "sign",
+      "try",
+      "get",
+      "learn"
+    ],
+    "punctuation": {
+      "periods": 79,
+      "questions": 1,
+      "exclamations": 0,
+      "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 5.4,
+      "min": 4.1,
+      "max": 6.8
+    },
+    "heading_words": {
+      "target": 8.6,
+      "min": 6.4,
+      "max": 10.8
+    },
+    "paragraph_words": {
+      "target": 8.0,
+      "min": 6.0,
+      "max": 10.0
+    },
+    "cta_words": {
+      "target": 3.0,
+      "min": 2.2,
+      "max": 3.8
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "download",
+      "sign",
+      "try",
+      "get",
+      "learn"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

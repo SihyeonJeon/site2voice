@@ -1,13 +1,13 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://www.eyesmag.com/about",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 769,
-    "sentences": 60,
-    "avg_sentence_words": 12.8,
+    "sentences": 28,
+    "avg_sentence_words": 13.1,
     "avg_heading_words": 1,
     "avg_paragraph_words": 16.2,
     "avg_cta_words": 2,
@@ -33,9 +33,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 12.8,
-      "min": 9.6,
-      "max": 16.0
+      "target": 13.1,
+      "min": 9.8,
+      "max": 16.4
     },
     "heading_words": {
       "target": 1.0,

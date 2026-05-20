@@ -1,16 +1,16 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://github.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 1628,
-    "sentences": 40,
-    "avg_sentence_words": 40.7,
+    "sentences": 33,
+    "avg_sentence_words": 10.0,
     "avg_heading_words": 5.3,
     "avg_paragraph_words": 12.4,
-    "avg_cta_words": 3.2,
+    "avg_cta_words": 2.8,
     "avg_link_words": 3.1,
     "headings": 12,
     "ctas": 12,
@@ -18,7 +18,7 @@
     "type_token_ratio": 0.26
   },
   "tone": [
-    "explanatory",
+    "short and direct",
     "action-oriented",
     "technical",
     "trust-forward"
@@ -26,10 +26,11 @@
   "style": {
     "cta_verbs": [
       "sign",
+      "open",
       "create",
       "try",
       "explore",
-      "learn"
+      "read"
     ],
     "punctuation": {
       "periods": 41,
@@ -40,9 +41,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 40.7,
-      "min": 30.5,
-      "max": 50.9
+      "target": 10.0,
+      "min": 7.5,
+      "max": 12.5
     },
     "heading_words": {
       "target": 5.3,
@@ -55,18 +56,19 @@
       "max": 15.5
     },
     "cta_words": {
-      "target": 3.2,
-      "min": 2.4,
-      "max": 4.0
+      "target": 2.8,
+      "min": 2.1,
+      "max": 3.5
     },
     "recommended_terms": [],
     "source_terms": [],
     "cta_verbs": [
       "sign",
+      "open",
       "create",
       "try",
       "explore",
-      "learn"
+      "read"
     ],
     "minimum_recommended_terms": 0,
     "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",

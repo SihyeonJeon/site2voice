@@ -1,24 +1,24 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://monocle.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
-    "words": 2686,
-    "sentences": 40,
-    "avg_sentence_words": 67.2,
-    "avg_heading_words": 8.3,
+    "words": 2696,
+    "sentences": 85,
+    "avg_sentence_words": 6.4,
+    "avg_heading_words": 8.2,
     "avg_paragraph_words": 7,
     "avg_cta_words": 2.9,
     "avg_link_words": 2.1,
     "headings": 12,
     "ctas": 7,
     "links": 16,
-    "type_token_ratio": 0.291
+    "type_token_ratio": 0.29
   },
   "tone": [
-    "explanatory",
+    "short and direct",
     "action-oriented"
   ],
   "style": {
@@ -38,14 +38,14 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 67.2,
-      "min": 50.4,
-      "max": 84.0
+      "target": 6.4,
+      "min": 4.8,
+      "max": 8.0
     },
     "heading_words": {
-      "target": 8.3,
-      "min": 6.2,
-      "max": 10.4
+      "target": 8.2,
+      "min": 6.1,
+      "max": 10.2
     },
     "paragraph_words": {
       "target": 7.0,

@@ -7,7 +7,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 ## Voice Summary
 
 - Overall tone: **balanced, action-oriented**.
-- Sentence shape: about **15.7 words** per sentence.
+- Sentence shape: about **12.6 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -21,8 +21,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 - Heading shape: about **7.2 words** per heading.
 - Paragraph rhythm: about **7.8 words** per paragraph sample.
-- CTA shape: about **2.6 words** per CTA.
-- CTA verbs: `sign`, `start`, `contact`, `get`, `create`, `watch`, `explore`, `see`.
+- CTA shape: about **2.7 words** per CTA.
+- CTA verbs: `sign`, `start`, `contact`, `get`, `create`, `watch`, `read`, `explore`.
 - Navigation label shape: about **2.4 words** per label.
 - Lexical variety: **0.301** type-token ratio.
 
@@ -39,10 +39,10 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **11.8 and 19.6 words**.
+- Keep average sentence length between **9.4 and 15.8 words**.
 - Keep headings near **7.2 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **7.8 words**.
-- Keep CTAs near **2.6 words** and start them with: `sign`, `start`, `contact`, `get`, `create`, `watch`, `explore`, `see`.
+- Keep CTAs near **2.7 words** and start them with: `sign`, `start`, `contact`, `get`, `create`, `watch`, `read`, `explore`.
 - Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
@@ -54,7 +54,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 | Signal | Value |
 | --- | --- |
 | Words | 1748 |
-| Sentences | 111 |
+| Sentences | 49 |
 | Headings | 12 |
 | CTA candidates | 12 |
 

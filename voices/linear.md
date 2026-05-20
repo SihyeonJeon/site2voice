@@ -7,7 +7,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 ## Voice Summary
 
 - Overall tone: **balanced, action-oriented, technical**.
-- Sentence shape: about **12.9 words** per sentence.
+- Sentence shape: about **10.6 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -21,8 +21,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 - Heading shape: about **7.2 words** per heading.
 - Paragraph rhythm: about **16.1 words** per paragraph sample.
-- CTA shape: about **1.5 words** per CTA.
-- CTA verbs: `contact`, `sign`, `build`, `get`, `download`.
+- CTA shape: about **1.6 words** per CTA.
+- CTA verbs: `contact`, `open`, `sign`, `build`, `get`, `download`.
 - Navigation label shape: about **1.4 words** per label.
 - Lexical variety: **0.399** type-token ratio.
 
@@ -39,10 +39,10 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **9.7 and 16.1 words**.
+- Keep average sentence length between **7.9 and 13.2 words**.
 - Keep headings near **7.2 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **16.1 words**.
-- Keep CTAs near **1.5 words** and start them with: `contact`, `sign`, `build`, `get`, `download`.
+- Keep CTAs near **1.6 words** and start them with: `contact`, `open`, `sign`, `build`, `get`, `download`.
 - Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
@@ -54,9 +54,9 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 | Signal | Value |
 | --- | --- |
 | Words | 797 |
-| Sentences | 62 |
+| Sentences | 27 |
 | Headings | 12 |
-| CTA candidates | 8 |
+| CTA candidates | 9 |
 
 ## Do / Don't
 

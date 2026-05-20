@@ -1,0 +1,79 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://discord.com/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 767,
+    "sentences": 12,
+    "avg_sentence_words": 17.3,
+    "avg_heading_words": 5.2,
+    "avg_paragraph_words": 29.7,
+    "avg_cta_words": 2.8,
+    "avg_link_words": 2.9,
+    "headings": 12,
+    "ctas": 5,
+    "links": 16,
+    "type_token_ratio": 0.342
+  },
+  "tone": [
+    "balanced",
+    "action-oriented",
+    "technical",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "download",
+      "open"
+    ],
+    "punctuation": {
+      "periods": 15,
+      "questions": 0,
+      "exclamations": 0,
+      "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 17.3,
+      "min": 13.0,
+      "max": 21.6
+    },
+    "heading_words": {
+      "target": 5.2,
+      "min": 3.9,
+      "max": 6.5
+    },
+    "paragraph_words": {
+      "target": 29.7,
+      "min": 22.3,
+      "max": 37.1
+    },
+    "cta_words": {
+      "target": 2.8,
+      "min": 2.1,
+      "max": 3.5
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "download",
+      "open"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

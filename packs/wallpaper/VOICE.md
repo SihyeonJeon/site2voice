@@ -6,8 +6,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Voice Summary
 
-- Overall tone: **explanatory**.
-- Sentence shape: about **74 words** per sentence.
+- Overall tone: **short and direct**.
+- Sentence shape: about **7.2 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -24,7 +24,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 - CTA shape: about **4.5 words** per CTA.
 - CTA verbs: `sign`, `contact`.
 - Navigation label shape: about **1.9 words** per label.
-- Lexical variety: **0.229** type-token ratio.
+- Lexical variety: **0.221** type-token ratio.
 
 ## Agent Rules
 
@@ -39,7 +39,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **55.5 and 92.5 words**.
+- Keep average sentence length between **5.4 and 9.0 words**.
 - Keep headings near **1.5 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **17.2 words**.
 - Keep CTAs near **4.5 words** and start them with: `sign`, `contact`.
@@ -53,8 +53,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 | Signal | Value |
 | --- | --- |
-| Words | 2072 |
-| Sentences | 28 |
+| Words | 2110 |
+| Sentences | 46 |
 | Headings | 12 |
 | CTA candidates | 2 |
 

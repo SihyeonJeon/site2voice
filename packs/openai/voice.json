@@ -1,13 +1,13 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://openai.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 554,
-    "sentences": 12,
-    "avg_sentence_words": 46.2,
+    "sentences": 17,
+    "avg_sentence_words": 2.8,
     "avg_heading_words": 2.4,
     "avg_paragraph_words": 2.2,
     "avg_cta_words": 4.6,
@@ -18,7 +18,7 @@
     "type_token_ratio": 0.301
   },
   "tone": [
-    "explanatory",
+    "short and direct",
     "action-oriented",
     "technical"
   ],
@@ -38,9 +38,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 46.2,
-      "min": 34.7,
-      "max": 57.8
+      "target": 2.8,
+      "min": 4.0,
+      "max": 4.0
     },
     "heading_words": {
       "target": 2.4,

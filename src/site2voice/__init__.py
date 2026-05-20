@@ -1,3 +1,3 @@
 """site2voice: generate AI-agent copy profiles from website copy."""
 
-__version__ = "0.5.2"
+__version__ = "0.5.3"

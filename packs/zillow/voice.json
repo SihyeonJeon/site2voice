@@ -1,0 +1,88 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.zillow.com/mortgages/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 3788,
+    "sentences": 97,
+    "avg_sentence_words": 14.7,
+    "avg_heading_words": 5.3,
+    "avg_paragraph_words": 45.2,
+    "avg_cta_words": 2.8,
+    "avg_link_words": 2.1,
+    "headings": 12,
+    "ctas": 12,
+    "links": 16,
+    "type_token_ratio": 0.18
+  },
+  "tone": [
+    "balanced",
+    "action-oriented",
+    "technical"
+  ],
+  "style": {
+    "cta_verbs": [
+      "sign",
+      "join",
+      "buy",
+      "open",
+      "build",
+      "see",
+      "get"
+    ],
+    "punctuation": {
+      "periods": 132,
+      "questions": 57,
+      "exclamations": 0,
+      "colons": 11
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 14.7,
+      "min": 11.0,
+      "max": 18.4
+    },
+    "heading_words": {
+      "target": 5.3,
+      "min": 4.0,
+      "max": 6.6
+    },
+    "paragraph_words": {
+      "target": 45.2,
+      "min": 33.9,
+      "max": 56.5
+    },
+    "cta_words": {
+      "target": 2.8,
+      "min": 2.1,
+      "max": 3.5
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "sign",
+      "join",
+      "buy",
+      "open",
+      "build",
+      "see",
+      "get"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

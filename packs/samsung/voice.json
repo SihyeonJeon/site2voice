@@ -1,0 +1,76 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.samsung.com/",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 2066,
+    "sentences": 59,
+    "avg_sentence_words": 6.5,
+    "avg_heading_words": 3.2,
+    "avg_paragraph_words": 8.4,
+    "avg_cta_words": 1.5,
+    "avg_link_words": 1.4,
+    "headings": 12,
+    "ctas": 2,
+    "links": 16,
+    "type_token_ratio": 0.272
+  },
+  "tone": [
+    "short and direct"
+  ],
+  "style": {
+    "cta_verbs": [
+      "보기",
+      "확인"
+    ],
+    "punctuation": {
+      "periods": 24,
+      "questions": 0,
+      "exclamations": 4,
+      "colons": 12
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 6.5,
+      "min": 4.9,
+      "max": 8.1
+    },
+    "heading_words": {
+      "target": 3.2,
+      "min": 2.4,
+      "max": 4.0
+    },
+    "paragraph_words": {
+      "target": 8.4,
+      "min": 6.3,
+      "max": 10.5
+    },
+    "cta_words": {
+      "target": 1.5,
+      "min": 1.1,
+      "max": 1.9
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "보기",
+      "확인"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

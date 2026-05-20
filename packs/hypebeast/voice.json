@@ -1,13 +1,13 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://hypebeast.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 993,
-    "sentences": 21,
-    "avg_sentence_words": 47.3,
+    "sentences": 11,
+    "avg_sentence_words": 6.2,
     "avg_heading_words": 7.3,
     "avg_paragraph_words": 7.8,
     "avg_cta_words": 2,
@@ -18,7 +18,7 @@
     "type_token_ratio": 0.349
   },
   "tone": [
-    "explanatory"
+    "short and direct"
   ],
   "style": {
     "cta_verbs": [
@@ -33,9 +33,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 47.3,
-      "min": 35.5,
-      "max": 59.1
+      "target": 6.2,
+      "min": 4.7,
+      "max": 7.8
     },
     "heading_words": {
       "target": 7.3,

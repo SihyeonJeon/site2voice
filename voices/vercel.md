@@ -6,8 +6,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Voice Summary
 
-- Overall tone: **explanatory, action-oriented, technical, trust-forward**.
-- Sentence shape: about **34.5 words** per sentence.
+- Overall tone: **short and direct, action-oriented, technical, trust-forward**.
+- Sentence shape: about **4.9 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -21,8 +21,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 - Heading shape: about **2.6 words** per heading.
 - Paragraph rhythm: about **4.5 words** per paragraph sample.
-- CTA shape: about **3.9 words** per CTA.
-- CTA verbs: `build`, `see`, `join`, `sign`, `get`, `start`, `learn`.
+- CTA shape: about **4 words** per CTA.
+- CTA verbs: `build`, `see`, `read`, `join`, `sign`, `get`, `start`, `learn`.
 - Navigation label shape: about **4.6 words** per label.
 - Lexical variety: **0.171** type-token ratio.
 
@@ -39,10 +39,10 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **25.9 and 43.1 words**.
+- Keep average sentence length between **4.0 and 6.1 words**.
 - Keep headings near **2.6 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **4.5 words**.
-- Keep CTAs near **3.9 words** and start them with: `build`, `see`, `join`, `sign`, `get`, `start`, `learn`.
+- Keep CTAs near **4.0 words** and start them with: `build`, `see`, `read`, `join`, `sign`, `get`, `start`, `learn`.
 - Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
@@ -54,9 +54,9 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 | Signal | Value |
 | --- | --- |
 | Words | 2035 |
-| Sentences | 59 |
+| Sentences | 108 |
 | Headings | 12 |
-| CTA candidates | 11 |
+| CTA candidates | 12 |
 
 ## Do / Don't
 

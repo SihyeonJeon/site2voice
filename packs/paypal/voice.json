@@ -1,0 +1,90 @@
+{
+  "schema_version": "site2voice.voice.v1",
+  "generator": "site2voice/0.5.3",
+  "source": "https://www.paypal.com/us/business",
+  "title": "",
+  "meta_description": "",
+  "metrics": {
+    "words": 1341,
+    "sentences": 90,
+    "avg_sentence_words": 6.5,
+    "avg_heading_words": 2.8,
+    "avg_paragraph_words": 12.8,
+    "avg_cta_words": 2.5,
+    "avg_link_words": 2.6,
+    "headings": 12,
+    "ctas": 12,
+    "links": 16,
+    "type_token_ratio": 0.284
+  },
+  "tone": [
+    "short and direct",
+    "action-oriented",
+    "trust-forward"
+  ],
+  "style": {
+    "cta_verbs": [
+      "buy",
+      "request",
+      "start",
+      "get",
+      "open",
+      "sign",
+      "contact",
+      "read"
+    ],
+    "punctuation": {
+      "periods": 59,
+      "questions": 0,
+      "exclamations": 0,
+      "colons": 0
+    }
+  },
+  "output_contract": {
+    "sentence_words": {
+      "target": 6.5,
+      "min": 4.9,
+      "max": 8.1
+    },
+    "heading_words": {
+      "target": 2.8,
+      "min": 2.1,
+      "max": 3.5
+    },
+    "paragraph_words": {
+      "target": 12.8,
+      "min": 9.6,
+      "max": 16.0
+    },
+    "cta_words": {
+      "target": 2.5,
+      "min": 1.9,
+      "max": 3.1
+    },
+    "recommended_terms": [],
+    "source_terms": [],
+    "cta_verbs": [
+      "buy",
+      "request",
+      "start",
+      "get",
+      "open",
+      "sign",
+      "contact",
+      "read"
+    ],
+    "minimum_recommended_terms": 0,
+    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "benchmark_gates": {
+      "overall": 75,
+      "copy_safety": 85,
+      "claim_safety": 75
+    }
+  },
+  "headings": [],
+  "ctas": [],
+  "links": [],
+  "buttons": [],
+  "lexicon": [],
+  "paragraph_samples": []
+}

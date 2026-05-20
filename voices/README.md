@@ -27,21 +27,39 @@ curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/str
 
 | Voice | Tone | Use |
 | --- | --- | --- |
-| [Anthropic](anthropic.md) | explanatory, technical, trust-forward | measured AI safety and product copy |
-| [Apple](apple.md) | explanatory, action-oriented | minimal premium product copy |
+| [Anthropic](anthropic.md) | short and direct, action-oriented, technical, trust-forward | measured AI safety and product copy |
+| [Apple](apple.md) | balanced, action-oriented | minimal premium product copy |
+| [Brave](brave.md) | balanced, action-oriented, technical, trust-forward | privacy-first browser and search copy |
+| [Canva](canva.md) | short and direct, action-oriented, trust-forward | accessible creator-tool positioning |
+| [Discord](discord.md) | balanced, action-oriented, technical, trust-forward | casual community-product copy |
+| [Disney+](disneyplus.md) | balanced | franchise entertainment subscription copy |
 | [EYESMAG](eyesmag.md) | balanced | Korean fashion and lifestyle editorial intro copy |
-| [Figma](figma.md) | explanatory, action-oriented, technical | creative collaboration copy |
-| [GitHub](github.md) | explanatory, action-oriented, technical, trust-forward | developer ecosystem copy |
-| [Highsnobiety](highsnobiety.md) | explanatory | commerce-aware culture editorial copy |
-| [Hypebeast](hypebeast.md) | explanatory | trend-led culture editorial copy |
+| [Figma](figma.md) | short and direct, action-oriented, technical | creative collaboration copy |
+| [GitHub](github.md) | short and direct, action-oriented, technical, trust-forward | developer ecosystem copy |
+| [Highsnobiety](highsnobiety.md) | balanced | commerce-aware culture editorial copy |
+| [Hypebeast](hypebeast.md) | short and direct | trend-led culture editorial copy |
 | [Linear](linear.md) | balanced, action-oriented, technical | precise product-team positioning |
-| [Monocle](monocle.md) | explanatory, action-oriented | polished city, design, and affairs copy |
-| [Notion](notion.md) | balanced, action-oriented, technical, trust-forward | simple workspace and AI-product copy |
-| [OpenAI](openai.md) | explanatory, action-oriented, technical | research-to-product institutional copy |
-| [Shopify](shopify.md) | explanatory | merchant-growth product copy |
+| [LinkedIn](linkedin.md) | balanced, action-oriented, trust-forward | career and professional-network copy |
+| [Microsoft](microsoft.md) | balanced, action-oriented, technical, trust-forward | broad AI product-ecosystem copy |
+| [Monocle](monocle.md) | short and direct, action-oriented | polished city, design, and affairs copy |
+| [Netflix](netflix.md) | short and direct, action-oriented | direct entertainment subscription copy |
+| [Notion](notion.md) | short and direct, action-oriented, technical, trust-forward | simple workspace and AI-product copy |
+| [OpenAI](openai.md) | short and direct, action-oriented, technical | research-to-product institutional copy |
+| [PayPal](paypal.md) | short and direct, action-oriented, trust-forward | consumer and business payments copy |
+| [Pinterest](pinterest.md) | balanced, action-oriented | visual discovery and inspiration copy |
+| [Prime Video](primevideo.md) | short and direct, action-oriented | catalog-led entertainment copy |
+| [Reddit](reddit.md) | balanced, trust-forward | community and conversation-platform copy |
+| [Roblox](roblox.md) | balanced, action-oriented | youth gaming and creator-platform copy |
+| [Samsung](samsung.md) | short and direct | consumer hardware ecosystem copy |
+| [Shopify](shopify.md) | short and direct, action-oriented, trust-forward | merchant-growth product copy |
+| [Spotify](spotify.md) | short and direct, action-oriented | music and audio subscription copy |
 | [Stripe](stripe.md) | balanced, action-oriented | technical trust-forward SaaS copy |
-| [Vercel](vercel.md) | explanatory, action-oriented, technical, trust-forward | performance and deployment copy |
-| [Wallpaper](wallpaper.md) | explanatory | design, interiors, and architecture editorial copy |
+| [TikTok](tiktok.md) | explanatory, action-oriented | creator and entertainment-platform copy |
+| [Vercel](vercel.md) | short and direct, action-oriented, technical, trust-forward | performance and deployment copy |
+| [Wallpaper](wallpaper.md) | short and direct | design, interiors, and architecture editorial copy |
+| [WhatsApp](whatsapp.md) | balanced, trust-forward | privacy-forward consumer utility copy |
+| [Zillow](zillow.md) | balanced, action-oriented, technical | real-estate finance and marketplace copy |
+| [Zoom](zoom.md) | short and direct, action-oriented | meeting and collaboration SaaS copy |
 
 Need machine-readable metrics or an agent prompt too? Use the full
 [context packs](../packs).

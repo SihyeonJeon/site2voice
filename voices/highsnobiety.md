@@ -6,8 +6,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Voice Summary
 
-- Overall tone: **explanatory**.
-- Sentence shape: about **22.3 words** per sentence.
+- Overall tone: **balanced**.
+- Sentence shape: about **16.4 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -39,7 +39,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **16.7 and 27.9 words**.
+- Keep average sentence length between **12.3 and 20.5 words**.
 - Keep headings near **9.2 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **21.0 words**.
 - Keep CTAs near **2.0 words** and start them with: `get`, `see`, `contact`.
@@ -54,7 +54,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 | Signal | Value |
 | --- | --- |
 | Words | 1716 |
-| Sentences | 77 |
+| Sentences | 41 |
 | Headings | 12 |
 | CTA candidates | 3 |
 

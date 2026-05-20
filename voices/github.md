@@ -6,8 +6,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Voice Summary
 
-- Overall tone: **explanatory, action-oriented, technical, trust-forward**.
-- Sentence shape: about **40.7 words** per sentence.
+- Overall tone: **short and direct, action-oriented, technical, trust-forward**.
+- Sentence shape: about **10.0 words** per sentence.
 - Content policy: this file captures rhythm and structure, not source nouns.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
@@ -21,8 +21,8 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 - Heading shape: about **5.3 words** per heading.
 - Paragraph rhythm: about **12.4 words** per paragraph sample.
-- CTA shape: about **3.2 words** per CTA.
-- CTA verbs: `sign`, `create`, `try`, `explore`, `learn`.
+- CTA shape: about **2.8 words** per CTA.
+- CTA verbs: `sign`, `open`, `create`, `try`, `explore`, `read`.
 - Navigation label shape: about **3.1 words** per label.
 - Lexical variety: **0.26** type-token ratio.
 
@@ -39,10 +39,10 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 
 ## Output Contract
 
-- Keep average sentence length between **30.5 and 50.9 words**.
+- Keep average sentence length between **7.5 and 12.5 words**.
 - Keep headings near **5.3 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **12.4 words**.
-- Keep CTAs near **3.2 words** and start them with: `sign`, `create`, `try`, `explore`, `learn`.
+- Keep CTAs near **2.8 words** and start them with: `sign`, `open`, `create`, `try`, `explore`, `read`.
 - Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
@@ -54,7 +54,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 | Signal | Value |
 | --- | --- |
 | Words | 1628 |
-| Sentences | 40 |
+| Sentences | 33 |
 | Headings | 12 |
 | CTA candidates | 12 |
 

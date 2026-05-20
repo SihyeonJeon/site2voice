@@ -1,24 +1,24 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://vercel.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 2035,
-    "sentences": 59,
-    "avg_sentence_words": 34.5,
+    "sentences": 108,
+    "avg_sentence_words": 4.9,
     "avg_heading_words": 2.6,
     "avg_paragraph_words": 4.5,
-    "avg_cta_words": 3.9,
+    "avg_cta_words": 4,
     "avg_link_words": 4.6,
     "headings": 12,
-    "ctas": 11,
+    "ctas": 12,
     "links": 16,
     "type_token_ratio": 0.171
   },
   "tone": [
-    "explanatory",
+    "short and direct",
     "action-oriented",
     "technical",
     "trust-forward"
@@ -27,6 +27,7 @@
     "cta_verbs": [
       "build",
       "see",
+      "read",
       "join",
       "sign",
       "get",
@@ -42,9 +43,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 34.5,
-      "min": 25.9,
-      "max": 43.1
+      "target": 4.9,
+      "min": 4.0,
+      "max": 6.1
     },
     "heading_words": {
       "target": 2.6,
@@ -57,15 +58,16 @@
       "max": 5.6
     },
     "cta_words": {
-      "target": 3.9,
-      "min": 2.9,
-      "max": 4.9
+      "target": 4.0,
+      "min": 3.0,
+      "max": 5.0
     },
     "recommended_terms": [],
     "source_terms": [],
     "cta_verbs": [
       "build",
       "see",
+      "read",
       "join",
       "sign",
       "get",

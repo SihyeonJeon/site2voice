@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+## 0.5.3
+
+- Added 18 reference-only copy profiles from popular web products and platforms.
+- Added `docs/popular-sites-analysis.md` with source selection rules, excluded
+  candidates, and extracted metrics.
+- Hardened sentence extraction for card-heavy and JS-rendered pages by deriving
+  sentence shape from paragraph-like blocks before broader fallback text.
+- Expanded CTA verb detection to include common editorial verbs such as `read`
+  and `open`.
+
 ## 0.5.2
 
 - Reframed public documentation around reference-only copy profiles instead of

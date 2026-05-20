@@ -1,24 +1,25 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.2",
+  "generator": "site2voice/0.5.3",
   "source": "https://www.anthropic.com/",
   "title": "",
   "meta_description": "",
   "metrics": {
     "words": 1064,
-    "sentences": 31,
-    "avg_sentence_words": 34.3,
+    "sentences": 14,
+    "avg_sentence_words": 8.8,
     "avg_heading_words": 5.2,
     "avg_paragraph_words": 14.8,
-    "avg_cta_words": 2,
+    "avg_cta_words": 2.3,
     "avg_link_words": 2,
     "headings": 12,
-    "ctas": 3,
+    "ctas": 6,
     "links": 16,
     "type_token_ratio": 0.233
   },
   "tone": [
-    "explanatory",
+    "short and direct",
+    "action-oriented",
     "technical",
     "trust-forward"
   ],
@@ -26,7 +27,8 @@
     "cta_verbs": [
       "try",
       "contact",
-      "download"
+      "download",
+      "read"
     ],
     "punctuation": {
       "periods": 30,
@@ -37,9 +39,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 34.3,
-      "min": 25.7,
-      "max": 42.9
+      "target": 8.8,
+      "min": 6.6,
+      "max": 11.0
     },
     "heading_words": {
       "target": 5.2,
@@ -52,16 +54,17 @@
       "max": 18.5
     },
     "cta_words": {
-      "target": 2.0,
-      "min": 1.5,
-      "max": 2.5
+      "target": 2.3,
+      "min": 1.7,
+      "max": 2.9
     },
     "recommended_terms": [],
     "source_terms": [],
     "cta_verbs": [
       "try",
       "contact",
-      "download"
+      "download",
+      "read"
     ],
     "minimum_recommended_terms": 0,
     "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",

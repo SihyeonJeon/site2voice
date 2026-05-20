@@ -10,7 +10,7 @@ rhythm, heading shape, CTA verb shape, claim boundaries, and benchmark gates.
 
 **Not official. Not affiliated. Not permission to impersonate a brand.**
 
-## Voices
+## Featured Profiles
 
 | Profile | Tone | Best for |
 | --- | --- | --- |
@@ -29,6 +29,13 @@ rhythm, heading shape, CTA verb shape, claim boundaries, and benchmark gates.
 | [Stripe](voices/stripe.md) | calm, technical | fintech and SaaS copy |
 | [Vercel](voices/vercel.md) | performance-led | developer platform pages |
 | [Wallpaper](voices/wallpaper.md) | design-editorial | architecture and interiors copy |
+
+The full collection now includes **33 reference-only profiles**, including
+popular web products such as [Canva](voices/canva.md),
+[LinkedIn](voices/linkedin.md), [Netflix](voices/netflix.md),
+[TikTok](voices/tiktok.md), [WhatsApp](voices/whatsapp.md), [Zoom](voices/zoom.md),
+and [PayPal](voices/paypal.md). See the [full collection](voices) and the
+[popular-sites analysis](docs/popular-sites-analysis.md).
 
 ## Use
 
@@ -68,8 +75,8 @@ Same LedgerFlow prompt, scored against Stripe:
 
 | Candidate | Result | Overall | Variety | CTA | Copy safety |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Without `VOICE.md` | FAIL | 60.4 | 40.5 | 50.0 | 100.0 |
-| With `VOICE.md` | PASS | 91.0 | 45.8 | 100.0 | 96.2 |
+| Without `VOICE.md` | FAIL | 63.8 | 40.5 | 25.0 | 100.0 |
+| With `VOICE.md` | PASS | 91.1 | 45.8 | 100.0 | 96.2 |
 
 See the [full comparison](examples/comparisons/stripe-ledgerflow/README.md).
 
