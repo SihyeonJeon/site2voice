@@ -259,6 +259,8 @@ def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
     ]
 
     return {
+        "schema_version": "site2voice.voice.v1",
+        "generator": f"site2voice/{__version__}",
         "source": resolved_source,
         "title": title_items[-1] if title_items else "",
         "meta_description": parser.meta_description,

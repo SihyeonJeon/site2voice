@@ -18,6 +18,8 @@ jobs:
       - run: python -m pip install -e .
       - run: python -m unittest discover -s tests
       - run: site2voice examples/saas-home.html --out /tmp/VOICE.md
+      - run: site2voice init examples/editorial-home.html --dir /tmp/site2voice-context --no-samples
+      - run: site2voice bench examples/editorial-home.html examples/after-copy.md --strict
 
   package:
     runs-on: ubuntu-latest

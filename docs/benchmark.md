@@ -10,6 +10,12 @@ site2voice bench examples/editorial-home.html \
   --out examples/editorial-benchmark.md
 ```
 
+For CI, score the candidate you intend to ship:
+
+```bash
+site2voice bench examples/editorial-home.html examples/after-copy.md --strict
+```
+
 ## Metrics
 
 | Metric | What it checks |
@@ -36,6 +42,15 @@ A candidate passes when:
 
 This matters because direct copying can look stylistically aligned while being
 the wrong behavior. Copy safety is a gate, not just a metric.
+
+Use custom gates when the default is too loose or too strict:
+
+```bash
+site2voice bench SOURCE candidate.md \
+  --fail-under 80 \
+  --min-copy-safety 90 \
+  --min-claim-safety 90
+```
 
 ## Example
 

@@ -3,6 +3,8 @@ from __future__ import annotations
 import json
 import tempfile
 import unittest
+from contextlib import redirect_stderr, redirect_stdout
+from io import StringIO
 from pathlib import Path
 
 from site2voice.cli import main
@@ -36,6 +38,7 @@ class Site2VoiceTests(unittest.TestCase):
             code = main([str(FIXTURE), "--format", "json", "--out", str(out)])
             self.assertEqual(code, 0)
             payload = json.loads(out.read_text(encoding="utf-8"))
+            self.assertEqual(payload["schema_version"], "site2voice.voice.v1")
             self.assertGreater(payload["metrics"]["words"], 20)
 
     def test_benchmark_scores_after_above_before(self) -> None:
@@ -58,6 +61,48 @@ class Site2VoiceTests(unittest.TestCase):
             scores = {item["label"]: item["score"] for item in payload["candidates"]}
             self.assertGreater(scores["after-copy"], scores["before-copy"])
             self.assertGreater(scores["after-copy"], 70)
+
+    def test_benchmark_strict_gate_fails_bad_copy(self) -> None:
+        stdout = StringIO()
+        stderr = StringIO()
+        with redirect_stdout(stdout), redirect_stderr(stderr):
+            code = main(
+                [
+                    "bench",
+                    "examples/editorial-home.html",
+                    "examples/before-copy.md",
+                    "--strict",
+                ]
+            )
+        self.assertEqual(code, 2)
+        self.assertIn("overall", stderr.getvalue())
+
+    def test_benchmark_strict_gate_passes_good_copy(self) -> None:
+        stdout = StringIO()
+        with redirect_stdout(stdout):
+            code = main(
+                [
+                    "bench",
+                    "examples/editorial-home.html",
+                    "examples/after-copy.md",
+                    "--strict",
+                ]
+            )
+        self.assertEqual(code, 0)
+
+    def test_init_writes_context_pack(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            target = Path(td) / ".site2voice"
+            stdout = StringIO()
+            with redirect_stdout(stdout):
+                code = main(["init", str(FIXTURE), "--dir", str(target), "--no-samples"])
+            self.assertEqual(code, 0)
+            self.assertTrue((target / "VOICE.md").exists())
+            self.assertTrue((target / "voice.json").exists())
+            self.assertTrue((target / "agent-prompt.md").exists())
+            voice_json = json.loads((target / "voice.json").read_text(encoding="utf-8"))
+            self.assertEqual(voice_json["schema_version"], "site2voice.voice.v1")
+            self.assertIn("site2voice bench", (target / "agent-prompt.md").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

@@ -4,19 +4,26 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "site2voice"
-version = "0.2.1"
+version = "0.3.0"
 description = "Generate AI-agent VOICE.md files from website copy and CTAs."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [{name = "Sihyeon Jeon"}]
-keywords = ["agents", "voice", "copywriting", "markdown", "branding"]
+keywords = ["agents", "context-engineering", "voice", "copywriting", "benchmark", "markdown"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Environment :: Console",
   "Topic :: Text Processing :: Markup :: HTML",
   "Topic :: Software Development :: Documentation",
+  "Topic :: Software Development :: Quality Assurance",
 ]
+
+[project.urls]
+Homepage = "https://github.com/SihyeonJeon/site2voice"
+Repository = "https://github.com/SihyeonJeon/site2voice"
+Issues = "https://github.com/SihyeonJeon/site2voice/issues"
+Changelog = "https://github.com/SihyeonJeon/site2voice/blob/main/CHANGELOG.md"
 
 [project.scripts]
 site2voice = "site2voice.cli:main"

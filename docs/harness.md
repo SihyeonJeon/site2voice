@@ -7,11 +7,13 @@
 2. **Profiler** runs `site2voice SOURCE --format json` and extracts measurable
    voice signals: sentence shape, heading shape, CTA verbs, lexical variety,
    and repeated vocabulary.
-3. **Writer** uses the generated `VOICE.md` as context to write new candidate
+3. **Initializer** runs `site2voice init SOURCE` to create `VOICE.md`,
+   `voice.json`, and `agent-prompt.md`.
+4. **Writer** uses the generated `VOICE.md` as context to write new candidate
    copy.
-4. **Evaluator** runs `site2voice bench SOURCE before.md after.md` and checks
+5. **Evaluator** runs `site2voice bench SOURCE candidate.md --strict` and checks
    alignment, claim boundaries, and copy safety.
-5. **Publisher** updates examples, docs, releases, and launch notes.
+6. **Publisher** updates examples, docs, releases, and launch notes.
 
 ## Claude Operator Review
 

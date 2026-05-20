@@ -7,6 +7,11 @@ from typing import Any
 from .extract import STOPWORDS, analyze, clean_text, cta_score, sentences, tone_labels, trim_snippet, words
 
 
+DEFAULT_PASS_SCORE = 75.0
+DEFAULT_COPY_SAFETY = 85.0
+DEFAULT_CLAIM_SAFETY = 75.0
+MAX_COPY_TOKENS = 3000
+
 CLAIM_WORDS = {
     "best",
     "certified",
@@ -136,17 +141,19 @@ def ngrams(tokens: list[str], size: int) -> set[tuple[str, ...]]:
 
 
 def longest_shared_run(source_tokens: list[str], candidate_tokens: list[str]) -> int:
+    source_tokens = source_tokens[:MAX_COPY_TOKENS]
+    candidate_tokens = candidate_tokens[:MAX_COPY_TOKENS]
+    if not source_tokens or not candidate_tokens:
+        return 0
     best = 0
-    for left in range(len(source_tokens)):
-        for right in range(len(candidate_tokens)):
-            run = 0
-            while (
-                left + run < len(source_tokens)
-                and right + run < len(candidate_tokens)
-                and source_tokens[left + run] == candidate_tokens[right + run]
-            ):
-                run += 1
-            best = max(best, run)
+    previous = [0] * (len(candidate_tokens) + 1)
+    for source_token in source_tokens:
+        current = [0] * (len(candidate_tokens) + 1)
+        for index, candidate_token in enumerate(candidate_tokens, start=1):
+            if source_token == candidate_token:
+                current[index] = previous[index - 1] + 1
+                best = max(best, current[index])
+        previous = current
     return best
 
 
@@ -198,7 +205,11 @@ def score_candidate(reference: dict[str, Any], candidate_text: str, label: str) 
         + scores["claim_safety"] * 10
         + scores["copy_safety"] * 10
     )
-    passed = weighted >= 75 and scores["copy_safety"] >= 0.85 and scores["claim_safety"] >= 0.75
+    passed = (
+        weighted >= DEFAULT_PASS_SCORE
+        and scores["copy_safety"] * 100 >= DEFAULT_COPY_SAFETY
+        and scores["claim_safety"] * 100 >= DEFAULT_CLAIM_SAFETY
+    )
     return {
         "label": label,
         "score": round(weighted, 1),
@@ -233,6 +244,33 @@ def benchmark(reference_source: str, candidate_paths: list[str], timeout: float 
 
 def benchmark_json(payload: dict[str, Any]) -> str:
     return json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
+
+
+def benchmark_failures(
+    payload: dict[str, Any],
+    fail_under: float | None = None,
+    min_copy_safety: float | None = None,
+    min_claim_safety: float | None = None,
+    strict: bool = False,
+) -> list[str]:
+    failures: list[str] = []
+    score_floor = DEFAULT_PASS_SCORE if strict and fail_under is None else fail_under
+    copy_floor = DEFAULT_COPY_SAFETY if strict and min_copy_safety is None else min_copy_safety
+    claim_floor = DEFAULT_CLAIM_SAFETY if strict and min_claim_safety is None else min_claim_safety
+
+    for candidate in payload["candidates"]:
+        label = candidate["label"]
+        if score_floor is not None and candidate["score"] < score_floor:
+            failures.append(f"{label}: overall {candidate['score']:.1f} < {score_floor:.1f}")
+        copy_score = candidate["scores"]["copy_safety"]
+        if copy_floor is not None and copy_score < copy_floor:
+            failures.append(f"{label}: copy safety {copy_score:.1f} < {copy_floor:.1f}")
+        claim_score = candidate["scores"]["claim_safety"]
+        if claim_floor is not None and claim_score < claim_floor:
+            failures.append(f"{label}: claim safety {claim_score:.1f} < {claim_floor:.1f}")
+        if strict and not candidate["pass"] and not any(item.startswith(f"{label}:") for item in failures):
+            failures.append(f"{label}: did not pass default gates")
+    return failures
 
 
 def benchmark_markdown(payload: dict[str, Any]) -> str:

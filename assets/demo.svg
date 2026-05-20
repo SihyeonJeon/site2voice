@@ -1,0 +1,18 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">site2voice terminal demo</title>
+  <desc id="desc">A terminal demo showing VOICE.md generation and benchmark scoring.</desc>
+  <rect width="960" height="540" rx="18" fill="#0B0F14"/>
+  <rect x="28" y="28" width="904" height="484" rx="12" fill="#111820" stroke="#263241"/>
+  <circle cx="58" cy="58" r="7" fill="#FF5F57"/>
+  <circle cx="82" cy="58" r="7" fill="#FFBD2E"/>
+  <circle cx="106" cy="58" r="7" fill="#28C840"/>
+  <text x="52" y="112" fill="#9AE6B4" font-family="Menlo, Consolas, monospace" font-size="22">$ pipx install site2voice</text>
+  <text x="52" y="158" fill="#9AE6B4" font-family="Menlo, Consolas, monospace" font-size="22">$ site2voice init https://example.com</text>
+  <text x="80" y="202" fill="#D6E4F0" font-family="Menlo, Consolas, monospace" font-size="20">Created voice context pack in .site2voice:</text>
+  <text x="80" y="236" fill="#D6E4F0" font-family="Menlo, Consolas, monospace" font-size="20">- .site2voice/VOICE.md</text>
+  <text x="80" y="270" fill="#D6E4F0" font-family="Menlo, Consolas, monospace" font-size="20">- .site2voice/voice.json</text>
+  <text x="80" y="304" fill="#D6E4F0" font-family="Menlo, Consolas, monospace" font-size="20">- .site2voice/agent-prompt.md</text>
+  <text x="52" y="364" fill="#9AE6B4" font-family="Menlo, Consolas, monospace" font-size="22">$ site2voice bench source.html copy.md --strict</text>
+  <rect x="80" y="392" width="800" height="66" rx="8" fill="#0E2A1E" stroke="#2F855A"/>
+  <text x="108" y="434" fill="#B7F7CC" font-family="Menlo, Consolas, monospace" font-size="22">PASS 83.8 overall   93.2 copy safety   no invented claims</text>
+</svg>

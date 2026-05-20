@@ -2,25 +2,23 @@
 
 Current status: **not ready to submit broadly**.
 
-The project now has a public repo, a release, examples, tests, and a benchmark.
-That is enough for lightweight launch posts, but not enough for high-signal
-awesome-list submissions. Awesome maintainers usually expect visible usage,
-clear novelty, and a stable public surface.
+The project now has a public repo, releases, examples, tests, an agent context
+pack command, and a CI-usable benchmark. It is close enough for narrow,
+high-fit lists, but broad submissions should still wait for visible external
+usage.
 
 ## Best Fit
 
 | List family | Fit | Why |
 | --- | --- | --- |
-| Vibe coding / context engineering | High later | `site2voice` creates agent context files and includes an eval path. |
+| Vibe coding / context engineering | High | `site2voice` creates agent context files and includes an eval path. |
 | Prompt engineering tools | Medium later | Useful for prompt/context prep, but not a prompt library. |
 | AI for design | Medium-low | Related to design handoff, but voice/copy is not visual design. |
 | Claude Code tools | Not yet | Some lists require high star counts or mature adoption. |
 
 ## Submit When
 
-- v0.2+ release is public and installable from GitHub.
-- PyPI trusted publishing is connected, or the README clearly marks PyPI as
-  pending.
+- v0.3+ release is public and installable.
 - README shows one command, one result, and one before/after benchmark.
 - At least one real-world demo or user workflow exists.
 - No generated third-party prose is committed.

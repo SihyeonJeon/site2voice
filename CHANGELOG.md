@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0
+
+- Added `site2voice init` for agent-ready context packs.
+- Added benchmark CI gates: `--strict`, `--fail-under`,
+  `--min-copy-safety`, and `--min-claim-safety`.
+- Added stable `site2voice.voice.v1` metadata to JSON output.
+- Improved copy-safety runtime on longer inputs.
+- Added repo hygiene docs, demo assets, and agent workflow documentation.
+
 ## 0.2.1
 
 - Added the `pypi` GitHub environment claim to the Trusted Publishing workflow.
