@@ -5,7 +5,7 @@
   "title": "Vercel: Build and deploy the best web experiences with the AI Cloud",
   "meta_description": "Vercel gives developers the frameworks, workflows, and infrastructure to build a faster, more personalized web.",
   "metrics": {
-    "words": 2034,
+    "words": 2033,
     "sentences": 59,
     "avg_sentence_words": 34.5,
     "avg_heading_words": 2.6,
@@ -14,7 +14,7 @@
     "headings": 12,
     "ctas": 11,
     "links": 16,
-    "type_token_ratio": 0.172
+    "type_token_ratio": 0.171
   },
   "tone": [
     "explanatory",

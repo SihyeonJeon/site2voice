@@ -5,12 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "site2voice"
 version = "0.5.0"
-description = "Generate agent-ready VOICE.md packs and CI benchmarks for website copy."
+description = "Ready-to-use VOICE.md files and optional benchmarks for AI-generated copy."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [{name = "Sihyeon Jeon"}]
-keywords = ["agents", "context-engineering", "voice", "copywriting", "benchmark", "markdown"]
+keywords = ["agents", "context-engineering", "voice-md", "copywriting", "benchmark", "markdown"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Environment :: Console",

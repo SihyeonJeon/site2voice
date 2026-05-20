@@ -2,33 +2,30 @@
   "schema_version": "site2voice.voice.v1",
   "generator": "site2voice/0.5.0",
   "source": "https://www.shopify.com/",
-  "title": "Shopify: The All-in-One Commerce Platform for Businesses - Shopify",
-  "meta_description": "Try Shopify free. Build or grow your business fast with AI. Get more than ecommerce software with tools to manage every part of your business.",
+  "title": "Shopify 대한민국",
+  "meta_description": "Shopify를 무료로 체험해 보세요. AI로 비즈니스를 빠르게 구축하고 성장시키세요. 비즈니스의 모든 부분을 관리할 수 있는 도구로 전자상거래 소프트웨어 그 이상의 가치를 경험해 보세요.",
   "metrics": {
-    "words": 1771,
-    "sentences": 87,
-    "avg_sentence_words": 20.4,
-    "avg_heading_words": 5.4,
-    "avg_paragraph_words": 4.5,
-    "avg_cta_words": 3,
+    "words": 1699,
+    "sentences": 77,
+    "avg_sentence_words": 22.1,
+    "avg_heading_words": 4.4,
+    "avg_paragraph_words": 4.2,
+    "avg_cta_words": 2.5,
     "headings": 12,
-    "ctas": 5,
+    "ctas": 2,
     "links": 16,
-    "type_token_ratio": 0.25
+    "type_token_ratio": 0.293
   },
   "tone": [
-    "explanatory",
-    "action-oriented",
-    "trust-forward"
+    "explanatory"
   ],
   "style": {
     "cta_verbs": [
-      "start",
-      "get",
-      "build"
+      "플랜",
+      "shopify"
     ],
     "punctuation": {
-      "periods": 83,
+      "periods": 73,
       "questions": 3,
       "exclamations": 0,
       "colons": 1
@@ -36,43 +33,42 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 20.4,
-      "min": 15.3,
-      "max": 25.5
+      "target": 22.1,
+      "min": 16.6,
+      "max": 27.6
     },
     "heading_words": {
-      "target": 5.4,
-      "min": 4.1,
-      "max": 6.8
+      "target": 4.4,
+      "min": 3.3,
+      "max": 5.5
     },
     "paragraph_words": {
-      "target": 4.5,
+      "target": 4.2,
       "min": 4.0,
-      "max": 5.6
+      "max": 5.2
     },
     "cta_words": {
-      "target": 3.0,
-      "min": 2.2,
-      "max": 3.8
+      "target": 2.5,
+      "min": 1.9,
+      "max": 3.1
     },
     "recommended_terms": [
       "english",
       "shopify",
       "espa",
-      "store",
-      "commerce",
-      "sidekick",
       "fran",
       "ais",
-      "build",
-      "app",
+      "sidekick",
+      "상거래",
+      "com",
+      "deutsch",
+      "에이전트",
       "dev",
-      "checkout"
+      "shop"
     ],
     "cta_verbs": [
-      "start",
-      "get",
-      "build"
+      "플랜",
+      "shopify"
     ],
     "minimum_recommended_terms": 4,
     "benchmark_gates": {
@@ -82,72 +78,70 @@
     }
   },
   "headings": [
-    "Be the next AI all-star",
-    "store they line up for",
-    "Your brand has entered the chat",
-    "Sell more in more places",
-    "Grow around the world",
-    "For anyone from entrepreneurs to enterprise",
-    "Meet your secret weapon, Sidekick",
-    "Your very own commerce AI",
-    "What winning looks like",
-    "Customize everything with apps",
-    "Hyperdriven by AI. Commerce to the core.",
-    "There’s no better place for you to build"
+    "다음 목적지는 AI 올스타",
+    "새로운 카테고리 개척자",
+    "채팅창에 브랜드가 등장했습니다",
+    "더 많은 곳에서 더 많이 판매하세요",
+    "글로벌 무대로 확장하세요",
+    "초기 기업가부터 대규모 기업까지 모두를 위한 플랫폼",
+    "나만의 비밀 무기, Sidekick을 만나보세요",
+    "나만의 상거래 AI",
+    "성공적인 비즈니스의 모습",
+    "앱으로 모든 것을 맞춤화하세요",
+    "AI 기반의 강력한 추진력. 상거래의 핵심을 경험하세요.",
+    "비즈니스 성장을 위한 최고의 동반자"
   ],
   "ctas": [
-    "Start for free",
-    "Get a stunning store",
-    "Build custom storefronts",
-    "Build for AI",
-    "Build apps"
+    "플랜 보기",
+    "Shopify 지원 센터"
   ],
   "links": [
-    "Skip to Content",
-    "Sidekick Your commerce-obsessed AI assistant.",
-    "Website Builder",
-    "Themes",
-    "Domains",
-    "Customer Accounts",
+    "콘텐츠로 건너뛰기",
+    "Sidekick 상거래에 최적화된 AI 어시스턴트를 만나보세요.",
+    "웹사이트 빌더",
+    "테마",
+    "도메인",
+    "고객 계정",
     "Sidekick",
-    "Online",
-    "AI Chats",
-    "Point of Sale",
-    "Shop App",
-    "Social & Marketplaces",
-    "Global",
+    "온라인",
+    "AI 채팅",
+    "POS(Point of Sale)",
+    "Shop 앱",
+    "소셜 및 마켓플레이스",
+    "전 세계",
     "B2B",
-    "Across Markets",
-    "Advertising & Campaigns"
+    "Markets 전체에 적용하기",
+    "광고 및 캠페인"
   ],
   "buttons": [
-    "USA | English"
+    "무료 체험 시작",
+    "대한민국 | 한국어"
   ],
   "lexicon": [
     "english",
     "shopify",
     "espa",
-    "store",
-    "commerce",
-    "sidekick",
     "fran",
     "ais",
-    "build",
-    "app",
-    "dev",
-    "checkout",
-    "deutsch",
-    "shop",
-    "tools",
+    "sidekick",
+    "상거래",
     "com",
-    "fast",
-    "customer",
+    "deutsch",
+    "에이전트",
+    "dev",
+    "shop",
+    "app",
     "nederlands",
     "portugu",
     "italiano",
     "sloven",
     "ina",
-    "enterprise"
+    "빠르게",
+    "있습니다",
+    "웹사이트",
+    "구축하세요",
+    "store",
+    "개발자"
   ],
   "paragraph_samples": []
 }

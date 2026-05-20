@@ -203,7 +203,7 @@
       "headings": 12,
       "ctas": 3,
       "links": 16,
-      "type_token_ratio": 0.355
+      "type_token_ratio": 0.354
     },
     "tone": [
       "explanatory"
@@ -304,10 +304,10 @@
     "category": "global affairs and culture media",
     "use": "polished city, design, and affairs copy",
     "metrics": {
-      "words": 2673,
+      "words": 2675,
       "sentences": 40,
-      "avg_sentence_words": 66.8,
-      "avg_heading_words": 8.3,
+      "avg_sentence_words": 66.9,
+      "avg_heading_words": 8.2,
       "avg_paragraph_words": 7,
       "avg_cta_words": 2.9,
       "headings": 12,
@@ -418,35 +418,33 @@
     "category": "commerce platform",
     "use": "merchant-growth product copy",
     "metrics": {
-      "words": 1771,
-      "sentences": 87,
-      "avg_sentence_words": 20.4,
-      "avg_heading_words": 5.4,
-      "avg_paragraph_words": 4.5,
-      "avg_cta_words": 3,
+      "words": 1699,
+      "sentences": 77,
+      "avg_sentence_words": 22.1,
+      "avg_heading_words": 4.4,
+      "avg_paragraph_words": 4.2,
+      "avg_cta_words": 2.5,
       "headings": 12,
-      "ctas": 5,
+      "ctas": 2,
       "links": 16,
-      "type_token_ratio": 0.25
+      "type_token_ratio": 0.293
     },
     "tone": [
-      "explanatory",
-      "action-oriented",
-      "trust-forward"
+      "explanatory"
     ],
     "lexicon": [
       "english",
       "shopify",
       "espa",
-      "store",
-      "commerce",
-      "sidekick",
       "fran",
       "ais",
-      "build",
-      "app",
+      "sidekick",
+      "상거래",
+      "com",
+      "deutsch",
+      "에이전트",
       "dev",
-      "checkout"
+      "shop"
     ]
   },
   {
@@ -493,7 +491,7 @@
     "category": "developer platform",
     "use": "performance and deployment copy",
     "metrics": {
-      "words": 2034,
+      "words": 2033,
       "sentences": 59,
       "avg_sentence_words": 34.5,
       "avg_heading_words": 2.6,
@@ -502,7 +500,7 @@
       "headings": 12,
       "ctas": 11,
       "links": 16,
-      "type_token_ratio": 0.172
+      "type_token_ratio": 0.171
     },
     "tone": [
       "explanatory",
@@ -532,16 +530,16 @@
     "category": "design and architecture media",
     "use": "design, interiors, and architecture editorial copy",
     "metrics": {
-      "words": 2050,
+      "words": 2076,
       "sentences": 30,
-      "avg_sentence_words": 68.3,
+      "avg_sentence_words": 69.2,
       "avg_heading_words": 1.5,
-      "avg_paragraph_words": 16.2,
+      "avg_paragraph_words": 17.2,
       "avg_cta_words": 4.5,
       "headings": 12,
       "ctas": 2,
       "links": 16,
-      "type_token_ratio": 0.23
+      "type_token_ratio": 0.227
     },
     "tone": [
       "explanatory"
@@ -550,15 +548,15 @@
       "may",
       "published",
       "new",
-      "last",
       "design",
-      "updated",
       "wallpaper",
       "travel",
+      "last",
+      "updated",
+      "jack",
+      "moss",
       "tianna",
-      "williams",
-      "this",
-      "summer"
+      "williams"
     ]
   }
 ]

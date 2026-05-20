@@ -5,16 +5,16 @@
   "title": "Wallpaper*: design, interiors, architecture, fashion, art",
   "meta_description": "Wallpaper* is the world’s number one global design destination, championing the best in architecture, interiors, fashion, art and contemporary lifestyle",
   "metrics": {
-    "words": 2050,
+    "words": 2076,
     "sentences": 30,
-    "avg_sentence_words": 68.3,
+    "avg_sentence_words": 69.2,
     "avg_heading_words": 1.5,
-    "avg_paragraph_words": 16.2,
+    "avg_paragraph_words": 17.2,
     "avg_cta_words": 4.5,
     "headings": 12,
     "ctas": 2,
     "links": 16,
-    "type_token_ratio": 0.23
+    "type_token_ratio": 0.227
   },
   "tone": [
     "explanatory"
@@ -33,9 +33,9 @@
   },
   "output_contract": {
     "sentence_words": {
-      "target": 68.3,
-      "min": 51.2,
-      "max": 85.4
+      "target": 69.2,
+      "min": 51.9,
+      "max": 86.5
     },
     "heading_words": {
       "target": 1.5,
@@ -43,9 +43,9 @@
       "max": 1.9
     },
     "paragraph_words": {
-      "target": 16.2,
-      "min": 12.1,
-      "max": 20.2
+      "target": 17.2,
+      "min": 12.9,
+      "max": 21.5
     },
     "cta_words": {
       "target": 4.5,
@@ -56,15 +56,15 @@
       "may",
       "published",
       "new",
-      "last",
       "design",
-      "updated",
       "wallpaper",
       "travel",
+      "last",
+      "updated",
+      "jack",
+      "moss",
       "tianna",
-      "williams",
-      "this",
-      "summer"
+      "williams"
     ],
     "cta_verbs": [
       "sign",
@@ -122,27 +122,27 @@
     "may",
     "published",
     "new",
-    "last",
     "design",
-    "updated",
     "wallpaper",
     "travel",
+    "last",
+    "updated",
+    "jack",
+    "moss",
     "tianna",
     "williams",
     "this",
-    "summer",
     "view",
     "jonathan",
     "bell",
-    "architecture",
-    "art",
     "museum",
     "here",
-    "york",
+    "summer",
+    "years",
+    "architecture",
+    "art",
     "fashion",
-    "live",
-    "ben",
-    "mccormack"
+    "they"
   ],
   "paragraph_samples": []
 }

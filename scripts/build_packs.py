@@ -4,7 +4,6 @@ import json
 from pathlib import Path
 
 from site2voice.context_pack import create_context_pack
-from site2voice.extract import analyze
 
 
 PACKS = [
@@ -120,16 +119,18 @@ def build_readme(rows: list[dict[str, object]]) -> str:
     lines = [
         "# Voice Packs",
         "",
-        "Agent-ready voice packs generated from well-known public websites.",
+        "Full context packs generated from well-known public websites.",
         "",
         "These packs are safe public artifacts: they keep derived style metrics and",
         "short labels, but remove source paragraph samples. They are not official",
         "brand guidelines and should not be used to copy protected prose.",
         "",
+        "For the fastest path, use the single-file [VOICE.md collection](../voices).",
+        "",
         "## Use",
         "",
         "```bash",
-        "curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/packs/stripe/VOICE.md -o VOICE.md",
+        "curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md",
         "```",
         "",
         "Then tell your agent:",
@@ -164,10 +165,53 @@ def build_readme(rows: list[dict[str, object]]) -> str:
     return "\n".join(lines)
 
 
+def build_voice_readme(rows: list[dict[str, object]]) -> str:
+    lines = [
+        "# VOICE.md Collection",
+        "",
+        "Drop-in writing style files for AI agents.",
+        "",
+        "`DESIGN.md` tells agents how UI should look. `VOICE.md` tells them how copy should sound.",
+        "",
+        "Copy one file into your project as `VOICE.md`, then tell your agent:",
+        "",
+        "```text",
+        "Use @VOICE.md for headings, CTAs, navigation labels, and UI microcopy.",
+        "```",
+        "",
+        "**No install. No JSON. No generation step.**",
+        "",
+        "## Download",
+        "",
+        "```bash",
+        "curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md",
+        "```",
+        "",
+        "## Voices",
+        "",
+        "| Voice | Tone | Use |",
+        "| --- | --- | --- |",
+    ]
+    for row in rows:
+        tone = ", ".join(row.get("tone", [])) or str(row["category"])
+        lines.append(f"| [{row['name']}]({row['slug']}.md) | {tone} | {row['use']} |")
+    lines.extend(
+        [
+            "",
+            "Need machine-readable metrics or an agent prompt too? Use the full",
+            "[context packs](../packs).",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
     packs_dir = root / "packs"
+    voices_dir = root / "voices"
     packs_dir.mkdir(exist_ok=True)
+    voices_dir.mkdir(exist_ok=True)
 
     rows: list[dict[str, object]] = []
     for pack in PACKS:
@@ -179,7 +223,11 @@ def main() -> None:
             force=True,
             timeout=20.0,
         )
-        profile = analyze(pack["url"], timeout=20.0)
+        (voices_dir / f"{pack['slug']}.md").write_text(
+            (target / "VOICE.md").read_text(encoding="utf-8"),
+            encoding="utf-8",
+        )
+        profile = json.loads((target / "voice.json").read_text(encoding="utf-8"))
         row: dict[str, object] = {
             **pack,
             "metrics": profile["metrics"],
@@ -191,6 +239,7 @@ def main() -> None:
     rows = sorted(rows, key=lambda item: str(item["slug"]))
     (packs_dir / "index.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (packs_dir / "README.md").write_text(build_readme(rows), encoding="utf-8")
+    (voices_dir / "README.md").write_text(build_voice_readme(rows), encoding="utf-8")
 
 
 if __name__ == "__main__":
