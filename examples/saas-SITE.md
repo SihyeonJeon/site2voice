@@ -60,7 +60,7 @@ If a `DESIGN.md` file is present, it controls colors, typography, spacing, compo
 - New project supplies: product category, user domain, audience, examples, proof, imagery, and offer.
 - `DESIGN.md` supplies all visual identity and component decisions; this file does not supply colors, fonts, spacing, animation, or components.
 - Do not let the reference site's business, catalog, cultural context, or customer scenario become the new site's subject.
-- If using a retail reference for an education product, the output must stay educational in nouns, examples, proof, and CTAs.
+- Keep nouns, examples, proof, claims, and CTAs inside the new project's domain.
 
 ## Agent Instructions
 

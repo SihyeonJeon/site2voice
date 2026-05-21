@@ -15,8 +15,6 @@ Copy one file into your project as `VOICE.md`, then tell your agent:
 Use @VOICE.md as a copy contract for headings, CTA shape, paragraph rhythm, and UI microcopy.
 ```
 
-**No install. No JSON. No generation step.**
-
 ## Download
 
 ```bash

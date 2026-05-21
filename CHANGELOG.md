@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 0.5.6
+
+- Removed internal planning and positioning notes from the public docs.
+- Trimmed README and collection READMEs toward direct use: choose a profile,
+  copy `SITE.md` / `VOICE.md`, and keep visual design in `DESIGN.md`.
+- Kept user-facing docs focused on role boundaries, benchmarking, CI usage,
+  and generated profile semantics.
+
 ## 0.5.5
 
 - Added explicit domain-firewall rules to generated `SITE.md`, `VOICE.md`, and
@@ -27,15 +35,14 @@
   `site2voice.site.v1` / `site.json` output.
 - Updated context packs to include `SITE.md`, `site.json`, `VOICE.md`,
   `voice.json`, and a combined agent prompt.
-- Added a flat `sites/` collection for direct no-install downloads.
+- Added a flat `sites/` collection for direct file downloads.
 - Kept numeric ranges as benchmark drift checks while moving public guidance
   toward section recipes, rhetorical patterns, and content boundaries.
 
 ## 0.5.3
 
 - Added 18 reference-only copy profiles from popular web products and platforms.
-- Added `docs/popular-sites-analysis.md` with source selection rules, excluded
-  candidates, and extracted metrics.
+- Added source-selection notes for expanded public profiles.
 - Hardened sentence extraction for card-heavy and JS-rendered pages by deriving
   sentence shape from paragraph-like blocks before broader fallback text.
 - Expanded CTA verb detection to include common editorial verbs such as `read`
@@ -45,8 +52,7 @@
 
 - Reframed public documentation around reference-only copy profiles instead of
   brand-voice imitation.
-- Added `BRAND_USAGE.md`, a `DESIGN.md` vs `VOICE.md` comparison, and a dated
-  competitive review.
+- Added `BRAND_USAGE.md` and a `DESIGN.md` vs `VOICE.md` role comparison.
 - Added brand-safety scope language to generated `VOICE.md` files and context
   pack prompts.
 - Synced the package runtime version with the release version.
@@ -101,7 +107,7 @@
   verbs, and lexical variety.
 - Added copy-safety and claim-boundary gates.
 - Added synthetic editorial fixtures and benchmark report.
-- Added source-candidate, benchmark, awesome-eligibility, and harness docs.
+- Added benchmark and safety docs.
 
 ## 0.1.0
 

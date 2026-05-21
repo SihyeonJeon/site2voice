@@ -33,7 +33,7 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 - Reference supplies: rhythm, heading shape, CTA shape, section behavior, and rhetorical moves.
 - New project supplies: category, audience, domain nouns, examples, offer, claims, proof, and visual subject matter.
 - If a noun or scenario is not in the new project brief, remove it even if it appears in the reference source.
-- Example: when using a retail reference for an education product, keep all nouns, examples, proof, and CTAs educational.
+- Keep nouns, examples, proof, claims, and CTAs inside the new project's domain.
 
 ## Writing Moves
 

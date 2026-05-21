@@ -19,8 +19,6 @@ Then tell your agent:
 Use @SITE.md for page structure and @VOICE.md for copy rhythm. Bring our own product nouns, facts, and claims.
 ```
 
-**No install. No JSON. No generation step.**
-
 ## Sites
 
 | Site | Archetype | Density | Conversion | Use |

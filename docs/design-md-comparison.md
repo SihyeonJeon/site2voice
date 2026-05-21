@@ -3,11 +3,11 @@
 `DESIGN.md`, `SITE.md`, and `VOICE.md` are repo-local context files for AI
 agents, but they solve different problems.
 
-| File | Primary Job | Typical Signals | Output Risk |
+| File | Primary Job | Typical Signals | Boundary |
 | --- | --- | --- | --- |
-| `DESIGN.md` | Visual identity and UI system | Colors, typography, spacing, components, layout, depth, responsive behavior | Visual imitation, trade dress, brand asset misuse |
-| `SITE.md` | Page-structure contract | Page archetype, section order, section jobs, conversion pressure, content boundaries | Source business model, offer, audience, or claim leakage |
-| `VOICE.md` | Copy behavior and writing contract | Sentence rhythm, heading shape, CTA shape, paragraph rhythm, claim boundaries | Source prose reuse, brand impersonation, unsupported claims |
+| `DESIGN.md` | Visual identity and UI system | Colors, typography, spacing, components, layout, depth, responsive behavior | Does not define page message or product facts |
+| `SITE.md` | Page-structure contract | Page archetype, section order, section jobs, conversion pressure, content boundaries | Does not define visual tokens or product facts |
+| `VOICE.md` | Copy behavior and writing contract | Sentence rhythm, heading shape, CTA shape, paragraph rhythm, claim boundaries | Does not define visual tokens or product facts |
 
 `site2voice` does not implement the `DESIGN.md` visual spec. It does not extract
 colors, fonts, component tokens, screenshots, logos, or layout systems. It
@@ -26,10 +26,8 @@ When all files are present, responsibilities must not overlap:
 | `SITE.md` | Page architecture, section order, section jobs, conversion path | Owns information architecture only |
 | `VOICE.md` | Sentence rhythm, heading behavior, CTA shape, claim boundaries | Owns copy behavior only |
 
-For example, using an athletic retail reference for an education product should
-not introduce reference-category nouns, catalog logic, cultural context, or
-campaign assumptions. `SITE.md` and `VOICE.md` should shape the page and copy;
-the project brief supplies the subject.
+`SITE.md` and `VOICE.md` shape the page and copy. The project brief supplies
+the subject.
 
 ## Why This Exists Separately
 
@@ -45,7 +43,7 @@ can match a visual system and still sound generic, overclaimed, or off-market.
 - which claims must not be invented;
 - whether candidate copy copied spans from the reference.
 
-## How It Avoids Brand Cloning
+## Public Profile Boundaries
 
 Public `SITE.md` and `VOICE.md` profiles are intentionally constrained:
 
@@ -59,7 +57,7 @@ Public `SITE.md` and `VOICE.md` profiles are intentionally constrained:
 - benchmark gates for copy safety and claim safety.
 
 The reference site name identifies the measurement source only. It does not
-mean the profile is official, endorsed, affiliated, or safe for impersonation.
+mean the profile is official, endorsed, or affiliated.
 
 ## Format Difference
 

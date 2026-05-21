@@ -46,9 +46,8 @@ category. The new project brief owns:
 - claims;
 - imagery subject matter.
 
-For cross-domain work, use the reference only for structure. A retail reference
-can shape the pacing of an education website, but the output must stay
-educational in nouns, proof, examples, and CTAs.
+For cross-domain work, use the reference only for structure. The output's
+nouns, proof, examples, and CTAs must come from the new project brief.
 
 ## Use
 

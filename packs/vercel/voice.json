@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.5",
+  "generator": "site2voice/0.5.6",
   "source": "https://vercel.com/",
   "title": "",
   "meta_description": "",

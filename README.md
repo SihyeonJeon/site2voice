@@ -1,16 +1,16 @@
 # site2voice
 
-**Drop-in `SITE.md` and `VOICE.md` profiles. Pick a public web pattern, save two files, and your agent gets page structure plus copy rhythm.**
+**Reference `SITE.md` and `VOICE.md` files for AI-generated web pages.**
 
-`site2voice` is not a visual design-system library and not a brand-cloning tool.
-It turns public pages into compact, reference-only context files:
+Pick a public web pattern, copy the matching files into your project, and give
+your agent structure plus writing rhythm:
 
 - `SITE.md`: section order, page jobs, structure recipes, and content boundaries.
 - `VOICE.md`: sentence rhythm, heading shape, CTA shape, claim boundaries, and benchmark gates.
 
-**No install. No JSON. No generation step.**
-
-**Not official. Not affiliated. Not permission to impersonate a brand.**
+Reference names identify public pages used for measurement. They do not imply
+official guidelines, affiliation, endorsement, or permission to reuse protected
+brand identity.
 
 ## Context Stack
 
@@ -23,8 +23,7 @@ Use the files together without overlapping responsibilities:
 | `SITE.md` | page structure, section order, section jobs, conversion path | colors, fonts, product category |
 | `VOICE.md` | sentence rhythm, heading behavior, CTA shape, claim boundaries | product nouns, visual design |
 
-This prevents an athletic retail reference from leaking its products or cultural
-context into an unrelated education, finance, healthcare, or developer product.
+Use the reference files for pattern, not subject matter.
 
 ## Featured Profiles
 
@@ -50,8 +49,8 @@ The full collection now includes **33 reference-only profiles**, including
 popular web products such as [Canva](voices/canva.md),
 [LinkedIn](voices/linkedin.md), [Netflix](voices/netflix.md),
 [TikTok](voices/tiktok.md), [WhatsApp](voices/whatsapp.md), [Zoom](voices/zoom.md),
-and [PayPal](voices/paypal.md). See the [full collection](voices) and the
-[SITE.md collection](sites), plus the [popular-sites analysis](docs/popular-sites-analysis.md).
+and [PayPal](voices/paypal.md). See the [VOICE.md collection](voices) and the
+[SITE.md collection](sites).
 
 ## Use
 
@@ -62,7 +61,7 @@ curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/sites/stri
 curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md
 ```
 
-Tell Claude Code, Codex, Cursor, or Copilot:
+Tell your agent:
 
 ```text
 Use @SITE.md for page structure and @VOICE.md for copy rhythm. Bring our own product nouns, facts, and claims.
@@ -73,9 +72,7 @@ navigation labels, paragraph samples, logos, screenshots, and brand assets.
 Use `SITE.md` when building a web page; use `VOICE.md` when writing headings,
 CTAs, UI copy, and launch copy.
 
-Reference names identify the public page used for measurement. They do not
-imply sponsorship, endorsement, affiliation, or permission to reuse protected
-brand identity. See [Brand Usage](BRAND_USAGE.md).
+See [Brand Usage](BRAND_USAGE.md) for the boundary rules.
 
 ## Not DESIGN.md
 
@@ -85,8 +82,7 @@ order, section jobs, page archetype, and content boundaries. `VOICE.md`
 describes writing behavior: rhythm, CTA shape, claim safety, and copy-safety
 gates.
 
-Read the full comparison in [DESIGN.md vs SITE.md / VOICE.md](docs/design-md-comparison.md)
-and the dated [competitive review](docs/competitive-review.md).
+Read the role map in [DESIGN.md vs SITE.md / VOICE.md](docs/design-md-comparison.md).
 
 ## Before / After
 
