@@ -5,7 +5,7 @@ include SECURITY.md
 include BRAND_USAGE.md
 recursive-include assets *.svg
 recursive-include docs *.md
-recursive-include examples *.html *.md
+recursive-include examples *.html *.md *.json *.png
 recursive-include packs *.md *.json
 recursive-include sites *.md
 recursive-include voices *.md

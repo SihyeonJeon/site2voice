@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LedgerFlow - Payments observability</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #697386;
+      --paper: #ffffff;
+      --wash: #f6f7fb;
+      --blue: #4353ff;
+      --purple: #8b5cf6;
+      --line: #e7eaf1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--wash);
+    }
+    nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-weight: 800; letter-spacing: .02em; }
+    .links { display: flex; gap: 22px; color: var(--muted); font-size: 14px; }
+    .hero {
+      padding: 80px 28px 72px;
+      background:
+        radial-gradient(circle at 25% 20%, rgba(139, 92, 246, .28), transparent 34%),
+        radial-gradient(circle at 80% 0%, rgba(67, 83, 255, .24), transparent 30%),
+        linear-gradient(180deg, #ffffff, #f4f5ff);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-inner {
+      max-width: 940px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+    .sub {
+      max-width: 760px;
+      margin: 28px auto 0;
+      font-size: 21px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+    }
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid var(--line);
+    }
+    .primary { background: var(--blue); color: white; border-color: var(--blue); }
+    .secondary { background: white; color: var(--ink); }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 56px 28px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      min-height: 230px;
+      padding: 26px;
+      border-radius: 8px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(30, 38, 66, .08);
+    }
+    h2 { margin: 0 0 14px; font-size: 22px; line-height: 1.15; }
+    p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .proof {
+      margin-top: 28px;
+      padding: 38px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #172033, #303778);
+      color: white;
+    }
+    .proof p { color: #d9def4; max-width: 760px; }
+    .final {
+      margin-top: 28px;
+      padding: 42px;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+    footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 28px 48px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 860px) {
+      .cards { grid-template-columns: 1fr; }
+      .links { display: none; }
+      .hero { padding-top: 52px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="brand">LedgerFlow</div>
+    <div class="links">
+      <span>Product</span>
+      <span>Integrations</span>
+      <span>Pricing</span>
+      <span>Docs</span>
+      <span>Sign in</span>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>The best way to see every payment before it breaks</h1>
+      <p class="sub">Real-time observability across your payment rails, reconciliations, and ledger entries, built for finance and engineering to share one secure source of truth.</p>
+      <div class="actions">
+        <a class="button primary" href="#">Start free trial</a>
+        <a class="button secondary" href="#">Book a demo</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="cards">
+      <article class="card">
+        <h2>Trace every transaction end-to-end</h2>
+        <p>Follow a single payment from API call to settled ledger entry, with timing, retries, and failure context at each hop.</p>
+      </article>
+      <article class="card">
+        <h2>Reconcile in minutes, not weeks</h2>
+        <p>Automated matching across processors, banks, and your internal ledger flags breaks the moment they happen instead of at month-end close.</p>
+      </article>
+      <article class="card">
+        <h2>Alert on the metrics that matter</h2>
+        <p>Set thresholds on authorization rates, settlement lag, and dispute volume, then route alerts to the team that can fix them.</p>
+      </article>
+      <article class="card">
+        <h2>One workspace for finance and engineering</h2>
+        <p>Shared dashboards, queries, and incident timelines help accountants and on-call engineers stop arguing over which number is real.</p>
+      </article>
+    </section>
+    <section class="proof">
+      <h2>Built by teams who have lived through close week</h2>
+      <p>LedgerFlow was designed by operators who ran payments at scale and got tired of stitching CSVs together at 2 a.m.</p>
+    </section>
+    <section class="final">
+      <h2>Stop guessing where the money went</h2>
+      <div class="actions">
+        <a class="button primary" href="#">Start free trial</a>
+      </div>
+    </section>
+  </main>
+  <footer>Product · Docs · Pricing · Support</footer>
+</body>
+</html>

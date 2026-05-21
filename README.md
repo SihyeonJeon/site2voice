@@ -85,6 +85,11 @@ Same LedgerFlow prompt, scored against Stripe:
 
 See the [full comparison](examples/comparisons/stripe-ledgerflow/README.md).
 
+For a visible web result, see the
+[SITE.md + VOICE.md web comparison](examples/comparisons/stripe-ledgerflow-web).
+It shows the same HTML landing-page prompt with and without the context files,
+including screenshots and a `reference-fit` score.
+
 ## Optional CLI
 
 Generate a new context pack from any public URL:

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Added a visible Stripe/LedgerFlow web comparison with side-by-side HTML
+  outputs, screenshots, and a reproducible `reference-fit` report.
+- Added `scripts/reference_fit_report.py` to measure safe motif reproduction:
+  structure fit, voice fit, copy safety, claim safety, and mimic risk.
+
 ## 0.5.4
 
 - Added `SITE.md` page-structure profiles beside existing `VOICE.md` copy

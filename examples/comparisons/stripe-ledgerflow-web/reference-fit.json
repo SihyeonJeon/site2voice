@@ -1,0 +1,135 @@
+{
+  "schema_version": "site2voice.reference_fit.v1",
+  "reference": {
+    "voice": "packs/stripe/voice.json",
+    "site": "packs/stripe/site.json",
+    "source": "https://stripe.com/",
+    "page_archetype": "technical product landing"
+  },
+  "scoring": {
+    "reference_fit": "45% structure fit + 45% voice fit + 5% copy safety + 5% claim safety",
+    "mimic_risk": "100 - copy safety. Keep this low; reference fit should not reward copying."
+  },
+  "candidates": [
+    {
+      "label": "without-context",
+      "path": "examples/comparisons/stripe-ledgerflow-web/without-context.html",
+      "reference_fit": 63.2,
+      "structure_fit": {
+        "score": 74.5,
+        "slot_coverage": 85.7,
+        "slot_order": 85.7,
+        "density_fit": 30.0,
+        "conversion_fit": 65.0,
+        "navigation_fit": 55.0,
+        "observed_slots": [
+          "navigation",
+          "first_screen",
+          "capability_stack",
+          "proof_band",
+          "conversion_band",
+          "footer"
+        ],
+        "observed_density": "compact",
+        "observed_conversion": "medium",
+        "observed_navigation": "minimal navigation"
+      },
+      "voice_fit": {
+        "label": "without-context",
+        "score": 49.2,
+        "grade": "weak",
+        "pass": false,
+        "scores": {
+          "sentence_fit": 46.8,
+          "lexical_variety_fit": 53.7,
+          "cta_fit": 25.0,
+          "tone_fit": 0.0,
+          "heading_fit": 100.0,
+          "claim_safety": 50.0,
+          "copy_safety": 100.0
+        },
+        "metrics": {
+          "words": 244,
+          "sentences": 7,
+          "avg_sentence_words": 26.9,
+          "headings": 7,
+          "ctas": 3,
+          "type_token_ratio": 0.561
+        },
+        "tone": [
+          "explanatory"
+        ],
+        "longest_shared_run": 0
+      },
+      "mimic_risk": 0.0,
+      "page_metrics": {
+        "words": 189,
+        "headings": 7,
+        "ctas": 3,
+        "links": 3,
+        "sections": 3
+      }
+    },
+    {
+      "label": "with-site-voice",
+      "path": "examples/comparisons/stripe-ledgerflow-web/with-site-voice.html",
+      "reference_fit": 92.1,
+      "structure_fit": {
+        "score": 95.8,
+        "slot_coverage": 100.0,
+        "slot_order": 100.0,
+        "density_fit": 65.0,
+        "conversion_fit": 100.0,
+        "navigation_fit": 100.0,
+        "observed_slots": [
+          "navigation",
+          "first_screen",
+          "capability_stack",
+          "proof_band",
+          "detail_sections",
+          "conversion_band",
+          "footer"
+        ],
+        "observed_density": "balanced",
+        "observed_conversion": "high",
+        "observed_navigation": "broad utility navigation"
+      },
+      "voice_fit": {
+        "label": "with-site-voice",
+        "score": 89.4,
+        "grade": "aligned",
+        "pass": true,
+        "scores": {
+          "sentence_fit": 80.3,
+          "lexical_variety_fit": 62.1,
+          "cta_fit": 100.0,
+          "tone_fit": 100.0,
+          "heading_fit": 100.0,
+          "claim_safety": 75.0,
+          "copy_safety": 100.0
+        },
+        "metrics": {
+          "words": 297,
+          "sentences": 15,
+          "avg_sentence_words": 15.7,
+          "headings": 11,
+          "ctas": 9,
+          "type_token_ratio": 0.485
+        },
+        "tone": [
+          "balanced",
+          "action-oriented"
+        ],
+        "longest_shared_run": 0
+      },
+      "mimic_risk": 0.0,
+      "page_metrics": {
+        "words": 237,
+        "headings": 11,
+        "ctas": 6,
+        "links": 12,
+        "sections": 4
+      }
+    }
+  ]
+}
