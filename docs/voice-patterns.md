@@ -44,6 +44,22 @@ Good source families:
 These sources are useful contrast sets. They expose whether candidate copy is
 accidentally drifting from editorial voice into SaaS launch-page voice.
 
+## VOICE.md Boundaries
+
+`VOICE.md` owns copy behavior only: sentence rhythm, heading behavior, CTA
+shape, paragraph rhythm, and claim boundaries. It does not own product category,
+audience, examples, visual design, or source-domain vocabulary.
+
+When `DESIGN.md`, `SITE.md`, and `VOICE.md` are used together:
+
+- the project brief owns facts and domain nouns;
+- `DESIGN.md` owns visual implementation;
+- `SITE.md` owns page structure;
+- `VOICE.md` owns copy rhythm.
+
+Do not use a reference site's product category as writing material unless the
+new project brief independently supplies that category.
+
 ## Agent Handoff
 
 Give the agent the generated `VOICE.md`, then score the result:

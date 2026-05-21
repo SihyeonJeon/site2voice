@@ -14,6 +14,8 @@ Use `SITE.md` and `VOICE.md` together:
 - `VOICE.md`: sentence rhythm, CTA shape, paragraph rhythm, and benchmark gates.
 
 Together they form a reference-only copy contract and page-structure contract.
+They do not replace `DESIGN.md`. If `DESIGN.md` is present, it owns colors,
+typography, spacing, layout grid, components, motion, and imagery style.
 
 Before shipping new copy, run a benchmark against the source:
 
@@ -29,6 +31,10 @@ Rules:
   page-structure target.
 - Reuse rhythm, CTA shape, and information order; bring your own product nouns.
 - Do not transfer source-specific nouns from the reference site.
+- Do not infer the new product category, audience, examples, or offer from the
+  reference site.
+- Do not use `SITE.md` or `VOICE.md` for colors, fonts, spacing, components,
+  animation, imagery, or responsive layout.
 - Keep unsupported security, performance, customer, pricing, or AI claims out.
 - Do not imply brand affiliation, endorsement, or official guideline status.
 - Treat `voice.json` and `site.json` as machine-readable evidence, not brand approval.
@@ -39,7 +45,7 @@ def create_context_pack(
     source: str,
     output_dir: str,
     timeout: float = 20.0,
-    max_snippets: int = 8,
+    max_snippets: int = 0,
     force: bool = False,
     category_hint: str | None = None,
 ) -> dict[str, Any]:

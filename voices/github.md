@@ -15,8 +15,25 @@ Use this file as a reference-only copy profile for AI-generated pages, docs, and
 ## Scope
 
 - Reuse measurable writing patterns: sentence rhythm, heading shape, CTA verb shape, paragraph rhythm, and information order.
-- Bring your own product names, topics, claims, examples, and domain nouns.
+- Bring your own product names, topics, audience, claims, examples, and domain nouns.
 - Do not use trademarks, logos, proprietary product names, or brand claims unless you already have independent rights to use them.
+- Do not infer the new project's product category from the reference site.
+- Do not use this file for colors, fonts, spacing, components, animation, imagery, or responsive layout.
+
+## Context Stack
+
+- Project brief owns: product category, audience, facts, domain nouns, examples, offers, and claims.
+- `DESIGN.md` owns: colors, typography, spacing, layout grid, visual components, motion, and imagery style.
+- `SITE.md` owns: page structure, section order, section jobs, and conversion path.
+- `VOICE.md` owns: sentence rhythm, heading behavior, CTA shape, and claim boundaries.
+- If files conflict, do not merge responsibilities; use the owner above.
+
+## Domain Firewall
+
+- Reference supplies: rhythm, heading shape, CTA shape, section behavior, and rhetorical moves.
+- New project supplies: category, audience, domain nouns, examples, offer, claims, proof, and visual subject matter.
+- If a noun or scenario is not in the new project brief, remove it even if it appears in the reference source.
+- Example: when using a retail reference for an education product, keep all nouns, examples, proof, and CTAs educational.
 
 ## Writing Moves
 
@@ -42,7 +59,8 @@ Use these numbers as calibration checks after drafting.
 - Start with a concrete user outcome before describing implementation details.
 - Prefer short active sentences and visible verbs from the CTA list.
 - Reuse rhythm, CTA shape, and information order; bring your own product nouns.
-- Do not import source-specific topics, product names, market claims, or domain nouns.
+- Do not import source-specific topics, product names, market claims, audience assumptions, or domain nouns.
+- Defer all visual decisions to `DESIGN.md` when it is present.
 - Do not imply affiliation with, approval from, or official representation of the reference source.
 - Keep headings specific; avoid generic labels like `<generic feature label>` unless the source uses that pattern.
 - When adding new sections, match the observed information order: headline, proof, action, details.
@@ -54,7 +72,7 @@ Use these numbers as calibration checks after drafting.
 - Keep headings near **5.3 words**; avoid generic one-word section labels unless the source uses them.
 - Keep paragraph blocks near **12.4 words**.
 - Keep CTAs near **2.8 words** and start them with: `sign`, `open`, `create`, `try`, `explore`, `read`.
-- Content boundary: Use only the new project's nouns. Do not transfer source-specific terms from the reference site.
+- Content boundary: Use only the new project's nouns, facts, audience, offer, and domain. Do not transfer source-specific products, categories, slogans, people, campaigns, or topics.
 - Keep the first screen structure close to: specific headline, short proof/value sentence, one or two action CTAs.
 - If writing a candidate file, run:
   `site2voice bench https://github.com/ path/to/candidate.md --strict`

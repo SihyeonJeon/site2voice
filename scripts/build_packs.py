@@ -3,8 +3,9 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from site2voice import __version__
 from site2voice.context_pack import create_context_pack
-from site2voice.extract import to_site_json, to_site_markdown
+from site2voice.extract import output_contract, to_json, to_markdown, to_site_json, to_site_markdown
 
 
 PACKS = [
@@ -392,6 +393,28 @@ def build_site_readme(rows: list[dict[str, object]]) -> str:
     return "\n".join(lines)
 
 
+def normalize_existing_profile(profile: dict[str, object]) -> dict[str, object]:
+    metrics = profile["metrics"]
+    style = profile.get("style", {})
+    assert isinstance(metrics, dict)
+    assert isinstance(style, dict)
+    cta_verbs = style.get("cta_verbs", [])
+    assert isinstance(cta_verbs, list)
+    normalized = dict(profile)
+    normalized["generator"] = f"site2voice/{__version__}"
+    normalized["title"] = ""
+    normalized["meta_description"] = ""
+    normalized["headings"] = []
+    normalized["paragraph_samples"] = []
+    normalized["lexicon"] = []
+    normalized["ctas"] = []
+    normalized["links"] = []
+    normalized["buttons"] = []
+    normalized["output_contract"] = output_contract(metrics, [], [str(item) for item in cta_verbs])
+    normalized["output_contract"]["source_terms"] = []
+    return normalized
+
+
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
     packs_dir = root / "packs"
@@ -415,7 +438,11 @@ def main() -> None:
             )
         except Exception as exc:  # noqa: BLE001
             if (target / "VOICE.md").exists() and (target / "voice.json").exists():
-                existing_profile = json.loads((target / "voice.json").read_text(encoding="utf-8"))
+                existing_profile = normalize_existing_profile(
+                    json.loads((target / "voice.json").read_text(encoding="utf-8"))
+                )
+                (target / "VOICE.md").write_text(to_markdown(existing_profile, max_snippets=0), encoding="utf-8")
+                (target / "voice.json").write_text(to_json(existing_profile), encoding="utf-8")
                 (target / "SITE.md").write_text(
                     to_site_markdown(existing_profile, category_hint=pack["category"]),
                     encoding="utf-8",

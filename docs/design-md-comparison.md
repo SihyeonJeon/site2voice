@@ -15,6 +15,22 @@ extracts structural and copy signals and writes compact Markdown contracts that
 an agent can follow before generating landing-page sections, headings, CTAs,
 docs, and UI microcopy.
 
+## Context Stack
+
+When all files are present, responsibilities must not overlap:
+
+| Context | Owns | Override Rule |
+| --- | --- | --- |
+| Project brief | Product category, audience, facts, domain nouns, examples, offers, claims | Always overrides reference context for meaning and subject matter |
+| `DESIGN.md` | Colors, typography, spacing, layout grid, components, motion, imagery style | Owns visual implementation |
+| `SITE.md` | Page architecture, section order, section jobs, conversion path | Owns information architecture only |
+| `VOICE.md` | Sentence rhythm, heading behavior, CTA shape, claim boundaries | Owns copy behavior only |
+
+For example, using an athletic retail reference for an education product should
+not introduce reference-category nouns, catalog logic, cultural context, or
+campaign assumptions. `SITE.md` and `VOICE.md` should shape the page and copy;
+the project brief supplies the subject.
+
 ## Why This Exists Separately
 
 Visual context does not tell an agent how to structure or write a page. A page

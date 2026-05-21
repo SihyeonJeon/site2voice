@@ -271,7 +271,39 @@ def output_contract(metrics: dict[str, Any], lexicon: list[str], cta_verbs: list
         "source_terms": lexicon[:12],
         "cta_verbs": cta_verbs,
         "minimum_recommended_terms": 0,
-        "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+        "content_rule": (
+            "Use only the new project's nouns, facts, audience, offer, and domain. "
+            "Do not transfer source-specific products, categories, slogans, people, campaigns, or topics."
+        ),
+        "domain_firewall": {
+            "reference_supplies": [
+                "sentence rhythm",
+                "heading shape",
+                "CTA shape",
+                "section order",
+                "rhetorical moves",
+            ],
+            "design_md_supplies": [
+                "colors",
+                "typography",
+                "spacing",
+                "layout grid",
+                "components",
+                "motion",
+                "visual assets",
+            ],
+            "project_must_supply": [
+                "product category",
+                "audience",
+                "domain nouns",
+                "offer",
+                "proof",
+                "claims",
+                "examples",
+                "visual subject matter",
+            ],
+            "rule": "If a noun, claim, or scenario is not in the new project brief, remove it even if it appears in the reference source.",
+        },
         "benchmark_gates": {
             "overall": 75,
             "copy_safety": 85,
@@ -496,7 +528,9 @@ def site_contract(payload: dict[str, Any], category_hint: str | None = None) -> 
             "information_density": density,
             "conversion_pressure": pressure,
             "navigation_model": navigation_model(metrics),
-            "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers.",
+            "content_boundary": (
+                "Structure and copy shape only. Bring new project nouns, facts, claims, audience, domain, and offers."
+            ),
         },
         "structure_metrics": {
             "words": metrics["words"],
@@ -527,13 +561,14 @@ def site_contract(payload: dict[str, Any], category_hint: str | None = None) -> 
         "agent_instructions": [
             "Use SITE.md for page structure and section order.",
             "Use VOICE.md for sentence rhythm, CTA shape, and benchmark gates.",
+            "Treat the new project brief as the only source of product category, audience, domain nouns, examples, offers, and claims.",
             "Replace every topic, product noun, market claim, price, and proof point with facts from the new project.",
             "Do not imply affiliation with, endorsement from, or official representation of the reference source.",
             "If a needed fact is missing, write a neutral placeholder or remove the claim.",
         ],
         "anti_patterns": [
             "Do not copy source headings, CTA labels, navigation labels, slogans, or campaign names.",
-            "Do not import the reference site's product catalog, audience, pricing, legal claims, or feature names.",
+            "Do not import the reference site's product catalog, category, audience, pricing, legal claims, feature names, people, events, or cultural context.",
             "Do not turn structure guidance into a visual design system.",
             "Do not add urgency, security, performance, customer, or compliance claims without evidence.",
         ],
@@ -604,7 +639,7 @@ def analyze(source: str, timeout: float = 20.0) -> dict[str, Any]:
     }
 
 
-def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
+def to_markdown(payload: dict[str, Any], max_snippets: int = 0) -> str:
     metrics = payload["metrics"]
     contract = payload["output_contract"]
     sentence_words = contract["sentence_words"]
@@ -637,8 +672,25 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         "## Scope",
         "",
         "- Reuse measurable writing patterns: sentence rhythm, heading shape, CTA verb shape, paragraph rhythm, and information order.",
-        "- Bring your own product names, topics, claims, examples, and domain nouns.",
+        "- Bring your own product names, topics, audience, claims, examples, and domain nouns.",
         "- Do not use trademarks, logos, proprietary product names, or brand claims unless you already have independent rights to use them.",
+        "- Do not infer the new project's product category from the reference site.",
+        "- Do not use this file for colors, fonts, spacing, components, animation, imagery, or responsive layout.",
+        "",
+        "## Context Stack",
+        "",
+        "- Project brief owns: product category, audience, facts, domain nouns, examples, offers, and claims.",
+        "- `DESIGN.md` owns: colors, typography, spacing, layout grid, visual components, motion, and imagery style.",
+        "- `SITE.md` owns: page structure, section order, section jobs, and conversion path.",
+        "- `VOICE.md` owns: sentence rhythm, heading behavior, CTA shape, and claim boundaries.",
+        "- If files conflict, do not merge responsibilities; use the owner above.",
+        "",
+        "## Domain Firewall",
+        "",
+        "- Reference supplies: rhythm, heading shape, CTA shape, section behavior, and rhetorical moves.",
+        "- New project supplies: category, audience, domain nouns, examples, offer, claims, proof, and visual subject matter.",
+        "- If a noun or scenario is not in the new project brief, remove it even if it appears in the reference source.",
+        "- Example: when using a retail reference for an education product, keep all nouns, examples, proof, and CTAs educational.",
         "",
         "## Writing Moves",
         "",
@@ -664,7 +716,8 @@ def to_markdown(payload: dict[str, Any], max_snippets: int = 8) -> str:
         "- Start with a concrete user outcome before describing implementation details.",
         "- Prefer short active sentences and visible verbs from the CTA list.",
         "- Reuse rhythm, CTA shape, and information order; bring your own product nouns.",
-        "- Do not import source-specific topics, product names, market claims, or domain nouns.",
+        "- Do not import source-specific topics, product names, market claims, audience assumptions, or domain nouns.",
+        "- Defer all visual decisions to `DESIGN.md` when it is present.",
         "- Do not imply affiliation with, approval from, or official representation of the reference source.",
         "- Keep headings specific; avoid generic labels like `<generic feature label>` unless the source uses that pattern.",
         "- When adding new sections, match the observed information order: headline, proof, action, details.",
@@ -739,6 +792,7 @@ def to_site_markdown(payload: dict[str, Any], category_hint: str | None = None) 
         "Use this file as a reference-only page-structure contract for AI-generated websites.",
         "",
         "Pair it with `VOICE.md`: `SITE.md` controls section order and page intent; `VOICE.md` controls copy rhythm, CTA shape, and benchmark gates.",
+        "If a `DESIGN.md` file is present, it controls colors, typography, spacing, components, motion, and responsive layout.",
         "",
         "## Site Summary",
         "",
@@ -771,17 +825,33 @@ def to_site_markdown(payload: dict[str, Any], category_hint: str | None = None) 
 
     lines.extend(
         [
-            "",
-            "## Rhetorical Pattern",
+        "",
+        "## Rhetorical Pattern",
             "",
             "- Opening move: name the reader outcome before listing mechanics.",
             "- Section rhythm: move from value, to proof, to action, then to detail only when needed.",
-            "- Proof move: use real product behavior, customer evidence, constraints, or measurable facts.",
-            "- CTA move: repeat one primary next action after the reader has enough context.",
-            "- Density move: keep compact pages decisive; make dense pages scannable with clear section jobs.",
-            "",
-            "## Agent Instructions",
-            "",
+        "- Proof move: use real product behavior, customer evidence, constraints, or measurable facts.",
+        "- CTA move: repeat one primary next action after the reader has enough context.",
+        "- Density move: keep compact pages decisive; make dense pages scannable with clear section jobs.",
+        "",
+        "## Context Stack",
+        "",
+        "- Project brief owns: product category, audience, facts, domain nouns, examples, offers, and claims.",
+        "- `DESIGN.md` owns: colors, typography, spacing, layout grid, visual components, motion, and imagery style.",
+        "- `SITE.md` owns: page structure, section order, section jobs, and conversion path.",
+        "- `VOICE.md` owns: sentence rhythm, heading behavior, CTA shape, and claim boundaries.",
+        "- If files conflict, do not merge responsibilities; use the owner above.",
+        "",
+        "## Domain Firewall",
+        "",
+        "- Reference supplies: page architecture, section order, density, conversion pressure, and section jobs.",
+        "- New project supplies: product category, user domain, audience, examples, proof, imagery, and offer.",
+        "- `DESIGN.md` supplies all visual identity and component decisions; this file does not supply colors, fonts, spacing, animation, or components.",
+        "- Do not let the reference site's business, catalog, cultural context, or customer scenario become the new site's subject.",
+        "- If using a retail reference for an education product, the output must stay educational in nouns, examples, proof, and CTAs.",
+        "",
+        "## Agent Instructions",
+        "",
         ]
     )
     lines.extend(f"- {item}" for item in contract["agent_instructions"])

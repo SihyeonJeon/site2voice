@@ -105,6 +105,28 @@
         "content_rule": {
           "type": "string"
         },
+        "domain_firewall": {
+          "type": "object",
+          "required": ["reference_supplies", "design_md_supplies", "project_must_supply", "rule"],
+          "properties": {
+            "reference_supplies": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "design_md_supplies": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "project_must_supply": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "rule": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
         "benchmark_gates": {
           "type": "object",
           "required": ["overall", "copy_safety", "claim_safety"],

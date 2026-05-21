@@ -5,6 +5,7 @@ Reference source: `https://linear.app/`
 Use this file as a reference-only page-structure contract for AI-generated websites.
 
 Pair it with `VOICE.md`: `SITE.md` controls section order and page intent; `VOICE.md` controls copy rhythm, CTA shape, and benchmark gates.
+If a `DESIGN.md` file is present, it controls colors, typography, spacing, components, motion, and responsive layout.
 
 ## Site Summary
 
@@ -12,7 +13,7 @@ Pair it with `VOICE.md`: `SITE.md` controls section order and page intent; `VOIC
 - Information density: **balanced**.
 - Conversion pressure: **high**.
 - Navigation model: **broad utility navigation**.
-- Content boundary: Structure and copy shape only. Bring new project nouns, facts, claims, and offers.
+- Content boundary: Structure and copy shape only. Bring new project nouns, facts, claims, audience, domain, and offers.
 - Brand policy: this is not an official guideline, endorsement, or permission to impersonate the reference source.
 
 ## Page Blueprint
@@ -47,10 +48,27 @@ Pair it with `VOICE.md`: `SITE.md` controls section order and page intent; `VOIC
 - CTA move: repeat one primary next action after the reader has enough context.
 - Density move: keep compact pages decisive; make dense pages scannable with clear section jobs.
 
+## Context Stack
+
+- Project brief owns: product category, audience, facts, domain nouns, examples, offers, and claims.
+- `DESIGN.md` owns: colors, typography, spacing, layout grid, visual components, motion, and imagery style.
+- `SITE.md` owns: page structure, section order, section jobs, and conversion path.
+- `VOICE.md` owns: sentence rhythm, heading behavior, CTA shape, and claim boundaries.
+- If files conflict, do not merge responsibilities; use the owner above.
+
+## Domain Firewall
+
+- Reference supplies: page architecture, section order, density, conversion pressure, and section jobs.
+- New project supplies: product category, user domain, audience, examples, proof, imagery, and offer.
+- `DESIGN.md` supplies all visual identity and component decisions; this file does not supply colors, fonts, spacing, animation, or components.
+- Do not let the reference site's business, catalog, cultural context, or customer scenario become the new site's subject.
+- If using a retail reference for an education product, the output must stay educational in nouns, examples, proof, and CTAs.
+
 ## Agent Instructions
 
 - Use SITE.md for page structure and section order.
 - Use VOICE.md for sentence rhythm, CTA shape, and benchmark gates.
+- Treat the new project brief as the only source of product category, audience, domain nouns, examples, offers, and claims.
 - Replace every topic, product noun, market claim, price, and proof point with facts from the new project.
 - Do not imply affiliation with, endorsement from, or official representation of the reference source.
 - If a needed fact is missing, write a neutral placeholder or remove the claim.
@@ -58,7 +76,7 @@ Pair it with `VOICE.md`: `SITE.md` controls section order and page intent; `VOIC
 ## Content Boundary
 
 - Do not copy source headings, CTA labels, navigation labels, slogans, or campaign names.
-- Do not import the reference site's product catalog, audience, pricing, legal claims, or feature names.
+- Do not import the reference site's product catalog, category, audience, pricing, legal claims, feature names, people, events, or cultural context.
 - Do not turn structure guidance into a visual design system.
 - Do not add urgency, security, performance, customer, or compliance claims without evidence.
 

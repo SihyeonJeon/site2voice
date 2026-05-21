@@ -34,10 +34,13 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertIn("Navigation label shape", text)
             self.assertIn("Output Contract", text)
             self.assertIn("Content boundary", text)
+            self.assertIn("Domain Firewall", text)
+            self.assertIn("Context Stack", text)
             self.assertIn("Brand policy", text)
             self.assertIn("not an official guideline", text)
             self.assertNotIn("Main vocabulary", text)
             self.assertNotIn("Start free", text)
+            self.assertNotIn("Run your launch room", text)
 
     def test_cli_writes_json(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -64,6 +67,9 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertIn("Section Recipes", text)
             self.assertIn("Rhetorical Pattern", text)
             self.assertIn("Content Boundary", text)
+            self.assertIn("Domain Firewall", text)
+            self.assertIn("Context Stack", text)
+            self.assertIn("DESIGN.md", text)
             self.assertIn("Pair it with `VOICE.md`", text)
             self.assertNotIn("Start free", text)
             self.assertNotIn("Northstar Ops", text)
@@ -172,6 +178,31 @@ class Site2VoiceTests(unittest.TestCase):
             self.assertIn("site2voice bench", agent_prompt)
             self.assertIn("reference-only copy contract", agent_prompt)
             self.assertIn("Do not imply brand affiliation", agent_prompt)
+            self.assertIn("DESIGN.md", agent_prompt)
+
+    def test_default_markdown_does_not_leak_reference_domain_terms(self) -> None:
+        source_html = """
+        <!doctype html>
+        <html>
+          <head><title>Reference Store</title></head>
+          <body>
+            <h1>Jordan shoes for every sport moment</h1>
+            <p>Shop sneakers, apparel, athlete stories, and limited collections.</p>
+            <a href="/shop">Buy shoes</a>
+          </body>
+        </html>
+        """
+        with tempfile.TemporaryDirectory() as td:
+            source = Path(td) / "reference.html"
+            source.write_text(source_html, encoding="utf-8")
+            voice = Path(td) / "VOICE.md"
+            site = Path(td) / "SITE.md"
+            self.assertEqual(main([str(source), "--out", str(voice)]), 0)
+            self.assertEqual(main(["site", str(source), "--out", str(site)]), 0)
+            combined = (voice.read_text(encoding="utf-8") + site.read_text(encoding="utf-8")).lower()
+            for term in ["jordan", "shoe", "shoes", "sneakers", "sport", "athlete", "apparel"]:
+                self.assertNotIn(term, combined)
+            self.assertIn("domain firewall", combined)
 
 
 if __name__ == "__main__":

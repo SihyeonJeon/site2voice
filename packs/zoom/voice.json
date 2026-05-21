@@ -1,6 +1,6 @@
 {
   "schema_version": "site2voice.voice.v1",
-  "generator": "site2voice/0.5.4",
+  "generator": "site2voice/0.5.5",
   "source": "https://www.zoom.com/",
   "title": "",
   "meta_description": "",
@@ -71,7 +71,36 @@
       "learn"
     ],
     "minimum_recommended_terms": 0,
-    "content_rule": "Use only the new project's nouns. Do not transfer source-specific terms from the reference site.",
+    "content_rule": "Use only the new project's nouns, facts, audience, offer, and domain. Do not transfer source-specific products, categories, slogans, people, campaigns, or topics.",
+    "domain_firewall": {
+      "reference_supplies": [
+        "sentence rhythm",
+        "heading shape",
+        "CTA shape",
+        "section order",
+        "rhetorical moves"
+      ],
+      "design_md_supplies": [
+        "colors",
+        "typography",
+        "spacing",
+        "layout grid",
+        "components",
+        "motion",
+        "visual assets"
+      ],
+      "project_must_supply": [
+        "product category",
+        "audience",
+        "domain nouns",
+        "offer",
+        "proof",
+        "claims",
+        "examples",
+        "visual subject matter"
+      ],
+      "rule": "If a noun, claim, or scenario is not in the new project brief, remove it even if it appears in the reference source."
+    },
     "benchmark_gates": {
       "overall": 75,
       "copy_safety": 85,

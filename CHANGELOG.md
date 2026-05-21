@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+## 0.5.5
+
+- Added explicit domain-firewall rules to generated `SITE.md`, `VOICE.md`, and
+  agent prompts so reference style cannot supply product category, audience,
+  examples, offers, claims, or source-domain nouns.
+- Added a context-stack contract that separates project brief, `DESIGN.md`,
+  `SITE.md`, and `VOICE.md` ownership.
+- Changed CLI and context-pack defaults to omit source snippets unless
+  `--max-snippets` is explicitly set above zero.
+- Added regression coverage for cross-domain leakage from retail-style source
+  terms into unrelated generated context files.
+
 - Added a visible Stripe/LedgerFlow web comparison with side-by-side HTML
   outputs, screenshots, and a reproducible `reference-fit` report.
 - Added `scripts/reference_fit_report.py` to measure safe motif reproduction:

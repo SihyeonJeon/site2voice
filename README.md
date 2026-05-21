@@ -12,6 +12,20 @@ It turns public pages into compact, reference-only context files:
 
 **Not official. Not affiliated. Not permission to impersonate a brand.**
 
+## Context Stack
+
+Use the files together without overlapping responsibilities:
+
+| Context | Owns | Must not supply |
+| --- | --- | --- |
+| Project brief | product category, audience, facts, domain nouns, examples, offer, claims | reference-site nouns |
+| `DESIGN.md` | colors, typography, spacing, layout grid, components, motion, imagery style | copy rhythm or claims |
+| `SITE.md` | page structure, section order, section jobs, conversion path | colors, fonts, product category |
+| `VOICE.md` | sentence rhythm, heading behavior, CTA shape, claim boundaries | product nouns, visual design |
+
+This prevents an athletic retail reference from leaking its products or cultural
+context into an unrelated education, finance, healthcare, or developer product.
+
 ## Featured Profiles
 
 | Profile | Tone | Best for |

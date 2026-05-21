@@ -1,13 +1,13 @@
 {
   "schema_version": "site2voice.site.v1",
-  "generator": "site2voice/0.5.4",
+  "generator": "site2voice/0.5.5",
   "source": "https://github.com/",
   "site_summary": {
     "page_archetype": "technical product landing",
     "information_density": "dense",
     "conversion_pressure": "high",
     "navigation_model": "broad utility navigation",
-    "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, and offers."
+    "content_boundary": "Structure and copy shape only. Bring new project nouns, facts, claims, audience, domain, and offers."
   },
   "structure_metrics": {
     "words": 1628,
@@ -128,13 +128,14 @@
   "agent_instructions": [
     "Use SITE.md for page structure and section order.",
     "Use VOICE.md for sentence rhythm, CTA shape, and benchmark gates.",
+    "Treat the new project brief as the only source of product category, audience, domain nouns, examples, offers, and claims.",
     "Replace every topic, product noun, market claim, price, and proof point with facts from the new project.",
     "Do not imply affiliation with, endorsement from, or official representation of the reference source.",
     "If a needed fact is missing, write a neutral placeholder or remove the claim."
   ],
   "anti_patterns": [
     "Do not copy source headings, CTA labels, navigation labels, slogans, or campaign names.",
-    "Do not import the reference site's product catalog, audience, pricing, legal claims, or feature names.",
+    "Do not import the reference site's product catalog, category, audience, pricing, legal claims, feature names, people, events, or cultural context.",
     "Do not turn structure guidance into a visual design system.",
     "Do not add urgency, security, performance, customer, or compliance claims without evidence."
   ]

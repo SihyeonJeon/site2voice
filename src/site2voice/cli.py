@@ -28,7 +28,12 @@ def build_generate_parser() -> argparse.ArgumentParser:
     parser.add_argument("--format", choices=["md", "json"], default="md")
     parser.add_argument("--out", help="write output to this path")
     parser.add_argument("--timeout", type=float, default=20.0, help="seconds to wait for URL fetches")
-    parser.add_argument("--max-snippets", type=int, default=8, help="max evidence snippets in Markdown output")
+    parser.add_argument(
+        "--max-snippets",
+        type=int,
+        default=0,
+        help="max source evidence snippets in Markdown output; default 0 prevents domain leakage",
+    )
     parser.add_argument("--no-samples", action="store_true", help="omit page-pattern and paragraph samples")
     return parser
 
@@ -70,7 +75,12 @@ def build_init_parser() -> argparse.ArgumentParser:
     parser.add_argument("source", help="URL or local HTML file")
     parser.add_argument("--dir", default=".site2voice", help="output directory for the context pack")
     parser.add_argument("--timeout", type=float, default=20.0, help="seconds to wait for URL fetches")
-    parser.add_argument("--max-snippets", type=int, default=8, help="max evidence snippets in VOICE.md")
+    parser.add_argument(
+        "--max-snippets",
+        type=int,
+        default=0,
+        help="max source evidence snippets in VOICE.md; default 0 prevents domain leakage",
+    )
     parser.add_argument("--no-samples", action="store_true", help="omit page-pattern and paragraph samples")
     parser.add_argument("--force", action="store_true", help="overwrite existing context pack files")
     return parser

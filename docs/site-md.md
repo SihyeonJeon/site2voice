@@ -5,6 +5,10 @@
 Use it when the task is not only "write in this tone", but "build a page that
 has the right information architecture, section rhythm, and conversion path."
 
+It is not a substitute for `DESIGN.md`. If both files are present, `DESIGN.md`
+owns colors, typography, spacing, layout grid, components, motion, and imagery
+style. `SITE.md` owns page structure only.
+
 ## What It Captures
 
 - page archetype;
@@ -27,6 +31,24 @@ has the right information architecture, section rhythm, and conversion path."
 - raw CTAs;
 - source vocabulary;
 - product catalogs, pricing, or market claims.
+
+## Domain Firewall
+
+`SITE.md` must not make the new product inherit the reference site's business
+category. The new project brief owns:
+
+- product category;
+- audience;
+- domain nouns;
+- examples;
+- offer;
+- proof;
+- claims;
+- imagery subject matter.
+
+For cross-domain work, use the reference only for structure. A retail reference
+can shape the pacing of an education website, but the output must stay
+educational in nouns, proof, examples, and CTAs.
 
 ## Use
 
