@@ -1,3 +1,3 @@
-"""site2voice: generate AI-agent copy profiles from website copy."""
+"""site-voice-packs: generate SITE.md and VOICE.md context packs."""
 
 __version__ = "0.5.6"

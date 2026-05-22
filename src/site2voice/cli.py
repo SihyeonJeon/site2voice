@@ -13,7 +13,7 @@ from .extract import analyze, to_json, to_markdown, to_site_json, to_site_markdo
 def build_generate_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="site2voice",
-        description="Generate AI-agent VOICE.md copy profiles from website copy and CTAs.",
+        description="Generate AI-agent VOICE.md copy profiles and SITE.md structure profiles.",
         epilog=(
             "Commands:\n"
             "  site2voice SOURCE --out VOICE.md\n"
@@ -157,7 +157,7 @@ def cmd_init(argv: list[str]) -> int:
     except Exception as exc:  # noqa: BLE001
         print(f"ERROR: {exc}", file=sys.stderr)
         return 1
-    print(f"Created site2voice context pack in {result['output_dir']}:")
+    print(f"Created SITE.md and VOICE.md context pack in {result['output_dir']}:")
     for path in result["files"].values():
         print(f"- {path}")
     return 0

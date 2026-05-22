@@ -52,8 +52,8 @@ nouns, proof, examples, and CTAs must come from the new project brief.
 ## Use
 
 ```bash
-curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/sites/stripe.md -o SITE.md
-curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md
+curl -L https://raw.githubusercontent.com/SihyeonJeon/site-voice-packs/main/sites/stripe.md -o SITE.md
+curl -L https://raw.githubusercontent.com/SihyeonJeon/site-voice-packs/main/voices/stripe.md -o VOICE.md
 ```
 
 Then give both files to your agent:

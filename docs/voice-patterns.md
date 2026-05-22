@@ -1,6 +1,6 @@
 # Voice Patterns
 
-`site2voice` does not try to copy a brand, magazine, or topic. It extracts
+`site-voice-packs` does not try to copy a brand, magazine, or topic. It extracts
 measurable writing signals that help an agent write new copy in a nearby
 register without pasting source prose, importing source-specific nouns, or
 implying affiliation with the reference source.

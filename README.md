@@ -1,6 +1,6 @@
-# site2voice
+# site-voice-packs
 
-**Reference `SITE.md` and `VOICE.md` files for AI-generated web pages.**
+**Drop-in `SITE.md` and `VOICE.md` context packs for AI-generated web pages.**
 
 Pick a public web pattern, copy the matching files into your project, and give
 your agent structure plus writing rhythm:
@@ -57,8 +57,8 @@ and [PayPal](voices/paypal.md). See the [VOICE.md collection](voices) and the
 Download one structure profile and one copy profile:
 
 ```bash
-curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/sites/stripe.md -o SITE.md
-curl -L https://raw.githubusercontent.com/SihyeonJeon/site2voice/main/voices/stripe.md -o VOICE.md
+curl -L https://raw.githubusercontent.com/SihyeonJeon/site-voice-packs/main/sites/stripe.md -o SITE.md
+curl -L https://raw.githubusercontent.com/SihyeonJeon/site-voice-packs/main/voices/stripe.md -o VOICE.md
 ```
 
 Tell your agent:
@@ -109,6 +109,9 @@ pipx install site2voice
 site2voice init https://example.com
 ```
 
+The PyPI package and CLI keep the `site2voice` name for install compatibility.
+The repo name describes the main artifact: ready-to-use site and voice packs.
+
 Generate only a page-structure file:
 
 ```bash
@@ -126,7 +129,7 @@ Need `site.json`, `voice.json`, or an agent prompt too? Use the full [context pa
 ## Status
 
 [![PyPI](https://img.shields.io/pypi/v/site2voice.svg)](https://pypi.org/project/site2voice/)
-[![CI](https://github.com/SihyeonJeon/site2voice/actions/workflows/ci.yml/badge.svg)](https://github.com/SihyeonJeon/site2voice/actions/workflows/ci.yml)
+[![CI](https://github.com/SihyeonJeon/site-voice-packs/actions/workflows/ci.yml/badge.svg)](https://github.com/SihyeonJeon/site-voice-packs/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Develop

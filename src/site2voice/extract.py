@@ -153,7 +153,7 @@ def read_source(source: str, timeout: float = 20.0) -> tuple[str, str]:
     if source.startswith(("http://", "https://")):
         request = urllib.request.Request(
             source,
-            headers={"User-Agent": f"site2voice/{__version__} (+https://github.com/SihyeonJeon/site2voice)"},
+            headers={"User-Agent": f"site2voice/{__version__} (+https://github.com/SihyeonJeon/site-voice-packs)"},
         )
         with urllib.request.urlopen(request, timeout=timeout) as response:
             content_type = response.headers.get_content_charset() or "utf-8"

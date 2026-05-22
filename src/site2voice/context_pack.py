@@ -6,7 +6,7 @@ from typing import Any
 from .extract import analyze, to_json, to_markdown, to_site_json, to_site_markdown
 
 
-PROMPT_TEMPLATE = """# site2voice Agent Prompt
+PROMPT_TEMPLATE = """# SITE.md + VOICE.md Agent Prompt
 
 Use `SITE.md` and `VOICE.md` together:
 

@@ -9,7 +9,7 @@ agents, but they solve different problems.
 | `SITE.md` | Page-structure contract | Page archetype, section order, section jobs, conversion pressure, content boundaries | Does not define visual tokens or product facts |
 | `VOICE.md` | Copy behavior and writing contract | Sentence rhythm, heading shape, CTA shape, paragraph rhythm, claim boundaries | Does not define visual tokens or product facts |
 
-`site2voice` does not implement the `DESIGN.md` visual spec. It does not extract
+`site-voice-packs` does not implement the `DESIGN.md` visual spec. It does not extract
 colors, fonts, component tokens, screenshots, logos, or layout systems. It
 extracts structural and copy signals and writes compact Markdown contracts that
 an agent can follow before generating landing-page sections, headings, CTAs,
@@ -33,7 +33,7 @@ the subject.
 
 Visual context does not tell an agent how to structure or write a page. A page
 can match a visual system and still sound generic, overclaimed, or off-market.
-`site2voice` targets that missing layer:
+`site-voice-packs` targets that missing layer:
 
 - which section jobs should appear;
 - how the first screen should move from outcome to action;
