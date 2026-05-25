@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+## 0.6.1
+
+- Changed the PyPI distribution name to `site-voice-packs` to match the public
+  repository and trusted publisher configuration.
+- Kept the Python import package as `site2voice` and kept both CLI commands:
+  `site2voice` and `site-voice-packs`.
+
 ## 0.6.0
 
 - Added `site2voice webfit` for scoring visible HTML outputs against

@@ -118,12 +118,12 @@ site2voice webfit \
 Generate a new context pack from any public URL:
 
 ```bash
-pipx install site2voice
+pipx install site-voice-packs
 site2voice init https://example.com
 ```
 
-The PyPI package and CLI keep the `site2voice` name for install compatibility.
-The repo name describes the main artifact: ready-to-use site and voice packs.
+The PyPI package uses the repo name, `site-voice-packs`. The CLI keeps
+`site2voice` and also exposes `site-voice-packs`.
 
 Generate only a page-structure file:
 
@@ -147,7 +147,7 @@ Need `site.json`, `voice.json`, or an agent prompt too? Use the full [context pa
 
 ## Status
 
-[![PyPI](https://img.shields.io/pypi/v/site2voice.svg)](https://pypi.org/project/site2voice/)
+[![PyPI](https://img.shields.io/pypi/v/site-voice-packs.svg)](https://pypi.org/project/site-voice-packs/)
 [![CI](https://github.com/SihyeonJeon/site-voice-packs/actions/workflows/ci.yml/badge.svg)](https://github.com/SihyeonJeon/site-voice-packs/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
