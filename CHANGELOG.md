@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+## 0.6.0
+
+- Added `site2voice webfit` for scoring visible HTML outputs against
+  `SITE.md` and `VOICE.md` JSON profiles.
+- Added CLI gates for visible before/after evidence: minimum reference-fit
+  delta, minimum copy safety, and maximum mimic risk.
+- Added `webfit.md` and `webfit.json` to the Stripe/LedgerFlow web comparison
+  so the screenshot example is reproducible from the package command.
+- Refactored the previous reference-fit script to use the packaged webfit
+  implementation.
+
 ## 0.5.6
 
 - Removed internal planning and positioning notes from the public docs.

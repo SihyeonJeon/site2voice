@@ -20,6 +20,7 @@ jobs:
       - run: site2voice examples/saas-home.html --out /tmp/VOICE.md
       - run: site2voice init examples/editorial-home.html --dir /tmp/site2voice-context --no-samples
       - run: site2voice bench examples/editorial-home.html examples/after-copy.md --strict
+      - run: site2voice webfit --voice packs/stripe/voice.json --site packs/stripe/site.json --min-delta 20 --min-copy-safety 95 --max-mimic-risk 5 examples/comparisons/stripe-ledgerflow-web/without-context.html examples/comparisons/stripe-ledgerflow-web/with-site-voice.html
 
   package:
     runs-on: ubuntu-latest

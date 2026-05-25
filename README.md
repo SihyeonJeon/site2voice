@@ -98,7 +98,20 @@ See the [full comparison](examples/comparisons/stripe-ledgerflow/README.md).
 For a visible web result, see the
 [SITE.md + VOICE.md web comparison](examples/comparisons/stripe-ledgerflow-web).
 It shows the same HTML landing-page prompt with and without the context files,
-including screenshots and a `reference-fit` score.
+including screenshots and a `webfit` score.
+
+`webfit` makes the visual comparison reproducible:
+
+```bash
+site2voice webfit \
+  --voice packs/stripe/voice.json \
+  --site packs/stripe/site.json \
+  --min-delta 20 \
+  --min-copy-safety 95 \
+  --max-mimic-risk 5 \
+  examples/comparisons/stripe-ledgerflow-web/without-context.html \
+  examples/comparisons/stripe-ledgerflow-web/with-site-voice.html
+```
 
 ## Optional CLI
 
@@ -122,6 +135,12 @@ Validate generated copy:
 
 ```bash
 site2voice bench https://example.com draft.md --strict
+```
+
+Score visible HTML outputs:
+
+```bash
+site2voice webfit --voice voice.json --site site.json before.html after.html
 ```
 
 Need `site.json`, `voice.json`, or an agent prompt too? Use the full [context packs](packs).

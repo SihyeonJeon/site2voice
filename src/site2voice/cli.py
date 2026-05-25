@@ -8,6 +8,7 @@ from . import __version__
 from .benchmark import benchmark, benchmark_failures, benchmark_json, benchmark_markdown
 from .context_pack import create_context_pack
 from .extract import analyze, to_json, to_markdown, to_site_json, to_site_markdown
+from .webfit import build_webfit_payload, webfit_failures, webfit_json, webfit_markdown
 
 
 def build_generate_parser() -> argparse.ArgumentParser:
@@ -19,7 +20,8 @@ def build_generate_parser() -> argparse.ArgumentParser:
             "  site2voice SOURCE --out VOICE.md\n"
             "  site2voice site SOURCE --out SITE.md\n"
             "  site2voice init SOURCE --dir .site2voice\n"
-            "  site2voice bench REFERENCE candidate.md --strict"
+            "  site2voice bench REFERENCE candidate.md --strict\n"
+            "  site2voice webfit --voice voice.json --site site.json before.html after.html"
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -64,6 +66,22 @@ def build_bench_parser() -> argparse.ArgumentParser:
     parser.add_argument("--fail-under", type=float, help="exit non-zero if any candidate overall score is below this")
     parser.add_argument("--min-copy-safety", type=float, help="exit non-zero if copy safety is below this")
     parser.add_argument("--min-claim-safety", type=float, help="exit non-zero if claim safety is below this")
+    return parser
+
+
+def build_webfit_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        prog="site2voice webfit",
+        description="Score visible HTML outputs against SITE.md and VOICE.md JSON profiles.",
+    )
+    parser.add_argument("--voice", required=True, type=Path, help="voice.json profile")
+    parser.add_argument("--site", required=True, type=Path, help="site.json profile")
+    parser.add_argument("candidates", nargs="+", type=Path, help="HTML files to score")
+    parser.add_argument("--format", choices=["md", "json"], default="md")
+    parser.add_argument("--out", help="write webfit report to this path")
+    parser.add_argument("--min-delta", type=float, help="fail if with-site-voice does not beat without-context by this much")
+    parser.add_argument("--min-copy-safety", type=float, help="fail if any candidate copy safety is below this")
+    parser.add_argument("--max-mimic-risk", type=float, help="fail if any candidate mimic risk is above this")
     return parser
 
 
@@ -144,6 +162,29 @@ def cmd_bench(argv: list[str]) -> int:
     return 0
 
 
+def cmd_webfit(argv: list[str]) -> int:
+    args = build_webfit_parser().parse_args(argv)
+    try:
+        payload = build_webfit_payload(args.voice, args.site, args.candidates)
+    except Exception as exc:  # noqa: BLE001
+        print(f"ERROR: {exc}", file=sys.stderr)
+        return 1
+    output = webfit_json(payload) if args.format == "json" else webfit_markdown(payload)
+    write_output(output, args.out)
+    failures = webfit_failures(
+        payload,
+        min_delta=args.min_delta,
+        min_copy_safety=args.min_copy_safety,
+        max_mimic_risk=args.max_mimic_risk,
+    )
+    if failures:
+        print("WEBFIT FAILED:", file=sys.stderr)
+        for failure in failures:
+            print(f"- {failure}", file=sys.stderr)
+        return 2
+    return 0
+
+
 def cmd_init(argv: list[str]) -> int:
     args = build_init_parser().parse_args(argv)
     try:
@@ -171,6 +212,8 @@ def main(argv: list[str] | None = None) -> int:
         return cmd_init(argv[1:])
     if argv and argv[0] == "site":
         return cmd_site(argv[1:])
+    if argv and argv[0] == "webfit":
+        return cmd_webfit(argv[1:])
     return cmd_generate(argv)
 
 

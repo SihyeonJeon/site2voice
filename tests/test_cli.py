@@ -137,8 +137,40 @@ class Site2VoiceTests(unittest.TestCase):
                     "examples/after-copy.md",
                     "--strict",
                 ]
-            )
+        )
         self.assertEqual(code, 0)
+
+    def test_webfit_scores_visible_html_outputs(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td) / "webfit.json"
+            code = main(
+                [
+                    "webfit",
+                    "--voice",
+                    "packs/stripe/voice.json",
+                    "--site",
+                    "packs/stripe/site.json",
+                    "--format",
+                    "json",
+                    "--out",
+                    str(out),
+                    "--min-delta",
+                    "20",
+                    "--min-copy-safety",
+                    "95",
+                    "--max-mimic-risk",
+                    "5",
+                    "examples/comparisons/stripe-ledgerflow-web/without-context.html",
+                    "examples/comparisons/stripe-ledgerflow-web/with-site-voice.html",
+                ]
+            )
+            self.assertEqual(code, 0)
+            payload = json.loads(out.read_text(encoding="utf-8"))
+            self.assertEqual(payload["schema_version"], "site2voice.webfit.v1")
+            scores = {item["label"]: item["reference_fit"] for item in payload["candidates"]}
+            self.assertGreater(scores["with-site-voice"], scores["without-context"])
+            self.assertGreaterEqual(scores["with-site-voice"] - scores["without-context"], 20)
+            self.assertEqual(payload["candidates"][0]["mimic_risk"], 0.0)
 
     def test_init_writes_context_pack(self) -> None:
         with tempfile.TemporaryDirectory() as td:

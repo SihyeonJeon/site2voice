@@ -23,6 +23,32 @@
     }
     h1 { margin: 0; font-size: 26px; letter-spacing: 0; }
     p { margin: 8px 0 0; color: #b9c2d0; }
+    .scores {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 22px 18px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .score {
+      border: 1px solid #2d3a50;
+      border-radius: 8px;
+      background: #141d2f;
+      padding: 12px 14px;
+    }
+    .score span {
+      display: block;
+      color: #8fa0b9;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .score strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 20px;
+    }
     .grid {
       max-width: 1280px;
       margin: 0 auto;
@@ -52,6 +78,7 @@
     }
     @media (max-width: 900px) {
       header { align-items: start; flex-direction: column; }
+      .scores { grid-template-columns: 1fr 1fr; }
       .grid { grid-template-columns: 1fr; }
       iframe { height: 720px; }
     }
@@ -64,6 +91,12 @@
       <p>Left: no context. Right: Stripe SITE.md + VOICE.md as reference-only context.</p>
     </div>
   </header>
+  <section class="scores" aria-label="Reference fit scores">
+    <div class="score"><span>Without context</span><strong>63.2</strong></div>
+    <div class="score"><span>With SITE + VOICE</span><strong>92.1</strong></div>
+    <div class="score"><span>Delta</span><strong>+28.9</strong></div>
+    <div class="score"><span>Mimic risk</span><strong>0.0</strong></div>
+  </section>
   <main class="grid">
     <section class="frame">
       <div class="label">Without SITE.md / VOICE.md</div>

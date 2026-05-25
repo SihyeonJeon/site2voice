@@ -1,4 +1,4 @@
-.PHONY: test example site-example bench bench-ci web-fit init-example packs
+.PHONY: test example site-example bench bench-ci webfit web-fit webfit-ci init-example packs
 
 test:
 	PYTHONPATH=src python3 -m unittest discover -s tests
@@ -15,8 +15,14 @@ bench:
 bench-ci:
 	PYTHONPATH=src python3 -m site2voice.cli bench examples/editorial-home.html examples/after-copy.md --strict
 
-web-fit:
-	PYTHONPATH=src python3 scripts/reference_fit_report.py --voice packs/stripe/voice.json --site packs/stripe/site.json --out examples/comparisons/stripe-ledgerflow-web/reference-fit.json --markdown examples/comparisons/stripe-ledgerflow-web/reference-fit.md examples/comparisons/stripe-ledgerflow-web/without-context.html examples/comparisons/stripe-ledgerflow-web/with-site-voice.html
+webfit:
+	PYTHONPATH=src python3 -m site2voice.cli webfit --voice packs/stripe/voice.json --site packs/stripe/site.json --format json --out examples/comparisons/stripe-ledgerflow-web/webfit.json examples/comparisons/stripe-ledgerflow-web/without-context.html examples/comparisons/stripe-ledgerflow-web/with-site-voice.html
+	PYTHONPATH=src python3 -m site2voice.cli webfit --voice packs/stripe/voice.json --site packs/stripe/site.json --out examples/comparisons/stripe-ledgerflow-web/webfit.md examples/comparisons/stripe-ledgerflow-web/without-context.html examples/comparisons/stripe-ledgerflow-web/with-site-voice.html
+
+web-fit: webfit
+
+webfit-ci:
+	PYTHONPATH=src python3 -m site2voice.cli webfit --voice packs/stripe/voice.json --site packs/stripe/site.json --min-delta 20 --min-copy-safety 95 --max-mimic-risk 5 examples/comparisons/stripe-ledgerflow-web/without-context.html examples/comparisons/stripe-ledgerflow-web/with-site-voice.html
 
 init-example:
 	rm -rf /tmp/site2voice-context

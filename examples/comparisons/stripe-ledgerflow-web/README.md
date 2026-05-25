@@ -11,6 +11,8 @@ shape, and claim discipline in a way a builder can inspect.
 
 ## Visual Result
 
+![Side-by-side preview with scores](screenshots/preview.png)
+
 | Without context | With SITE.md + VOICE.md |
 | --- | --- |
 | ![Without context](screenshots/without-context.png) | ![With SITE.md and VOICE.md](screenshots/with-site-voice.png) |
@@ -34,17 +36,21 @@ alignment while keeping `mimic risk` low.
 - [request-with-site-voice.md](request-with-site-voice.md): same prompt with context files.
 - [without-context.html](without-context.html): visible result without context.
 - [with-site-voice.html](with-site-voice.html): visible result with `SITE.md` and `VOICE.md`.
+- [webfit.md](webfit.md): CLI-generated visible-output scoring report.
+- [webfit.json](webfit.json): machine-readable visible-output scoring report.
 - [reference-fit.md](reference-fit.md): Markdown scoring report.
 - [reference-fit.json](reference-fit.json): machine-readable scoring report.
 
 ## Reproduce
 
 ```bash
-PYTHONPATH=src python3 scripts/reference_fit_report.py \
+site2voice webfit \
   --voice packs/stripe/voice.json \
   --site packs/stripe/site.json \
-  --out examples/comparisons/stripe-ledgerflow-web/reference-fit.json \
-  --markdown examples/comparisons/stripe-ledgerflow-web/reference-fit.md \
+  --out examples/comparisons/stripe-ledgerflow-web/webfit.md \
+  --min-delta 20 \
+  --min-copy-safety 95 \
+  --max-mimic-risk 5 \
   examples/comparisons/stripe-ledgerflow-web/without-context.html \
   examples/comparisons/stripe-ledgerflow-web/with-site-voice.html
 ```
